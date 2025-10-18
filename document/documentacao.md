@@ -79,11 +79,14 @@ _O Canvas da proposta de valor deve ser feito considerando a solução que você
 
 &emsp; A matriz de risco permite que a Renault identifique ameaças e falhas que possam comprometer as operações de telemetria e análise de dados veiculares em pista, além de, com seu eixo de oportunidade, também explorar quesitos para inovação e segurança dos dados na infraestrutura IoT que está sendo desenvolvida pelo grupo. Com a crescente demanda por otimização de processos de engenharia automotiva e as rápidas mudanças tecnológicas no setor de IoT, essa ferramenta assegura resiliência e agilidade, reforçando a capacidade da Renault em desenvolver veículos mais eficientes e seguros, especialmente na identificação e mitigação de problemas de squeak and rattle.
 
-<center> <sub> Figura # - Matriz de Riscos e Oportunidades Sprint 1  </sub> </center>
-<br>
+<div align="center">
+<sup>Figura # - Matriz de Riscos e Oportunidades </sup>
+   
 <img src="../assets/matriz-de-riscos.png"> 
-<center> <sub> Fonte: Material produzido pelos autores (2025)  </sub> </center>
-<br>
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+   
+</div>
 
 &emsp; A matriz de risco identificou algumas ameaças importantes para o projeto de telemetria veicular. Entre elas, destaca-se a sobrecarga de processamento do microcontrolador, que pode não conseguir lidar com grandes volumes de dados de sensores de velocidade e aceleração em alta frequência, causando perda de amostras críticas e comprometendo a precisão das simulações. Outro fator crítico é a vulnerabilidade de segurança dos dados, onde informações sensíveis de testes podem ser interceptados se não houver criptografia adequada, expondo dados estratégicos sobre o desenvolvimento de novos veículos. Adicionalmente, a instabilidade de conectividade em áreas com baixa cobertura de rede pode causar atraso ou perda de pacotes durante a transmissão dos dados para o banco de dados remoto, prejudicando a continuidade do monitoramento em tempo real. As condições adversas do ambiente de pista, como poeira, calor extremo, vibração e umidade, também representam ameaças ao funcionamento adequado dos sensores, podendo alterar medições e gerar dados inconsistentes que comprometem as análises de squeak and rattle.
 
