@@ -77,7 +77,21 @@ _O Canvas da proposta de valor deve ser feito considerando a solução que você
 
 ### 3.1.5. Matriz de Riscos (sprint 1)	
 
-_A Matriz de Risco deve ser desenhada considerando o projeto que os alunos estão criando. Deve ser entregue no template disponível no drive da turma. Os alunos devem enumerar os riscos, distribuí-los na matriz e justificar suas decisões._     
+&emsp; A matriz de risco permite que a Renault identifique ameaças e falhas que possam comprometer as operações de telemetria e análise de dados veiculares em pista, além de, com seu eixo de oportunidade, também explorar quesitos para inovação e segurança dos dados na infraestrutura IoT que está sendo desenvolvida pelo grupo. Com a crescente demanda por otimização de processos de engenharia automotiva e as rápidas mudanças tecnológicas no setor de IoT, essa ferramenta assegura resiliência e agilidade, reforçando a capacidade da Renault em desenvolver veículos mais eficientes e seguros, especialmente na identificação e mitigação de problemas de squeak and rattle.
+
+<center> <sub> Figura # - Matriz de Riscos e Oportunidades Sprint 1  </sub> </center>
+<br>
+<img src="../assets/matriz-de-riscos.png"> 
+<center> <sub> Fonte: Material produzido pelos autores (2025)  </sub> </center>
+<br>
+
+&emsp; A matriz de risco identificou algumas ameaças importantes para o projeto de telemetria veicular. Entre elas, destaca-se a sobrecarga de processamento do microcontrolador, que pode não conseguir lidar com grandes volumes de dados de sensores de velocidade e aceleração em alta frequência, causando perda de amostras críticas e comprometendo a precisão das simulações. Outro fator crítico é a vulnerabilidade de segurança dos dados, onde informações sensíveis de testes podem ser interceptados se não houver criptografia adequada, expondo dados estratégicos sobre o desenvolvimento de novos veículos. Adicionalmente, a instabilidade de conectividade em áreas com baixa cobertura de rede pode causar atraso ou perda de pacotes durante a transmissão dos dados para o banco de dados remoto, prejudicando a continuidade do monitoramento em tempo real. As condições adversas do ambiente de pista, como poeira, calor extremo, vibração e umidade, também representam ameaças ao funcionamento adequado dos sensores, podendo alterar medições e gerar dados inconsistentes que comprometem as análises de squeak and rattle.
+
+&emsp; Por outro lado, a matriz de risco também ressalta oportunidades estratégicas que impulsionam a inovação e ampliam o valor do projeto. O aproveitamento de dados reais de pista aumenta significativamente a precisão dos modelos de simulação de squeak and rattle, reduzindo custos e tempo no desenvolvimento de novos veículos ao permitir testes virtuais mais confiáveis antes da produção. Outra oportunidade crucial é a padronização de dados e aprimoramento do dashboard com filtros e validação automática, tornando as análises mais claras e evitando interpretações incorretas que poderiam levar a decisões equivocadas de engenharia. O desenvolvimento de um sistema de transmissão resiliente e inteligente de dados também se destaca, viabilizando o uso da solução em pistas remotas e expandindo as possibilidades de testes em diferentes condições. A implementação de criptografia e segurança alinhada à LGPD representa uma oportunidade de garantir confiança no uso corporativo e proteção da propriedade intelectual. Por fim, o pré-processamento local dos dados otimiza a eficiência do sistema, reduzindo o volume de informações desnecessárias enviadas ao servidor e melhorando o desempenho geral da solução.
+
+&emsp; Conforme o contexto supramencionado, essas ameaças e oportunidades demonstram a importância de uma matriz de risco completa e bem estruturada para a Renault, permitindo tanto a mitigação de problemas técnicos quanto o aproveitamento do potencial de impacto positivo no desenvolvimento automotivo, especialmente na redução de problemas de squeak and rattle através de simulações mais precisas baseadas em dados reais de pista.
+
+
 
 ### 3.1.6. Política de Privacidade de acordo com a LGPD (sprint 1)	
 
