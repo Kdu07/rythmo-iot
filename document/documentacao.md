@@ -126,6 +126,10 @@ _Coloque aqui suas Personas:_
 - _Humaniza o público, facilitando decisões centradas no usuário._
 - _Trabalhar na criação de pelo menos uma Persona_
 
+&nbsp;&nbsp;&nbsp;&nbsp;Segundo Louise Bruton (2022), personas no contexto de UI/UX, são representações fictícias de usuários reais, criadas com base em pesquisas qualitativas e quantitativas para auxiliar designers a compreenderem melhor o público-alvo e tomarem decisões de design mais informadas. Essas personas incluem detalhes demográficos, comportamentais, motivações, dores e objetivos, promovendo empatia e garantindo que o produto priorize as necessidades dos usuários, o que resulta em experiências mais intuitivas e eficazes.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Tendo em vista esses pontos, em nosso projeto nós criamos duas personas: um sendo o piloto que conduzirá o carro em tetes de Squeak and Rattle e o outro sendo o engenheiro de simulação da Renault, que analisará o resultados e relatórios para tirar conclusões úteis. Fizemos isso para auxiliar o desenvolvimento do projeto e não perdermos de vista os nossos objetivos.
+
 ### 3.2.2. Jornada do Usuário e Storyboard (sprint 2)	
 
 _Coloque aqui seu Mapa de Jornada do Usuário:_
@@ -265,3 +269,6 @@ LUCK, Heloisa. Liderança em gestão escolar. 4. ed. Petrópolis: Vozes, 2010. <
 SOBRENOME, Nome. Título do livro: subtítulo do livro. Edição. Cidade de publicação: Nome da editora, Ano de publicação. <br>
 Disponível em: https://adalove.inteli.edu.br/feed. Acesso em: 1 out. 2023 <br>
 Disponível em: LINK DO SITE. Acesso em: Dia Mês Ano_
+
+
+BRUTON, Louise. What are UX personas and what are they used for? UX Design Institute, 2022. Disponível em: https://www.uxdesigninstitute.com/blog/what-are-ux-personas/. Acesso em: 19 out. 2025.
