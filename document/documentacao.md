@@ -37,7 +37,7 @@ _Apresente de forma sucinta o parceiro de negócio, seu porte, local, área de a
 
 1.1.2 Objetivos Específicos com o Projeto
 
-- Criar um sistema IoT funcional: Desenvolver um protótipo embarcado que use sensores de aceleração e força conectados a um microcontrolador (como o Arduino) para coletar dados durante os testes do veículo.
+- Criar um sistema IoT funcional: Desenvolver um protótipo embarcado que use sensores de aceleração e força conectados a um microcontrolador,  para coletar dados durante os testes do veículo.
 
 - Coletar e enviar dados em tempo real: Permitir que os sinais obtidos pelos sensores sejam transmitidos automaticamente para uma plataforma digital por meio de conexão sem fio, como Wi-Fi ou Bluetooth.
 
@@ -45,9 +45,8 @@ _Apresente de forma sucinta o parceiro de negócio, seu porte, local, área de a
 
 - Apoiar análises de Squeak and Rattle: Disponibilizar informações úteis para estudos e simulações que busquem compreender e reduzir ruídos e vibrações estruturais nos veículos da Renault.
 
-- Assegurar a confiabilidade das medições: Documentar e padronizar todo o processo de coleta, transmissão e tratamento dos dados, garantindo a qualidade e a reprodutibilidade dos resultados obtidos.
+- Assegurar a confiabilidade das medições: Documentar e padronizar todo o processo de coleta, transmissão e tratamento dos dados, garantindo a qualidade dos resultados obtidos.
 
-- Promover inovação e colaboração: Fortalecer a relação entre a Renault e o Inteli, incentivando o desenvolvimento de soluções tecnológicas aplicadas à engenharia automotiva e contribuindo para a evolução de práticas sustentáveis no setor.
 
 ## 1.2 Proposta da solução
 
