@@ -81,6 +81,8 @@ _A Matriz de Risco deve ser desenhada considerando o projeto que os alunos estã
 
 ### 3.1.6. Política de Privacidade de acordo com a LGPD (sprint 1)	
 
+Esta política de privacidade é válida a partir de outubro de 2025.
+
 _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita considerando o projeto que os alunos estão criando. Os pontos a seguir precisam ser apresentados. O aluno pode utilizar  o Gerador de Política de Privacidade (https://www.nuvemshop.com.br/ferramentas/gerador-politica-de-privacidade), criado pela Nuvemshop e, de acordo com a empresa, já adaptado a LGPD para ter uma prévia e ajustar de acordo com o seu projeto._
 
 #### 3.1.6.1 Informações gerais sobre a empresa / organização
