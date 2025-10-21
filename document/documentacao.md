@@ -111,9 +111,28 @@ _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita
 
 
 ### 3.1.7. Bill of Material (BOM) (sprint 1)
-_BOM (Bill of Material) pode ser definido como uma lista completa de materiais, que detalha todos os itens necessários para construir, fabricar ou reparar um produto. Deve-se preencher o template fornecido.
+# Bill of Materials (BOM)
 
+| Item | Código do Produto | Descrição            | Quantidade | Unidade | Fornecedor      | Preço Unitário | Total    | Observações      |
+|------|-------------------|----------------------|------------|---------|-----------------|----------------|----------|------------------|
+| 1    | 12345             | ESP 32               | 1          | un      | ?               | R$ 45,00       | R$ 45,00 | 38 pinos         |
+| 2    | 12345             | Módulo Piezoelétrico | 1          | un      | ?               | R$ 15,00       | R$ 15,00 | 3.3V ou 5V       |
+| 3    | MMA8452           | Módulo Acelerômetro  | 1          | un      | ?               | R$ 15,00       | R$ 15,00 | 3.3V ou 5V       |
+| 4    | MMA8452           | Módulo Acelerômetro  | 1          | un      | ?               | R$ 15,00       | R$ 15,00 | 3.3V ou 5V       |
 
+---
+
+**Legenda dos campos:**
+
+- **Item**: Número sequencial.
+- **Código do Produto**: Código do fornecedor.
+- **Descrição**: Nome ou especificação do componente/material.
+- **Quantidade**: Quantidade necessária para o projeto.
+- **Unidade**: Unidade de medida (un, m, kg, etc.).
+- **Fornecedor**: Nome do fornecedor ou fabricante.
+- **Preço Unitário**: Custo de cada unidade.
+- **Total**: Quantidade x Preço Unitário.
+- **Observações**: Informações adicionais relevantes.
 
 
 ## 3.2. Domínio de Fundamentos de Experiência de Usuário 
