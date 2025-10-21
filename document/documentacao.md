@@ -79,7 +79,7 @@ Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para 
 
 Em síntese, a Renault Brasil opera num ambiente competitivo e em transformação, no qual eficiência operacional, inovação em produto/serviço e uma experiência omnichannel consistente são diferenciais para crescer participação e rentabilidade
 
-#### 3.1.1.1 5 Forças de Porter
+#### 3.1.1.4 5 Forças de Porter
 
 
 
