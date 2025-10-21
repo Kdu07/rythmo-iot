@@ -49,11 +49,39 @@ _Descreva as etapas da metodologia RM-ODP que foram utilizadas para o desenvolvi
 
 _Link para os templates de negócios: https://drive.google.com/drive/folders/1lTqisJ_gxxtc5J5aXM8ula2kQ4MsII_M?usp=sharing_
 
-### 3.1.1. Contexto da Indústria (sprint 1)	
+### 3.1.1. Contexto da Indústria
 
-_O aluno deve fornecer informações sobre a concorrência (mínimo 3 competidores - 1 parágrafo; modelo de negócio - 1 parágrafo, e tendências - 1 parágrafo). Considere o setor do parceiro. Por exemplo, se o parceiro for a Rede Gazeta, o setor de Televisão.<br>
-<br>
-A análise de 5 forças deve ser feita considerando também o parceiro, o aluno deve preencher o template disponibilizado. No link a seguir há indicações de como avaliar as 5 forças: https://rockcontent.com/br/blog/5-forcas-de-porter/_
+A Renault Brasil atua no competitivo setor automotivo, com foco na produção e venda de veículos de passeio e comerciais leves, além de serviços financeiros e locação. Inserida numa cadeia complexa que abrange pesquisa científica, engenharia, manufatura, logística, rede de concessionárias e soluções digitais, a operação no país tem valor estratégico para a marca. No país, combina uma fábrica robusta, ecossistema de fornecedores locais e crescente integração com tendências globais, como frota elétrica e conectividade.</br>
+
+#### 3.1.1.1 Concorrentes	
+No mercado brasileiro, a Renault disputa espaço especialmente com montadoras estabelecidas. Entre os principais competidores:
+- Chevrolet (General Motors): forte presença em hatches e SUVs, ampla rede de concessionárias e marketing agressivo.
+- Fiat (Stellantis): liderança histórica em volumes e portfólio amplo, especialmente em compactos e comerciais leves.
+- Volkswagen: tradição, percepção de qualidade e renovação de linha com foco em eficiência e conectividade.</br>
+
+Outros players relevantes incluem Hyundai, Toyota e Jeep (Stellantis), que pressionam as margens e aceleram a inovação no setor. </br>
+
+#### 3.1.1.2 Modelo de negócio	
+O modelo de negócio da Renault Brasil integra:
+- Manufatura local e cadeia de suprimentos: produção nacional para ganho de escala, maior competitividade de custos e adequação a requisitos regulatórios e de conteúdo local.
+- Portfólio de produtos: veículos de entrada, SUVs compactos/medianos e comerciais leves, balanceando volume e rentabilidade. Edição de séries especiais e atualizações frequentes para manter relevância.
+- Rede de distribuição e pós‑venda: concessionárias como ponto de venda, serviços, garantia, peças e acessórios; foco na experiência do cliente e no custo total de propriedade.
+- Serviços financeiros: financiamentos, consórcios, leasing e seguros em parceria com braço financeiro, aumentando conversão e ticket médio.
+- Inovação e parcerias: eletrificação, conectividade embarcada e mobilidade como serviço (car‑sharing, assinatura, frotas).
+
+#### 3.1.1.3 Tendências
+A Renault Brasil...
+- Eletrificação gradual: avanços em híbridos, sobretudo em mercados urbanos e frotas. Discussão sobre biocombustíveis e híbridos flex como ponte tecnológica no Brasil.
+- SUVização e segurança: maior participação de SUVs e crossovers; consumidores buscam segurança, conectividade e ADAS (Sistemas Avançados de Assistência ao Motorista) com preços acessíveis.
+- Digitalização da jornada: mais etapas da compra migram para o online; pós‑venda preditivo e transparência de custos ganham importância.
+- Eficiência regulatória: metas de emissões e segurança pressionam inovação em powertrain, aerodinâmica e materiais.
+Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para frotas e apps ampliam relevância.
+
+Em síntese, a Renault Brasil opera num ambiente competitivo e em transformação, no qual eficiência operacional, inovação em produto/serviço e uma experiência omnichannel consistente são diferenciais para crescer participação e rentabilidade
+
+#### 3.1.1.1 5 Forças de Porter
+
+
 
 ### 3.1.2. Análise SWOT (sprint 1)	
 
