@@ -81,7 +81,14 @@ Em síntese, a Renault Brasil opera num ambiente competitivo e em transformaçã
 
 #### 3.1.1.4 5 Forças de Porter
 
+<div align="center">
+<sup>Figura # - 5 Forças de Porter </sup>
+   
+<img src="../assets/5-forcas.png"> 
 
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+   
+</div>
 
 ### 3.1.2. Análise SWOT (sprint 1)	
 
