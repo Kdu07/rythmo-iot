@@ -40,10 +40,10 @@ class Display{
         textSelect = "Paralelepipedo";
       return textSelect;
       case 3:
-        textSelect = "Molestada";
+        textSelect = "Placeholder";
       return textSelect;
       case 4:
-        textSelect = "Molestada2.0";
+        textSelect = "Placeholder2";
       return textSelect;
     }
   }
