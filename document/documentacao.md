@@ -64,28 +64,31 @@ A análise de 5 forças deve ser feita considerando também o parceiro, o aluno 
 
 ### 3.1.2.1  Imagem
 
-![alt text](<Frame 1(1).png>)
+![alt text](<Frame 1(2).png>)
 Fonte do template: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/
 
 ### 3.1.2.2 Forças (Internas)
 
-### Plano Renaulution para inovação global (Group)
-O Renaulution é o plano da Renault para mudar a empresa. Ele foca em novos modelos, como 24 lançamentos até 2025, com 10 elétricos. Reduz plataformas de 6 para 3 e corta produção para ser mais eficiente. Em 2025, continua com EVs e parcerias para crescer.
+### Liderança em veículos acessíveis e elétricos
+A Renault Brasil destaca-se com o Kwid como o carro mais barato do país e o Kwid E-Tech como veículo elétrico acessível, com IPI zerado, impulsionando vendas em segmentos econômicos e sustentáveis. Isso mitiga fraquezas de custos ao atrair volume de vendas e explora oportunidades de incentivos fiscais, reduzindo impactos de ameaças econômicas.
 
-### Rede com grande presença no mercado brasileiro
-A Renault atua no Brasil, tem fábricas em Curitiba e exporta para América do Sul. Lança o Boreal SUV no Brasil em 2025, ajudando vendas internacionais a subirem 16,4% no primeiro semestre.
+### Prêmios e reconhecimento local
+Modelos como Kardian (Carro do Ano 2025) e Megane E-Tech (Compra do Ano) reforçam qualidade e inovação, com tecnologia OpenR Link integrada. Relaciona-se com fraquezas ao melhorar reputação apesar de recalls, e conecta a oportunidades de mercado, combatendo ameaças de concorrentes.
 
-### Qualidade e serviços acessíveis (Brasil/Group)
-No Brasil, a Renault oferece carros baratos como o Kwid E-Tech, o EV mais acessível. Fábricas produzem para a região com foco em qualidade. Globalmente, serviços pós-venda ajudam vendas a crescerem 2,9% no Q1 2025. Modelos como Kardian impulsionam o mercado.
+### Crescimento de vendas no H1 2025
+Vendas subiram 8,8% para 60,7 mil unidades no primeiro semestre, tornando o Brasil o 7º mercado global do grupo. Essa força explora oportunidades de expansão veículos elétricos, compensa fraquezas operacionais e resiste a ameaças instáveis via diversificação local.
 
 ### 3.1.2.3 Fraquezas (Internas)
 
 
-### Recalls afetando reputação (Group/Brasil)
-Em 2025, recalls prejudicam a imagem. No Brasil, Kwid e Duster tem problemas no eixo traseiro defeituoso, risco de perda de controle. Freios de estacionamento também afetam vários modelos, custando caro.
+### Expansão de veículos elétricos com incentivos fiscais
+Crescimento do mercado veículos elétricos no Brasil (58% em julho), com IPI zero no Kwid E-Tech, permite maior adoção sustentável. Relaciona-se com forças de inovação, mitiga fraquezas de dependência e resiste a ameaças econômicas via demanda crescente.
 
-### Falhas em modelos emergentes
-No brasil, modelos falham e market share cai. Perdas de €12,8bi no H1 2025. Queda em vans leves reflete problemas. Cortes de empregos mostram fraquezas internas.
+### Parcerias e rede de concessionárias
+Expansão de lojas e parcerias locais para veículos elétricos e serviços pós-venda aumentam presença no Brasil. Fortalece forças de prêmios, corrige fraquezas de market share e explora ameaças de concorrência para ganhar terreno.
+
+### Crescimento do mercado brasileiro
+Mercado total de 1,8 mi veículos até agosto oferece espaço para SUVs como Boreal e Kardian. Impulsiona forças de vendas, reduz fraquezas de custos via escala e neutraliza ameaças regulatórias com foco em sustentabilidade.
 
 ### 3.1.2.4 Oportunidades (Externas)
 
@@ -100,14 +103,14 @@ No Brasil, 23 novas lojas Geely via Renault em 19 cidades, totalizando 105. Aume
 
 ### 3.1.2.5 Ameaças (Externas)
 
-### Competidores de marcas chinesas
-Chineses superam Renault em agosto de 2025, com 5,5% market share e +121% crescimento. MG vende mais que Tesla/Fiat, BYD que Suzuki/Jeep. Pressionam em EVs.
+### Concorrência de marcas chinesas
+Marcas como BYD dominam veículos elétricos com preços agressivos, pressionando market share da Renault Brasil. Enfraquece forças de liderança, piora fraquezas de dependência e reduz oportunidades de expansão.
 
-### Incertezas econômicas 2025 (Group)
-Renault planeja cortar 3k empregos voluntários em suporte (HR, finanças), 15% do staff. Perdas no H1 2025, margem para 6,5%, ações caem 18%. Demanda fraca em vans.
+### Instabilidade econômica no Brasil
+Flutuações e pressões comerciais afetam demanda e custos operacionais locais. Desafia forças de vendas, amplifica fraquezas de inovação e ameaça oportunidades de incentivos se políticas mudarem.
 
 ### Regulamentações ambientais rigorosas
- Renault avisa que pooling enfraquece indústria. Nissan sai do pool da Renault para BYD. Foco em carros pequenos baratos, mas rivais chineses competem.
+Normas mais rígidas para emissões exigem adaptações caras em veículos elétricos e produção local. Limita forças de sustentabilidade, agrava fraquezas de custos e impacta oportunidades de mercado se não cumpridas.
 
 
 ### 3.1.3. Descrição da Solução a ser Desenvolvida (sprint 1)	
