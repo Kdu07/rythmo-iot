@@ -61,16 +61,46 @@ _A entrega deve ser realizada no formato de quadrante (template), semelhante ao 
 
 ### 3.1.3. Descrição da Solução a ser Desenvolvida (sprint 1)	
 
+Nesta seção, apresenta-se o desenvolvimento de uma solução IoT voltada ao contexto de Squeak & Rattle (S&R) da Renault do Brasil, alinhando as metas do projeto às demandas de engenharia e qualidade. A partir do TAPI e das necessidades identificadas, a solução deve padronizar a aquisição de sinais dinâmicos em pista (A×t e F×t), transmiti-los com confiabilidade para uma plataforma em nuvem, armazená-los de forma rastreável e oferecer visualização analítica inicial. Essa base sustentará análises e-line reprodutíveis e, no médio prazo, viabilizará a construção de um sinal de entrada genérico para S&R.
+
 #### 3.1.3.1 Qual é o problema a ser resolvido
+
+O processo de avaliação e-line para S&R exige sinais dinâmicos representativos dos diferentes perfis de pista que excitam o veículo. Hoje, a ausência de uma base padronizada, rastreável e reprodutível desses sinais limita a comparabilidade entre campanhas, dificulta a análise objetiva, aumenta retrabalho e retarda decisões de engenharia.
 
 #### 3.1.3.2 Qual a solução proposta (visão de negócios)
 
+A solução proposta é um protótipo IoT compacto que adquire sinais de aceleração (A×t) e força (F×t) em condições reais de rodagem, transmite os dados via MQTT para uma plataforma em nuvem, e persiste os arquivos e metadados em um repositório organizado.
+Em termos de valor de negócios, a solução:
+
+- Padroniza o insumo das análises e-line, reduzindo variação operacional.
+- Aumenta a confiabilidade e governança do ciclo de vida dos dados de teste.
+- Acelera a tomada de decisão (dados prontos para consumo analítico).
+- Cria a base para um sinal de entrada genérico de S&R e para evoluções analíticas (indicadores, espectros, automações).
+
 #### 3.1.3.3 Como a solução proposta deverá ser utilizada
+
+Instrumentação - O módulo embarcado (acelerômetros + sensor de força + condicionamento + MCU/SoC) é acoplado ao equipamento/veículo conforme plano de ensaio.
+
+Rodagem em pista - Executam-se campanhas nos perfis de pista definidos, seguindo procedimento (velocidade-alvo/intervalo, duração, repetições).
+
+Transmissão - Durante a rodagem, os pacotes são publicados quase em tempo real via MQTT; se houver perda de conexão, entra o buffer local e a publicação é retomada ao reconectar.
+
+Armazenamento e visualização - Os dados brutos e metadados (pista, equipamento/veículo, firmware, timestamps) são persistidos e disponibilizados em dashboard/visualizador para inspeção, pré-processamento (ex.: filtragem) e análises iniciais (ex.: FFT, indicadores de criticidade).
+
+Rastreabilidade - Cada sessão recebe identificadores únicos e um checklist automático de metadados, permitindo auditoria técnica e comparabilidade entre campanhas.
 
 #### 3.1.3.4 Quais os benefícios trazidos pela solução proposta
 
+- Precisão e padronização nas análises e-line, com sinais comparáveis entre pistas e ao longo do tempo.
+- Governança e rastreabilidade ponta-a-ponta (coleta -> transmissão -> persistência -> análise).
+- Eficiência operacional, com menos retrabalho e menor tempo para preparar/validar ensaios.
+- Base para escala analítica, viabilizando espectros padronizados e indicadores de criticidade.
+- Evolutividade: insumo concreto para compor um sinal de entrada genérico para S&R e automações futuras.
+
 #### 3.1.3.5 Qual será o critério de sucesso e qual medida será utilizada para o avaliar
-	
+
+Critério de sucesso (Sprint 1): *comprovar*, em rodagem controlada, a viabilidade técnica do protótipo para adquirir, *transmitir*, *armazenar* e *visualizar* sinais A×t e F×t com rastreabilidade completa e utilidade analítica inicial.
+
 ### 3.1.4. Value Proposition Canvas (sprint 1)	
 
 _O Canvas da proposta de valor deve ser feito considerando a solução que vocês estão desenvolvendo. Usar o template disponível no drive da turma._     
