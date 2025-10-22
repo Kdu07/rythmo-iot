@@ -61,7 +61,7 @@ _A entrega deve ser realizada no formato de quadrante (template), semelhante ao 
 
 ### 3.1.3. Descrição da Solução a ser Desenvolvida (sprint 1)	
 
-Nesta seção, apresenta-se o desenvolvimento de uma solução IoT voltada ao contexto de Squeak & Rattle (S&R) da Renault do Brasil, alinhando as metas do projeto às demandas de engenharia e qualidade. A partir do TAPI e das necessidades identificadas, a solução deve padronizar a aquisição de sinais dinâmicos em pista (A×t e F×t), transmiti-los com confiabilidade para uma plataforma em nuvem, armazená-los de forma rastreável e oferecer visualização analítica inicial. Essa base sustentará análises e-line reprodutíveis e, no médio prazo, viabilizará a construção de um sinal de entrada genérico para S&R.
+Nesta seção, apresenta-se o desenvolvimento de uma solução IoT voltada ao contexto de Squeak & Rattle (S&R) da Renault do Brasil, alinhando as metas do projeto às demandas de engenharia e qualidade. A partir do TAPI e das necessidades identificadas, a solução deve padronizar a aquisição de sinais dinâmicos em pista (A×t e F×t), transmiti-los com confiabilidade para uma plataforma em nuvem, armazená-los de forma rastreável e oferecer visualização analítica inicial. Essa base sustentará análises e-line reprodutíveis e, no médio prazo, viabilizará a construção de um sinal de entrada genérico para S&R, em conformidade com referências consagradas do setor, como o VDA 230-206 (ensaios de stick–slip para materiais e interfaces de interior), a literatura técnica da SAE em predição e validação de S&R/NVH, e os Core Tools da AIAG (APQP/PPAP) para rastreabilidade e evidências de validação.
 
 #### 3.1.3.1 Qual é o problema a ser resolvido
 
