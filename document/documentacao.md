@@ -74,51 +74,51 @@ Figura 4 - Análise SWOT
 ### 3.1.2.2 Forças (Internas):
 
 ### Liderança em veículos acessíveis e elétricos
-A Renault Brasil destaca-se com o Kwid como o carro mais barato do país e o Kwid E-Tech como veículo elétrico acessível, com IPI zerado, impulsionando vendas em segmentos econômicos e sustentáveis. Isso mitiga fraquezas de custos ao atrair volume de vendas e explora oportunidades de incentivos fiscais, reduzindo impactos de ameaças econômicas.
+&nbsp;&nbsp;&nbsp;&nbsp; A Renault Brasil destaca-se com o Kwid como o carro mais barato do país e o Kwid E-Tech como veículo elétrico acessível, com IPI zerado, impulsionando vendas em segmentos econômicos e sustentáveis. Isso mitiga fraquezas de custos ao atrair volume de vendas e explora oportunidades de incentivos fiscais, reduzindo impactos de ameaças econômicas.
 
 ### Prêmios e reconhecimento local
-Modelos como Kardian (Carro do Ano 2025) e Megane E-Tech (Compra do Ano) reforçam qualidade e inovação, com tecnologia OpenR Link integrada. Relaciona-se com fraquezas ao melhorar reputação apesar de recalls, e conecta a oportunidades de mercado, combatendo ameaças de concorrentes.
+&nbsp;&nbsp;&nbsp;&nbsp; Modelos como Kardian (Carro do Ano 2025) e Megane E-Tech (Compra do Ano) reforçam qualidade e inovação, com tecnologia OpenR Link integrada. Relaciona-se com fraquezas ao melhorar reputação apesar de recalls, e conecta a oportunidades de mercado, combatendo ameaças de concorrentes.
 
 ### Crescimento de vendas no primeiro semestre de 2025
-Vendas subiram 8,8% para 60,7 mil unidades no primeiro semestre, tornando o Brasil o 7º mercado global do grupo. Essa força explora oportunidades de expansão veículos elétricos, compensa fraquezas operacionais e resiste a ameaças instáveis via diversificação local.
+&nbsp;&nbsp;&nbsp;&nbsp; Vendas subiram 8,8% para 60,7 mil unidades no primeiro semestre, tornando o Brasil o 7º mercado global do grupo. Essa força explora oportunidades de expansão veículos elétricos, compensa fraquezas operacionais e resiste a ameaças instáveis via diversificação local.
 
 ### 3.1.2.3 Fraquezas (Internas):
 
 
 ### Dependência de cadeia de suprimentos global
-Vulnerável a variações cambiais e interrupções, afetando produção local de veículos elétricos e aumentando custos. Agrava ameaças econômicas, enfraquece forças de crescimento, mas oportunidades de incentivos fiscais podem ajudar a reduzir impactos.
+&nbsp;&nbsp;&nbsp;&nbsp; Vulnerável a variações cambiais e interrupções, afetando produção local de veículos elétricos e aumentando custos. Agrava ameaças econômicas, enfraquece forças de crescimento, mas oportunidades de incentivos fiscais podem ajudar a reduzir impactos.
 
 ### Pressão de custos em inovação
-Altos investimentos em tech como E-Tech e OpenR Link pressionam margens, especialmente em um mercado sensível a preços. Limita forças de prêmios, é piorada por ameaças regulatórias, mas interliga a oportunidades de expansão para diluir custos via volume.
+&nbsp;&nbsp;&nbsp;&nbsp; Altos investimentos em tech como E-Tech e OpenR Link pressionam margens, especialmente em um mercado sensível a preços. Limita forças de prêmios, é piorada por ameaças regulatórias, mas interliga a oportunidades de expansão para diluir custos via volume.
 
 ### Market share limitado em premium
-Foco em econômicos como Kwid restringe penetração em SUVs premium, com recalls recentes afetando confiança. Enfraquece forças de vendas, amplifica ameaças de concorrentes chineses, mas oportunidades de veículos elétricos podem expandir para novos segmentos.
+&nbsp;&nbsp;&nbsp;&nbsp; Foco em econômicos como Kwid restringe penetração em SUVs premium, com recalls recentes afetando confiança. Enfraquece forças de vendas, amplifica ameaças de concorrentes chineses, mas oportunidades de veículos elétricos podem expandir para novos segmentos.
 
 ### 3.1.2.4 Oportunidades (Externas):
 
 ### Expansão híbridos/EVs no Brasil
-Mercado de EVs no Brasil cresce 58% em julho 2025. Parceria com Geely lança EX5 elétrico em julho, usando rede Renault. Kwid E-Tech impulsiona vendas 8,8% no H1.
+&nbsp;&nbsp;&nbsp;&nbsp; Mercado de EVs no Brasil cresce 58% em julho 2025. Parceria com Geely lança EX5 elétrico em julho, usando rede Renault. Kwid E-Tech impulsiona vendas 8,8% no H1.
 
 ### Alianças Nissan-Mitsubishi para tech
-Aliança Renault-Nissan-Mitsubishi avança em EVs. Compartilham plataformas como CMF-B para Micra EV e Eclipse Cross. Em setembro 2025, projetos conjuntos na fábrica Ampere Douai melhoram EVs e autonomia.
+&nbsp;&nbsp;&nbsp;&nbsp; Aliança Renault-Nissan-Mitsubishi avança em EVs. Compartilham plataformas como CMF-B para Micra EV e Eclipse Cross. Em setembro 2025, projetos conjuntos na fábrica Ampere Douai melhoram EVs e autonomia.
 
 ### Aumento concessionárias regionais (Brasil)
-No Brasil, 23 novas lojas Geely via Renault em 19 cidades, totalizando 105. Aumenta vendas de EVs. Mercado brasileiro tem 1,8mi unidades até agosto 2025, com Renault crescendo.
+&nbsp;&nbsp;&nbsp;&nbsp; No Brasil, 23 novas lojas Geely via Renault em 19 cidades, totalizando 105. Aumenta vendas de EVs. Mercado brasileiro tem 1,8mi unidades até agosto 2025, com Renault crescendo.
 
 ### 3.1.2.5 Ameaças (Externas):
 
 ### Concorrência de marcas chinesas
-Marcas como BYD dominam veículos elétricos com preços agressivos, pressionando market share da Renault Brasil. Enfraquece forças de liderança, piora fraquezas de dependência e reduz oportunidades de expansão.
+&nbsp;&nbsp;&nbsp;&nbsp; Marcas como BYD dominam veículos elétricos com preços agressivos, pressionando market share da Renault Brasil. Enfraquece forças de liderança, piora fraquezas de dependência e reduz oportunidades de expansão.
 
 ### Instabilidade econômica no Brasil
-Flutuações e pressões comerciais afetam demanda e custos operacionais locais. Desafia forças de vendas, amplifica fraquezas de inovação e ameaça oportunidades de incentivos se políticas mudarem.
+&nbsp;&nbsp;&nbsp;&nbsp; Flutuações e pressões comerciais afetam demanda e custos operacionais locais. Desafia forças de vendas, amplifica fraquezas de inovação e ameaça oportunidades de incentivos se políticas mudarem.
 
 ### Regulamentações ambientais rigorosas
-Normas mais rígidas para emissões exigem adaptações caras em veículos elétricos e produção local. Limita forças de sustentabilidade, agrava fraquezas de custos e impacta oportunidades de mercado se não cumpridas.
+&nbsp;&nbsp;&nbsp;&nbsp; Normas mais rígidas para emissões exigem adaptações caras em veículos elétricos e produção local. Limita forças de sustentabilidade, agrava fraquezas de custos e impacta oportunidades de mercado se não cumpridas.
 
 ### 3.1.2.6 Conclusão: 
 
-A Renault Brasil apresenta um posicionamento sólido no mercado automotivo local, impulsionado por forças internas como a liderança em veículos acessíveis e elétricos, prêmios de reconhecimento e crescimento de vendas de 8,8% no primeiro semestre de 2025. No entanto, fraquezas como a dependência de suprimentos globais, pressão de custos em inovação e market share limitado em segmentos premium demandam atenção para evitar vulnerabilidades.
+&nbsp;&nbsp;&nbsp;&nbsp; A Renault Brasil apresenta um posicionamento sólido no mercado automotivo local, impulsionado por forças internas como a liderança em veículos acessíveis e elétricos, prêmios de reconhecimento e crescimento de vendas de 8,8% no primeiro semestre de 2025. No entanto, fraquezas como a dependência de suprimentos globais, pressão de custos em inovação e market share limitado em segmentos premium demandam atenção para evitar vulnerabilidades.
 Em resumo, a Renault Brasil está bem posicionada para crescer na transição para mobilidade elétrica, desde que invista em autonomia operacional e inovação estratégica para equilibrar riscos e capitalizar tendências sustentáveis, visando liderança duradoura no setor.
 
 ### 3.1.3. Descrição da Solução a ser Desenvolvida (sprint 1)	
