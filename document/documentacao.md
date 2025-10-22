@@ -165,8 +165,14 @@ _A entrega deve ser realizada no formato de quadrante (template), semelhante ao 
 
 &emsp; Essa abordagem inaugura um novo paradigma na engenharia automotiva: unir tecnologia e engenharia para criar veículos mais silenciosos, confortáveis e sofisticados — refletindo não apenas eficiência técnica, mas também o cuidado com a experiência do motorista e o legado da marca Renault.
 
+<div align="center">
+<sup>Figura # - Canvas Proposta de Valor </sup>
 
 <img src="../assets/canvas-proposta-de-valor.png">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 ### 3.1.5. Matriz de Riscos (sprint 1)	
 
