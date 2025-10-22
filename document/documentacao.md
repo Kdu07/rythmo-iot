@@ -64,7 +64,7 @@ A análise de 5 forças deve ser feita considerando também o parceiro, o aluno 
 
 ### 3.1.2.1  Imagem
 
-![alt text](<analise swot.png>)
+![alt text](<Frame 1(1).png>)
 Fonte do template: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/
 
 ### 3.1.2.2 Forças (Internas)
@@ -72,22 +72,20 @@ Fonte do template: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-se
 ### Plano Renaulution para inovação global (Group)
 O Renaulution é o plano da Renault para mudar a empresa. Ele foca em novos modelos, como 24 lançamentos até 2025, com 10 elétricos. Reduz plataformas de 6 para 3 e corta produção para ser mais eficiente. Em 2025, continua com EVs e parcerias para crescer.
 
-### Rede em 134 países, forte no Brasil
-A Renault atua em 134 países, com bom desempenho em emergentes como Brasil e Índia. No Brasil, tem fábricas em Curitiba e exporta para América do Sul. Lança o Boreal SUV no Brasil em 2025, ajudando vendas internacionais a subirem 16,4% no primeiro semestre.
+### Rede com grande presença no mercado brasileiro
+A Renault atua no Brasil, tem fábricas em Curitiba e exporta para América do Sul. Lança o Boreal SUV no Brasil em 2025, ajudando vendas internacionais a subirem 16,4% no primeiro semestre.
 
 ### Qualidade e serviços acessíveis (Brasil/Group)
 No Brasil, a Renault oferece carros baratos como o Kwid E-Tech, o EV mais acessível. Fábricas produzem para a região com foco em qualidade. Globalmente, serviços pós-venda ajudam vendas a crescerem 2,9% no Q1 2025. Modelos como Kardian impulsionam o mercado.
 
 ### 3.1.2.3 Fraquezas (Internas)
 
-### Fraca penetração na Ásia (Group)
-A Renault tem pouca presença na Ásia em 2025. Na Índia, market share é menor que 1%, por causa de vendas baixas (38k em 2024). Marcas chinesas dominam. Planeja 500k unidades na Índia até 2030, mas ainda é fraco.
 
 ### Recalls afetando reputação (Group/Brasil)
-Em 2025, recalls prejudicam a imagem. Na Europa, 15k veículos por falha na partida. No Brasil, Kwid e Duster por eixo traseiro defeituoso, risco de perda de controle. Freios de estacionamento também afetam vários modelos, custando caro.
+Em 2025, recalls prejudicam a imagem. No Brasil, Kwid e Duster tem problemas no eixo traseiro defeituoso, risco de perda de controle. Freios de estacionamento também afetam vários modelos, custando caro.
 
-### Falhas em modelos emergentes (ex.: Índia, similar Brasil)
-Em mercados como Índia, modelos falham e market share cai. Perdas de €12,8bi no H1 2025. No Brasil, queda em vans leves reflete problemas. Cortes de empregos mostram fraquezas internas.
+### Falhas em modelos emergentes
+No brasil, modelos falham e market share cai. Perdas de €12,8bi no H1 2025. Queda em vans leves reflete problemas. Cortes de empregos mostram fraquezas internas.
 
 ### 3.1.2.4 Oportunidades (Externas)
 
@@ -109,7 +107,7 @@ Chineses superam Renault em agosto de 2025, com 5,5% market share e +121% cresci
 Renault planeja cortar 3k empregos voluntários em suporte (HR, finanças), 15% do staff. Perdas no H1 2025, margem para 6,5%, ações caem 18%. Demanda fraca em vans.
 
 ### Regulamentações ambientais rigorosas
-Regras EU cortam CO2 em 2025, multas até €15bi. Renault avisa que pooling enfraquece indústria. Nissan sai do pool da Renault para BYD. Foco em small cars baratos, mas rivais chineses competem.
+ Renault avisa que pooling enfraquece indústria. Nissan sai do pool da Renault para BYD. Foco em carros pequenos baratos, mas rivais chineses competem.
 
 
 ### 3.1.3. Descrição da Solução a ser Desenvolvida (sprint 1)	
