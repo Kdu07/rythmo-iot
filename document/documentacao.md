@@ -75,7 +75,7 @@ _A entrega deve ser realizada no formato de quadrante (template), semelhante ao 
 
 &emsp; O Canvas de Proposta de Valor é uma ferramenta desenvolvida para ajudar empresas a compreender como um projeto pode atender de forma efetiva às necessidades e expectativas de seus clientes. Criado por Alexander Osterwalder, o modelo permite estruturar os elementos que realmente geram valor para o público-alvo, destacando os ganhos proporcionados por um produto ou serviço e as dores que ele se propõe a resolver. Essa abordagem contribui para uma visão mais estratégica e centrada no cliente, garantindo que as soluções desenvolvidas estejam alinhadas ao que realmente importa para o consumidor (Osterwalder et al., 2014).
 
-&emsp; No contexto da Renault Brasil, a busca por inovação constante no processo de desenvolvimento automotivo trouxe à tona um desafio importante: aprimorar as simulações de Squeak and Rattle (S&R) — ruídos e vibrações indesejadas que afetam o conforto e a percepção de qualidade dos veículos. Para enfrentar esse problema, a empresa aposta em uma solução baseada em Internet das Coisas (IoT) e Inteligência Artificial (IA), capaz de capturar dados de velocidade e aceleração em tempo real.
+&emsp; No contexto da Renault Brasil, a busca por inovação constante no processo de desenvolvimento automotivo trouxe à tona um desafio importante: aprimorar as simulações de Squeak and Rattle (S&R) — ruídos e vibrações indesejadas que afetam o conforto e a percepção de qualidade dos veículos. Para enfrentar esse problema, a empresa aposta em uma solução baseada em Internet das Coisas (IoT), capaz de capturar dados de velocidade e aceleração em tempo real.
 
 &emsp; Com isso, torna-se possível realizar análises mais precisas e preditivas ainda nas fases iniciais de desenvolvimento, identificando potenciais falhas estruturais antes mesmo da construção dos protótipos físicos. O resultado é um processo mais ágil, econômico e assertivo, que reduz custos, retrabalhos e tempo de projeto, ao mesmo tempo em que eleva o padrão de qualidade e o conforto percebido pelo cliente final.
 
@@ -352,6 +352,8 @@ Também inclua figuras da versão final do protótipo físico e dashboards, alé
 _Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de projeto em relação ao uso dessa solução. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras._
 
 ## <a name="c5"></a>5. Referências
+
+OSTERWALDER, A.; PIGNEUR, Y.; BERNARDA, G.; SMITH, A. *Value Proposition Design: How to Create Products and Services Customers Want.* Wiley, 2014.
 
 _Incluir as principais referências de seu projeto, para que seu parceiro possa consultar caso ele se interessar em aprofundar. Um exemplo de referência de livro e de site: <br>
 LUCK, Heloisa. Liderança em gestão escolar. 4. ed. Petrópolis: Vozes, 2010. <br>
