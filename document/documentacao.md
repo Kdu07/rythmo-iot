@@ -137,11 +137,41 @@ _BOM (Bill of Material) pode ser definido como uma lista completa de materiais, 
 
 ### 3.2.1. Personas (sprint 1)	
 
-_Coloque aqui suas Personas:_
-- _Representação fictícia do público-alvo._
-- _Baseada em dados reais e pesquisas._
-- _Humaniza o público, facilitando decisões centradas no usuário._
-- _Trabalhar na criação de pelo menos uma Persona_
+&nbsp;&nbsp;&nbsp;&nbsp;Segundo Louise Bruton (2022), personas no contexto de UI/UX, são representações fictícias de usuários reais, criadas com base em pesquisas qualitativas e quantitativas para auxiliar designers a compreenderem melhor o público-alvo e tomarem decisões de design mais informadas. Essas personas incluem detalhes demográficos, comportamentais, motivações, dores e objetivos, promovendo empatia e garantindo que o produto priorize as necessidades dos usuários, o que resulta em experiências mais intuitivas e eficazes.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Tendo em vista esses pontos, em nosso projeto nós criamos duas personas: um sendo o piloto que conduzirá o carro em tetes de Squeak and Rattle e o outro sendo o engenheiro de simulação da Renault, que analisará o resultados e relatórios para tirar conclusões úteis. Fizemos isso para auxiliar o desenvolvimento do projeto e não perdermos de vista os nossos objetivos.
+
+
+**João Silva, Piloto de Teste**
+
+<img src="../assets/persona-1.png" alt="Persona 1" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;João Silva representa o usuário operacional que interage diretamente com o dispositivo IoT durante os testes em pistas. Como piloto experiente, ele será responsável por instalar o dispositivo, ativar o sistema embarcado e conduzir o veículo em condições reais de rodagem, coletando dados de aceleração (A x t) e força (F x t).
+
+**Por que a persona João Silva?**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Entender as dores de João, como configurações complexas que demandam tempo ou interferem na condução, permite projetar interfaces simples e intuitivas. Isso reduz riscos, como distrações durante a direção, alinhando-se ao objetivo de coletar dados de forma automatizada e confiável.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Personas como essa promovem empatia para experiências diferentes das dos desenvolvedores, ajudando a priorizar requisitos como conectividade Wi-Fi/Bluetooth robusta e feedback imediato sobre a qualidade das medições. No MVP do projeto, isso assegura que o hardware seja prático, evitando falhas que invalidem rodagens inteiras e contribuindo para a viabilidade técnica da solução IoT.
+
+<br/>
+
+**Maria Oliveira, Engenheira de Simulação**
+
+<img src="../assets/persona-2.png" alt="Persona 2" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;Maria Oliveira personifica o usuário analítico que processa os dados coletados, utilizando-os para simulações CAE (Computer-Aided Engineering) de Squeak and Rattle. Como engenheira sênior, ela acessa a plataforma as a service, analisa sinais para gerar indicadores de criticidade e espectros de frequência, e integra os dados em modelos virtuais.
+
+**Por que a persona Maria Oliveira?**
+
+&nbsp;&nbsp;&nbsp;&nbsp;As frustrações de Maria, como a falta de dados confiáveis e coletivamente exaustivos de diferentes cenários de rodagem reais e de diferentes veículos, necessários para alavancar a qualidade de análises Squeak and Rattle, destacam a necessidade de padronização e armazenamento contínuo. Isso apoia o objetivo do projeto de criar um sinal de entrada genérico para avaliações "e-line", permitindo análises comparativas e previsões precisas.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ao entender motivações como avançar na precisão das simulações para veículos mais duráveis, a persona alinha o design com necessidades de integração com softwares existentes, como brokers MQTT.
+
+**Conclusão**
+
+&nbsp;&nbsp;&nbsp;&nbsp;As personas João Silva e Maria Oliveira são fundamentais para um design centrado no usuário, construindo empatia e prevendo interações em um projeto IoT complexo. Elas garantem que o protótipo atenda às demandas operacionais e analíticas, alinhando-se aos objetivos da Renault de automação, precisão e sustentabilidade. Ao incorporar essas representações, o projeto não só resolve problemas práticos, como aquisição de dados em pistas variadas, mas também pavimenta o caminho para expansões com IA e simulações digitais.
+
 
 ### 3.2.2. Jornada do Usuário e Storyboard (sprint 2)	
 
@@ -286,6 +316,9 @@ _Escreva, de forma resumida, sobre os principais resultados do seu projeto e fa�
 
 ## <a name="c5"></a>5. Referências
 
+BRUTON, Louise. What are UX personas and what are they used for? UX Design Institute, 2022. Disponível em: https://www.uxdesigninstitute.com/blog/what-are-ux-personas/. Acesso em: 19 out. 2025.
+
 KOTONYA, Gerald; SOMMERVILLE, Ian. Requirements engineering: processes and techniques. Chichester: J. Wiley, 1998.
 
 WIEGERS, Karl; BEATTY, Joy. Software requirements. 3. ed. Redmond: Microsoft Press, 2013.
+
