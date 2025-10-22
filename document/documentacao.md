@@ -62,6 +62,13 @@ A análise de 5 forças deve ser feita considerando também o parceiro, o aluno 
 
 &nbsp;&nbsp;&nbsp;&nbsp;A aplicação da análise SWOT permite compreender de forma ampla o cenário em que a organização está inserida, nesse caso a Renault Brasil, fornecendo embasamento para decisões mais assertivas. Ao explorar as forças, corrigir as fraquezas, aproveitar as oportunidades e se preparar para as ameaças, é possível garantir um direcionamento mais consistente no andamento do projeto.
 
+### 3.1.2.1  Imagem
+
+![alt text](<analise swot.png>)
+Fonte do template: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/
+
+### 3.1.2.2 
+
 
 ### 3.1.3. Descrição da Solução a ser Desenvolvida (sprint 1)	
 
