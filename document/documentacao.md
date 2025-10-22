@@ -113,12 +113,13 @@ _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita
 ### 3.1.7. Bill of Material (BOM) (sprint 1)
 # Bill of Materials (BOM)
 
-| Item | Código do Produto | Descrição            | Quantidade | Unidade | Fornecedor      | Preço Unitário | Total    | Observações      |
-|------|-------------------|----------------------|------------|---------|-----------------|----------------|----------|------------------|
-| 1    | 12345             | ESP 32               | 1          | un      | ?               | R$ 45,00       | R$ 45,00 | 38 pinos         |
-| 2    | 12345             | Módulo Piezoelétrico | 1          | un      | ?               | R$ 15,00       | R$ 15,00 | 3.3V ou 5V       |
-| 3    | MMA8452           | Módulo Acelerômetro  | 1          | un      | ?               | R$ 15,00       | R$ 15,00 | 3.3V ou 5V       |
-| 4    | MMA8452           | Módulo Acelerômetro  | 1          | un      | ?               | R$ 15,00       | R$ 15,00 | 3.3V ou 5V       |
+| Item | Código do Produto | Descrição               | Quantidade | Unidade | Preço Unitário | Total    | Observações        |
+|------|-------------------|-------------------------|------------|---------|----------------|----------|--------------------|
+| 1    | ESP32             | Microcontrolador ESP 32 | 1          | un      | R$ 45,00       | R$ 45,00 | 38 pinos           |
+| 2    | ?                 | Módulo Piezoelétrico    | 1          | un      | R$ 15,00       | R$ 15,00 | 3.3V ou 5V         |
+| 3    | MPU6050           | Módulo Acelerômetro     | 1          | un      | R$ 15,00       | R$ 15,00 | 3.3V ou 5V         |
+| 4    | ?                 | Push Button             | 3          | un      | R$ 0,50        | R$ 1,50  | Máx 12V            |
+| 5    | ?                 | Monitor LCD             | 1          | un      | R$ 15,00       | R$ 15,00 | 5V; 16:2; chip I2C |
 
 ---
 
@@ -129,7 +130,6 @@ _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita
 - **Descrição**: Nome ou especificação do componente/material.
 - **Quantidade**: Quantidade necessária para o projeto.
 - **Unidade**: Unidade de medida (un, m, kg, etc.).
-- **Fornecedor**: Nome do fornecedor ou fabricante.
 - **Preço Unitário**: Custo de cada unidade.
 - **Total**: Quantidade x Preço Unitário.
 - **Observações**: Informações adicionais relevantes.
