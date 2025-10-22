@@ -64,8 +64,12 @@ A análise de 5 forças deve ser feita considerando também o parceiro, o aluno 
 
 ### 3.1.2.1  Visualização da análise SWOT:
 
-![alt text](<analiseSWOT.png>)
-Fonte do template: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/
+<div align="center">
+Figura 4 - Análise SWOT
+<img src="../document/analiseSWOT.png"
+<sup>Fonte: Material alterado pelos autores com base no tamplete disponível em: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/</sup>
+</div>
+ 
 
 ### 3.1.2.2 Forças (Internas):
 
