@@ -62,12 +62,12 @@ A análise de 5 forças deve ser feita considerando também o parceiro, o aluno 
 
 &nbsp;&nbsp;&nbsp;&nbsp;A aplicação da análise SWOT permite compreender de forma ampla o cenário em que a organização está inserida, nesse caso a Renault Brasil, fornecendo embasamento para decisões mais assertivas. Ao explorar as forças, corrigir as fraquezas, aproveitar as oportunidades e se preparar para as ameaças, é possível garantir um direcionamento mais consistente no andamento do projeto.
 
-### 3.1.2.1  Visualização da análise SWOT
+### 3.1.2.1  Visualização da análise SWOT:
 
-![alt text](<Frame 1(2).png>)
+![alt text](<analiseSWOT.png>)
 Fonte do template: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/
 
-### 3.1.2.2 Forças (Internas)
+### 3.1.2.2 Forças (Internas):
 
 ### Liderança em veículos acessíveis e elétricos
 A Renault Brasil destaca-se com o Kwid como o carro mais barato do país e o Kwid E-Tech como veículo elétrico acessível, com IPI zerado, impulsionando vendas em segmentos econômicos e sustentáveis. Isso mitiga fraquezas de custos ao atrair volume de vendas e explora oportunidades de incentivos fiscais, reduzindo impactos de ameaças econômicas.
@@ -75,10 +75,10 @@ A Renault Brasil destaca-se com o Kwid como o carro mais barato do país e o Kwi
 ### Prêmios e reconhecimento local
 Modelos como Kardian (Carro do Ano 2025) e Megane E-Tech (Compra do Ano) reforçam qualidade e inovação, com tecnologia OpenR Link integrada. Relaciona-se com fraquezas ao melhorar reputação apesar de recalls, e conecta a oportunidades de mercado, combatendo ameaças de concorrentes.
 
-### Crescimento de vendas no H1 2025
+### Crescimento de vendas no primeiro semestre de 2025
 Vendas subiram 8,8% para 60,7 mil unidades no primeiro semestre, tornando o Brasil o 7º mercado global do grupo. Essa força explora oportunidades de expansão veículos elétricos, compensa fraquezas operacionais e resiste a ameaças instáveis via diversificação local.
 
-### 3.1.2.3 Fraquezas (Internas)
+### 3.1.2.3 Fraquezas (Internas):
 
 
 ### Expansão de veículos elétricos com incentivos fiscais
@@ -90,7 +90,7 @@ Expansão de lojas e parcerias locais para veículos elétricos e serviços pós
 ### Crescimento do mercado brasileiro
 Mercado total de 1,8 mi veículos até agosto oferece espaço para SUVs como Boreal e Kardian. Impulsiona forças de vendas, reduz fraquezas de custos via escala e neutraliza ameaças regulatórias com foco em sustentabilidade.
 
-### 3.1.2.4 Oportunidades (Externas)
+### 3.1.2.4 Oportunidades (Externas):
 
 ### Expansão híbridos/EVs no Brasil
 Mercado de EVs no Brasil cresce 58% em julho 2025. Parceria com Geely lança EX5 elétrico em julho, usando rede Renault. Kwid E-Tech impulsiona vendas 8,8% no H1.
@@ -101,7 +101,7 @@ Aliança Renault-Nissan-Mitsubishi avança em EVs. Compartilham plataformas como
 ### Aumento concessionárias regionais (Brasil)
 No Brasil, 23 novas lojas Geely via Renault em 19 cidades, totalizando 105. Aumenta vendas de EVs. Mercado brasileiro tem 1,8mi unidades até agosto 2025, com Renault crescendo.
 
-### 3.1.2.5 Ameaças (Externas)
+### 3.1.2.5 Ameaças (Externas):
 
 ### Concorrência de marcas chinesas
 Marcas como BYD dominam veículos elétricos com preços agressivos, pressionando market share da Renault Brasil. Enfraquece forças de liderança, piora fraquezas de dependência e reduz oportunidades de expansão.
