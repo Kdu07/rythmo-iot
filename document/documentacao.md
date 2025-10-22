@@ -62,7 +62,7 @@ A análise de 5 forças deve ser feita considerando também o parceiro, o aluno 
 
 &nbsp;&nbsp;&nbsp;&nbsp;A aplicação da análise SWOT permite compreender de forma ampla o cenário em que a organização está inserida, nesse caso a Renault Brasil, fornecendo embasamento para decisões mais assertivas. Ao explorar as forças, corrigir as fraquezas, aproveitar as oportunidades e se preparar para as ameaças, é possível garantir um direcionamento mais consistente no andamento do projeto.
 
-### 3.1.2.1  Imagem
+### 3.1.2.1  Visualização da análise SWOT
 
 ![alt text](<Frame 1(2).png>)
 Fonte do template: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/
@@ -112,6 +112,10 @@ Flutuações e pressões comerciais afetam demanda e custos operacionais locais.
 ### Regulamentações ambientais rigorosas
 Normas mais rígidas para emissões exigem adaptações caras em veículos elétricos e produção local. Limita forças de sustentabilidade, agrava fraquezas de custos e impacta oportunidades de mercado se não cumpridas.
 
+### 3.1.2.6 Conclusão: 
+
+A Renault Brasil apresenta um posicionamento sólido no mercado automotivo local, impulsionado por forças internas como a liderança em veículos acessíveis e elétricos, prêmios de reconhecimento e crescimento de vendas de 8,8% no primeiro semestre de 2025. No entanto, fraquezas como a dependência de suprimentos globais, pressão de custos em inovação e market share limitado em segmentos premium demandam atenção para evitar vulnerabilidades.
+Em resumo, a Renault Brasil está bem posicionada para crescer na transição para mobilidade elétrica, desde que invista em autonomia operacional e inovação estratégica para equilibrar riscos e capitalizar tendências sustentáveis, visando liderança duradoura no setor.
 
 ### 3.1.3. Descrição da Solução a ser Desenvolvida (sprint 1)	
 
