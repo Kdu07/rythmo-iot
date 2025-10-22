@@ -81,14 +81,14 @@ Vendas subiram 8,8% para 60,7 mil unidades no primeiro semestre, tornando o Bras
 ### 3.1.2.3 Fraquezas (Internas):
 
 
-### Expansão de veículos elétricos com incentivos fiscais
-Crescimento do mercado veículos elétricos no Brasil (58% em julho), com IPI zero no Kwid E-Tech, permite maior adoção sustentável. Relaciona-se com forças de inovação, mitiga fraquezas de dependência e resiste a ameaças econômicas via demanda crescente.
+### Dependência de cadeia de suprimentos global
+Vulnerável a variações cambiais e interrupções, afetando produção local de veículos elétricos e aumentando custos. Agrava ameaças econômicas, enfraquece forças de crescimento, mas oportunidades de incentivos fiscais podem ajudar a reduzir impactos.
 
-### Parcerias e rede de concessionárias
-Expansão de lojas e parcerias locais para veículos elétricos e serviços pós-venda aumentam presença no Brasil. Fortalece forças de prêmios, corrige fraquezas de market share e explora ameaças de concorrência para ganhar terreno.
+### Pressão de custos em inovação
+Altos investimentos em tech como E-Tech e OpenR Link pressionam margens, especialmente em um mercado sensível a preços. Limita forças de prêmios, é piorada por ameaças regulatórias, mas interliga a oportunidades de expansão para diluir custos via volume.
 
-### Crescimento do mercado brasileiro
-Mercado total de 1,8 mi veículos até agosto oferece espaço para SUVs como Boreal e Kardian. Impulsiona forças de vendas, reduz fraquezas de custos via escala e neutraliza ameaças regulatórias com foco em sustentabilidade.
+### Market share limitado em premium
+Foco em econômicos como Kwid restringe penetração em SUVs premium, com recalls recentes afetando confiança. Enfraquece forças de vendas, amplifica ameaças de concorrentes chineses, mas oportunidades de veículos elétricos podem expandir para novos segmentos.
 
 ### 3.1.2.4 Oportunidades (Externas):
 
