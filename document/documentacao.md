@@ -250,6 +250,9 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 |14|Reset de seleção|Botão Reset |Botão pressionado (LOW)|Display LCD I2C|Display volta a mostrar "Select Pista:" e opção atual|Ao pressionar o botão de reset, a seleção é desfeita e o display retorna ao estado inicial de escolha de pista.|
 |15|Ciclo de opções|Botão Options |Botão pressionado repetidas vezes|Display LCD I2C|Opções voltam para "Lisa" após "Placeholder2"|Ao pressionar o botão de opções cinco vezes, o display retorna para a primeira opção ("Lisa"), reiniciando o ciclo.|
 |16|Seleção bloqueada|Botão Options após seleção|Botão pressionado (LOW)|Display LCD I2C|Opção não muda após seleção|Após selecionar uma pista, pressionar o botão de opções não altera mais a pista até que o reset seja realizado.|
+|17|Inicio bloqueado|Botão Start sem seleção|Botão pressionado (LOW)|Display LCD I2C|Medições não iniciam|Ao pressionar o botão de start sem uma pista selecionada, as medições não são iniciadas.|
+|18|Inicio após seleção|Botão Start com seleção|Botão pressionado (LOW)|Display LCD I2C|Medições iniciam e são exibidas|Ao pressionar o botão de start após selecionar uma pista, as medições começam a ser exibidas no display.|
+|19|Reset após início|Botão Reset após start|Botão pressionado (LOW)|Display LCD I2C|Medições param e display volta ao estado inicial|Ao pressionar o botão de reset após iniciar as medições, o display retorna ao estado inicial de escolha de pista.|
 
 
 </div>
