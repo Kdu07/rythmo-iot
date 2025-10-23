@@ -283,6 +283,18 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 
 </div>
 
+- Teste 03, 06, 09: Verificação das leituras de aceleração negativa nos eixos X, Y e Z.
+
+<div align="center">
+
+   <sub>Caso 3: Aceleração negativa</sub>
+
+   <img src="../assets/caso-teste-369.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
 _Abaixo você deve registrar diversas situações de teste, indicando exemplos de leitura (entrada) e escrita (saída) apresentadas pelo seu sistema no simulador. Estes registros serão utilizados para testar seus componentes, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de possíveis falhas nas leituras de entradas e saídas. <br>
 Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do simulador e descreva os testes realizados para ilustrar o funcionamento do protótipo simulado. A tabela a seguir serve como exemplo._
 
