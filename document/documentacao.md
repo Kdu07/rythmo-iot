@@ -181,7 +181,106 @@ Em resumo, a Renault Brasil está bem posicionada para crescer na transição pa
 	
 ### 3.1.4. Value Proposition Canvas (sprint 1)	
 
-_O Canvas da proposta de valor deve ser feito considerando a solução que vocês estão desenvolvendo. Usar o template disponível no drive da turma._     
+&emsp; O Canvas de Proposta de Valor é uma ferramenta desenvolvida para ajudar empresas a compreender como um projeto pode atender de forma efetiva às necessidades e expectativas de seus clientes. Criado por Alexander Osterwalder, o modelo permite estruturar os elementos que realmente geram valor para o público-alvo, destacando os ganhos proporcionados por um produto ou serviço e as dores que ele se propõe a resolver. Essa abordagem contribui para uma visão mais estratégica e centrada no cliente, garantindo que as soluções desenvolvidas estejam alinhadas ao que realmente importa para o consumidor (Osterwalder et al., 2014).
+
+&emsp; No contexto da Renault Brasil, a busca por inovação constante no processo de desenvolvimento automotivo trouxe à tona um desafio importante: aprimorar as simulações de Squeak and Rattle (S&R) — ruídos e vibrações indesejadas que afetam o conforto e a percepção de qualidade dos veículos. Para enfrentar esse problema, a empresa aposta em uma solução baseada em Internet das Coisas (IoT), capaz de capturar dados de velocidade e aceleração em tempo real.
+
+&emsp; Com isso, torna-se possível realizar análises mais precisas e preditivas ainda nas fases iniciais de desenvolvimento, identificando potenciais falhas estruturais antes mesmo da construção dos protótipos físicos. O resultado é um processo mais ágil, econômico e assertivo, que reduz custos, retrabalhos e tempo de projeto, ao mesmo tempo em que eleva o padrão de qualidade e o conforto percebido pelo cliente final.
+
+#### 3.1.4.1 Proposta de Valor
+
+&emsp; A proposta de valor da Renault Brasil representa o conjunto de benefícios e soluções tecnológicas oferecidas às suas equipes de engenharia e P&D, com o objetivo de resolver desafios práticos e estratégicos no desenvolvimento veicular.
+
+#### 3.1.4.2 Criadores de Ganho
+
+- Identificação antecipada de falhas de Squeak and Rattle antes da prototipagem.
+
+- Redução expressiva de custos com retrabalho e fabricação de protótipos físicos.
+
+- Aceleração do ciclo de desenvolvimento e validação de novos modelos.
+
+- Aumento da precisão e da confiabilidade das simulações virtuais.
+
+- Melhoria perceptível no conforto acústico e na qualidade percebida.
+
+- Fortalecimento da imagem da Renault como referência em inovação e engenharia digital.
+
+#### 3.1.4.3 Produtos e Serviços
+
+- Sistema IoT para captura e transmissão de dados de velocidade, aceleração e vibração.
+
+- Plataforma integrada de análise de dados conectada aos softwares de simulação da Renault.
+
+- Dashboard interativo para acompanhamento e visualização em tempo real.
+
+- Relatórios automáticos com insights sobre falhas potenciais e pontos críticos.
+
+- Algoritmos de machine learning para detecção de padrões e anomalias em testes virtuais.
+
+#### 3.1.4.4 Alívio das Dores
+
+- Diminuição da dependência de protótipos físicos e testes manuais demorados.
+
+- Redução dos custos com repetição de testes e retrabalhos.
+
+- Eliminação de incertezas nas etapas iniciais de projeto.
+
+- Comunicação mais eficiente entre design, engenharia e validação.
+
+- Melhor aproveitamento de tempo e recursos no processo de desenvolvimento.
+
+#### 3.1.4.5 Ganhos
+
+- Maior eficiência e agilidade no ciclo de desenvolvimento de veículos.
+
+- Economia de recursos financeiros, humanos e de infraestrutura.
+
+- Modernização do processo de simulação de Squeak and Rattle.
+
+- Resultados técnicos mais confiáveis e previsíveis.
+
+- Elevação do padrão de qualidade, conforto e percepção de valor dos veículos.
+
+#### 3.1.4.7 Dores
+
+- Custos elevados com prototipagem e testes físicos.
+
+- Dificuldade em detectar falhas estruturais nas fases iniciais.
+
+- Retrabalho devido à identificação tardia de problemas.
+
+- Limitações das simulações atuais por falta de dados reais de dinâmica veicular.
+
+- Pressão por prazos curtos em ciclos de desenvolvimento cada vez mais exigentes.
+
+#### 3.1.4.8 Tarefas do Cliente
+
+- Desenvolver veículos que ofereçam conforto acústico e robustez estrutural.
+
+- Validar o desempenho de ruído e vibração antes da construção de protótipos.
+
+- Antecipar falhas de Squeak and Rattle com base em dados reais e simulações inteligentes.
+
+- Integrar as fases de design, simulação e testes de forma fluida e colaborativa.
+
+- Cumprir metas de inovação, eficiência e sustentabilidade dentro do processo de P&D.
+
+#### 3.1.4.9 Conclusão
+
+&emsp; A solução proposta para a Renault Brasil redefine o modo como a engenharia automotiva lida com ruídos e vibrações, ao integrar tecnologias de IoT e IA no processo de simulação. A coleta de dados reais de aceleração e velocidade permite uma análise preditiva mais confiável e acessível, reduzindo a dependência de protótipos físicos e aumentando a eficiência das equipes.
+
+&emsp; Com dashboards intuitivos, relatórios automáticos e algoritmos inteligentes, os engenheiros passam a contar com informações em tempo real para tomar decisões mais assertivas. O resultado é um processo de desenvolvimento mais ágil, sustentável e orientado por dados, que reforça a posição da Renault como uma marca inovadora e comprometida com a excelência técnica.
+
+&emsp; Essa abordagem inaugura um novo paradigma na engenharia automotiva: unir tecnologia e engenharia para criar veículos mais silenciosos, confortáveis e sofisticados — refletindo não apenas eficiência técnica, mas também o cuidado com a experiência do motorista e o legado da marca Renault.
+
+<div align="center">
+<sup>Figura # - Canvas Proposta de Valor </sup>
+
+<img src="../assets/canvas-proposta-de-valor.png">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 ### 3.1.5. Matriz de Riscos (sprint 1)	
 
@@ -407,6 +506,7 @@ _Escreva, de forma resumida, sobre os principais resultados do seu projeto e fa�
 
 ## <a name="c5"></a>5. Referências
 
+OSTERWALDER, A.; PIGNEUR, Y.; BERNARDA, G.; SMITH, A. *Value Proposition Design: How to Create Products and Services Customers Want.* Wiley, 2014.
 
 KEVIN DUNNE. SWOT Analysis: Strengths, Weaknesses, Opportunities and Threats (ou título equivalente em inglês conforme aparece na página). Mind Tools, sem data explícita de publicação (s.d.). Acesso em: 19 out. 2025.
 
@@ -415,3 +515,4 @@ BRUTON, Louise. What are UX personas and what are they used for? UX Design Insti
 KOTONYA, Gerald; SOMMERVILLE, Ian. Requirements engineering: processes and techniques. Chichester: J. Wiley, 1998.
 
 WIEGERS, Karl; BEATTY, Joy. Software requirements. 3. ed. Redmond: Microsoft Press, 2013.
+
