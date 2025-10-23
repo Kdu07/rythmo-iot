@@ -15,7 +15,7 @@
       "type": "wokwi-pushbutton",
       "id": "btn1",
       "top": 332.6,
-      "left": 307.2,
+      "left": 297.6,
       "attrs": { "color": "red", "xray": "1", "bounce": "0" }
     },
     {
@@ -52,6 +52,22 @@
       "top": 384,
       "left": 316.8,
       "attrs": { "text": "RESET\n" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 27.5, "left": -192.2, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": 455.02, "left": -112.88, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn4",
+      "top": 332.6,
+      "left": 422.4,
+      "attrs": { "color": "green", "xray": "1", "bounce": "0" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": 384,
+      "left": 432,
+      "attrs": { "text": "START\n" }
     }
   ],
   "connections": [
@@ -62,11 +78,20 @@
     [ "esp:22", "lcd1:SCL", "green", [ "h38.4", "v9.6" ] ],
     [ "esp:21", "lcd1:SDA", "green", [ "h48", "v-28.8" ] ],
     [ "esp:5", "btn2:1.r", "green", [ "h105.6", "v57.6", "h96" ] ],
-    [ "esp:GND.2", "btn2:2.l", "black", [ "v-38.4", "h38.4", "v230.4" ] ],
     [ "btn3:1.r", "esp:17", "green", [ "v0" ] ],
-    [ "esp:GND.2", "btn3:2.l", "black", [ "v-38.4", "h96", "v288", "h153.6" ] ],
     [ "esp:18", "btn1:1.r", "green", [ "h115.2", "v48", "h144" ] ],
-    [ "esp:GND.2", "btn1:2.l", "black", [ "v-67.2", "h480", "v316.8", "h-124.8" ] ]
+    [ "esp:21", "imu1:SDA", "green", [ "h28.8", "v220.8", "h-28.8" ] ],
+    [ "esp:22", "imu1:SCL", "green", [ "h0" ] ],
+    [ "esp:GND.2", "imu1:GND", "black", [ "v-19.2", "h28.8" ] ],
+    [ "esp:3V3", "imu1:VCC", "red", [ "h-38.25", "v259.2", "h163.2" ] ],
+    [ "esp:16", "btn4:1.r", "green", [ "h556.8", "v67.2" ] ],
+    [ "esp:5V", "pot1:VCC", "red", [ "h-57.45", "v-220.8", "h76.8" ] ],
+    [ "esp:GND.2", "pot1:GND", "black", [ "v-38.4", "h-96" ] ],
+    [ "pot1:SIG", "esp:4", "green", [ "v38.4", "h153.2", "v153.6" ] ],
+    [ "esp:GND.2", "btn2:2.r", "black", [ "v-57.6", "h76.8", "v345.6", "h124.8" ] ],
+    [ "esp:GND.2", "btn3:2.r", "black", [ "v-48", "h96", "v364.8", "h230.4" ] ],
+    [ "esp:GND.2", "btn1:2.r", "black", [ "v-67.2", "h451.2", "v259.2" ] ],
+    [ "esp:GND.2", "btn4:2.r", "black", [ "v-86.4", "h585.6", "v278.4" ] ]
   ],
   "dependencies": {}
 }
