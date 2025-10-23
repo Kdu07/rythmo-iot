@@ -328,35 +328,64 @@ _A Matriz de Risco deve ser desenhada considerando o projeto que os alunos estã
 
 ### 3.1.6. Política de Privacidade de acordo com a LGPD (sprint 1)	
 
+&nbsp;&nbsp;&nbsp;&nbsp;*Esta política de privacidade é válida a partir de outubro de 2025.*
 
-_A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita considerando o projeto que os alunos estão criando. Os pontos a seguir precisam ser apresentados. O aluno pode utilizar  o Gerador de Política de Privacidade (https://www.nuvemshop.com.br/ferramentas/gerador-politica-de-privacidade), criado pela Nuvemshop e, de acordo com a empresa, já adaptado a LGPD para ter uma prévia e ajustar de acordo com o seu projeto._
+&nbsp;&nbsp;&nbsp;&nbsp;Esta Política de Privacidade é redigida em conformidade com a Lei nº 13.709/2018, Lei Geral de Proteção de Dados Pessoais, e com as normas correlatas de proteção da privacidade no Brasil. O documento materializa o compromisso da nossa organização estudantil, atuando como empresa no contexto do projeto para a Renault Brasil, com os princípios de finalidade, adequação, necessidade, livre acesso, qualidade dos dados, transparência, segurança, prevenção, não discriminação e responsabilização. Desde a concepção e por padrão, adotamos uma abordagem de proteção de dados por desenho e por defeito, de modo que controles técnicos e organizacionais sejam incorporados ao ciclo de desenvolvimento da solução IoT e dos serviços associados.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A presente seção existe para definir com clareza como os dados pessoais serão tratados no escopo do projeto, quais atores assumem responsabilidades pelo tratamento, quais direitos assistem aos titulares e de que forma são atendidos. A descrição transparente do tratamento reduz riscos regulatórios e contratuais, orienta processos internos, fortalece a confiança de usuários e parceiros, e cria um registro formal de governança e prestação de contas perante a Autoridade Nacional de Proteção de Dados e demais partes interessadas.
 
 #### 3.1.6.1 Informações gerais sobre a empresa / organização
 
+&nbsp;&nbsp;&nbsp;&nbsp;A controladora do tratamento de dados pessoais, para fins desta iniciativa acadêmica com simulação empresarial, é a organização do projeto identificada como [Nome da Empresa do Projeto], estabelecida em [endereço completo], inscrita no [CNPJ], que define finalidades e toma as decisões essenciais sobre as operações de tratamento no âmbito da solução de monitoramento e análise para Squeak and Rattle. Em determinados fluxos específicos, fornecedores de tecnologia e serviços atuarão como operadores, sempre mediante contratos com cláusulas de proteção de dados compatíveis com a legislação aplicável.
+
 #### 3.1.6.2 Informações sobre o tratamento de dados
+
+&nbsp;&nbsp;&nbsp;&nbsp;O tratamento compreende a coleta, a produção, a recepção, a classificação, a utilização, o acesso, a reprodução, a transmissão, a distribuição, o processamento, o arquivamento, o armazenamento, a eliminação, a avaliação e o controle da informação, a modificação, a comunicação, a transferência, a difusão e a extração de dados pessoais relacionados ao uso dos sistemas da solução, à gestão de contas de usuários internos, à interação com interfaces de suporte e à eventual integração com ambientes corporativos da contratante. Cada operação observará base legal adequada, registro de atividades e minimização do volume de dados estritamente necessário à finalidade.
 
 #### 3.1.6.3 Quais são os dados coletados
 
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados coletados podem incluir informações de identificação e contato do usuário interno da solução, como nome, e mail corporativo e credenciais de acesso, registros de uso e telemetria da aplicação, como horários de acesso, endereço IP e eventos de navegação, e dados técnicos decorrentes do projeto IoT quando houver associação a pessoa natural identificada ou identificável, como marcações de sessão e georreferenciamento ativado por decisão do usuário ou do time de testes. Não é objetivo do projeto coletar dados sensíveis e, caso em cenário excepcional tal coleta se faça indispensável, serão aplicadas salvaguardas reforçadas e base legal apropriada.
+
 #### 3.1.6.4 Onde os dados são coletados 
+
+&nbsp;&nbsp;&nbsp;&nbsp;A coleta ocorre nas interfaces de cadastro e autenticação da plataforma, nos módulos de captura e publicação de dados do dispositivo IoT quando a sessão puder ser relacionada a um usuário, nos painéis de visualização e análise utilizados por equipes de engenharia e nas rotinas administrativas de suporte e melhoria contínua do serviço. A coleta pode ocorrer também por meio de comunicações operacionais enviadas pelo time do projeto aos usuários, desde que pertinentes à execução dos serviços.
 
 #### 3.1.6.5 Para quais finalidades os dados serão utilizadas
 
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados são utilizados para permitir o funcionamento da solução, administrar o ciclo de vida das contas, autenticar e autorizar acessos, registrar a execução de testes e sessões, viabilizar a transmissão e a integridade dos pacotes publicados, apresentar informações em painéis de análise, prestar suporte técnico, conduzir auditorias e melhorar continuamente a performance, a segurança e a usabilidade. Em hipóteses específicas, dados podem ser usados para cumprir obrigações legais ou regulatórias e para atender solicitações formais de autoridades competentes, quando juridicamente exigido.
+
 #### 3.1.6.6 Onde os dados ficam armazenados 
+
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados são armazenados em infraestrutura de computação em nuvem contratada pela organização do projeto, com ambientes segregados por finalidade e controles de acesso baseados em papéis. Sempre que tecnicamente viável, aplica se criptografia em repouso e em trânsito, chaves geridas com políticas de rotação e registros de acesso com trilhas de auditoria. Eventuais redundâncias geográficas seguem a política de continuidade de negócios e os requisitos contratuais pactuados com a contratante.
 
 #### 3.1.6.7 Qual o período de armazenamento dos dados (retenção)
 
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados são conservados pelo tempo necessário para cumprir as finalidades informadas e por prazos adicionais necessários para atendimento de obrigações legais, exercício regular de direitos em processos, auditorias e defesa de interesses. Ao término das finalidades ou transcorridos os prazos legais, aplica se procedimento de exclusão segura ou anonimização, preservando se somente informações residuais que, por imposição normativa ou exigência de responsabilidade, precisem permanecer arquivadas.
+
 #### 3.1.6.8 Uso de cookies e/ou tecnologias semelhantes
+
+&nbsp;&nbsp;&nbsp;&nbsp;A solução pode utilizar cookies e tecnologias equivalentes para autenticação, manutenção de sessão, segurança, medição de desempenho e análise de uso. O usuário poderá gerir preferências por meio das configurações do navegador e dos controles disponibilizados na própria aplicação, ciente de que a desativação de componentes estritamente necessários pode comprometer funcionalidades essenciais.
 
 #### 3.1.6.9 Com quem esses dados são compartilhados (parceiros, fornecedores, subcontratados)
 
+&nbsp;&nbsp;&nbsp;&nbsp;O compartilhamento de dados pessoais limita se a terceiros estritamente necessários à execução dos serviços, como provedores de nuvem, componentes de mensageria, ferramentas de observabilidade e suporte técnico, sempre sob contratos que imponham confidencialidade, uso limitado à finalidade contratada e padrões de segurança compatíveis. Caso ocorra transferência internacional, serão adotados mecanismos previstos na legislação para garantir nível adequado de proteção, como cláusulas contratuais específicas e avaliações de impacto.
+
 #### 3.1.6.10 Informações sobre medidas de segurança adotadas pela empresa
+
+&nbsp;&nbsp;&nbsp;&nbsp;A organização adota um conjunto de medidas técnicas e administrativas proporcional aos riscos identificados, incluindo gestão de identidades e acessos com princípios de menor privilégio, segregação de ambientes, criptografia, monitoramento de atividades relevantes, processo de gestão de vulnerabilidades, testes periódicos de segurança, políticas de continuidade e plano de resposta a incidentes. Em caso de incidentes que possam acarretar risco ou dano relevante aos titulares, a organização promoverá a devida comunicação aos afetados e à autoridade competente, conforme exigido em lei.
 
 #### 3.1.6.11 Orientações sobre como a empresa/organização atende aos direitos dos usuários
 
+&nbsp;&nbsp;&nbsp;&nbsp;Os direitos de confirmação da existência de tratamento, acesso, correção, anonimização, bloqueio ou eliminação, portabilidade, informação sobre compartilhamentos e sobre a possibilidade de não fornecer consentimento, bem como a revisão de decisões automatizadas quando aplicável, podem ser exercidos mediante solicitação direcionada aos canais oficiais desta Política. As demandas serão analisadas sob critérios de autenticidade do solicitante, viabilidade técnica e fundamentos legais, com resposta em prazos compatíveis com a LGPD e com a complexidade do pedido.
+
 #### 3.1.6.12 Informações sobre como o titular de dados pode solicitar e exercer os seus direitos
+
+&nbsp;&nbsp;&nbsp;&nbsp;O titular poderá encaminhar solicitação clara e específica por meio do correio eletrônico indicado na presente Política ou por endereço físico disponibilizado, informando os dados necessários à verificação de identidade e à localização do registro. Quando a solicitação envolver dados processados em nome de terceiros contratantes, a organização atuará de modo coordenado com o respectivo controlador, comunicando o andamento e o resultado ao titular.
 
 #### 3.1.6.13 Informações de contato do Data Protection Officer (DPO) ou encarregado de proteção de dados da organização
 
+&nbsp;&nbsp;&nbsp;&nbsp;O encarregado pelo tratamento de dados pessoais desta organização é [Nome do Encarregado], que pode ser contatado pelo e mail [privacidade@nomedoprojeto.com.br
+] e pelo endereço [endereço para correspondência]. O encarregado atua como canal de comunicação entre titulares, a organização e a Autoridade Nacional de Proteção de Dados e está à disposição para esclarecimentos, solicitações e sugestões relacionados a esta Política.
 
 ### 3.1.7. Bill of Material (BOM) (sprint 1)
 _BOM (Bill of Material) pode ser definido como uma lista completa de materiais, que detalha todos os itens necessários para construir, fabricar ou reparar um produto. Deve-se preencher o template fornecido.
