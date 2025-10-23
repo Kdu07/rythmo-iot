@@ -70,14 +70,12 @@ O modelo de negócio da Renault Brasil integra:
 - Inovação e parcerias: eletrificação, conectividade embarcada e mobilidade como serviço (car‑sharing, assinatura, frotas).
 
 #### 3.1.1.3 Tendências
-A Renault Brasil...
+A Renault Brasil garante sua posição no mercado ao acompanhar as novas tendências:
 - Eletrificação gradual: avanços em híbridos, sobretudo em mercados urbanos e frotas. Discussão sobre biocombustíveis e híbridos flex como ponte tecnológica no Brasil.
 - SUVização e segurança: maior participação de SUVs e crossovers; consumidores buscam segurança, conectividade e ADAS (Sistemas Avançados de Assistência ao Motorista) com preços acessíveis.
 - Digitalização da jornada: mais etapas da compra migram para o online; pós‑venda preditivo e transparência de custos ganham importância.
 - Eficiência regulatória: metas de emissões e segurança pressionam inovação em powertrain, aerodinâmica e materiais.
 Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para frotas e apps ampliam relevância.
-
-&nbsp;&nbsp;&nbsp;&nbsp;Em síntese, a Renault Brasil opera num ambiente competitivo e em transformação, no qual eficiência operacional, inovação em produto/serviço e uma experiência omnichannel consistente são diferenciais para crescer participação e rentabilidade
 
 #### 3.1.1.4 5 Forças de Porter
 
@@ -94,7 +92,7 @@ Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para 
    
 </div>
 
-
+Dessa forma, em um mercado altamente disputado e em rápida transformação, a Renault Brasil busca diferenciais ao equilibrar eficiência operacional, inovação orientada ao cliente e uma estratégia comercial omnichannel. A combinação de parque industrial local competitivo, portfólio alinhado ao desejo por SUVs, somada ao avanço em eletrificação acessível para a realidade brasileira, posiciona a marca para defender margens e ganhar participação no mercado. O sucesso dependerá de entregar valor superior (eficiência, segurança, conectividade e experiência) em proporção ao custo total do produto.
 
 ### 3.1.2. Análise SWOT (sprint 1)	
 
