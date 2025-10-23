@@ -51,7 +51,7 @@ _Link para os templates de negócios: https://drive.google.com/drive/folders/1lT
 
 ### 3.1.1. Contexto da Indústria
 
-A Renault Brasil atua no competitivo setor automotivo, com foco na produção e venda de veículos de passeio e comerciais leves, além de serviços financeiros e locação. Inserida numa cadeia complexa que abrange pesquisa científica, engenharia, manufatura, logística, rede de concessionárias e soluções digitais, a operação no país tem valor estratégico para a marca. No país, combina uma fábrica robusta, ecossistema de fornecedores locais e crescente integração com tendências globais, como frota elétrica e conectividade.</br>
+&nbsp;&nbsp;&nbsp;&nbsp;A Renault Brasil atua no competitivo setor automotivo, com foco na produção e venda de veículos de passeio e comerciais leves, além de serviços financeiros e locação. Inserida numa cadeia complexa que abrange pesquisa científica, engenharia, manufatura, logística, rede de concessionárias e soluções digitais, a operação no país tem valor estratégico para a marca. No país, combina uma fábrica robusta, ecossistema de fornecedores locais e crescente integração com tendências globais, como frota elétrica e conectividade.</br>
 
 #### 3.1.1.1 Concorrentes	
 No mercado brasileiro, a Renault disputa espaço especialmente com montadoras estabelecidas. Entre os principais competidores:
@@ -77,9 +77,13 @@ A Renault Brasil...
 - Eficiência regulatória: metas de emissões e segurança pressionam inovação em powertrain, aerodinâmica e materiais.
 Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para frotas e apps ampliam relevância.
 
-Em síntese, a Renault Brasil opera num ambiente competitivo e em transformação, no qual eficiência operacional, inovação em produto/serviço e uma experiência omnichannel consistente são diferenciais para crescer participação e rentabilidade
+&nbsp;&nbsp;&nbsp;&nbsp;Em síntese, a Renault Brasil opera num ambiente competitivo e em transformação, no qual eficiência operacional, inovação em produto/serviço e uma experiência omnichannel consistente são diferenciais para crescer participação e rentabilidade
 
 #### 3.1.1.4 5 Forças de Porter
+
+ &nbsp;&nbsp;&nbsp;&nbsp;De acordo com Michael Porter (1986, apud PORTER, 2008), para que se torne possível examinar o ambiente em que uma empresa está inclusa, é necessário analisar sua performance no mercado em relação aos competidores, fatores internos e externos. Logo, o modelo das Cinco Forças de Porter é parte essencial da pesquisa de campo para tirar o maior proveito das oportunidades que irão se apresentar. O modelo tem como respectivas forças: rivalidade entre concorrentes; poder de barganha dos fornecedores; poder de barganha dos clientes; ameaça de novos entrantes; ameaça de produtos substitutos.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A seguir, a análise das 5 forças de Porter no contexto da Renault Brasil:
 
 <div align="center">
 <sup>Figura # - 5 Forças de Porter </sup>
@@ -89,6 +93,8 @@ Em síntese, a Renault Brasil opera num ambiente competitivo e em transformaçã
 <sup>Fonte: Material produzido pelos autores (2025)</sup>
    
 </div>
+
+
 
 ### 3.1.2. Análise SWOT (sprint 1)	
 
@@ -300,3 +306,8 @@ LUCK, Heloisa. Liderança em gestão escolar. 4. ed. Petrópolis: Vozes, 2010. <
 SOBRENOME, Nome. Título do livro: subtítulo do livro. Edição. Cidade de publicação: Nome da editora, Ano de publicação. <br>
 Disponível em: https://adalove.inteli.edu.br/feed. Acesso em: 1 out. 2023 <br>
 Disponível em: LINK DO SITE. Acesso em: Dia Mês Ano_
+
+
+INVESTOPEDIA. Porter’s 5 Forces: Definition and Examples. Disponível em: https://www.investopedia.com/terms/p/porter.asp. Acesso em: 23 out. 2025.
+
+PORTER, Michael E. Competitive strategy: techniques for analyzing industries and competitors. New York: Free Press, 2008.
