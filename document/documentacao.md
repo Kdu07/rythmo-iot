@@ -508,9 +508,29 @@ _Preencha aqui o link para o protótipo inicial no Wokwi_
 _Abaixo você deve registrar diversas situações de teste, indicando exemplos de leitura (entrada) e escrita (saída) apresentadas pelo seu sistema no simulador. Estes registros serão utilizados para testar seus componentes, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de possíveis falhas nas leituras de entradas e saídas. <br>
 Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do simulador e descreva os testes realizados para ilustrar o funcionamento do protótipo simulado. A tabela a seguir serve como exemplo._
 
+<div align="center">
+
+<sub> Quadro # - Casos de teste</sub>
+
+</div>
+
 **#** | **Bloco** | **Componente de entrada** | **Leitura da entrada** | **Componente de saída** | **Leitura da saída** | **Descrição**
-|----------|----------|----------|----------|----------|----------|----------|
-|01|ex. medidor de umidade relativa do ar|ex. “sensor de umidade XPTO”| < 100 | ex. led amarelo | piscante em intervalo de 1s | quando a umidade está baixa, o led amarelo pisca
+|---|---|---|---|---|---|---|
+|01|Troca de opção de pista|Botão Options|Botão pressionado (LOW)|Display LCD|Texto da pista muda para próxima opção|Ao pressionar o botão de opções, o display alterna entre "Lisa", "Esburacada", "Paralelepipedo", "Placeholder", "Placeholder2".|
+|02|Seleção de pista|Botão Select |Botão pressionado (LOW)|Display LCD|Texto muda para "Selected Pista:" e mostra pista escolhida|Ao pressionar o botão de seleção, a pista atual é marcada como selecionada e o display exibe "Selected Pista:" na linha superior.|
+|03|Reset de seleção|Botão Reset |Botão pressionado (LOW)|Display LCD|Display volta a mostrar "Select Pista:" e opção atual|Ao pressionar o botão de reset, a seleção é desfeita e o display retorna ao estado inicial de escolha de pista.|
+|04|Ciclo de opções|Botão Options |Botão pressionado repetidas vezes|Display LCD|Opções voltam para "Lisa" após "Placeholder2"|Ao pressionar o botão de opções cinco vezes, o display retorna para a primeira opção ("Lisa"), reiniciando o ciclo.|
+|05|Seleção bloqueada|Botão Options após seleção|Botão pressionado (LOW)|Display LCD|Opção não muda após seleção|Após selecionar uma pista, pressionar o botão de opções não altera mais a pista até que o reset seja realizado.|
+
+
+
+<div align="center">
+
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+
+</div>
+
+
 
 ### 3.4.2. Protótipo Físico do Projeto (offline) (sprint 2)	
 
