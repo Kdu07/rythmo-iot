@@ -77,7 +77,9 @@ _O Canvas da proposta de valor deve ser feito considerando a solução que você
 
 ### 3.1.5. Matriz de Riscos (sprint 1)	
 
-&emsp; A matriz de risco permite que a Renault identifique ameaças e falhas que possam comprometer as operações de telemetria e análise de dados veiculares em pista, além de, com seu eixo de oportunidade, também explorar quesitos para inovação e segurança dos dados na infraestrutura IoT que está sendo desenvolvida pelo grupo. Com a crescente demanda por otimização de processos de engenharia automotiva e as rápidas mudanças tecnológicas no setor de IoT, essa ferramenta assegura resiliência e agilidade, reforçando a capacidade da Renault em desenvolver veículos mais eficientes e seguros, especialmente na identificação e mitigação de problemas de squeak and rattle.
+&emsp; Segundo Tomaz, Gagliasso e Malavota (2020), a matriz de riscos é uma ferramenta analítica que permite visualizar e gerenciar as incertezas de um projeto por meio da relação entre a probabilidade de ocorrência e o impacto potencial de cada risco. Ao estruturar essas variáveis em um formato matricial, ela fornece uma base racional para priorização e tomada de decisão, promovendo ações preventivas e corretivas mais eficazes. Além disso, por ser parte de um processo iterativo, a matriz evolui com o projeto, incorporando novos riscos e reavaliando os existentes, o que a torna um instrumento dinâmico e indispensável à gestão estratégica.
+
+&emsp; No contexto da Renault, a matriz de riscos permite identificar ameaças e falhas que possam comprometer as operações de telemetria e análise de dados veiculares em pista, além de, por meio de seu eixo de oportunidades, explorar caminhos voltados à inovação e à segurança dos dados na infraestrutura IoT em desenvolvimento pelo grupo. Diante da crescente demanda por otimização dos processos de engenharia automotiva e das rápidas transformações tecnológicas no setor de IoT, essa ferramenta assegura resiliência e agilidade, fortalecendo a capacidade da Renault em desenvolver veículos mais eficientes e seguros, especialmente na identificação e mitigação de problemas de squeak and rattle.
 
 <div align="center">
 <sup>Figura # - Matriz de Riscos e Oportunidades </sup>
@@ -276,6 +278,8 @@ Também inclua figuras da versão final do protótipo físico e dashboards, alé
 _Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de projeto em relação ao uso dessa solução. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras._
 
 ## <a name="c5"></a>5. Referências
+
+TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenharia. São Paulo: Atlas, 2020.
 
 _Incluir as principais referências de seu projeto, para que seu parceiro possa consultar caso ele se interessar em aprofundar. Um exemplo de referência de livro e de site: <br>
 LUCK, Heloisa. Liderança em gestão escolar. 4. ed. Petrópolis: Vozes, 2010. <br>
