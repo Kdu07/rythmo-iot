@@ -320,9 +320,15 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 
 </div>
 
-_Abaixo você deve registrar diversas situações de teste, indicando exemplos de leitura (entrada) e escrita (saída) apresentadas pelo seu sistema no simulador. Estes registros serão utilizados para testar seus componentes, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de possíveis falhas nas leituras de entradas e saídas. <br>
-Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do simulador e descreva os testes realizados para ilustrar o funcionamento do protótipo simulado. A tabela a seguir serve como exemplo._
+- Teste 12, 13, 14, 15, 16, 17, 18 e 19: Verificação do funcionamento dos botões de opções, seleção, reset e start.
 
+&emsp;Para uma melhor demonstração dos casos 12, 13, 14, 15, 16, 17, 18 e 19, foi gravado um vídeo desses testes no simulador, que está disponível no link abaixo:
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1boN18v-9LacVXzaJGFAZLGGOmYxoMpKp/view?usp=sharing) para acessar o vídeo.
+
+&emsp; O vídeo demonstra algumas inconsistencias no caso 15, onde o botão de opções volta para a primeira opção após a quinta opção aparecer duas vezes. Entretanto, todos os outros casos de teste funcionaram conforme o esperado, validando o funcionamento do protótipo simulado.
+
+&emsp;Dessa forma, após todo o processo de simulação e realização dos casos de teste, obtivemos uma visão mais clara do protótipo a ser desenvolvido. Esse processo permite identificar possíveis erros e limitações, oferecendo a oportunidade de aprimorar o sistema antes da implementação física. Assim, conseguimos reduzir riscos e aumentar a eficiência no desenvolvimento do projeto.
 
 ### 3.4.2. Protótipo Físico do Projeto (offline) (sprint 2)	
 
