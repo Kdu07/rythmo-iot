@@ -128,21 +128,21 @@ class Display{
     }
   }
 
-  void writeData(){
-    if(started != -1){
-      unsigned long startTime = millis();
-      sensors_event_t a, g, temp;
-      mpu.getEvent(&a, &g, &temp);
-      if(!SPIFFS.exists("/dados.csv")){
-        File dados = SPIFFS.open("/dados.csv","w");
-        dados.println("Time,Number,Pista,AX,AY,AZ");
-        dados.close();
-      }
-      File dados = SPIFFS.open("/dados.csv","a");
-      dados.println(String(millis()-startTime) + "," + String(number) + "," + textSelect + "," + String(a.acceleration.x) + "," + String(a.acceleration.y) + "," + String(a.acceleration.z) );
-      dados.close();
-    }  
-  }
+  // void writeData(){
+  //   if(started != -1){
+  //     unsigned long startTime = millis();
+  //     sensors_event_t a, g, temp;
+  //     mpu.getEvent(&a, &g, &temp);
+  //     if(!SPIFFS.exists("/dados.csv")){
+  //       File dados = SPIFFS.open("/dados.csv","w");
+  //       dados.println("Time,Number,Pista,AX,AY,AZ");
+  //       dados.close();
+  //     }
+  //     File dados = SPIFFS.open("/dados.csv","a");
+  //     dados.println(String(millis()-startTime) + "," + String(number) + "," + textSelect + "," + String(a.acceleration.x) + "," + String(a.acceleration.y) + "," + String(a.acceleration.z) );
+  //     dados.close();
+  //   }  
+  // }
 
   void options(){
     int value = digitalRead((BUTTON_OPTIONS));
@@ -209,8 +209,8 @@ void setup() {
   mpu.setGyroRange(MPU6050_RANGE_250_DEG);
   mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
 
-  SPIFFS.begin(true);
-  LittleFS.begin(true,"/littlefs", 10, "spiffs");
+  // SPIFFS.begin(true);
+  // LittleFS.begin(true,"/littlefs", 10, "spiffs");
 
 }
 
