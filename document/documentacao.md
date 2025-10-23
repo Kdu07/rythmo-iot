@@ -25,19 +25,65 @@
 
 # <a name="c1"></a>1. Introdução (sprint 1)
 
-_Apresente de forma sucinta o parceiro de negócio, seu porte, local, área de atuação e posicionamento no mercado. Maiores detalhes deverão ser descritos na seção 4. Descreva resumidamente o problema a ser resolvido (sem ainda mencionar a solução)._
+## Parceiro de Negócio: Renault do Brasil
+
+### Perfil da Empresa
+
+&nbsp;&nbsp;&nbsp;&nbsp;A Renault do Brasil é uma subsidiária da Renault S.A., uma das maiores montadoras de automóveis do mundo, com sede na França. A empresa atua no Brasil desde 1998 e é reconhecida por sua inovação tecnológica, qualidade de produtos e compromisso com a sustentabilidade. A Renault do Brasil oferece uma ampla gama de veículos, incluindo carros compactos, SUVs e veículos elétricos, atendendo a diversos segmentos do mercado automotivo nacional e internacional. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;Localizada em São José dos Pinhais, Paraná, a fábrica da Renault no Brasil é uma das mais modernas do país, equipada com tecnologias avançadas de produção e sustentabilidade ambiental. O porte da empresa é de grande escala, empregando milhares de colaboradores e contribuindo significativamente para a economia local e nacional.
+
+
+### Problema a Ser Resolvido
+
+**Contexto do Desafio**
+A Renault enfrenta um desafio técnico relacionado às análises de Squeak and Rattle (ruídos e vibrações indesejados em veículos).
+
+**Limitação Atual:**
+As análises do tipo "e-line" (método de simulação) dependem de sinais de entrada precisos que representem deslocamento x tempo ou força x tempo. Atualmente, não existe uma base de dados estruturada que contemple as diferentes excitações que os veículos sofrem em diversos tipos de pistas.
+
+**Impacto:**
+Sem dados reais e padronizados sobre o comportamento dos veículos em diferentes condições de rodagem, as simulações perdem precisão, dificultando a previsão e mitigação de problemas de Squeak and Rattle durante o desenvolvimento de novos projetos.
+
+**Necessidade:**
+Estudar sistematicamente os tipos de pistas e coletar dados experimentais que possam alimentar as simulações com sinais de entrada genéricos e representativos da realidade operacional dos veículos.
 
 ## 1.1 Objetivos
 
-_Descreva os objetivos gerais e específicos do seu parceiro de negócios, sem entrar em méritos técnicos ou especificações de tecnologia. Aqui importa o objetivo em si, não os meios para se chegar até lá._
+1.1.1 Objetivos Gerais
+
+&nbsp;&nbsp;&nbsp;&nbsp;A Renault do Brasil, reconhecida por sua inovação e compromisso com a mobilidade sustentável, busca constantemente aprimorar seus processos de engenharia e qualidade. Dentro dessa visão, o projeto tem como objetivo geral desenvolver uma solução IoT capaz de coletar e armazenar dados de aceleração e força em veículos de teste, criando uma base de dados padronizada que apoie simulações de Squeak and Rattle (ruídos e vibrações estruturais).
+
+&nbsp;&nbsp;&nbsp;&nbsp;Com isso, pretende-se tornar o processo de análise mais preciso e automatizado, reduzindo a necessidade de testes físicos e contribuindo para práticas de desenvolvimento mais eficientes e sustentáveis. O projeto também busca aproximar a universidade do ambiente industrial, permitindo a aplicação prática de tecnologias emergentes e fortalecendo a parceria entre o Inteli e a Renault.
+
+1.1.2 Objetivos Específicos com o Projeto
+
+- Criar um sistema IoT funcional: Desenvolver um protótipo embarcado que use sensores de aceleração e força conectados a um microcontrolador,  para coletar dados durante os testes do veículo.
+
+- Coletar e enviar dados em tempo real: Permitir que os sinais obtidos pelos sensores sejam transmitidos automaticamente para uma plataforma digital por meio de conexão sem fio, como Wi-Fi ou Bluetooth.
+
+- Construir um banco de dados de perfis de pista: Organizar e armazenar os dados coletados, formando uma base que represente diferentes tipos de pista, velocidades e condições de rodagem.
+
+- Apoiar análises de Squeak and Rattle: Disponibilizar informações úteis para estudos e simulações que busquem compreender e reduzir ruídos e vibrações estruturais nos veículos da Renault.
+
+- Assegurar a confiabilidade das medições: Documentar e padronizar todo o processo de coleta, transmissão e tratamento dos dados, garantindo a qualidade dos resultados obtidos.
+
 
 ## 1.2 Proposta da solução
 
-_Descreva resumidamente sua proposta de solução (em alto nível) e como essa solução pretende resolver o problema, atendendo os objetivos listados na seção anterior._
+&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta para o projeto envolve o desenvolvimento de um dispositivo IoT (Internet das Coisas) capaz de monitorar as condições de Squeak and Rattle por meio de sensores instalados nos veículos e envio de dados por lotes. Esse dispositivo será equipado com dois sensores principais (Acelerometros e Piezoeletricos) para a captação de dados relevantes, como aceleração, vibração, velocidade e outros indicadores relevantes para a melhor interpretabilidade dos dados para os simuladores de Squeak and Rattle.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados captados pelos sensores serão enviados periodicamente para a nuvem e armazenados em um banco de dados relacional, garantindo um fluxo contínuo e seguro de informações.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Além disso, a solução inclui o desenvolvimento de uma interface de controle intuitiva que permitirá a definir variáveis importantes que devem ser consideradas no envio desses dados para o banco de dados. Tais variáveis podem incluir o tipo de pista, condições climáticas, velocidade do veículo, entre outros fatores que possam influenciar os resultados das análises de Squeak and Rattle.
 
 ## 1.3 Justificativa
 
-_Faça uma breve defesa de sua proposta de solução, escreva sobre seus potenciais, seus benefícios e como ela se diferencia._
+&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta busca suprir a falta de dados padronizados sobre vibrações e ruídos em veículos, essenciais para análises precisas de Squeak and Rattle. O uso de um dispositivo IoT com sensores acelerômetros e piezoelétricos permite coletar e enviar dados reais de forma automatizada e segura, criando uma base confiável para futuras simulações.
+
+&nbsp;&nbsp;&nbsp;&nbsp;O envio das informações para a nuvem e seu armazenamento em um banco de dados relacional garantem melhor organização e acesso aos dados, enquanto a interface de controle intuitiva torna o sistema adaptável a diferentes condições de teste. Seus benefícios incluem a redução do tempo e custo dos testes, além de aumentar a precisão das análises, contribuindo para a melhoria contínua dos processos de engenharia da Renault.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A solução se diferencia por sua capacidade de integrar hardware, conectividade e análise de dados em uma única plataforma, facilitando a coleta e interpretação das informações. Isso não apenas melhora a eficiência dos testes, mas também contribui para a inovação nos processos de engenharia da Renault, alinhando-se com as tendências atuais de digitalização e automação na indústria automotiva.
 
 # <a name="c2"></a>2. Metodologia (sprint 3)
 
@@ -56,24 +102,225 @@ _O aluno deve fornecer informações sobre a concorrência (mínimo 3 competidor
 A análise de 5 forças deve ser feita considerando também o parceiro, o aluno deve preencher o template disponibilizado. No link a seguir há indicações de como avaliar as 5 forças: https://rockcontent.com/br/blog/5-forcas-de-porter/_
 
 ### 3.1.2. Análise SWOT (sprint 1)	
+ 
 
-_A entrega deve ser realizada no formato de quadrante (template), semelhante ao template disponibilizado. Em forças e fraquezas considerar aspectos internos e em oportunidades e ameaças, aspectos externos. Essa análise deve ser feita com relação ao parceiro, por exemplo a Rede Gazeta._   
+&nbsp;&nbsp;&nbsp;&nbsp; Segundo Kevin Dunne, a análise SWOT (Strengths, Weaknesses, Opportunities e Threats) é uma ferramenta estratégica utilizada para avaliar a situação atual de uma organização, identificando seus pontos fortes e fracos, assim como as oportunidades e ameaças do ambiente externo. Essa análise possibilita a construção de estratégias mais eficazes, alinhadas aos objetivos da instituição, e contribui para aumentar as chances de sucesso dos projetos.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A aplicação da análise SWOT permite compreender de forma ampla o cenário em que a organização está inserida, nesse caso a Renault Brasil, fornecendo embasamento para decisões mais assertivas. Ao explorar as forças, corrigir as fraquezas, aproveitar as oportunidades e se preparar para as ameaças, é possível garantir um direcionamento mais consistente no andamento do projeto.
+
+### 3.1.2.1  Visualização da análise SWOT:
+
+<div align="center">
+Figura 4 - Análise SWOT
+<img src="../document/analiseSWOT.png"
+<sup>Fonte: Material alterado pelos autores com base no tamplete disponível em: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/</sup>
+</div>
+ 
+
+### 3.1.2.2 Forças (Internas):
+
+### Liderança em veículos acessíveis e elétricos
+&nbsp;&nbsp;&nbsp;&nbsp; A Renault Brasil destaca-se com o Kwid como o carro mais barato do país e o Kwid E-Tech como veículo elétrico acessível, com IPI zerado, impulsionando vendas em segmentos econômicos e sustentáveis. Isso mitiga fraquezas de custos ao atrair volume de vendas e explora oportunidades de incentivos fiscais, reduzindo impactos de ameaças econômicas.
+
+### Prêmios e reconhecimento local
+&nbsp;&nbsp;&nbsp;&nbsp; Modelos como Kardian (Carro do Ano 2025) e Megane E-Tech (Compra do Ano) reforçam qualidade e inovação, com tecnologia OpenR Link integrada. Relaciona-se com fraquezas ao melhorar reputação apesar de recalls, e conecta a oportunidades de mercado, combatendo ameaças de concorrentes.
+
+### Crescimento de vendas no primeiro semestre de 2025
+&nbsp;&nbsp;&nbsp;&nbsp; Vendas subiram 8,8% para 60,7 mil unidades no primeiro semestre, tornando o Brasil o 7º mercado global do grupo. Essa força explora oportunidades de expansão veículos elétricos, compensa fraquezas operacionais e resiste a ameaças instáveis via diversificação local.
+
+### 3.1.2.3 Fraquezas (Internas):
+
+
+### Dependência de cadeia de suprimentos global
+&nbsp;&nbsp;&nbsp;&nbsp; Vulnerável a variações cambiais e interrupções, afetando produção local de veículos elétricos e aumentando custos. Agrava ameaças econômicas, enfraquece forças de crescimento, mas oportunidades de incentivos fiscais podem ajudar a reduzir impactos.
+
+### Pressão de custos em inovação
+&nbsp;&nbsp;&nbsp;&nbsp; Altos investimentos em tech como E-Tech e OpenR Link pressionam margens, especialmente em um mercado sensível a preços. Limita forças de prêmios, é piorada por ameaças regulatórias, mas interliga a oportunidades de expansão para diluir custos via volume.
+
+### Market share limitado em premium
+&nbsp;&nbsp;&nbsp;&nbsp; Foco em econômicos como Kwid restringe penetração em SUVs premium, com recalls recentes afetando confiança. Enfraquece forças de vendas, amplifica ameaças de concorrentes chineses, mas oportunidades de veículos elétricos podem expandir para novos segmentos.
+
+### 3.1.2.4 Oportunidades (Externas):
+
+### Expansão híbridos/EVs no Brasil
+&nbsp;&nbsp;&nbsp;&nbsp; Mercado de EVs no Brasil cresce 58% em julho 2025. Parceria com Geely lança EX5 elétrico em julho, usando rede Renault. Kwid E-Tech impulsiona vendas 8,8% no H1.
+
+### Alianças Nissan-Mitsubishi para tech
+&nbsp;&nbsp;&nbsp;&nbsp; Aliança Renault-Nissan-Mitsubishi avança em EVs. Compartilham plataformas como CMF-B para Micra EV e Eclipse Cross. Em setembro 2025, projetos conjuntos na fábrica Ampere Douai melhoram EVs e autonomia.
+
+### Aumento concessionárias regionais (Brasil)
+&nbsp;&nbsp;&nbsp;&nbsp; No Brasil, 23 novas lojas Geely via Renault em 19 cidades, totalizando 105. Aumenta vendas de EVs. Mercado brasileiro tem 1,8mi unidades até agosto 2025, com Renault crescendo.
+
+### 3.1.2.5 Ameaças (Externas):
+
+### Concorrência de marcas chinesas
+&nbsp;&nbsp;&nbsp;&nbsp; Marcas como BYD dominam veículos elétricos com preços agressivos, pressionando market share da Renault Brasil. Enfraquece forças de liderança, piora fraquezas de dependência e reduz oportunidades de expansão.
+
+### Instabilidade econômica no Brasil
+&nbsp;&nbsp;&nbsp;&nbsp; Flutuações e pressões comerciais afetam demanda e custos operacionais locais. Desafia forças de vendas, amplifica fraquezas de inovação e ameaça oportunidades de incentivos se políticas mudarem.
+
+### Regulamentações ambientais rigorosas
+&nbsp;&nbsp;&nbsp;&nbsp; Normas mais rígidas para emissões exigem adaptações caras em veículos elétricos e produção local. Limita forças de sustentabilidade, agrava fraquezas de custos e impacta oportunidades de mercado se não cumpridas.
+
+### 3.1.2.6 Conclusão: 
+
+&nbsp;&nbsp;&nbsp;&nbsp; A Renault Brasil apresenta um posicionamento sólido no mercado automotivo local, impulsionado por forças internas como a liderança em veículos acessíveis e elétricos, prêmios de reconhecimento e crescimento de vendas de 8,8% no primeiro semestre de 2025. No entanto, fraquezas como a dependência de suprimentos globais, pressão de custos em inovação e market share limitado em segmentos premium demandam atenção para evitar vulnerabilidades.
+Em resumo, a Renault Brasil está bem posicionada para crescer na transição para mobilidade elétrica, desde que invista em autonomia operacional e inovação estratégica para equilibrar riscos e capitalizar tendências sustentáveis, visando liderança duradoura no setor.
 
 ### 3.1.3. Descrição da Solução a ser Desenvolvida (sprint 1)	
 
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta seção, apresenta-se o desenvolvimento de uma solução IoT voltada ao contexto de Squeak & Rattle (S&R) da Renault do Brasil, alinhando as metas do projeto às demandas de engenharia e qualidade. A solução busca padronizar a aquisição de sinais dinâmicos em pista (A×t e F×t), transmiti-los com confiabilidade para uma plataforma em nuvem, armazená-los de forma rastreável e oferecer visualização analítica inicial. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;Essa base sustentará análises e-line reprodutíveis e, no médio prazo, viabilizará a construção de um sinal de entrada genérico para S&R, beneficiando a tomada de decisão e a eficiência operacional.
+
 #### 3.1.3.1 Qual é o problema a ser resolvido
+
+&nbsp;&nbsp;&nbsp;&nbsp;O processo de avaliação e-line para S&R exige sinais dinâmicos representativos dos diferentes perfis de pista que excitam o veículo. Hoje, a ausência de uma base padronizada, rastreável e reprodutível desses sinais dificulta a análise objetiva, aumenta retrabalho e retarda decisões de engenharia.
 
 #### 3.1.3.2 Qual a solução proposta (visão de negócios)
 
+&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta é um protótipo IoT compacto que adquire sinais de aceleração (A×t) e força (F×t) em condições reais de rodagem, transmite os dados via MQTT, e persiste os arquivos e metadados em um repositório organizado.
+
+Em termos de valor de negócios, a solução:
+
+- Padroniza o insumo das análises e-line, reduzindo variação operacional.
+- Aumenta a confiabilidade e governança do ciclo de vida dos dados de teste.
+- Acelera a tomada de decisão (dados prontos para consumo analítico).
+- Cria a base para um sinal de entrada genérico de S&R e para evoluções analíticas (indicadores, espectros, automações).
+
 #### 3.1.3.3 Como a solução proposta deverá ser utilizada
+
+**Instrumentação** - O módulo embarcado (acelerômetros + sensor de força + condicionamento + MCU/SoC) é acoplado ao equipamento/veículo conforme plano de ensaio.
+
+**Rodagem em pista** - Executam-se campanhas nos perfis de pista definidos, seguindo procedimento (velocidade-alvo/intervalo, duração, repetições).
+
+**Transmissão** - Durante a rodagem, os pacotes são publicados via MQTT; se houver perda de conexão, entra o buffer local e a publicação é retomada ao reconectar.
+
+**Armazenamento e visualização** - Os dados brutos e metadados (pista, equipamento/veículo, timestamps) são persistidos e disponibilizados em dashboard/visualizador para inspeção, pré-processamento (ex.: filtragem) e análises iniciais.
+
+**Rastreabilidade** - Cada sessão recebe identificadores únicos e um checklist automático de metadados, permitindo auditoria técnica e comparabilidade entre campanhas.
 
 #### 3.1.3.4 Quais os benefícios trazidos pela solução proposta
 
+- Aquisição padronizada de sinais dinâmicos A×t e F×t em condições reais de rodagem.
+- Precisão e padronização nas análises e-line, com sinais comparáveis entre pistas e ao longo do tempo.
+- Governança e rastreabilidade ponta-a-ponta (coleta -> transmissão -> persistência -> análise).
+- Eficiência operacional, com menos retrabalho e menor tempo para preparar/validar ensaios.
+- Base para escala analítica, viabilizando espectros padronizados e indicadores de criticidade.
+- Evolutividade: insumo concreto para compor um sinal de entrada genérico para S&R e automações futuras.
+
 #### 3.1.3.5 Qual será o critério de sucesso e qual medida será utilizada para o avaliar
-	
+
+&nbsp;&nbsp;&nbsp;&nbsp;O critério de sucesso da solução proposta é a sua capacidade de atender às demandas de engenharia e qualidade da Renault do Brasil para Squeak & Rattle: comprovar, em rodagem controlada, a viabilidade técnica do protótipo para adquirir, transmitir, armazenar e visualizar sinais A×t e F×t com rastreabilidade completa e utilidade analítica inicial.
+
+Tal critério será avaliado com base nos seguintes indicadores-chave de desempenho (KPIs):
+- Precisão dos dados adquiridos: Verificar se os sinais A×t e F×t atendem às especificações técnicas estabelecidas (ex.: resolução, taxa de amostragem).
+- Taxa de transmissão bem-sucedida: Medir a porcentagem de pacotes MQTT transmitidos com sucesso para a plataforma em nuvem durante as campanhas.
+- Rastreabilidade dos dados: Avaliar a completude dos metadados associados a cada sessão de teste, garantindo que todas as informações relevantes estejam registradas.
+- Satisfação do usuário final: Coletar feedback dos engenheiros de S&R sobre a usabilidade e utilidade da solução na prática.
+
 ### 3.1.4. Value Proposition Canvas (sprint 1)	
 
-_O Canvas da proposta de valor deve ser feito considerando a solução que vocês estão desenvolvendo. Usar o template disponível no drive da turma._     
+&emsp; O Canvas de Proposta de Valor é uma ferramenta desenvolvida para ajudar empresas a compreender como um projeto pode atender de forma efetiva às necessidades e expectativas de seus clientes. Criado por Alexander Osterwalder, o modelo permite estruturar os elementos que realmente geram valor para o público-alvo, destacando os ganhos proporcionados por um produto ou serviço e as dores que ele se propõe a resolver. Essa abordagem contribui para uma visão mais estratégica e centrada no cliente, garantindo que as soluções desenvolvidas estejam alinhadas ao que realmente importa para o consumidor (Osterwalder et al., 2014).
+
+&emsp; No contexto da Renault Brasil, a busca por inovação constante no processo de desenvolvimento automotivo trouxe à tona um desafio importante: aprimorar as simulações de Squeak and Rattle (S&R) — ruídos e vibrações indesejadas que afetam o conforto e a percepção de qualidade dos veículos. Para enfrentar esse problema, a empresa aposta em uma solução baseada em Internet das Coisas (IoT), capaz de capturar dados de velocidade e aceleração em tempo real.
+
+&emsp; Com isso, torna-se possível realizar análises mais precisas e preditivas ainda nas fases iniciais de desenvolvimento, identificando potenciais falhas estruturais antes mesmo da construção dos protótipos físicos. O resultado é um processo mais ágil, econômico e assertivo, que reduz custos, retrabalhos e tempo de projeto, ao mesmo tempo em que eleva o padrão de qualidade e o conforto percebido pelo cliente final.
+
+#### 3.1.4.1 Proposta de Valor
+
+&emsp; A proposta de valor da Renault Brasil representa o conjunto de benefícios e soluções tecnológicas oferecidas às suas equipes de engenharia e P&D, com o objetivo de resolver desafios práticos e estratégicos no desenvolvimento veicular.
+
+#### 3.1.4.2 Criadores de Ganho
+
+- Identificação antecipada de falhas de Squeak and Rattle antes da prototipagem.
+
+- Redução expressiva de custos com retrabalho e fabricação de protótipos físicos.
+
+- Aceleração do ciclo de desenvolvimento e validação de novos modelos.
+
+- Aumento da precisão e da confiabilidade das simulações virtuais.
+
+- Melhoria perceptível no conforto acústico e na qualidade percebida.
+
+- Fortalecimento da imagem da Renault como referência em inovação e engenharia digital.
+
+#### 3.1.4.3 Produtos e Serviços
+
+- Sistema IoT para captura e transmissão de dados de velocidade, aceleração e vibração.
+
+- Plataforma integrada de análise de dados conectada aos softwares de simulação da Renault.
+
+- Dashboard interativo para acompanhamento e visualização em tempo real.
+
+- Relatórios automáticos com insights sobre falhas potenciais e pontos críticos.
+
+- Algoritmos de machine learning para detecção de padrões e anomalias em testes virtuais.
+
+#### 3.1.4.4 Alívio das Dores
+
+- Diminuição da dependência de protótipos físicos e testes manuais demorados.
+
+- Redução dos custos com repetição de testes e retrabalhos.
+
+- Eliminação de incertezas nas etapas iniciais de projeto.
+
+- Comunicação mais eficiente entre design, engenharia e validação.
+
+- Melhor aproveitamento de tempo e recursos no processo de desenvolvimento.
+
+#### 3.1.4.5 Ganhos
+
+- Maior eficiência e agilidade no ciclo de desenvolvimento de veículos.
+
+- Economia de recursos financeiros, humanos e de infraestrutura.
+
+- Modernização do processo de simulação de Squeak and Rattle.
+
+- Resultados técnicos mais confiáveis e previsíveis.
+
+- Elevação do padrão de qualidade, conforto e percepção de valor dos veículos.
+
+#### 3.1.4.7 Dores
+
+- Custos elevados com prototipagem e testes físicos.
+
+- Dificuldade em detectar falhas estruturais nas fases iniciais.
+
+- Retrabalho devido à identificação tardia de problemas.
+
+- Limitações das simulações atuais por falta de dados reais de dinâmica veicular.
+
+- Pressão por prazos curtos em ciclos de desenvolvimento cada vez mais exigentes.
+
+#### 3.1.4.8 Tarefas do Cliente
+
+- Desenvolver veículos que ofereçam conforto acústico e robustez estrutural.
+
+- Validar o desempenho de ruído e vibração antes da construção de protótipos.
+
+- Antecipar falhas de Squeak and Rattle com base em dados reais e simulações inteligentes.
+
+- Integrar as fases de design, simulação e testes de forma fluida e colaborativa.
+
+- Cumprir metas de inovação, eficiência e sustentabilidade dentro do processo de P&D.
+
+#### 3.1.4.9 Conclusão
+
+&emsp; A solução proposta para a Renault Brasil redefine o modo como a engenharia automotiva lida com ruídos e vibrações, ao integrar tecnologias de IoT e IA no processo de simulação. A coleta de dados reais de aceleração e velocidade permite uma análise preditiva mais confiável e acessível, reduzindo a dependência de protótipos físicos e aumentando a eficiência das equipes.
+
+&emsp; Com dashboards intuitivos, relatórios automáticos e algoritmos inteligentes, os engenheiros passam a contar com informações em tempo real para tomar decisões mais assertivas. O resultado é um processo de desenvolvimento mais ágil, sustentável e orientado por dados, que reforça a posição da Renault como uma marca inovadora e comprometida com a excelência técnica.
+
+&emsp; Essa abordagem inaugura um novo paradigma na engenharia automotiva: unir tecnologia e engenharia para criar veículos mais silenciosos, confortáveis e sofisticados — refletindo não apenas eficiência técnica, mas também o cuidado com a experiência do motorista e o legado da marca Renault.
+
+<div align="center">
+<sup>Figura # - Canvas Proposta de Valor </sup>
+
+<img src="../assets/canvas-proposta-de-valor.png">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 ### 3.1.5. Matriz de Riscos (sprint 1)	
 
@@ -99,6 +346,7 @@ _O Canvas da proposta de valor deve ser feito considerando a solução que você
 
 
 ### 3.1.6. Política de Privacidade de acordo com a LGPD (sprint 1)	
+
 
 _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita considerando o projeto que os alunos estão criando. Os pontos a seguir precisam ser apresentados. O aluno pode utilizar  o Gerador de Política de Privacidade (https://www.nuvemshop.com.br/ferramentas/gerador-politica-de-privacidade), criado pela Nuvemshop e, de acordo com a empresa, já adaptado a LGPD para ter uma prévia e ajustar de acordo com o seu projeto._
 
@@ -139,11 +387,41 @@ _BOM (Bill of Material) pode ser definido como uma lista completa de materiais, 
 
 ### 3.2.1. Personas (sprint 1)	
 
-_Coloque aqui suas Personas:_
-- _Representação fictícia do público-alvo._
-- _Baseada em dados reais e pesquisas._
-- _Humaniza o público, facilitando decisões centradas no usuário._
-- _Trabalhar na criação de pelo menos uma Persona_
+&nbsp;&nbsp;&nbsp;&nbsp;Segundo Louise Bruton (2022), personas no contexto de UI/UX, são representações fictícias de usuários reais, criadas com base em pesquisas qualitativas e quantitativas para auxiliar designers a compreenderem melhor o público-alvo e tomarem decisões de design mais informadas. Essas personas incluem detalhes demográficos, comportamentais, motivações, dores e objetivos, promovendo empatia e garantindo que o produto priorize as necessidades dos usuários, o que resulta em experiências mais intuitivas e eficazes.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Tendo em vista esses pontos, em nosso projeto nós criamos duas personas: um sendo o piloto que conduzirá o carro em tetes de Squeak and Rattle e o outro sendo o engenheiro de simulação da Renault, que analisará o resultados e relatórios para tirar conclusões úteis. Fizemos isso para auxiliar o desenvolvimento do projeto e não perdermos de vista os nossos objetivos.
+
+
+**João Silva, Piloto de Teste**
+
+<img src="../assets/persona-1.png" alt="Persona 1" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;João Silva representa o usuário operacional que interage diretamente com o dispositivo IoT durante os testes em pistas. Como piloto experiente, ele será responsável por instalar o dispositivo, ativar o sistema embarcado e conduzir o veículo em condições reais de rodagem, coletando dados de aceleração (A x t) e força (F x t).
+
+**Por que a persona João Silva?**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Entender as dores de João, como configurações complexas que demandam tempo ou interferem na condução, permite projetar interfaces simples e intuitivas. Isso reduz riscos, como distrações durante a direção, alinhando-se ao objetivo de coletar dados de forma automatizada e confiável.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Personas como essa promovem empatia para experiências diferentes das dos desenvolvedores, ajudando a priorizar requisitos como conectividade Wi-Fi/Bluetooth robusta e feedback imediato sobre a qualidade das medições. No MVP do projeto, isso assegura que o hardware seja prático, evitando falhas que invalidem rodagens inteiras e contribuindo para a viabilidade técnica da solução IoT.
+
+<br/>
+
+**Maria Oliveira, Engenheira de Simulação**
+
+<img src="../assets/persona-2.png" alt="Persona 2" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;Maria Oliveira personifica o usuário analítico que processa os dados coletados, utilizando-os para simulações CAE (Computer-Aided Engineering) de Squeak and Rattle. Como engenheira sênior, ela acessa a plataforma as a service, analisa sinais para gerar indicadores de criticidade e espectros de frequência, e integra os dados em modelos virtuais.
+
+**Por que a persona Maria Oliveira?**
+
+&nbsp;&nbsp;&nbsp;&nbsp;As frustrações de Maria, como a falta de dados confiáveis e coletivamente exaustivos de diferentes cenários de rodagem reais e de diferentes veículos, necessários para alavancar a qualidade de análises Squeak and Rattle, destacam a necessidade de padronização e armazenamento contínuo. Isso apoia o objetivo do projeto de criar um sinal de entrada genérico para avaliações "e-line", permitindo análises comparativas e previsões precisas.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ao entender motivações como avançar na precisão das simulações para veículos mais duráveis, a persona alinha o design com necessidades de integração com softwares existentes, como brokers MQTT.
+
+**Conclusão**
+
+&nbsp;&nbsp;&nbsp;&nbsp;As personas João Silva e Maria Oliveira são fundamentais para um design centrado no usuário, construindo empatia e prevendo interações em um projeto IoT complexo. Elas garantem que o protótipo atenda às demandas operacionais e analíticas, alinhando-se aos objetivos da Renault de automação, precisão e sustentabilidade. Ao incorporar essas representações, o projeto não só resolve problemas práticos, como aquisição de dados em pistas variadas, mas também pavimenta o caminho para expansões com IA e simulações digitais.
+
 
 ### 3.2.2. Jornada do Usuário e Storyboard (sprint 2)	
 
@@ -161,18 +439,27 @@ _Coloque aqui seu Storyboard:_
 
 ## 3.3. Solução Técnica	
 
-_Nesta seção, detalhe a especificação da solução, de acordo com o disposto nas subseções._
+ &nbsp;&nbsp;&nbsp;&nbsp;Nesta subseção, são feitos os detalhamentos em relação às especificações e capacidades téncicas do dispositivo IOT, delimitando-se seus requisitos funcionais e não funcionais, seu planejamento de arquitetura e demais características estruturais.
 
 ### 3.3.1. Requisitos Funcionais (sprint 1)	
 
-_Descreva quais são os requisitos funcionais e sua relação com as demandas e problemas de negócios (visão de funcionalidades). Evolua estes requisitos conforme o desenvolvimento do projeto._
+ &nbsp;&nbsp;&nbsp;&nbsp;De acordo com Wiegers (2013) e Kotonya e Sommerville (1998), a Engenharia de Requisitos envolve a identificação e documentação de funcionalidades e constraints que um sistema deve satisfazer, capturando as demandas e perspectivas dos envolvidos no projeto. Esses requisitos classificam-se em funcionais, que definem as operações e comportamentos específicos que o software ou hardware precisa executar, e não funcionais, que estabelecem critérios de qualidade, como eficiência, interface, proteção de dados e acessibilidade. Os requisitos representam elementos fundamentais no ciclo de vida de produtos tecnológicos e exigem uma avaliação rigorosa, equilibrando as expectativas dos usuários com as viabilidades técnicas, visando a criação de soluções robustas, seguras e otimizadas.
 
-_Atente-se as regras de negócios. Caso necessário, as aponte nos cenários dos requisitos funcionais._
+ &nbsp;&nbsp;&nbsp;&nbsp;A seguir será detalhado os requisitos funcionais do projeto, seguindo a visão de funcionalidades, alinhados às demandas e problemas de negócios do parceiro Renault.
 
 | **RF#** | **Descrição** | **Regra de negócio** | 
 |----------|----------|----------|
-|RF01|Ex. O dispositivo deve permitir acionamento por botão liga e desliga|Ex. A solução deve funcionar apenas durante seu uso por operadores|
-|RF02|Preencha aqui seus requisitos|Preencha aqui as regras de negócio relacionadas|
+|RF01|O sistema deve adquirir dados de aceleração (A x t) a partir de acelerômetros instalados no veículo durante ensaios em diferentes perfis de pista.|A aquisição de dados de aceleração deve ocorrer apenas durante a execução de testes veiculares padronizados, garantindo que os dados sejam coletados em condições controladas de rodagem para análises de Squeak and Rattle.|
+|RF02|O sistema deve adquirir dados de força (F x t) a partir de sensores piezoelétricos instalados no veículo durante ensaios em diferentes perfis de pista.|A aquisição de dados de força deve ocorrer apenas durante a execução de testes veiculares padronizados, garantindo que os dados sejam coletados em condições controladas de rodagem para análises de Squeak and Rattle.|
+|RF03|O sistema deve formatar os dados coletados (aceleração e força) em estruturas compatíveis com o protocolo MQTT, incluindo timestamps e identificadores de sensor.|Os dados formatados devem incluir metadados como perfil de pista, velocidade e identificador do teste, para permitir a rastreabilidade e correlação com condições específicas de rodagem veicular.|
+|RF04|O sistema deve estabelecer uma conexão Wi-Fi com uma rede disponível para transmissão de dados.|A conexão Wi-Fi deve ser iniciada automaticamente ao ligar o dispositivo embarcado, priorizando redes pré-configuradas para ambientes de teste veicular na Renault ou proximidades do campus Inteli.|
+|RF05|O sistema deve transmitir os dados formatados via protocolo MQTT para uma plataforma as a service configurada como endpoint.|A transmissão via MQTT deve ocorrer em tempo real durante os testes, utilizando tópicos específicos para separar dados de aceleração e força, garantindo a entrega para análises posteriores em projetos Renault.|
+|RF06|O sistema deve permitir a definição de chaves de identificação de usuário (como API keys ou credenciais) para acesso seguro à plataforma de dashboard.|As chaves de identificação devem ser associadas a perfis de engenheiros da Renault ou equipe acadêmica, limitando o acesso apenas a stakeholders autorizados envolvidos no projeto de Squeak and Rattle.|
+|RF07|O sistema deve permitir a definição e registro de devices (dispositivos IoT) dentro da plataforma as a service.|Cada device registrado deve ser vinculado a um veículo ou configuração de teste específica, permitindo o gerenciamento de múltiplos protótipos em diferentes pistas de rodagem.|
+|RF08|O sistema deve armazenar os dados recebidos via MQTT em uma estrutura básica de banco de dados na plataforma as a service.|O armazenamento deve organizar os dados por teste, incluindo filtros por perfil de pista e velocidade, para facilitar a geração de bases de dados consistentes para simulações futuras de Squeak and Rattle.|
+|RF09|O sistema deve fornecer representação gráfica dos dados coletados, incluindo gráficos de aceleração e força ao longo do tempo, no dashboard da plataforma.|As representações gráficas devem permitir visualização comparativa entre diferentes perfis de pista e velocidades, apoiando análises de criticidade e padrões de resposta veicular associados a ruídos de Squeak and Rattle.|
+|RF10|O sistema deve permitir a exportação de dados armazenados em formatos como CSV ou JSON para análises externas.|A exportação deve ser restrita a usuários autenticados e deve incluir todos os metadados do teste, garantindo a reprodutibilidade em metodologias de simulação Renault.|
+|RF11|O sistema deve permitir a configuração de parâmetros de aquisição, como taxa de amostragem dos sensores e duração dos testes.|As configurações devem ser aplicadas apenas antes do início de um teste, garantindo padronização para diferentes excitações veiculares e perfis de pista.
 
 ### 3.3.2. Requisitos Não Funcionais (sprint 2)	
 
@@ -279,10 +566,15 @@ _Escreva, de forma resumida, sobre os principais resultados do seu projeto e fa�
 
 ## <a name="c5"></a>5. Referências
 
+OSTERWALDER, A.; PIGNEUR, Y.; BERNARDA, G.; SMITH, A. *Value Proposition Design: How to Create Products and Services Customers Want.* Wiley, 2014.
+
+KEVIN DUNNE. SWOT Analysis: Strengths, Weaknesses, Opportunities and Threats (ou título equivalente em inglês conforme aparece na página). Mind Tools, sem data explícita de publicação (s.d.). Acesso em: 19 out. 2025.
+
+BRUTON, Louise. What are UX personas and what are they used for? UX Design Institute, 2022. Disponível em: https://www.uxdesigninstitute.com/blog/what-are-ux-personas/. Acesso em: 19 out. 2025.
+
+KOTONYA, Gerald; SOMMERVILLE, Ian. Requirements engineering: processes and techniques. Chichester: J. Wiley, 1998.
+
+WIEGERS, Karl; BEATTY, Joy. Software requirements. 3. ed. Redmond: Microsoft Press, 2013.
+
 TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenharia. São Paulo: Atlas, 2020.
 
-_Incluir as principais referências de seu projeto, para que seu parceiro possa consultar caso ele se interessar em aprofundar. Um exemplo de referência de livro e de site: <br>
-LUCK, Heloisa. Liderança em gestão escolar. 4. ed. Petrópolis: Vozes, 2010. <br>
-SOBRENOME, Nome. Título do livro: subtítulo do livro. Edição. Cidade de publicação: Nome da editora, Ano de publicação. <br>
-Disponível em: https://adalove.inteli.edu.br/feed. Acesso em: 1 out. 2023 <br>
-Disponível em: LINK DO SITE. Acesso em: Dia Mês Ano_
