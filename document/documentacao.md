@@ -169,16 +169,56 @@ Em resumo, a Renault Brasil está bem posicionada para crescer na transição pa
 
 ### 3.1.3. Descrição da Solução a ser Desenvolvida (sprint 1)	
 
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta seção, apresenta-se o desenvolvimento de uma solução IoT voltada ao contexto de Squeak & Rattle (S&R) da Renault do Brasil, alinhando as metas do projeto às demandas de engenharia e qualidade. A solução busca padronizar a aquisição de sinais dinâmicos em pista (A×t e F×t), transmiti-los com confiabilidade para uma plataforma em nuvem, armazená-los de forma rastreável e oferecer visualização analítica inicial. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;Essa base sustentará análises e-line reprodutíveis e, no médio prazo, viabilizará a construção de um sinal de entrada genérico para S&R, beneficiando a tomada de decisão e a eficiência operacional.
+
 #### 3.1.3.1 Qual é o problema a ser resolvido
+
+&nbsp;&nbsp;&nbsp;&nbsp;O processo de avaliação e-line para S&R exige sinais dinâmicos representativos dos diferentes perfis de pista que excitam o veículo. Hoje, a ausência de uma base padronizada, rastreável e reprodutível desses sinais dificulta a análise objetiva, aumenta retrabalho e retarda decisões de engenharia.
 
 #### 3.1.3.2 Qual a solução proposta (visão de negócios)
 
+&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta é um protótipo IoT compacto que adquire sinais de aceleração (A×t) e força (F×t) em condições reais de rodagem, transmite os dados via MQTT, e persiste os arquivos e metadados em um repositório organizado.
+
+Em termos de valor de negócios, a solução:
+
+- Padroniza o insumo das análises e-line, reduzindo variação operacional.
+- Aumenta a confiabilidade e governança do ciclo de vida dos dados de teste.
+- Acelera a tomada de decisão (dados prontos para consumo analítico).
+- Cria a base para um sinal de entrada genérico de S&R e para evoluções analíticas (indicadores, espectros, automações).
+
 #### 3.1.3.3 Como a solução proposta deverá ser utilizada
+
+**Instrumentação** - O módulo embarcado (acelerômetros + sensor de força + condicionamento + MCU/SoC) é acoplado ao equipamento/veículo conforme plano de ensaio.
+
+**Rodagem em pista** - Executam-se campanhas nos perfis de pista definidos, seguindo procedimento (velocidade-alvo/intervalo, duração, repetições).
+
+**Transmissão** - Durante a rodagem, os pacotes são publicados via MQTT; se houver perda de conexão, entra o buffer local e a publicação é retomada ao reconectar.
+
+**Armazenamento e visualização** - Os dados brutos e metadados (pista, equipamento/veículo, timestamps) são persistidos e disponibilizados em dashboard/visualizador para inspeção, pré-processamento (ex.: filtragem) e análises iniciais.
+
+**Rastreabilidade** - Cada sessão recebe identificadores únicos e um checklist automático de metadados, permitindo auditoria técnica e comparabilidade entre campanhas.
 
 #### 3.1.3.4 Quais os benefícios trazidos pela solução proposta
 
+- Aquisição padronizada de sinais dinâmicos A×t e F×t em condições reais de rodagem.
+- Precisão e padronização nas análises e-line, com sinais comparáveis entre pistas e ao longo do tempo.
+- Governança e rastreabilidade ponta-a-ponta (coleta -> transmissão -> persistência -> análise).
+- Eficiência operacional, com menos retrabalho e menor tempo para preparar/validar ensaios.
+- Base para escala analítica, viabilizando espectros padronizados e indicadores de criticidade.
+- Evolutividade: insumo concreto para compor um sinal de entrada genérico para S&R e automações futuras.
+
 #### 3.1.3.5 Qual será o critério de sucesso e qual medida será utilizada para o avaliar
-	
+
+&nbsp;&nbsp;&nbsp;&nbsp;O critério de sucesso da solução proposta é a sua capacidade de atender às demandas de engenharia e qualidade da Renault do Brasil para Squeak & Rattle: comprovar, em rodagem controlada, a viabilidade técnica do protótipo para adquirir, transmitir, armazenar e visualizar sinais A×t e F×t com rastreabilidade completa e utilidade analítica inicial.
+
+Tal critério será avaliado com base nos seguintes indicadores-chave de desempenho (KPIs):
+- Precisão dos dados adquiridos: Verificar se os sinais A×t e F×t atendem às especificações técnicas estabelecidas (ex.: resolução, taxa de amostragem).
+- Taxa de transmissão bem-sucedida: Medir a porcentagem de pacotes MQTT transmitidos com sucesso para a plataforma em nuvem durante as campanhas.
+- Rastreabilidade dos dados: Avaliar a completude dos metadados associados a cada sessão de teste, garantindo que todas as informações relevantes estejam registradas.
+- Satisfação do usuário final: Coletar feedback dos engenheiros de S&R sobre a usabilidade e utilidade da solução na prática.
+
 ### 3.1.4. Value Proposition Canvas (sprint 1)	
 
 &emsp; O Canvas de Proposta de Valor é uma ferramenta desenvolvida para ajudar empresas a compreender como um projeto pode atender de forma efetiva às necessidades e expectativas de seus clientes. Criado por Alexander Osterwalder, o modelo permite estruturar os elementos que realmente geram valor para o público-alvo, destacando os ganhos proporcionados por um produto ou serviço e as dores que ele se propõe a resolver. Essa abordagem contribui para uma visão mais estratégica e centrada no cliente, garantindo que as soluções desenvolvidas estejam alinhadas ao que realmente importa para o consumidor (Osterwalder et al., 2014).
@@ -287,6 +327,7 @@ Em resumo, a Renault Brasil está bem posicionada para crescer na transição pa
 _A Matriz de Risco deve ser desenhada considerando o projeto que os alunos estão criando. Deve ser entregue no template disponível no drive da turma. Os alunos devem enumerar os riscos, distribuí-los na matriz e justificar suas decisões._     
 
 ### 3.1.6. Política de Privacidade de acordo com a LGPD (sprint 1)	
+
 
 _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita considerando o projeto que os alunos estão criando. Os pontos a seguir precisam ser apresentados. O aluno pode utilizar  o Gerador de Política de Privacidade (https://www.nuvemshop.com.br/ferramentas/gerador-politica-de-privacidade), criado pela Nuvemshop e, de acordo com a empresa, já adaptado a LGPD para ter uma prévia e ajustar de acordo com o seu projeto._
 
