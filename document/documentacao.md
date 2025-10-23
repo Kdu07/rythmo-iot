@@ -336,7 +336,7 @@ _A Matriz de Risco deve ser desenhada considerando o projeto que os alunos estã
 
 #### 3.1.6.1 Informações gerais sobre a empresa / organização
 
-&nbsp;&nbsp;&nbsp;&nbsp;A controladora do tratamento de dados pessoais, para fins desta iniciativa acadêmica com simulação empresarial, é a organização do projeto identificada como [Nome da Empresa do Projeto], estabelecida em [endereço completo], inscrita no [CNPJ], que define finalidades e toma as decisões essenciais sobre as operações de tratamento no âmbito da solução de monitoramento e análise para Squeak and Rattle. Em determinados fluxos específicos, fornecedores de tecnologia e serviços atuarão como operadores, sempre mediante contratos com cláusulas de proteção de dados compatíveis com a legislação aplicável.
+&nbsp;&nbsp;&nbsp;&nbsp;A controladora do tratamento de dados pessoais, para fins desta iniciativa acadêmica com simulação empresarial, é a organização do projeto identificada como Rythmo, estabelecida em Rua Professor Almeida Prado, 520, inscrita no XXX.XXX.XXX/XXXX-XX, que define finalidades e toma as decisões essenciais sobre as operações de tratamento no âmbito da solução de monitoramento e análise para Squeak and Rattle. Em determinados fluxos específicos, fornecedores de tecnologia e serviços atuarão como operadores, sempre mediante contratos com cláusulas de proteção de dados compatíveis com a legislação aplicável.
 
 #### 3.1.6.2 Informações sobre o tratamento de dados
 
@@ -384,8 +384,7 @@ _A Matriz de Risco deve ser desenhada considerando o projeto que os alunos estã
 
 #### 3.1.6.13 Informações de contato do Data Protection Officer (DPO) ou encarregado de proteção de dados da organização
 
-&nbsp;&nbsp;&nbsp;&nbsp;O encarregado pelo tratamento de dados pessoais desta organização é [Nome do Encarregado], que pode ser contatado pelo e mail [privacidade@nomedoprojeto.com.br
-] e pelo endereço [endereço para correspondência]. O encarregado atua como canal de comunicação entre titulares, a organização e a Autoridade Nacional de Proteção de Dados e está à disposição para esclarecimentos, solicitações e sugestões relacionados a esta Política.
+&nbsp;&nbsp;&nbsp;&nbsp;O encarregado pelo tratamento de dados pessoais desta organização é Cauê Taddeo, que pode ser contatado pelo e mail caue.taddeo@sou.inteli.edu.br e pelo endereço Rua Professor Almeida Prado, 520. O encarregado atua como canal de comunicação entre titulares, a organização e a Autoridade Nacional de Proteção de Dados e está à disposição para esclarecimentos, solicitações e sugestões relacionados a esta Política.
 
 ### 3.1.7. Bill of Material (BOM) (sprint 1)
 _BOM (Bill of Material) pode ser definido como uma lista completa de materiais, que detalha todos os itens necessários para construir, fabricar ou reparar um produto. Deve-se preencher o template fornecido.
