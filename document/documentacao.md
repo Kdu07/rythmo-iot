@@ -113,6 +113,27 @@ _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita
 ### 3.1.7. Bill of Material (BOM)
 # Bill of Materials (BOM)
 
+&nbsp;&nbsp;&nbsp;&nbsp;A seguir, apresentamos a Bill of Material (BOM), que consiste na lista completa de materiais e componentes necessários para a construção, manutenção e possíveis reparos do dispositivo IoT descrito neste documento.
+
+Abaixo estão as informações do projeto para a Bill of Materials:
+<div align="center">
+<sub>Tabela 1 - Sobre a Bill of Materials</sub><br>
+
+| Título do Projeto           | Rythmo IoT |
+| --------------------------- | ----------- |
+| Autor                       | Rythmo    |
+| Número do documento         | S/N         |
+| Revisão                     | 0           |
+| Total de componentes da PCI | 8         |
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+
+Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
+<div align="center">
+<sub>Tabela 2 - Bill of Materials</sub><br>
+
 | Item | Categoria        | Código do Produto   | Descrição               | Quantidade | Preço Unitário | Total    | Observações                  |
 |------|------------------|---------------------|-------------------------|------------|----------------|----------|------------------------------|
 | 1    | Microcontrolador | ESP32-DEVKITC       | Microcontrolador ESP 32 | 1          | R$ 50,00       | R$ 50,00 | Verificar USB (CP2102/CH340) |
@@ -122,18 +143,9 @@ _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita
 | 5    | Display          | 1602A               | Monitor LCD             | 1          | R$ 30,00       | R$ 30,00 | 5V; 16:2; chip I2C           |
 | Total |||||| R$ 114,00 |
 
----
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
 
-**Legenda dos campos:**
-
-- **Item**: Número sequencial.
-- **Categoria**: Agrupamento ao qual pertence.
-- **Código do Produto**: Código do fabricante.
-- **Descrição**: Nome ou especificação do componente/material.
-- **Quantidade**: Quantidade necessária para o projeto.
-- **Preço Unitário**: Custo de cada unidade.
-- **Total**: Quantidade x Preço Unitário.
-- **Observações**: Informações adicionais relevantes.
 
 
 ## 3.2. Domínio de Fundamentos de Experiência de Usuário 
