@@ -110,7 +110,7 @@ _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita
 #### 3.1.6.13 Informações de contato do Data Protection Officer (DPO) ou encarregado de proteção de dados da organização
 
 
-### 3.1.7. Bill of Material (BOM) (sprint 1)
+### 3.1.7. Bill of Material (BOM)
 # Bill of Materials (BOM)
 
 | Item | Categoria        | Código do Produto   | Descrição               | Quantidade | Preço Unitário | Total    | Observações                  |
@@ -126,8 +126,8 @@ _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita
 
 **Legenda dos campos:**
 
-- **Categoria**: Agrupamento ao qual pertence.
 - **Item**: Número sequencial.
+- **Categoria**: Agrupamento ao qual pertence.
 - **Código do Produto**: Código do fabricante.
 - **Descrição**: Nome ou especificação do componente/material.
 - **Quantidade**: Quantidade necessária para o projeto.
