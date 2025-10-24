@@ -29,6 +29,7 @@ class Display{
   int number = 1;
   unsigned long previousMillis;
   int intervalo = 1000;
+  int aux = 0;
   
 
   public:
@@ -103,7 +104,7 @@ class Display{
       sensors_event_t a, g, temp;
       mpu.getEvent(&a, &g, &temp);
       int pot = analogRead(POT);
-      if(delayMillis(1000)){
+      if(delayMillis(800)){
         // lcd.clear();
         lcd.setCursor(0,0);
         lcd.print("X:      ");
@@ -161,6 +162,7 @@ class Display{
     int value = digitalRead((BUTTON_SELECT));
     if (value == LOW){
       selected = option;
+      aux = 0;
     } 
   }
 
@@ -168,7 +170,10 @@ class Display{
     int value = digitalRead((BUTTON_START));
     if (value == LOW && selected != -1){
       started = option;
-      lcd.clear();
+      if(aux == 0){
+        lcd.clear();
+        aux = 1;
+      }
     } 
   }
 
@@ -177,6 +182,7 @@ class Display{
     if (value == LOW){
       selected = -1;
       started = -1; 
+      aux = 0;
       number++;
       lcd.clear();
     } 
