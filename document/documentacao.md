@@ -95,11 +95,50 @@ _Descreva as etapas da metodologia RM-ODP que foram utilizadas para o desenvolvi
 
 _Link para os templates de negócios: https://drive.google.com/drive/folders/1lTqisJ_gxxtc5J5aXM8ula2kQ4MsII_M?usp=sharing_
 
-### 3.1.1. Contexto da Indústria (sprint 1)	
+### 3.1.1. Contexto da Indústria
 
-_O aluno deve fornecer informações sobre a concorrência (mínimo 3 competidores - 1 parágrafo; modelo de negócio - 1 parágrafo, e tendências - 1 parágrafo). Considere o setor do parceiro. Por exemplo, se o parceiro for a Rede Gazeta, o setor de Televisão.<br>
-<br>
-A análise de 5 forças deve ser feita considerando também o parceiro, o aluno deve preencher o template disponibilizado. No link a seguir há indicações de como avaliar as 5 forças: https://rockcontent.com/br/blog/5-forcas-de-porter/_
+&nbsp;&nbsp;&nbsp;&nbsp;A Renault Brasil atua no competitivo setor automotivo, com foco na produção e venda de veículos de passeio e comerciais leves, além de serviços financeiros e locação. Inserida numa cadeia complexa que abrange pesquisa científica, engenharia, manufatura, logística, rede de concessionárias e soluções digitais, a operação no país tem valor estratégico para a marca. No país, combina uma fábrica robusta, ecossistema de fornecedores locais e crescente integração com tendências globais, como frota elétrica e conectividade.</br>
+
+#### 3.1.1.1 Concorrentes	
+No mercado brasileiro, a Renault disputa espaço especialmente com montadoras estabelecidas. Entre os principais competidores:
+- Chevrolet (General Motors): forte presença em hatches e SUVs, ampla rede de concessionárias e marketing agressivo.
+- Fiat (Stellantis): liderança histórica em volumes e portfólio amplo, especialmente em compactos e comerciais leves.
+- Volkswagen: tradição, percepção de qualidade e renovação de linha com foco em eficiência e conectividade.</br>
+
+Outros players relevantes incluem Hyundai, Toyota e Jeep (Stellantis), que pressionam as margens e aceleram a inovação no setor. </br>
+
+#### 3.1.1.2 Modelo de negócio	
+O modelo de negócio da Renault Brasil integra:
+- Manufatura local e cadeia de suprimentos: produção nacional para ganho de escala, maior competitividade de custos e adequação a requisitos regulatórios e de conteúdo local.
+- Portfólio de produtos: veículos de entrada, SUVs compactos/medianos e comerciais leves, balanceando volume e rentabilidade. Edição de séries especiais e atualizações frequentes para manter relevância.
+- Rede de distribuição e pós‑venda: concessionárias como ponto de venda, serviços, garantia, peças e acessórios; foco na experiência do cliente e no custo total de propriedade.
+- Serviços financeiros: financiamentos, consórcios, leasing e seguros em parceria com braço financeiro, aumentando conversão e ticket médio.
+- Inovação e parcerias: eletrificação, conectividade embarcada e mobilidade como serviço (car‑sharing, assinatura, frotas).
+
+#### 3.1.1.3 Tendências
+A Renault Brasil garante sua posição no mercado ao acompanhar as novas tendências:
+- Eletrificação gradual: avanços em híbridos, sobretudo em mercados urbanos e frotas. Discussão sobre biocombustíveis e híbridos flex como ponte tecnológica no Brasil.
+- SUVização e segurança: maior participação de SUVs e crossovers; consumidores buscam segurança, conectividade e ADAS (Sistemas Avançados de Assistência ao Motorista) com preços acessíveis.
+- Digitalização da jornada: mais etapas da compra migram para o online; pós‑venda preditivo e transparência de custos ganham importância.
+- Eficiência regulatória: metas de emissões e segurança pressionam inovação em powertrain, aerodinâmica e materiais.
+Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para frotas e apps ampliam relevância.
+
+#### 3.1.1.4 5 Forças de Porter
+
+ &nbsp;&nbsp;&nbsp;&nbsp;De acordo com Michael Porter (1986, apud PORTER, 2008), para que se torne possível examinar o ambiente em que uma empresa está inclusa, é necessário analisar sua performance no mercado em relação aos competidores, fatores internos e externos. Logo, o modelo das Cinco Forças de Porter é parte essencial da pesquisa de campo para tirar o maior proveito das oportunidades que irão se apresentar. O modelo tem como respectivas forças: rivalidade entre concorrentes; poder de barganha dos fornecedores; poder de barganha dos clientes; ameaça de novos entrantes; ameaça de produtos substitutos.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A seguir, a análise das 5 forças de Porter no contexto da Renault Brasil:
+
+<div align="center">
+<sup>Figura # - 5 Forças de Porter </sup>
+   
+<img src="../assets/5-forcas.png"> 
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+   
+</div>
+
+Dessa forma, em um mercado altamente disputado e em rápida transformação, a Renault Brasil busca diferenciais ao equilibrar eficiência operacional, inovação orientada ao cliente e uma estratégia comercial omnichannel. A combinação de parque industrial local competitivo, portfólio alinhado ao desejo por SUVs, somada ao avanço em eletrificação acessível para a realidade brasileira, posiciona a marca para defender margens e ganhar participação no mercado. O sucesso dependerá de entregar valor superior (eficiência, segurança, conectividade e experiência) em proporção ao custo total do produto.
 
 ### 3.1.2. Análise SWOT (sprint 1)	
  
@@ -670,6 +709,10 @@ Também inclua figuras da versão final do protótipo físico e dashboards, alé
 _Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de projeto em relação ao uso dessa solução. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras._
 
 ## <a name="c5"></a>5. Referências
+
+INVESTOPEDIA. Porter’s 5 Forces: Definition and Examples. Disponível em: https://www.investopedia.com/terms/p/porter.asp. Acesso em: 23 out. 2025.
+
+PORTER, Michael E. Competitive strategy: techniques for analyzing industries and competitors. New York: Free Press, 2008.
 
 OSTERWALDER, A.; PIGNEUR, Y.; BERNARDA, G.; SMITH, A. *Value Proposition Design: How to Create Products and Services Customers Want.* Wiley, 2014.
 
