@@ -113,23 +113,24 @@ _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita
 ### 3.1.7. Bill of Material (BOM) (sprint 1)
 # Bill of Materials (BOM)
 
-| Item | Código do Produto | Descrição               | Quantidade | Unidade | Preço Unitário | Total    | Observações        |
-|------|-------------------|-------------------------|------------|---------|----------------|----------|--------------------|
-| 1    | ESP32             | Microcontrolador ESP 32 | 1          | un      | R$ 45,00       | R$ 45,00 | 38 pinos           |
-| 2    | ?                 | Módulo Piezoelétrico    | 1          | un      | R$ 15,00       | R$ 15,00 | 3.3V ou 5V         |
-| 3    | MPU6050           | Módulo Acelerômetro     | 1          | un      | R$ 15,00       | R$ 15,00 | 3.3V ou 5V         |
-| 4    | ?                 | Push Button             | 3          | un      | R$ 0,50        | R$ 1,50  | Máx 12V            |
-| 5    | ?                 | Monitor LCD             | 1          | un      | R$ 15,00       | R$ 15,00 | 5V; 16:2; chip I2C |
+| Item | Categoria        | Código do Produto   | Descrição               | Quantidade | Preço Unitário | Total    | Observações                  |
+|------|------------------|---------------------|-------------------------|------------|----------------|----------|------------------------------|
+| 1    | Microcontrolador | ESP32-DEVKITC       | Microcontrolador ESP 32 | 1          | R$ 50,00       | R$ 50,00 | Verificar USB (CP2102/CH340) |
+| 2    | Sensor           | 7BB-27-4L0          | Disco Piezoelétrico     | 1          | R$ 15,00       | R$ 15,00 | 3.3V ou 5V                   |
+| 3    | Sensor           | GY-521 (MPU6050)    | Módulo Acelerômetro     | 1          | R$ 15,00       | R$ 15,00 | 3.3V ou 5V                   |
+| 4    | Botão            | B3F-1020            | Push Button             | 4          | R$ 1,00        | R$ 4,00  | Máx 12V                      |
+| 5    | Display          | 1602A               | Monitor LCD             | 1          | R$ 30,00       | R$ 30,00 | 5V; 16:2; chip I2C           |
+| Total |||||| R$ 114,00 |
 
 ---
 
 **Legenda dos campos:**
 
+- **Categoria**: Agrupamento ao qual pertence.
 - **Item**: Número sequencial.
-- **Código do Produto**: Código do fornecedor.
+- **Código do Produto**: Código do fabricante.
 - **Descrição**: Nome ou especificação do componente/material.
 - **Quantidade**: Quantidade necessária para o projeto.
-- **Unidade**: Unidade de medida (un, m, kg, etc.).
 - **Preço Unitário**: Custo de cada unidade.
 - **Total**: Quantidade x Preço Unitário.
 - **Observações**: Informações adicionais relevantes.
