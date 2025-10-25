@@ -416,9 +416,41 @@ _A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita
 #### 3.1.6.13 Informações de contato do Data Protection Officer (DPO) ou encarregado de proteção de dados da organização
 
 
-### 3.1.7. Bill of Material (BOM) (sprint 1)
-_BOM (Bill of Material) pode ser definido como uma lista completa de materiais, que detalha todos os itens necessários para construir, fabricar ou reparar um produto. Deve-se preencher o template fornecido.
+### 3.1.7. Bill of Material (BOM)
+# Bill of Materials (BOM)
 
+&nbsp;&nbsp;&nbsp;&nbsp;A seguir, apresentamos a Bill of Material (BOM), que consiste na lista completa de materiais e componentes necessários para a construção, manutenção e possíveis reparos do dispositivo IoT descrito neste documento.
+
+Abaixo estão as informações do projeto para a Bill of Materials:
+<div align="center">
+<sub>Tabela 1 - Sobre a Bill of Materials</sub><br>
+
+| Título do Projeto           | Rythmo IoT |
+| --------------------------- | ----------- |
+| Autor                       | Rythmo    |
+| Número do documento         | S/N         |
+| Revisão                     | 0           |
+| Total de componentes da PCI | 8         |
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+
+Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
+<div align="center">
+<sub>Tabela 2 - Bill of Materials</sub><br>
+
+| Item | Categoria        | Código do Produto   | Descrição               | Quantidade | Preço Unitário | Total    | Observações                  |
+|------|------------------|---------------------|-------------------------|------------|----------------|----------|------------------------------|
+| 1    | Microcontrolador | ESP32-DEVKITC       | Microcontrolador ESP 32 | 1          | R$ 50,00       | R$ 50,00 | Verificar USB (CP2102/CH340) |
+| 2    | Sensor           | 7BB-27-4L0          | Disco Piezoelétrico     | 1          | R$ 15,00       | R$ 15,00 | 3.3V ou 5V                   |
+| 3    | Sensor           | GY-521 (MPU6050)    | Módulo Acelerômetro     | 1          | R$ 15,00       | R$ 15,00 | 3.3V ou 5V                   |
+| 4    | Botão            | B3F-1020            | Push Button             | 4          | R$ 1,00        | R$ 4,00  | Máx 12V                      |
+| 5    | Display          | 1602A               | Monitor LCD             | 1          | R$ 30,00       | R$ 30,00 | 5V; 16:2; chip I2C           |
+| Total |||||| R$ 114,00 |
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
 
 
 
