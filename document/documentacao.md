@@ -442,7 +442,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 #### 3.1.6.13 Informações de contato do Data Protection Officer (DPO) ou encarregado de proteção de dados da organização
 
-&nbsp;&nbsp;&nbsp;&nbsp;O encarregado pelo tratamento de dados pessoais desta organização é Claudio Fernando André, que pode ser contatado pelo e mail xxxxx.xxxxxx@sou.inteli.edu.br e pelo endereço Rua Professor Almeida Prado, 520. O encarregado atua como canal de comunicação entre titulares, a organização e a Autoridade Nacional de Proteção de Dados e está à disposição para esclarecimentos, solicitações e sugestões relacionados a esta Política.
+&nbsp;&nbsp;&nbsp;&nbsp;O encarregado pelo tratamento de dados pessoais desta organização é Claudio Fernando André, que pode ser contatado pelo e mail claudio.andre@prof.inteli.edu.br e pelo endereço Rua Professor Almeida Prado, 520. O encarregado atua como canal de comunicação entre titulares, a organização e a Autoridade Nacional de Proteção de Dados e está à disposição para esclarecimentos, solicitações e sugestões relacionados a esta Política.
 
 ### 3.1.7. Bill of Material (BOM) (sprint 1)
 _BOM (Bill of Material) pode ser definido como uma lista completa de materiais, que detalha todos os itens necessários para construir, fabricar ou reparar um produto. Deve-se preencher o template fornecido.
