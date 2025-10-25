@@ -95,11 +95,50 @@ _Descreva as etapas da metodologia RM-ODP que foram utilizadas para o desenvolvi
 
 _Link para os templates de negócios: https://drive.google.com/drive/folders/1lTqisJ_gxxtc5J5aXM8ula2kQ4MsII_M?usp=sharing_
 
-### 3.1.1. Contexto da Indústria (sprint 1)	
+### 3.1.1. Contexto da Indústria
 
-_O aluno deve fornecer informações sobre a concorrência (mínimo 3 competidores - 1 parágrafo; modelo de negócio - 1 parágrafo, e tendências - 1 parágrafo). Considere o setor do parceiro. Por exemplo, se o parceiro for a Rede Gazeta, o setor de Televisão.<br>
-<br>
-A análise de 5 forças deve ser feita considerando também o parceiro, o aluno deve preencher o template disponibilizado. No link a seguir há indicações de como avaliar as 5 forças: https://rockcontent.com/br/blog/5-forcas-de-porter/_
+&nbsp;&nbsp;&nbsp;&nbsp;A Renault Brasil atua no competitivo setor automotivo, com foco na produção e venda de veículos de passeio e comerciais leves, além de serviços financeiros e locação. Inserida numa cadeia complexa que abrange pesquisa científica, engenharia, manufatura, logística, rede de concessionárias e soluções digitais, a operação no país tem valor estratégico para a marca. No país, combina uma fábrica robusta, ecossistema de fornecedores locais e crescente integração com tendências globais, como frota elétrica e conectividade.</br>
+
+#### 3.1.1.1 Concorrentes	
+No mercado brasileiro, a Renault disputa espaço especialmente com montadoras estabelecidas. Entre os principais competidores:
+- Chevrolet (General Motors): forte presença em hatches e SUVs, ampla rede de concessionárias e marketing agressivo.
+- Fiat (Stellantis): liderança histórica em volumes e portfólio amplo, especialmente em compactos e comerciais leves.
+- Volkswagen: tradição, percepção de qualidade e renovação de linha com foco em eficiência e conectividade.</br>
+
+Outros players relevantes incluem Hyundai, Toyota e Jeep (Stellantis), que pressionam as margens e aceleram a inovação no setor. </br>
+
+#### 3.1.1.2 Modelo de negócio	
+O modelo de negócio da Renault Brasil integra:
+- Manufatura local e cadeia de suprimentos: produção nacional para ganho de escala, maior competitividade de custos e adequação a requisitos regulatórios e de conteúdo local.
+- Portfólio de produtos: veículos de entrada, SUVs compactos/medianos e comerciais leves, balanceando volume e rentabilidade. Edição de séries especiais e atualizações frequentes para manter relevância.
+- Rede de distribuição e pós‑venda: concessionárias como ponto de venda, serviços, garantia, peças e acessórios; foco na experiência do cliente e no custo total de propriedade.
+- Serviços financeiros: financiamentos, consórcios, leasing e seguros em parceria com braço financeiro, aumentando conversão e ticket médio.
+- Inovação e parcerias: eletrificação, conectividade embarcada e mobilidade como serviço (car‑sharing, assinatura, frotas).
+
+#### 3.1.1.3 Tendências
+A Renault Brasil garante sua posição no mercado ao acompanhar as novas tendências:
+- Eletrificação gradual: avanços em híbridos, sobretudo em mercados urbanos e frotas. Discussão sobre biocombustíveis e híbridos flex como ponte tecnológica no Brasil.
+- SUVização e segurança: maior participação de SUVs e crossovers; consumidores buscam segurança, conectividade e ADAS (Sistemas Avançados de Assistência ao Motorista) com preços acessíveis.
+- Digitalização da jornada: mais etapas da compra migram para o online; pós‑venda preditivo e transparência de custos ganham importância.
+- Eficiência regulatória: metas de emissões e segurança pressionam inovação em powertrain, aerodinâmica e materiais.
+Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para frotas e apps ampliam relevância.
+
+#### 3.1.1.4 5 Forças de Porter
+
+ &nbsp;&nbsp;&nbsp;&nbsp;De acordo com Michael Porter (1986, apud PORTER, 2008), para que se torne possível examinar o ambiente em que uma empresa está inclusa, é necessário analisar sua performance no mercado em relação aos competidores, fatores internos e externos. Logo, o modelo das Cinco Forças de Porter é parte essencial da pesquisa de campo para tirar o maior proveito das oportunidades que irão se apresentar. O modelo tem como respectivas forças: rivalidade entre concorrentes; poder de barganha dos fornecedores; poder de barganha dos clientes; ameaça de novos entrantes; ameaça de produtos substitutos.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A seguir, a análise das 5 forças de Porter no contexto da Renault Brasil:
+
+<div align="center">
+<sup>Figura # - 5 Forças de Porter </sup>
+   
+<img src="../assets/5-forcas.png"> 
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+   
+</div>
+
+Dessa forma, em um mercado altamente disputado e em rápida transformação, a Renault Brasil busca diferenciais ao equilibrar eficiência operacional, inovação orientada ao cliente e uma estratégia comercial omnichannel. A combinação de parque industrial local competitivo, portfólio alinhado ao desejo por SUVs, somada ao avanço em eletrificação acessível para a realidade brasileira, posiciona a marca para defender margens e ganhar participação no mercado. O sucesso dependerá de entregar valor superior (eficiência, segurança, conectividade e experiência) em proporção ao custo total do produto.
 
 ### 3.1.2. Análise SWOT (sprint 1)	
  
@@ -324,7 +363,26 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 ### 3.1.5. Matriz de Riscos (sprint 1)	
 
-_A Matriz de Risco deve ser desenhada considerando o projeto que os alunos estão criando. Deve ser entregue no template disponível no drive da turma. Os alunos devem enumerar os riscos, distribuí-los na matriz e justificar suas decisões._     
+&emsp; Segundo Tomaz, Gagliasso e Malavota (2020), a matriz de riscos é uma ferramenta analítica que permite visualizar e gerenciar as incertezas de um projeto por meio da relação entre a probabilidade de ocorrência e o impacto potencial de cada risco. Ao estruturar essas variáveis em um formato matricial, ela fornece uma base racional para priorização e tomada de decisão, promovendo ações preventivas e corretivas mais eficazes. Além disso, por ser parte de um processo iterativo, a matriz evolui com o projeto, incorporando novos riscos e reavaliando os existentes, o que a torna um instrumento dinâmico e indispensável à gestão estratégica.
+
+&emsp; No contexto da Renault, a matriz de riscos permite identificar ameaças e falhas que possam comprometer as operações de telemetria e análise de dados veiculares em pista, além de, por meio de seu eixo de oportunidades, explorar caminhos voltados à inovação e à segurança dos dados na infraestrutura IoT em desenvolvimento pelo grupo. Diante da crescente demanda por otimização dos processos de engenharia automotiva e das rápidas transformações tecnológicas no setor de IoT, essa ferramenta assegura resiliência e agilidade, fortalecendo a capacidade da Renault em desenvolver veículos mais eficientes e seguros, especialmente na identificação e mitigação de problemas de squeak and rattle.
+
+<div align="center">
+<sup>Figura # - Matriz de Riscos e Oportunidades </sup>
+   
+<img src="../assets/matriz-de-riscos.png"> 
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+   
+</div>
+
+&emsp; A matriz de risco identificou algumas ameaças importantes para o projeto de telemetria veicular. Entre elas, destaca-se a sobrecarga de processamento do microcontrolador, que pode não conseguir lidar com grandes volumes de dados de sensores de velocidade e aceleração em alta frequência, causando perda de amostras críticas e comprometendo a precisão das simulações. Outro fator crítico é a vulnerabilidade de segurança dos dados, onde informações sensíveis de testes podem ser interceptados se não houver criptografia adequada, expondo dados estratégicos sobre o desenvolvimento de novos veículos. Adicionalmente, a instabilidade de conectividade em áreas com baixa cobertura de rede pode causar atraso ou perda de pacotes durante a transmissão dos dados para o banco de dados remoto, prejudicando a continuidade do monitoramento em tempo real. As condições adversas do ambiente de pista, como poeira, calor extremo, vibração e umidade, também representam ameaças ao funcionamento adequado dos sensores, podendo alterar medições e gerar dados inconsistentes que comprometem as análises de squeak and rattle.
+
+&emsp; Por outro lado, a matriz de risco também ressalta oportunidades estratégicas que impulsionam a inovação e ampliam o valor do projeto. O aproveitamento de dados reais de pista aumenta significativamente a precisão dos modelos de simulação de squeak and rattle, reduzindo custos e tempo no desenvolvimento de novos veículos ao permitir testes virtuais mais confiáveis antes da produção. Outra oportunidade crucial é a padronização de dados e aprimoramento do dashboard com filtros e validação automática, tornando as análises mais claras e evitando interpretações incorretas que poderiam levar a decisões equivocadas de engenharia. O desenvolvimento de um sistema de transmissão resiliente e inteligente de dados também se destaca, viabilizando o uso da solução em pistas remotas e expandindo as possibilidades de testes em diferentes condições. A implementação de criptografia e segurança alinhada à LGPD representa uma oportunidade de garantir confiança no uso corporativo e proteção da propriedade intelectual. Por fim, o pré-processamento local dos dados otimiza a eficiência do sistema, reduzindo o volume de informações desnecessárias enviadas ao servidor e melhorando o desempenho geral da solução.
+
+&emsp; Conforme o contexto supramencionado, essas ameaças e oportunidades demonstram a importância de uma matriz de risco completa e bem estruturada para a Renault, permitindo tanto a mitigação de problemas técnicos quanto o aproveitamento do potencial de impacto positivo no desenvolvimento automotivo, especialmente na redução de problemas de squeak and rattle através de simulações mais precisas baseadas em dados reais de pista.
+
+
 
 ### 3.1.6. Política de Privacidade de acordo com a LGPD (sprint 1)	
 
@@ -531,14 +589,119 @@ _Nesta seção, detalhe os resultados obtidos com a implementação, de acordo c
 
 ### 3.4.1.Protótipo Inicial do Projeto usando o Simulador Wokwi (sprint 1)
 
-_Preencha aqui o link para o protótipo inicial no Wokwi_
+De acordo com a documentação oficial, o Wokwi é uma plataforma de simulação eletrônica online e gratuita, que permite simular o uso de diversos componentes eletrônicos em conjunto com microcontroladores como o ESP32 e o Arduino. A finalidade de se utilizar essa ferramenta está na necessidade de testar o hardware e os componentes eletrônicos em conjunto com toda a programação antes de iniciar de fato a montagem física do circuito. Em projetos de eletrônica, é comum que a prototipagem passe por três etapas: simulação, prototipação em protoboard e, por fim, design de placa de circuito impresso.
 
-_Abaixo você deve registrar diversas situações de teste, indicando exemplos de leitura (entrada) e escrita (saída) apresentadas pelo seu sistema no simulador. Estes registros serão utilizados para testar seus componentes, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de possíveis falhas nas leituras de entradas e saídas. <br>
-Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do simulador e descreva os testes realizados para ilustrar o funcionamento do protótipo simulado. A tabela a seguir serve como exemplo._
+ Dessa forma, no contexto do nosso projeto, a utilização do Wokwi foi essencial para testar a funcionalidade do sensor MPU6050, que é um acelerômetro e giroscópio, integrado ao microcontrolador ESP32. Entretanto na plataforma Wokwi, não havia disponivel um sensor piezoelétrico, com orientação do professor, foi decidido utilizar um potenciômetro como alternativa, pois ele poderia simular variações de tensão de forma semelhante ao sensor piezoelétrico. Isso permitiu testar tanto o código quanto o comportamento dos componentes em um ambiente virtual controlado, reduzindo riscos e tempo para o desenvolvimento do protótipo físico.
+
+[Link para o protótipo inicial no Wokwi](https://wokwi.com/projects/445451718509901825)
+
+Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de teste. Nessa etapa, avaliamos as funcionalidades dos componentes em diferentes cenários, incluindo tanto casos de sucesso quanto situações com erros de leitura. O principal objetivo dessa fase é avaliar o comportamento do nosso sistema e, assim, garantir seu bom funcionamento, evitando riscos de falhas futuras na implementação física.
+
+<div align="center">
+
+<sub>Casos de Teste </sub>
+
+</div>
+
+<div align="center">
 
 **#** | **Bloco** | **Componente de entrada** | **Leitura da entrada** | **Componente de saída** | **Leitura da saída** | **Descrição**
 |----------|----------|----------|----------|----------|----------|----------|
-|01|ex. medidor de umidade relativa do ar|ex. “sensor de umidade XPTO”| < 100 | ex. led amarelo | piscante em intervalo de 1s | quando a umidade está baixa, o led amarelo pisca
+|01|Aceleração no eixo X| Sensor MPU6050 | 1g | Display LCD I2C | "X: 9.81"  em uma parte do display LCD | Quando o sensor detecta uma aceleração de 1g no eixo X, o display LCD I2C exibe o valor correspondente de 9.81 m/s².|
+|02|Aceleração no eixo X| Sensor MPU6050 | 0g | Display LCD I2C | "X: 0.00"  em uma parte do display LCD | Quando o sensor detecta uma aceleração de 0g no eixo X, o display LCD I2C exibe o valor correspondente de 0.00 m/s².|
+|03|Aceleração no eixo X| Sensor MPU6050 | -1g | Display LCD I2C | "X: -9.81"  em uma parte do display LCD | Quando o sensor detecta uma aceleração de -1g no eixo X, o display LCD I2C exibe o valor correspondente de -9.81 m/s².|
+|04|Aceleração no eixo Y| Sensor MPU6050 | 1g | Display LCD I2C | "Y: 9.81" em uma parte do display LCD | Quando o sensor detecta uma aceleração de 1g no eixo Y, o display LCD I2C exibe o valor correspondente de 9.81 m/s².|
+|05|Aceleração no eixo Y| Sensor MPU6050 | 0g | Display LCD I2C | "Y: 0.00" em uma parte do display LCD | Quando o sensor detecta uma aceleração de 0g no eixo Y, o display LCD I2C exibe o valor correspondente de 0.00 m/s².|
+|06|Aceleração no eixo Y| Sensor MPU6050 | -1g | Display LCD I2C | "Y: -9.81" em uma parte do display LCD | Quando o sensor detecta uma aceleração de -1g no eixo Y, o display LCD I2C exibe o valor correspondente de -9.81 m/s².|
+|07|Aceleração no eixo Z| Sensor MPU6050 | 1g | Display LCD I2C | "Z: 9.81" em uma parte do display LCD | Quando o sensor detecta uma aceleração de 1g no eixo Z, o display LCD I2C exibe o valor correspondente de 9.81 m/s².|
+|08|Aceleração no eixo Z| Sensor MPU6050 | 0g | Display LCD I2C | "Z: 0.00" em uma parte do display LCD | Quando o sensor detecta uma aceleração de 0g no eixo Z, o display LCD I2C exibe o valor correspondente de 0.00 m/s².|
+|09|Aceleração no eixo Z| Sensor MPU6050 | -1g | Display LCD I2C | "Z: -9.81" em uma parte do display LCD | Quando o sensor detecta uma aceleração de -1g no eixo Z, o display LCD I2C exibe o valor correspondente de -9.81 m/s².|
+|10|Variação do Potenciômetro| Potenciômetro | 0 | Display LCD I2C | "V: 0.00" em uma parte do display LCD | Quando o potenciômetro detecta o valor de 0, o display LCD I2C exibe o valor correspondente de 0.00.|
+|11|Variação do Potenciômetro| Potenciômetro | 4095 | Display LCD I2C | "V: 4095" em uma parte do display LCD | Quando o potenciômetro detecta o valor de 4095, o display LCD I2C exibe o valor correspondente de 4095.|
+|12|Troca de opção de pista|Botão Options|Botão pressionado (LOW)|Display LCD I2C|Texto da pista muda para próxima opção|Ao pressionar o botão de opções, o display alterna entre "Lisa", "Esburacada", "Paralelepipedo", "Placeholder", "Placeholder2".|
+|13|Seleção de pista|Botão Select |Botão pressionado (LOW)|Display LCD I2C|Texto muda para "Selected Pista:" e mostra pista escolhida|Ao pressionar o botão de seleção, a pista atual é marcada como selecionada e o display exibe "Selected Pista:" na linha superior.|
+|14|Reset de seleção|Botão Reset |Botão pressionado (LOW)|Display LCD I2C|Display volta a mostrar "Select Pista:" e opção atual|Ao pressionar o botão de reset, a seleção é desfeita e o display retorna ao estado inicial de escolha de pista.|
+|15|Ciclo de opções|Botão Options |Botão pressionado repetidas vezes|Display LCD I2C|Opções voltam para "Lisa" após "Placeholder2"|Ao pressionar o botão de opções cinco vezes, o display retorna para a primeira opção ("Lisa"), reiniciando o ciclo.|
+|16|Seleção bloqueada|Botão Options após seleção|Botão pressionado (LOW)|Display LCD I2C|Opção não muda após seleção|Após selecionar uma pista, pressionar o botão de opções não altera mais a pista até que o reset seja realizado.|
+|17|Inicio bloqueado|Botão Start sem seleção|Botão pressionado (LOW)|Display LCD I2C|Medições não iniciam|Ao pressionar o botão de start sem uma pista selecionada, as medições não são iniciadas.|
+|18|Inicio após seleção|Botão Start com seleção|Botão pressionado (LOW)|Display LCD I2C|Medições iniciam e são exibidas|Ao pressionar o botão de start após selecionar uma pista, as medições começam a ser exibidas no display.|
+|19|Reset após início|Botão Reset após start|Botão pressionado (LOW)|Display LCD I2C|Medições param e display volta ao estado inicial|Ao pressionar o botão de reset após iniciar as medições, o display retorna ao estado inicial de escolha de pista.|
+
+
+</div>
+
+<div align="center">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+- Teste 01, 04, 07: Verificação das leituras de aceleração positiva nos eixos X, Y e Z.
+
+<div align="center">
+   
+<sub>Caso 1: Aceleração positiva</sub>
+
+   <img src="../assets/caso-teste-147.png"> 
+   
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+   
+</div>
+
+- Teste 02, 05, 08: Verificação das leituras de aceleração nula nos eixos X, Y e Z.
+<div align="center">
+
+   <sub>Caso 2: Aceleração nula</sub>
+
+   <img src="../assets/caso-teste-258.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+- Teste 03, 06, 09: Verificação das leituras de aceleração negativa nos eixos X, Y e Z.
+
+<div align="center">
+
+   <sub>Caso 3: Aceleração negativa</sub>
+
+   <img src="../assets/caso-teste-369.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+- Teste 10, 11: Verificação das leituras do potenciômetro em seus valores extremos (0 e 4095).
+
+<div align="center">
+
+   <sub>Caso 4: Leitura do potenciômetro no valor minimo</sub>
+
+   <img src="../assets/caso-teste-10.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+<div align="center">
+
+   <sub>Caso 5: Leitura do potenciômetro no valor máximo</sub>
+
+   <img src="../assets/caso-teste-11.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+- Teste 12, 13, 14, 15, 16, 17, 18 e 19: Verificação do funcionamento dos botões de opções, seleção, reset e start.
+
+&emsp;Para uma melhor demonstração dos casos 12, 13, 14, 15, 16, 17, 18 e 19, foi gravado um vídeo desses testes no simulador, que está disponível no link abaixo:
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1boN18v-9LacVXzaJGFAZLGGOmYxoMpKp/view?usp=sharing) para acessar o vídeo.
+
+&emsp; O vídeo demonstra algumas inconsistencias no caso 15, onde o botão de opções volta para a primeira opção após a quinta opção aparecer duas vezes. Entretanto, todos os outros casos de teste funcionaram conforme o esperado, validando o funcionamento do protótipo simulado.
+
+&emsp;Dessa forma, após todo o processo de simulação e realização dos casos de teste, obtivemos uma visão mais clara do protótipo a ser desenvolvido. Esse processo permite identificar possíveis erros e limitações, oferecendo a oportunidade de aprimorar o sistema antes da implementação física. Assim, conseguimos reduzir riscos e aumentar a eficiência no desenvolvimento do projeto.
 
 ### 3.4.2. Protótipo Físico do Projeto (offline) (sprint 2)	
 
@@ -575,6 +738,10 @@ _Escreva, de forma resumida, sobre os principais resultados do seu projeto e fa�
 
 ## <a name="c5"></a>5. Referências
 
+INVESTOPEDIA. Porter’s 5 Forces: Definition and Examples. Disponível em: https://www.investopedia.com/terms/p/porter.asp. Acesso em: 23 out. 2025.
+
+PORTER, Michael E. Competitive strategy: techniques for analyzing industries and competitors. New York: Free Press, 2008.
+
 OSTERWALDER, A.; PIGNEUR, Y.; BERNARDA, G.; SMITH, A. *Value Proposition Design: How to Create Products and Services Customers Want.* Wiley, 2014.
 
 KEVIN DUNNE. SWOT Analysis: Strengths, Weaknesses, Opportunities and Threats (ou título equivalente em inglês conforme aparece na página). Mind Tools, sem data explícita de publicação (s.d.). Acesso em: 19 out. 2025.
@@ -584,4 +751,6 @@ BRUTON, Louise. What are UX personas and what are they used for? UX Design Insti
 KOTONYA, Gerald; SOMMERVILLE, Ian. Requirements engineering: processes and techniques. Chichester: J. Wiley, 1998.
 
 WIEGERS, Karl; BEATTY, Joy. Software requirements. 3. ed. Redmond: Microsoft Press, 2013.
+
+TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenharia. São Paulo: Atlas, 2020.
 
