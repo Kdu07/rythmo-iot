@@ -2,8 +2,8 @@
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
-#include <SPIFFS.h>
-#include <LittleFS.h>
+// #include <SPIFFS.h>
+// #include <LittleFS.h>
 
 #define I2C_ADDR    0x27
 #define LCD_COLUMNS 16
@@ -30,6 +30,10 @@ class Display{
   unsigned long previousMillis;
   int intervalo = 1000;
   int aux = 0;
+  
+  // Debounce para os botões
+  unsigned long lastDebounceTime = 0;
+  unsigned long debounceDelay = 300; // 300ms de debounce
   
 
   public:
@@ -82,25 +86,33 @@ class Display{
   }
   
   void text(){
-    if (alreadySelected()){
+    // ESTADO 1: Nada foi selecionado ainda
+    if (selected == -1){
       if(lastState != option){
         lastState = option;
         lcd.clear();
+        Serial.println("ESTADO 1: Menu de Selecao");
       }
       lcd.setCursor(0,0);
       lcd.print(textOption);
       lcd.setCursor(0,1);
       lcd.print(textSelect);
-    } else if (alreadyStarted()){
+    } 
+    // ESTADO 2: Algo foi selecionado MAS ainda não foi iniciado
+    else if (selected != -1 && started == -1){
       if(lastState != option){
         lastState = option;
         lcd.clear();
+        Serial.println("ESTADO 2: Pista Selecionada");
       }
       lcd.setCursor(0,0);
       lcd.print(textSelected);
       lcd.setCursor(0,1);
       lcd.print(textSelect);
-    } else{
+      delayMillis(1000);
+    } 
+    // ESTADO 3: Foi iniciado (mostra sensores)
+    else if (started != -1){
       sensors_event_t a, g, temp;
       mpu.getEvent(&a, &g, &temp);
       int pot = analogRead(POT);
@@ -147,33 +159,44 @@ class Display{
 
   void options(){
     int value = digitalRead((BUTTON_OPTIONS));
-    if (value == LOW && selected == -1 ){
-      if(option <= 4){
-        optionsToText(option);
+    if (value == LOW && selected == -1 && (millis() - lastDebounceTime) > debounceDelay){
+      lastDebounceTime = millis();
+      if(option < 4){
         option++;
+        optionsToText(option);
       } else {
         option = 0;
-        // optionsToText(option);
+        optionsToText(option);
       }
+      Serial.print("Options - option: ");
+      Serial.println(option);
     } 
   }
 
   void select(){
     int value = digitalRead((BUTTON_SELECT));
-    if (value == LOW){
+    if (value == LOW && (millis() - lastDebounceTime) > debounceDelay){
+      lastDebounceTime = millis();
       selected = option;
       aux = 0;
+      Serial.print("Select - selected: ");
+      Serial.print(selected);
+      Serial.print(" started: ");
+      Serial.println(started);
     } 
   }
 
   void start(){
     int value = digitalRead((BUTTON_START));
-    if (value == LOW && selected != -1){
+    if (value == LOW && selected != -1 && (millis() - lastDebounceTime) > debounceDelay){
+      lastDebounceTime = millis();
       started = option;
       if(aux == 0){
         lcd.clear();
         aux = 1;
       }
+      Serial.print("Start - started: ");
+      Serial.println(started);
     } 
   }
 
@@ -183,8 +206,11 @@ class Display{
       selected = -1;
       started = -1; 
       aux = 0;
+      option = 0;
+      optionsToText(option);
       number++;
       lcd.clear();
+      Serial.println("Reset - voltando ao menu");
     } 
   }
 
@@ -195,18 +221,58 @@ Display display;
 
 void setup() {
   // Init
+  Serial.begin(115200);
+  delay(1000); // Aguarda inicialização da serial
+  
+  Serial.println("Iniciando sistema...");
+  
+  // Inicializa I2C com pinos específicos (SDA=21, SCL=22 no ESP32)
+  Wire.begin(21, 22);
+  
+  // Escaneia dispositivos I2C
+  Serial.println("Escaneando dispositivos I2C...");
+  byte error, address;
+  int nDevices = 0;
+  for(address = 1; address < 127; address++) {
+    Wire.beginTransmission(address);
+    error = Wire.endTransmission();
+    if (error == 0) {
+      Serial.print("Dispositivo I2C encontrado no endereço 0x");
+      if (address < 16) Serial.print("0");
+      Serial.println(address, HEX);
+      nDevices++;
+    }
+  }
+  if (nDevices == 0) {
+    Serial.println("Nenhum dispositivo I2C encontrado!");
+  }
+  
+  // Inicializa LCD
+  Serial.println("Inicializando LCD...");
   lcd.init();
   lcd.backlight();
-  Serial.begin(115200);
+  lcd.clear();
+  
+  // Teste básico do LCD
+  lcd.setCursor(0, 0);
+  lcd.print("Teste LCD");
+  lcd.setCursor(0, 1);
+  lcd.print("Inicializando...");
+  delay(2000);
+  lcd.clear();
+  
   pinMode(BUTTON_OPTIONS, INPUT_PULLUP);
   pinMode(BUTTON_SELECT, INPUT_PULLUP);
   pinMode(BUTTON_RESET, INPUT_PULLUP);
   pinMode(POT, INPUT);
 
-
+  Serial.println("Inicializando MPU6050...");
   if (!mpu.begin()) {
     Serial.println("Sensor init failed");
-    while (1)
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("MPU6050 Erro!");
+    while (false)
       delay(10);
   }
   Serial.println("Found a MPU-6050 sensor");
