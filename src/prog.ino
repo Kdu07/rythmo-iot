@@ -9,9 +9,9 @@
 #define LCD_COLUMNS 16
 #define LCD_LINES   2
 #define BUTTON_OPTIONS 5
-#define BUTTON_SELECT 15
+#define BUTTON_SELECT 17
 #define BUTTON_RESET 18
-#define BUTTON_START 27
+#define BUTTON_START 16
 #define POT 4
 
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
@@ -57,7 +57,7 @@ class Display{
     }
   }
 
-  bool alreadyStarted(){
+    bool alreadyStarted(){
     if (started != -1){
       return false;
     } else{
@@ -91,6 +91,7 @@ class Display{
       if(lastState != option){
         lastState = option;
         lcd.clear();
+        Serial.println("ESTADO 1: Menu de Selecao");
       }
       lcd.setCursor(0,0);
       lcd.print(textOption);
@@ -99,20 +100,16 @@ class Display{
     } 
     // ESTADO 2: Algo foi selecionado MAS ainda não foi iniciado
     else if (selected != -1 && started == -1){
-      Serial.println("selected");
-      Serial.println(selected);
-      Serial.println("started");
-      Serial.println(started);
       if(lastState != option){
         lastState = option;
         lcd.clear();
+        Serial.println("ESTADO 2: Pista Selecionada");
       }
-      if(delayMillis(1000)){
-        lcd.setCursor(0,0);
-        lcd.print(textSelected);
-        lcd.setCursor(0,1);
-        lcd.print(textSelect);
-      }
+      lcd.setCursor(0,0);
+      lcd.print(textSelected);
+      lcd.setCursor(0,1);
+      lcd.print(textSelect);
+      delayMillis(1000);
     } 
     // ESTADO 3: Foi iniciado (mostra sensores)
     else if (started != -1){
@@ -181,11 +178,10 @@ class Display{
     if (value == LOW && (millis() - lastDebounceTime) > debounceDelay){
       lastDebounceTime = millis();
       selected = option;
-      started = -1;
       aux = 0;
-      Serial.println("selected");
-      Serial.println(selected);
-      Serial.println("started");
+      Serial.print("Select - selected: ");
+      Serial.print(selected);
+      Serial.print(" started: ");
       Serial.println(started);
     } 
   }
@@ -199,8 +195,6 @@ class Display{
         lcd.clear();
         aux = 1;
       }
-      Serial.print("Select - selected: ");
-      Serial.println(selected);
       Serial.print("Start - started: ");
       Serial.println(started);
     } 
@@ -227,7 +221,8 @@ Display display;
 
 void setup() {
   // Init
-  Serial.begin(9600);
+  Serial.begin(115200);
+  delay(1000); // Aguarda inicialização da serial
   
   Serial.println("Iniciando sistema...");
   
@@ -295,10 +290,8 @@ void setup() {
 void loop() {
     display.text();
     display.options();
+    display.start();
     display.select();
-    if(display.delayMillis(200)){
-      display.start();
-    }
     display.reset();
     // display.writeData();
 }
