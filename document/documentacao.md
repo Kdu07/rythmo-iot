@@ -526,9 +526,9 @@ Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
 
 #### 3.2.2.2 Fundamentação Teórica de um storyboard
 
-De acordo com Marissa Sapega, um storyboard é uma representação gráfica de uma narrativa, conceito ou roteiro, dividida em cenas sequenciais (painéis). Essas ferramentas visuais são tradicionalmente utilizadas para mapear como um script ou história se desenrolará uma vez animado ou encenado, mas pessoas as utilizam para diversas situações. Sapega explica que "storyboarding" é simplesmente o ato de criar um storyboard, e para obter os melhores resultados, é necessário equilibrar o fornecimento de informações visuais suficientes para contar a história de forma compreensível, sem torná-la excessivamente detalhada.
+&emsp; De acordo com Marissa Sapega, um storyboard é uma representação gráfica de uma narrativa, conceito ou roteiro, dividida em cenas sequenciais (painéis). Essas ferramentas visuais são tradicionalmente utilizadas para mapear como um script ou história se desenrolará uma vez animado ou encenado, mas pessoas as utilizam para diversas situações. Sapega explica que "storyboarding" é simplesmente o ato de criar um storyboard, e para obter os melhores resultados, é necessário equilibrar o fornecimento de informações visuais suficientes para contar a história de forma compreensível, sem torná-la excessivamente detalhada.
 
-No contexto do nosso projeto Rythmo, o storyboard é utilizado para ilustrar como a solução IoT será utilizada no cotidiano da engenheira de simulação Maria Oliveira, servindo como um guia visual prático das suas interações com o sistema. A vantagem de usar imagens sequenciais é que elas tornam a jornada do usuário fácil de entender à primeira vista e facilitam a memorização dos pontos de contato críticos entre a persona e o produto.
+&emsp; No contexto do nosso projeto Rythmo, o storyboard é utilizado para ilustrar como a solução IoT será utilizada no cotidiano da engenheira de simulação Maria Oliveira, servindo como um guia visual prático das suas interações com o sistema. A vantagem de usar imagens sequenciais é que elas tornam a jornada do usuário fácil de entender à primeira vista e facilitam a memorização dos pontos de contato críticos entre a persona e o produto.
 
 #### 3.2.2.3 Estrutura de um storyboard
 Em geral, a criação de um storyboard inclui três elementos principais:
@@ -539,9 +539,9 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 
 #### 3.2.2.4 Aplicação no Projeto
-Nesse sentido, no projeto Rythmo, o storyboard desempenha um papel fundamental ao permitir a visualização de como a persona Maria Oliveira, engenheira de simulação da Renault, interage com o sistema IoT de coleta de dados de Squeak and Rattle. O storyboard é baseado na jornada dessa persona específica, que enfrenta frustrações com a falta de dados confiáveis para simulações CAE e descobre na solução proposta uma ferramenta transformadora para seu trabalho.
+&emsp; Nesse sentido, no projeto Rythmo, o storyboard desempenha um papel fundamental ao permitir a visualização de como a persona Maria Oliveira, engenheira de simulação da Renault, interage com o sistema IoT de coleta de dados de Squeak and Rattle. O storyboard é baseado na jornada dessa persona específica, que enfrenta frustrações com a falta de dados confiáveis para simulações CAE e descobre na solução proposta uma ferramenta transformadora para seu trabalho.
 
-A criação de um storyboard detalhado para Maria permite identificar melhor suas necessidades técnicas e expectativas profissionais, ajudando nas tomadas de decisões do projeto em relação à interface do dashboard, funcionalidades de exportação de dados e integração com softwares de simulação existentes. Além disso, refina a usabilidade do produto, tornando o sistema mais intuitivo e alinhado às metas de precisão e eficiência nas análises de engenharia automotiva.
+&emsp; A criação de um storyboard detalhado para Maria permite identificar melhor suas necessidades técnicas e expectativas profissionais, ajudando nas tomadas de decisões do projeto em relação à interface do dashboard, funcionalidades de exportação de dados e integração com softwares de simulação existentes. Além disso, refina a usabilidade do produto, tornando o sistema mais intuitivo e alinhado às metas de precisão e eficiência nas análises de engenharia automotiva.
 
 #### 3.2.2.5 Storyboard Maria Oliveira
 
@@ -591,7 +591,7 @@ A criação de um storyboard detalhado para Maria permite identificar melhor sua
 
 #### 3.2.2.7 Conclusão
 
-&nbsp;&nbsp;&nbsp;&nbsp;A criação dos storyboards para as personas Maria Oliveira e João Silva foi fundamental para visualizar e compreender as interações críticas entre os usuários e o sistema IoT Rythmo. Ao mapear suas jornadas, conseguimos identificar pontos de contato essenciais, necessidades específicas e expectativas que guiaram o desenvolvimento do projeto. Esses storyboards não apenas facilitaram a comunicação entre a equipe de desenvolvimento, mas também asseguraram que o design do produto fosse centrado no usuário, promovendo uma experiência intuitiva e eficaz.
+&nbsp;&nbsp;&nbsp;&nbsp; A criação dos storyboards para as personas Maria Oliveira e João Silva foi fundamental para visualizar e compreender as interações críticas entre os usuários e o sistema IoT Rythmo. Ao mapear suas jornadas, conseguimos identificar pontos de contato essenciais, necessidades específicas e expectativas que guiaram o desenvolvimento do projeto. Esses storyboards não apenas facilitaram a comunicação entre a equipe de desenvolvimento, mas também asseguraram que o design do produto fosse centrado no usuário, promovendo uma experiência intuitiva e eficaz.
 
 
 
