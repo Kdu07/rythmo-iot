@@ -95,11 +95,50 @@ _Descreva as etapas da metodologia RM-ODP que foram utilizadas para o desenvolvi
 
 _Link para os templates de negócios: https://drive.google.com/drive/folders/1lTqisJ_gxxtc5J5aXM8ula2kQ4MsII_M?usp=sharing_
 
-### 3.1.1. Contexto da Indústria (sprint 1)	
+### 3.1.1. Contexto da Indústria
 
-_O aluno deve fornecer informações sobre a concorrência (mínimo 3 competidores - 1 parágrafo; modelo de negócio - 1 parágrafo, e tendências - 1 parágrafo). Considere o setor do parceiro. Por exemplo, se o parceiro for a Rede Gazeta, o setor de Televisão.<br>
-<br>
-A análise de 5 forças deve ser feita considerando também o parceiro, o aluno deve preencher o template disponibilizado. No link a seguir há indicações de como avaliar as 5 forças: https://rockcontent.com/br/blog/5-forcas-de-porter/_
+&nbsp;&nbsp;&nbsp;&nbsp;A Renault Brasil atua no competitivo setor automotivo, com foco na produção e venda de veículos de passeio e comerciais leves, além de serviços financeiros e locação. Inserida numa cadeia complexa que abrange pesquisa científica, engenharia, manufatura, logística, rede de concessionárias e soluções digitais, a operação no país tem valor estratégico para a marca. No país, combina uma fábrica robusta, ecossistema de fornecedores locais e crescente integração com tendências globais, como frota elétrica e conectividade.</br>
+
+#### 3.1.1.1 Concorrentes	
+No mercado brasileiro, a Renault disputa espaço especialmente com montadoras estabelecidas. Entre os principais competidores:
+- Chevrolet (General Motors): forte presença em hatches e SUVs, ampla rede de concessionárias e marketing agressivo.
+- Fiat (Stellantis): liderança histórica em volumes e portfólio amplo, especialmente em compactos e comerciais leves.
+- Volkswagen: tradição, percepção de qualidade e renovação de linha com foco em eficiência e conectividade.</br>
+
+Outros players relevantes incluem Hyundai, Toyota e Jeep (Stellantis), que pressionam as margens e aceleram a inovação no setor. </br>
+
+#### 3.1.1.2 Modelo de negócio	
+O modelo de negócio da Renault Brasil integra:
+- Manufatura local e cadeia de suprimentos: produção nacional para ganho de escala, maior competitividade de custos e adequação a requisitos regulatórios e de conteúdo local.
+- Portfólio de produtos: veículos de entrada, SUVs compactos/medianos e comerciais leves, balanceando volume e rentabilidade. Edição de séries especiais e atualizações frequentes para manter relevância.
+- Rede de distribuição e pós‑venda: concessionárias como ponto de venda, serviços, garantia, peças e acessórios; foco na experiência do cliente e no custo total de propriedade.
+- Serviços financeiros: financiamentos, consórcios, leasing e seguros em parceria com braço financeiro, aumentando conversão e ticket médio.
+- Inovação e parcerias: eletrificação, conectividade embarcada e mobilidade como serviço (car‑sharing, assinatura, frotas).
+
+#### 3.1.1.3 Tendências
+A Renault Brasil garante sua posição no mercado ao acompanhar as novas tendências:
+- Eletrificação gradual: avanços em híbridos, sobretudo em mercados urbanos e frotas. Discussão sobre biocombustíveis e híbridos flex como ponte tecnológica no Brasil.
+- SUVização e segurança: maior participação de SUVs e crossovers; consumidores buscam segurança, conectividade e ADAS (Sistemas Avançados de Assistência ao Motorista) com preços acessíveis.
+- Digitalização da jornada: mais etapas da compra migram para o online; pós‑venda preditivo e transparência de custos ganham importância.
+- Eficiência regulatória: metas de emissões e segurança pressionam inovação em powertrain, aerodinâmica e materiais.
+Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para frotas e apps ampliam relevância.
+
+#### 3.1.1.4 5 Forças de Porter
+
+ &nbsp;&nbsp;&nbsp;&nbsp;De acordo com Michael Porter (1986, apud PORTER, 2008), para que se torne possível examinar o ambiente em que uma empresa está inclusa, é necessário analisar sua performance no mercado em relação aos competidores, fatores internos e externos. Logo, o modelo das Cinco Forças de Porter é parte essencial da pesquisa de campo para tirar o maior proveito das oportunidades que irão se apresentar. O modelo tem como respectivas forças: rivalidade entre concorrentes; poder de barganha dos fornecedores; poder de barganha dos clientes; ameaça de novos entrantes; ameaça de produtos substitutos.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A seguir, a análise das 5 forças de Porter no contexto da Renault Brasil:
+
+<div align="center">
+<sup>Figura # - 5 Forças de Porter </sup>
+   
+<img src="../assets/5-forcas.png"> 
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+   
+</div>
+
+Dessa forma, em um mercado altamente disputado e em rápida transformação, a Renault Brasil busca diferenciais ao equilibrar eficiência operacional, inovação orientada ao cliente e uma estratégia comercial omnichannel. A combinação de parque industrial local competitivo, portfólio alinhado ao desejo por SUVs, somada ao avanço em eletrificação acessível para a realidade brasileira, posiciona a marca para defender margens e ganhar participação no mercado. O sucesso dependerá de entregar valor superior (eficiência, segurança, conectividade e experiência) em proporção ao custo total do produto.
 
 ### 3.1.2. Análise SWOT (sprint 1)	
  
@@ -347,39 +386,99 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 ### 3.1.6. Política de Privacidade de acordo com a LGPD (sprint 1)	
 
+&nbsp;&nbsp;&nbsp;&nbsp;*Esta política de privacidade é válida a partir de outubro de 2025.*
 
-_A Política de privacidade para o projeto de acordo com a LGPD deve ser escrita considerando o projeto que os alunos estão criando. Os pontos a seguir precisam ser apresentados. O aluno pode utilizar  o Gerador de Política de Privacidade (https://www.nuvemshop.com.br/ferramentas/gerador-politica-de-privacidade), criado pela Nuvemshop e, de acordo com a empresa, já adaptado a LGPD para ter uma prévia e ajustar de acordo com o seu projeto._
+&nbsp;&nbsp;&nbsp;&nbsp;Esta Política de Privacidade é redigida em conformidade com a Lei nº 13.709/2018, Lei Geral de Proteção de Dados Pessoais, e com as normas correlatas de proteção da privacidade no Brasil. O documento materializa o compromisso da nossa organização estudantil, atuando como empresa no contexto do projeto para a Renault Brasil, com os princípios de finalidade, adequação, necessidade, livre acesso, qualidade dos dados, transparência, segurança, prevenção, não discriminação e responsabilização. Desde a concepção e por padrão, adotamos uma abordagem de proteção de dados por desenho e por defeito, de modo que controles técnicos e organizacionais sejam incorporados ao ciclo de desenvolvimento da solução IoT e dos serviços associados.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A presente seção existe para definir com clareza como os dados pessoais serão tratados no escopo do projeto, quais atores assumem responsabilidades pelo tratamento, quais direitos assistem aos titulares e de que forma são atendidos. A descrição transparente do tratamento reduz riscos regulatórios e contratuais, orienta processos internos, fortalece a confiança de usuários e parceiros, e cria um registro formal de governança e prestação de contas perante a Autoridade Nacional de Proteção de Dados e demais partes interessadas.
 
 #### 3.1.6.1 Informações gerais sobre a empresa / organização
 
+&nbsp;&nbsp;&nbsp;&nbsp;A controladora do tratamento de dados pessoais, para fins desta iniciativa acadêmica com simulação empresarial, é a organização do projeto identificada como Rythmo, estabelecida em Rua Professor Almeida Prado, 520, inscrita no XXX.XXX.XXX/XXXX-XX, que define finalidades e toma as decisões essenciais sobre as operações de tratamento no âmbito da solução de monitoramento e análise para Squeak and Rattle. Em determinados fluxos específicos, fornecedores de tecnologia e serviços atuarão como operadores, sempre mediante contratos com cláusulas de proteção de dados compatíveis com a legislação aplicável.
+
 #### 3.1.6.2 Informações sobre o tratamento de dados
+
+&nbsp;&nbsp;&nbsp;&nbsp;O tratamento compreende a coleta, a produção, a recepção, a classificação, a utilização, o acesso, a reprodução, a transmissão, a distribuição, o processamento, o arquivamento, o armazenamento, a eliminação, a avaliação e o controle da informação, a modificação, a comunicação, a transferência, a difusão e a extração de dados pessoais relacionados ao uso dos sistemas da solução, à gestão de contas de usuários internos, à interação com interfaces de suporte e à eventual integração com ambientes corporativos da contratante. Cada operação observará base legal adequada, registro de atividades e minimização do volume de dados estritamente necessário à finalidade.
 
 #### 3.1.6.3 Quais são os dados coletados
 
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados coletados podem incluir informações de identificação e contato do usuário interno da solução, como nome, e mail corporativo e credenciais de acesso, registros de uso e telemetria da aplicação, como horários de acesso, endereço IP e eventos de navegação, e dados técnicos decorrentes do projeto IoT quando houver associação a pessoa natural identificada ou identificável, como marcações de sessão e georreferenciamento ativado por decisão do usuário ou do time de testes. Não é objetivo do projeto coletar dados sensíveis e, caso em cenário excepcional tal coleta se faça indispensável, serão aplicadas salvaguardas reforçadas e base legal apropriada.
+
 #### 3.1.6.4 Onde os dados são coletados 
+
+&nbsp;&nbsp;&nbsp;&nbsp;A coleta ocorre nas interfaces de cadastro e autenticação da plataforma, nos módulos de captura e publicação de dados do dispositivo IoT quando a sessão puder ser relacionada a um usuário, nos painéis de visualização e análise utilizados por equipes de engenharia e nas rotinas administrativas de suporte e melhoria contínua do serviço. A coleta pode ocorrer também por meio de comunicações operacionais enviadas pelo time do projeto aos usuários, desde que pertinentes à execução dos serviços.
 
 #### 3.1.6.5 Para quais finalidades os dados serão utilizadas
 
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados são utilizados para permitir o funcionamento da solução, administrar o ciclo de vida das contas, autenticar e autorizar acessos, registrar a execução de testes e sessões, viabilizar a transmissão e a integridade dos pacotes publicados, apresentar informações em painéis de análise, prestar suporte técnico, conduzir auditorias e melhorar continuamente a performance, a segurança e a usabilidade. Em hipóteses específicas, dados podem ser usados para cumprir obrigações legais ou regulatórias e para atender solicitações formais de autoridades competentes, quando juridicamente exigido.
+
 #### 3.1.6.6 Onde os dados ficam armazenados 
+
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados são armazenados em infraestrutura de computação em nuvem contratada pela organização do projeto, com ambientes segregados por finalidade e controles de acesso baseados em papéis. Sempre que tecnicamente viável, aplica se criptografia em repouso e em trânsito, chaves geridas com políticas de rotação e registros de acesso com trilhas de auditoria. Eventuais redundâncias geográficas seguem a política de continuidade de negócios e os requisitos contratuais pactuados com a contratante.
 
 #### 3.1.6.7 Qual o período de armazenamento dos dados (retenção)
 
+&nbsp;&nbsp;&nbsp;&nbsp;Os dados são conservados pelo tempo necessário para cumprir as finalidades informadas e por prazos adicionais necessários para atendimento de obrigações legais, exercício regular de direitos em processos, auditorias e defesa de interesses. Ao término das finalidades ou transcorridos os prazos legais, aplica se procedimento de exclusão segura ou anonimização, preservando se somente informações residuais que, por imposição normativa ou exigência de responsabilidade, precisem permanecer arquivadas.
+
 #### 3.1.6.8 Uso de cookies e/ou tecnologias semelhantes
+
+&nbsp;&nbsp;&nbsp;&nbsp;A solução pode utilizar cookies e tecnologias equivalentes para autenticação, manutenção de sessão, segurança, medição de desempenho e análise de uso. O usuário poderá gerir preferências por meio das configurações do navegador e dos controles disponibilizados na própria aplicação, ciente de que a desativação de componentes estritamente necessários pode comprometer funcionalidades essenciais.
 
 #### 3.1.6.9 Com quem esses dados são compartilhados (parceiros, fornecedores, subcontratados)
 
+&nbsp;&nbsp;&nbsp;&nbsp;O compartilhamento de dados pessoais limita se a terceiros estritamente necessários à execução dos serviços, como provedores de nuvem, componentes de mensageria, ferramentas de observabilidade e suporte técnico, sempre sob contratos que imponham confidencialidade, uso limitado à finalidade contratada e padrões de segurança compatíveis. Caso ocorra transferência internacional, serão adotados mecanismos previstos na legislação para garantir nível adequado de proteção, como cláusulas contratuais específicas e avaliações de impacto.
+
 #### 3.1.6.10 Informações sobre medidas de segurança adotadas pela empresa
+
+&nbsp;&nbsp;&nbsp;&nbsp;A organização adota um conjunto de medidas técnicas e administrativas proporcional aos riscos identificados, incluindo gestão de identidades e acessos com princípios de menor privilégio, segregação de ambientes, criptografia, monitoramento de atividades relevantes, processo de gestão de vulnerabilidades, testes periódicos de segurança, políticas de continuidade e plano de resposta a incidentes. Em caso de incidentes que possam acarretar risco ou dano relevante aos titulares, a organização promoverá a devida comunicação aos afetados e à autoridade competente, conforme exigido em lei.
 
 #### 3.1.6.11 Orientações sobre como a empresa/organização atende aos direitos dos usuários
 
+&nbsp;&nbsp;&nbsp;&nbsp;Os direitos de confirmação da existência de tratamento, acesso, correção, anonimização, bloqueio ou eliminação, portabilidade, informação sobre compartilhamentos e sobre a possibilidade de não fornecer consentimento, bem como a revisão de decisões automatizadas quando aplicável, podem ser exercidos mediante solicitação direcionada aos canais oficiais desta Política. As demandas serão analisadas sob critérios de autenticidade do solicitante, viabilidade técnica e fundamentos legais, com resposta em prazos compatíveis com a LGPD e com a complexidade do pedido.
+
 #### 3.1.6.12 Informações sobre como o titular de dados pode solicitar e exercer os seus direitos
+
+&nbsp;&nbsp;&nbsp;&nbsp;O titular poderá encaminhar solicitação clara e específica por meio do correio eletrônico indicado na presente Política ou por endereço físico disponibilizado, informando os dados necessários à verificação de identidade e à localização do registro. Quando a solicitação envolver dados processados em nome de terceiros contratantes, a organização atuará de modo coordenado com o respectivo controlador, comunicando o andamento e o resultado ao titular.
 
 #### 3.1.6.13 Informações de contato do Data Protection Officer (DPO) ou encarregado de proteção de dados da organização
 
+&nbsp;&nbsp;&nbsp;&nbsp;O encarregado pelo tratamento de dados pessoais desta organização é Claudio Fernando André, que pode ser contatado pelo e mail claudio.andre@prof.inteli.edu.br e pelo endereço Rua Professor Almeida Prado, 520. O encarregado atua como canal de comunicação entre titulares, a organização e a Autoridade Nacional de Proteção de Dados e está à disposição para esclarecimentos, solicitações e sugestões relacionados a esta Política.
 
-### 3.1.7. Bill of Material (BOM) (sprint 1)
-_BOM (Bill of Material) pode ser definido como uma lista completa de materiais, que detalha todos os itens necessários para construir, fabricar ou reparar um produto. Deve-se preencher o template fornecido.
+### 3.1.7. Bill of Material (BOM)
+# Bill of Materials (BOM)
 
+&nbsp;&nbsp;&nbsp;&nbsp;A seguir, apresentamos a Bill of Material (BOM), que consiste na lista completa de materiais e componentes necessários para a construção, manutenção e possíveis reparos do dispositivo IoT descrito neste documento.
+
+Abaixo estão as informações do projeto para a Bill of Materials:
+<div align="center">
+<sub>Tabela 1 - Sobre a Bill of Materials</sub><br>
+
+| Título do Projeto           | Rythmo IoT |
+| --------------------------- | ----------- |
+| Autor                       | Rythmo    |
+| Número do documento         | S/N         |
+| Revisão                     | 0           |
+| Total de componentes da PCI | 8         |
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+
+Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
+<div align="center">
+<sub>Tabela 2 - Bill of Materials</sub><br>
+
+| Item | Categoria        | Código do Produto   | Descrição               | Quantidade | Preço Unitário | Total    | Observações                  |
+|------|------------------|---------------------|-------------------------|------------|----------------|----------|------------------------------|
+| 1    | Microcontrolador | ESP32-DEVKITC       | Microcontrolador ESP 32 | 1          | R$ 50,00       | R$ 50,00 | Verificar USB (CP2102/CH340) |
+| 2    | Sensor           | 7BB-27-4L0          | Disco Piezoelétrico     | 1          | R$ 15,00       | R$ 15,00 | 3.3V ou 5V                   |
+| 3    | Sensor           | GY-521 (MPU6050)    | Módulo Acelerômetro     | 1          | R$ 15,00       | R$ 15,00 | 3.3V ou 5V                   |
+| 4    | Botão            | B3F-1020            | Push Button             | 4          | R$ 1,00        | R$ 4,00  | Máx 12V                      |
+| 5    | Display          | 1602A               | Monitor LCD             | 1          | R$ 30,00       | R$ 30,00 | 5V; 16:2; chip I2C           |
+| Total |||||| R$ 114,00 |
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
 
 
 
@@ -731,6 +830,10 @@ _Escreva, de forma resumida, sobre os principais resultados do seu projeto e fa�
 ## <a name="c5"></a>5. Referências
 
 SAPEGA, Marissa. What is a storyboard? CareerFoundry, [s.l.], [s.d.]. Disponível em: https://careerfoundry.com/en/blog/ui-design/what-is-a-storyboard/#what-is-a-storyboard. Acesso em: 1 nov. 2025.
+
+INVESTOPEDIA. Porter’s 5 Forces: Definition and Examples. Disponível em: https://www.investopedia.com/terms/p/porter.asp. Acesso em: 23 out. 2025.
+
+PORTER, Michael E. Competitive strategy: techniques for analyzing industries and competitors. New York: Free Press, 2008.
 
 OSTERWALDER, A.; PIGNEUR, Y.; BERNARDA, G.; SMITH, A. *Value Proposition Design: How to Create Products and Services Customers Want.* Wiley, 2014.
 
