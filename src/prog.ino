@@ -12,7 +12,7 @@
 #define BUTTON_SELECT 17
 #define BUTTON_RESET 18
 #define BUTTON_START 16
-#define POT 4
+#define PIEZO 34
 
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 Adafruit_MPU6050 mpu;
@@ -115,8 +115,8 @@ class Display{
     else if (started != -1){
       sensors_event_t a, g, temp;
       mpu.getEvent(&a, &g, &temp);
-      int pot = analogRead(POT);
-      if(delayMillis(800)){
+      int piezo = analogRead(PIEZO);
+      if(delayMillis(300)){
         // lcd.clear();
         lcd.setCursor(0,0);
         lcd.print("X:      ");
@@ -136,7 +136,7 @@ class Display{
         lcd.setCursor(8,1);
         lcd.print("V:      ");
         lcd.setCursor(10,1);
-        lcd.print(pot);
+        lcd.print(piezo);
       }
     }
   }
@@ -188,16 +188,16 @@ class Display{
 
   void start(){
     int value = digitalRead((BUTTON_START));
-    if (value == LOW && selected != -1 && (millis() - lastDebounceTime) > debounceDelay){
-      lastDebounceTime = millis();
-      started = option;
-      if(aux == 0){
-        lcd.clear();
-        aux = 1;
-      }
-      Serial.print("Start - started: ");
-      Serial.println(started);
-    } 
+    if (value == LOW && (millis() - lastDebounceTime) > debounceDelay && selected != -1 ){
+        lastDebounceTime = millis();
+        started = option;
+        if(aux == 0){
+          lcd.clear();
+          aux = 1;
+        }
+        Serial.print("Start - started: ");
+        Serial.println(started);
+    }
   }
 
   void reset(){
@@ -221,7 +221,7 @@ Display display;
 
 void setup() {
   // Init
-  Serial.begin(115200);
+  Serial.begin(9600);
   delay(1000); // Aguarda inicialização da serial
   
   Serial.println("Iniciando sistema...");
@@ -264,7 +264,8 @@ void setup() {
   pinMode(BUTTON_OPTIONS, INPUT_PULLUP);
   pinMode(BUTTON_SELECT, INPUT_PULLUP);
   pinMode(BUTTON_RESET, INPUT_PULLUP);
-  pinMode(POT, INPUT);
+  pinMode(BUTTON_START, INPUT_PULLUP);
+  pinMode(PIEZO, INPUT);
 
   Serial.println("Inicializando MPU6050...");
   if (!mpu.begin()) {
