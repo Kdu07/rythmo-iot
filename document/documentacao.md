@@ -446,6 +446,8 @@ A criação de um storyboard detalhado para Maria permite identificar melhor sua
 
 #### 3.2.2.5 Storyboard Maria Oliveira
 
+##### 3.2.2.5.1 Figura do storyboard da Maria
+
 <div align="center">
 
 <sub> Figura # - Storyboard Maria Oliveira </sub>
@@ -456,7 +458,7 @@ A criação de um storyboard detalhado para Maria permite identificar melhor sua
 
 </div>
 
-**Descrição das tarefas no storyboard da Maria:**
+##### 3.2.2.5.2 Descrição das tarefas no storyboard da Maria
 
 - Quadro 1: Maria está em sua estação de trabalho, cercada por monitores mostrando simulações CAE. Ela se frusta com resultados inconsistentes, devido a falta de dados reais confiáveis.
 - Quadro 2: Maria participa de uma reunião onde é apresentado o sistema IoT Rythmo. Seus olhos se iluminam ao compreender que finalmente terá acesso a dados reais de aceleração e força coletados diretamente das pistas de teste.
@@ -467,6 +469,8 @@ A criação de um storyboard detalhado para Maria permite identificar melhor sua
 
 #### 3.2.2.6 Storyboard João Silva
 
+##### 3.2.2.6.1 Figura do storyboard do João
+
 <div align="center">
 
 <sub> Figura # - Storyboard João Silva </sub>
@@ -476,6 +480,19 @@ A criação de um storyboard detalhado para Maria permite identificar melhor sua
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 
 </div>
+
+##### 3.2.2.5.2 Descrição das tarefas no storyboard do João
+
+- Quadro 1: João chega ao pátio do campo de provas com o case do kit IoT Rythmo. Ele se aproxima do veículo de testes e verifica visualmente seu estado antes de iniciar a instalação, demonstrando sua rotina profissional de preparação. O case contém ESP32, sensores e cabos organizados, prontos para instalação rápida.
+- Quadro 2: Dentro do veículo, João trabalha metodicamente fixando a central ESP32 no console central. Posiciona o acelerômetro na porta frontal direita para captar vibrações laterais e instala o sensor de força próximo ao painel. Os cabos são organizados com etiquetas coloridas: azul para aceleração e vermelho para força, facilitando identificação futura.
+- Quadro 3: João conecta a alimentação do sistema à fonte de energia do veículo. Ao ligar, o display LCD I2C acende mostrando a tela inicial. João ativa o hotspot em seu celular e, usando os botões físicos (Options, Select, Reset), navega até encontrar "Paralelepípedo" na lista de pistas. Após pressionar "Select", o display exibe "Selected Pista: Paralelepípedo", confirmando a configuração.
+- Quadro 4: João pressiona o botão "Start" para iniciar a coleta. O display LCD muda para o modo de medição, exibindo em tempo real: primeira linha com "X:0.0 Y:0.0 Z:9.8" (aceleração nos eixos em m/s²) e segunda linha com "V:0" (sensor de força). Esta configuração minimalista permite monitoramento rápido sem distrações durante a condução.
+- Quadro 5: João conduz o veículo pela pista de paralelepípedos com concentração profissional, ambas as mãos no volante. A pista gera vibrações características capturadas pelos sensores em tempo real. O display continua mostrando as variações de X, Y, Z e V conforme o veículo passa pelas irregularidades, sem necessidade de interação durante a condução.
+- Quadro 6: Ao completar o trajeto, João encosta o veículo em local seguro e pressiona "Reset". O display LCD retorna à tela inicial "Select Pista: Lisa", indicando que o sistema está pronto para nova sessão. Os dados foram automaticamente armazenados com timestamps e associados ao perfil "Paralelepípedo", garantindo rastreabilidade completa para análises futuras.
+
+#### 3.2.2.7 Conclusão
+
+&nbsp;&nbsp;&nbsp;&nbsp;A criação dos storyboards para as personas Maria Oliveira e João Silva foi fundamental para visualizar e compreender as interações críticas entre os usuários e o sistema IoT Rythmo. Ao mapear suas jornadas, conseguimos identificar pontos de contato essenciais, necessidades específicas e expectativas que guiaram o desenvolvimento do projeto. Esses storyboards não apenas facilitaram a comunicação entre a equipe de desenvolvimento, mas também asseguraram que o design do produto fosse centrado no usuário, promovendo uma experiência intuitiva e eficaz.
 
 
 
