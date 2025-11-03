@@ -1,5 +1,4 @@
 #include <LiquidCrystal_I2C.h>
-#include <Adafruit_MPU6050.h>
 #include <Adafruit_MMA8451.h>
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
@@ -16,7 +15,6 @@
 #define PIEZO 34
 
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
-Adafruit_MPU6050 mpu;
 Adafruit_MMA8451 mma = Adafruit_MMA8451();
 
 class Display{
@@ -146,15 +144,15 @@ class Display{
   // void writeData(){
   //   if(started != -1){
   //     unsigned long startTime = millis();
-  //     sensors_event_t a, g, temp;
-  //     mpu.getEvent(&a, &g, &temp);
+  //     sensors_event_t event;
+  //     mma.getEvent(&event);
   //     if(!SPIFFS.exists("/dados.csv")){
   //       File dados = SPIFFS.open("/dados.csv","w");
   //       dados.println("Time,Number,Pista,AX,AY,AZ");
   //       dados.close();
   //     }
   //     File dados = SPIFFS.open("/dados.csv","a");
-  //     dados.println(String(millis()-startTime) + "," + String(number) + "," + textSelect + "," + String(a.acceleration.x) + "," + String(a.acceleration.y) + "," + String(a.acceleration.z) );
+  //     dados.println(String(millis()-startTime) + "," + String(number) + "," + textSelect + "," + String(event.acceleration.x) + "," + String(event.acceleration.y) + "," + String(event.acceleration.z) );
   //     dados.close();
   //   }  
   // }
@@ -270,7 +268,8 @@ void setup() {
   pinMode(PIEZO, INPUT);
 
   Serial.println("Inicializando MMA8451...");
-  if (!mma.begin()) {
+  // Especifica o endereço I2C correto (0x1C ao invés do padrão 0x1D)
+  if (!mma.begin(0x1C)) {
     Serial.println("Sensor init failed");
     lcd.clear();
     lcd.setCursor(0, 0);
