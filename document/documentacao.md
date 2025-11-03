@@ -425,17 +425,59 @@ _BOM (Bill of Material) pode ser definido como uma lista completa de materiais, 
 
 ### 3.2.2. Jornada do Usuário e Storyboard (sprint 2)	
 
-_Coloque aqui seu Mapa de Jornada do Usuário:_
-- _Ferramenta visual da sequência de interações do usuário._
-- _Retrata sentimentos, obstáculos e satisfação ao longo de um processo._
-- _Identifica oportunidades de melhoria na experiência._
-- _Fazer pelo menos um mapa de jornada do usuário_
+#### 3.2.2.2 Fundamentação Teórica de um storyboard
 
-_Coloque aqui seu Storyboard:_
-- _Ilustração sequencial da interação do usuário com a solução._
-- _Enfatiza fluxo, interações e narrativa visual._
-- _Destaca pontos de atrito ou oportunidades na experiência._
-- _Criar ao menos um storyboard._
+De acordo com Marissa Sapega, um storyboard é uma representação gráfica de uma narrativa, conceito ou roteiro, dividida em cenas sequenciais (painéis). Essas ferramentas visuais são tradicionalmente utilizadas para mapear como um script ou história se desenrolará uma vez animado ou encenado, mas pessoas as utilizam para diversas situações. Sapega explica que "storyboarding" é simplesmente o ato de criar um storyboard, e para obter os melhores resultados, é necessário equilibrar o fornecimento de informações visuais suficientes para contar a história de forma compreensível, sem torná-la excessivamente detalhada.
+
+No contexto do nosso projeto Rythmo, o storyboard é utilizado para ilustrar como a solução IoT será utilizada no cotidiano da engenheira de simulação Maria Oliveira, servindo como um guia visual prático das suas interações com o sistema. A vantagem de usar imagens sequenciais é que elas tornam a jornada do usuário fácil de entender à primeira vista e facilitam a memorização dos pontos de contato críticos entre a persona e o produto.
+
+#### 3.2.2.3 Estrutura de um storyboard
+Em geral, a criação de um storyboard inclui três elementos principais:
+
+- Cenário: Os storyboards são baseados em um cenário ou em uma história de usuário específica, claramente especificado ao longo da narrativa visual.
+- Visual: São as representações gráficas ou ilustrações da interação de cada etapa do cenário.
+- Legenda: Cada visual tem uma descrição correspondente que explica brevemente as ações do usuário, ambiente, estado emocional e contexto técnico.
+
+
+#### 3.2.2.4 Aplicação no Projeto
+Nesse sentido, no projeto Rythmo, o storyboard desempenha um papel fundamental ao permitir a visualização de como a persona Maria Oliveira, engenheira de simulação da Renault, interage com o sistema IoT de coleta de dados de Squeak and Rattle. O storyboard é baseado na jornada dessa persona específica, que enfrenta frustrações com a falta de dados confiáveis para simulações CAE e descobre na solução proposta uma ferramenta transformadora para seu trabalho.
+
+A criação de um storyboard detalhado para Maria permite identificar melhor suas necessidades técnicas e expectativas profissionais, ajudando nas tomadas de decisões do projeto em relação à interface do dashboard, funcionalidades de exportação de dados e integração com softwares de simulação existentes. Além disso, refina a usabilidade do produto, tornando o sistema mais intuitivo e alinhado às metas de precisão e eficiência nas análises de engenharia automotiva.
+
+#### 3.2.2.5 Storyboard Maria Oliveira
+
+<div align="center">
+
+<sub> Figura # - Storyboard Maria Oliveira </sub>
+
+<img src="../assets/storyboard-maria.png">
+
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+
+</div>
+
+**Descrição das tarefas no storyboard da Maria:**
+
+- Quadro 1: Maria está em sua estação de trabalho, cercada por monitores mostrando simulações CAE. Ela se frusta com resultados inconsistentes, devido a falta de dados reais confiáveis.
+- Quadro 2: Maria participa de uma reunião onde é apresentado o sistema IoT Rythmo. Seus olhos se iluminam ao compreender que finalmente terá acesso a dados reais de aceleração e força coletados diretamente das pistas de teste.
+- Quadro 3: Em sua estação, Maria acessa pela primeira vez o dashboard do sistema Rythmo. A interface intuitiva exibe dados organizados por tipo de pista, velocidade e condições climáticas. Ela sorri ao visualizar gráficos de aceleração em tempo real.
+- Quadro 4: Maria exporta dados para CSV e integra com seu software de simulação. Ela compara sinais de diferentes perfis de pista (lisa, esburacada, paralelepípedo), identificando padrões que antes eram impossíveis de detectar.
+- Quadro 5: Com os dados reais, Maria ajusta seus modelos de simulação e-line. Os resultados agora convergem perfeitamente com os testes físicos. Ela comemora discretamente o sucesso, erguendo o punho em sinal de vitória.
+- Quadro 6: Maria apresenta seus resultados em reunião com a equipe de P&D. Ela demonstra como o sistema Rythmo reduziu o tempo de desenvolvimento em 30% e aumentou a precisão das análises de Squeak and Rattle, estabelecendo uma nova base de dados padronizada para projetos futuros.
+
+#### 3.2.2.6 Storyboard João Silva
+
+<div align="center">
+
+<sub> Figura # - Storyboard João Silva </sub>
+
+<img src="../assets/storyboard-joao.png">
+
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+
+</div>
+
+
 
 ## 3.3. Solução Técnica	
 
@@ -670,6 +712,8 @@ Também inclua figuras da versão final do protótipo físico e dashboards, alé
 _Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de projeto em relação ao uso dessa solução. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras._
 
 ## <a name="c5"></a>5. Referências
+
+SAPEGA, Marissa. What is a storyboard? CareerFoundry, [s.l.], [s.d.]. Disponível em: https://careerfoundry.com/en/blog/ui-design/what-is-a-storyboard/#what-is-a-storyboard. Acesso em: 1 nov. 2025.
 
 OSTERWALDER, A.; PIGNEUR, Y.; BERNARDA, G.; SMITH, A. *Value Proposition Design: How to Create Products and Services Customers Want.* Wiley, 2014.
 
