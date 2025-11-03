@@ -1,5 +1,6 @@
 #include <LiquidCrystal_I2C.h>
 #include <Adafruit_MPU6050.h>
+#include <Adafruit_MMA8451.h>
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
 // #include <SPIFFS.h>
@@ -16,6 +17,7 @@
 
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 Adafruit_MPU6050 mpu;
+Adafruit_MMA8451 mma = Adafruit_MMA8451();
 
 class Display{
   private:
@@ -113,25 +115,25 @@ class Display{
     } 
     // ESTADO 3: Foi iniciado (mostra sensores)
     else if (started != -1){
-      sensors_event_t a, g, temp;
-      mpu.getEvent(&a, &g, &temp);
+      sensors_event_t event;
+      mma.getEvent(&event);
       int piezo = analogRead(PIEZO);
       if(delayMillis(300)){
         // lcd.clear();
         lcd.setCursor(0,0);
         lcd.print("X:      ");
         lcd.setCursor(2,0);
-        lcd.print(a.acceleration.x);
+        lcd.print(event.acceleration.x);
 
         lcd.setCursor(8,0);
         lcd.print("Y:      ");
         lcd.setCursor(10,0);
-        lcd.print(a.acceleration.y);
+        lcd.print(event.acceleration.y);
       
         lcd.setCursor(0,1);
         lcd.print("Z:      ");
-        lcd.setCursor(2,1);
-        lcd.print(a.acceleration.z);
+        lcd.setCursor(2 ,1);
+        lcd.print(event.acceleration.z);
 
         lcd.setCursor(8,1);
         lcd.print("V:      ");
@@ -267,20 +269,18 @@ void setup() {
   pinMode(BUTTON_START, INPUT_PULLUP);
   pinMode(PIEZO, INPUT);
 
-  Serial.println("Inicializando MPU6050...");
-  if (!mpu.begin()) {
+  Serial.println("Inicializando MMA8451...");
+  if (!mma.begin()) {
     Serial.println("Sensor init failed");
     lcd.clear();
     lcd.setCursor(0, 0);
-    lcd.print("MPU6050 Erro!");
-    while (false)
+    lcd.print("MMA8451 Erro!");
+    while (true)
       delay(10);
   }
-  Serial.println("Found a MPU-6050 sensor");
+  Serial.println("Found a MMA8451 sensor");
 
-  mpu.setAccelerometerRange(MPU6050_RANGE_16_G);
-  mpu.setGyroRange(MPU6050_RANGE_250_DEG);
-  mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
+  mma.setRange(MMA8451_RANGE_2_G);
 
   // SPIFFS.begin(true);
   // LittleFS.begin(true,"/littlefs", 10, "spiffs");
