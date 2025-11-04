@@ -524,17 +524,76 @@ Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
 
 ### 3.2.2. Jornada do Usuário e Storyboard (sprint 2)	
 
-_Coloque aqui seu Mapa de Jornada do Usuário:_
-- _Ferramenta visual da sequência de interações do usuário._
-- _Retrata sentimentos, obstáculos e satisfação ao longo de um processo._
-- _Identifica oportunidades de melhoria na experiência._
-- _Fazer pelo menos um mapa de jornada do usuário_
+#### 3.2.2.2 Fundamentação Teórica de um storyboard
 
-_Coloque aqui seu Storyboard:_
-- _Ilustração sequencial da interação do usuário com a solução._
-- _Enfatiza fluxo, interações e narrativa visual._
-- _Destaca pontos de atrito ou oportunidades na experiência._
-- _Criar ao menos um storyboard._
+&emsp; De acordo com Marissa Sapega, um storyboard é uma representação gráfica de uma narrativa, conceito ou roteiro, dividida em cenas sequenciais (painéis). Essas ferramentas visuais são tradicionalmente utilizadas para mapear como um script ou história se desenrolará uma vez animado ou encenado, mas pessoas as utilizam para diversas situações. Sapega explica que "storyboarding" é simplesmente o ato de criar um storyboard, e para obter os melhores resultados, é necessário equilibrar o fornecimento de informações visuais suficientes para contar a história de forma compreensível, sem torná-la excessivamente detalhada.
+
+&emsp; No contexto do nosso projeto Rythmo, o storyboard é utilizado para ilustrar como a solução IoT será utilizada no cotidiano da engenheira de simulação Maria Oliveira, servindo como um guia visual prático das suas interações com o sistema. A vantagem de usar imagens sequenciais é que elas tornam a jornada do usuário fácil de entender à primeira vista e facilitam a memorização dos pontos de contato críticos entre a persona e o produto.
+
+#### 3.2.2.3 Estrutura de um storyboard
+Em geral, a criação de um storyboard inclui três elementos principais:
+
+- Cenário: Os storyboards são baseados em um cenário ou em uma história de usuário específica, claramente especificado ao longo da narrativa visual.
+- Visual: São as representações gráficas ou ilustrações da interação de cada etapa do cenário.
+- Legenda: Cada visual tem uma descrição correspondente que explica brevemente as ações do usuário, ambiente, estado emocional e contexto técnico.
+
+
+#### 3.2.2.4 Aplicação no Projeto
+&emsp; Nesse sentido, no projeto Rythmo, o storyboard desempenha um papel fundamental ao permitir a visualização de como a persona Maria Oliveira, engenheira de simulação da Renault, interage com o sistema IoT de coleta de dados de Squeak and Rattle. O storyboard é baseado na jornada dessa persona específica, que enfrenta frustrações com a falta de dados confiáveis para simulações CAE e descobre na solução proposta uma ferramenta transformadora para seu trabalho.
+
+&emsp; A criação de um storyboard detalhado para Maria permite identificar melhor suas necessidades técnicas e expectativas profissionais, ajudando nas tomadas de decisões do projeto em relação à interface do dashboard, funcionalidades de exportação de dados e integração com softwares de simulação existentes. Além disso, refina a usabilidade do produto, tornando o sistema mais intuitivo e alinhado às metas de precisão e eficiência nas análises de engenharia automotiva.
+
+#### 3.2.2.5 Storyboard Maria Oliveira
+
+##### 3.2.2.5.1 Figura do storyboard da Maria
+
+<div align="center">
+
+<sub> Figura # - Storyboard Maria Oliveira </sub>
+
+<img src="../assets/storyboard-maria.png">
+
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+
+</div>
+
+##### 3.2.2.5.2 Descrição das tarefas no storyboard da Maria
+
+- Quadro 1: Maria está em sua estação de trabalho, cercada por monitores mostrando simulações CAE. Ela se frusta com resultados inconsistentes, devido a falta de dados reais confiáveis.
+- Quadro 2: Maria participa de uma reunião onde é apresentado o sistema IoT Rythmo. Seus olhos se iluminam ao compreender que finalmente terá acesso a dados reais de aceleração e força coletados diretamente das pistas de teste.
+- Quadro 3: Em sua estação, Maria acessa pela primeira vez o dashboard do sistema Rythmo. A interface intuitiva exibe dados organizados por tipo de pista, velocidade e condições climáticas. Ela sorri ao visualizar gráficos de aceleração em tempo real.
+- Quadro 4: Maria exporta dados para CSV e integra com seu software de simulação. Ela compara sinais de diferentes perfis de pista (lisa, esburacada, paralelepípedo), identificando padrões que antes eram impossíveis de detectar.
+- Quadro 5: Com os dados reais, Maria ajusta seus modelos de simulação e-line. Os resultados agora convergem perfeitamente com os testes físicos. Ela comemora discretamente o sucesso, erguendo o punho em sinal de vitória.
+- Quadro 6: Maria apresenta seus resultados em reunião com a equipe de P&D (Pesquisa e Desenvolvimento). Ela demonstra como o sistema Rythmo reduziu o tempo de desenvolvimento e aumentou a precisão das análises de Squeak and Rattle, estabelecendo uma nova base de dados padronizada para projetos futuros.
+
+#### 3.2.2.6 Storyboard João Silva
+
+##### 3.2.2.6.1 Figura do storyboard do João
+
+<div align="center">
+
+<sub> Figura # - Storyboard João Silva </sub>
+
+<img src="../assets/storyboard-joao.png">
+
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+
+</div>
+
+##### 3.2.2.5.2 Descrição das tarefas no storyboard do João
+
+- Quadro 1: João chega ao pátio do campo de provas com o case do kit IoT Rythmo. Ele se aproxima do veículo de testes e verifica visualmente seu estado antes de iniciar a instalação, demonstrando sua rotina profissional de preparação. O case contém ESP32, sensores e cabos organizados, prontos para instalação rápida.
+- Quadro 2: Dentro do veículo, João trabalha metodicamente fixando a central ESP32 no console central. Posiciona o acelerômetro na porta frontal direita para captar vibrações laterais e instala o sensor de força próximo ao painel. Os cabos são organizados com etiquetas coloridas: azul para aceleração e vermelho para força, facilitando identificação futura.
+- Quadro 3: João conecta a alimentação do sistema à fonte de energia do veículo. Ao ligar, o display LCD acende mostrando a tela inicial. João ativa o hotspot em seu celular e, usando os botões físicos (Options, Select, Reset), navega até encontrar "Paralelepípedo" na lista de pistas. Após pressionar "Select", o display exibe "Selected Pista: Paralelepípedo", confirmando a configuração.
+- Quadro 4: João pressiona o botão "Start" para iniciar a coleta. O display LCD muda para o modo de medição, exibindo em tempo real: primeira linha com "X:0.0 Y:0.0 Z:9.8" (aceleração nos eixos em m/s²) e segunda linha com "V:0" (sensor de força). Esta configuração minimalista permite monitoramento rápido sem distrações durante a condução.
+- Quadro 5: João conduz o veículo pela pista de paralelepípedos com concentração profissional, ambas as mãos no volante. A pista gera vibrações características capturadas pelos sensores em tempo real. O display continua mostrando as variações de X, Y, Z e V conforme o veículo passa pelas irregularidades, sem necessidade de interação durante a condução.
+- Quadro 6: Ao completar o trajeto, João encosta o veículo em local seguro e pressiona "Reset". O display LCD retorna à tela inicial "Select Pista: Lisa", indicando que o sistema está pronto para nova sessão. Os dados foram automaticamente armazenados com timestamps e associados ao perfil "Paralelepípedo", garantindo rastreabilidade completa para análises futuras.
+
+#### 3.2.2.7 Conclusão
+
+&nbsp;&nbsp;&nbsp;&nbsp; A criação dos storyboards para as personas Maria Oliveira e João Silva foi fundamental para visualizar e compreender as interações críticas entre os usuários e o sistema IoT Rythmo. Ao mapear suas jornadas, conseguimos identificar pontos de contato essenciais, necessidades específicas e expectativas que guiaram o desenvolvimento do projeto. Esses storyboards não apenas facilitaram a comunicação entre a equipe de desenvolvimento, mas também asseguraram que o design do produto fosse centrado no usuário, promovendo uma experiência intuitiva e eficaz.
+
+
 
 ## 3.3. Solução Técnica	
 
@@ -769,6 +828,8 @@ Também inclua figuras da versão final do protótipo físico e dashboards, alé
 _Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de projeto em relação ao uso dessa solução. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras._
 
 ## <a name="c5"></a>5. Referências
+
+SAPEGA, Marissa. What is a storyboard? CareerFoundry, [s.l.], [s.d.]. Disponível em: https://careerfoundry.com/en/blog/ui-design/what-is-a-storyboard/#what-is-a-storyboard. Acesso em: 1 nov. 2025.
 
 INVESTOPEDIA. Porter’s 5 Forces: Definition and Examples. Disponível em: https://www.investopedia.com/terms/p/porter.asp. Acesso em: 23 out. 2025.
 
