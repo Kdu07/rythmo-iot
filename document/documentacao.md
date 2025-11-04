@@ -562,12 +562,18 @@ _Coloque aqui seu Storyboard:_
 
 ### 3.3.2. Requisitos Não Funcionais (sprint 2)	
 
-_Descreva quais são os requisitos não funcionais e sua relação com aspectos de qualidade seguindo a norma ISO25010 (visão de aspectos de qualidade). Evolua estes requisitos conforme o desenvolvimento do projeto._
+
+
 
 | **RNF#** | **Descrição** | **Aspecto de qualidade** | 
 |----------|----------|----------|
-|RNF01|Ex. O painel dashboard deve estar disponível 99% do tempo|Ex. Disponibilidade|
-|RNF02|Preencha aqui seus requisitos|Preencha aqui o aspecto de qualidade|
+|RNF01|Os dados coletados devem ser enviados ao armazenamento central mantendo cópia local. Se a rede estiver indisponível, os dados ficam guardados e são enviados automaticamente quando a conexão voltar. | Confiabilidade |
+|RNF02|O tempo de envio de cada pacote do sensor para o armazenamento central deve ser de até sessenta segundos durante os testes. | Desempenho |
+|RNF03|O dispositivo deve possuir capacidade de armazenamento local para pelo menos uma hora de coleta contínua de sinais. | Espaço |
+|RNF04|O sistema deve gerar um registro de sessão com data e hora de início e de término, volume de dados gravados e estado do envio, disponível para consulta pelos times técnicos.| Operacional |
+|RNF05|Os dados exportados devem ser fáceis de localizar e entender por novos usuários. Adotar estrutura de pastas simples por data e sessão, nomes de arquivo padronizados| Usabilidade |
+
+
 
 ### 3.3.3. Arquitetura da Solução (sprint 3)
 
