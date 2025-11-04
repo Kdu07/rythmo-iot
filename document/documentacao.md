@@ -562,7 +562,7 @@ _Coloque aqui seu Storyboard:_
 
 ### 3.3.2. Requisitos Não Funcionais (sprint 2)	
 
-
+Conforme Sommerville e Sawyer, requisitos não funcionais definem como o sistema opera e quais atributos de qualidade deve comprovar, abrangendo categorias de produto, organizacionais e externas. Segue a apresentação dos requisitos não funcionais, cada um mapeado à característica correspondente da ISO 25010 e acompanhado de método objetivo de verificação em ambiente controlado.
 
 | **RNF#** | **Descrição** | **Aspecto de qualidade** | 
 |----------|----------|----------|
