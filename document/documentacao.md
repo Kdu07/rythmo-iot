@@ -621,12 +621,40 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 ### 3.3.2. Requisitos Não Funcionais (sprint 2)	
 
-_Descreva quais são os requisitos não funcionais e sua relação com aspectos de qualidade seguindo a norma ISO25010 (visão de aspectos de qualidade). Evolua estes requisitos conforme o desenvolvimento do projeto._
+Conforme Sommerville e Sawyer, requisitos não funcionais definem como o sistema opera e quais atributos de qualidade deve comprovar, abrangendo categorias de produto, organizacionais e externas. Segue a apresentação dos requisitos não funcionais, cada um mapeado à característica correspondente da ISO 25010 e acompanhado de método objetivo de verificação em ambiente controlado.
 
 | **RNF#** | **Descrição** | **Aspecto de qualidade** | 
 |----------|----------|----------|
-|RNF01|Ex. O painel dashboard deve estar disponível 99% do tempo|Ex. Disponibilidade|
-|RNF02|Preencha aqui seus requisitos|Preencha aqui o aspecto de qualidade|
+|RNF01|Os dados coletados devem ser enviados ao armazenamento central mantendo cópia local. Se a rede estiver indisponível, os dados ficam guardados e são enviados automaticamente quando a conexão voltar. | Confiabilidade |
+|RNF02|O tempo de envio de cada pacote do sensor para o armazenamento central deve ser de até sessenta segundos durante os testes. | Desempenho |
+|RNF03|O dispositivo deve possuir capacidade de armazenamento local para pelo menos uma hora de coleta contínua de sinais. | Espaço |
+|RNF04|O sistema deve gerar um registro de sessão com data e hora de início e de término, volume de dados gravados e estado do envio, disponível para consulta pelos times técnicos.| Operacional |
+|RNF05|Os dados exportados devem ser fáceis de localizar e entender por novos usuários. Adotar estrutura de pastas simples por data e sessão, nomes de arquivo padronizados| Usabilidade |
+
+#### **RNF01 - Os dados coletados devem ser enviados ao armazenamento central mantendo cópia local. Se a rede estiver indisponível, os dados ficam guardados e são enviados automaticamente quando a conexão voltar.**
+
+Este requisito garante continuidade de coleta e proteção do histórico, evitando perda de informação durante testes e coletas em campo. Suporta comparações entre campanhas e dá previsibilidade ao fluxo de trabalho técnico.
+Como validar. Simular ausência de rede durante a coleta, confirmar a gravação local dos arquivos e verificar o envio automático após o retorno da conexão, conferindo contagem de registros e integridade no destino.
+
+#### **RNF02 - O tempo de envio de cada pacote do sensor para o armazenamento central deve ser de até sessenta segundos durante os testes.**
+Define um limite claro para o tempo de entrega dos dados, permitindo uso rápido pelas equipes e respostas mais ágeis em rotinas de engenharia.
+Como validar. Marcar horários no ponto de captura e no recebimento no repositório, executar sessões controladas e confirmar que os tempos medidos permanecem dentro de sessenta segundos.
+
+#### **RNF03 - O dispositivo deve possuir capacidade de armazenamento local para pelo menos uma hora de coleta contínua de sinais.**
+
+Assegura que a coleta prossiga mesmo sem conectividade, cobrindo janelas de oscilação de rede ou deslocamentos operacionais, sem interrupções.
+Como validar. Realizar uma sessão contínua de uma hora com a rede desligada, verificar a presença e a integridade dos arquivos locais e confirmar que não houve truncamentos.
+
+#### **RNF04 - O sistema deve gerar um registro de sessão com data e hora de início e de término, volume de dados gravados e estado do envio, disponível para consulta pelos times técnicos.**
+
+Fornece rastreabilidade e visibilidade do processo, facilitando auditoria, suporte e comparação entre sessões e veículos.
+Como validar. Encerrar uma sessão e verificar a criação do registro correspondente, conferindo consistência entre horários, volume gravado e status de entrega no armazenamento central.
+
+#### **RNF05 - Os dados exportados devem ser fáceis de localizar e entender por novos usuários. Adotar estrutura de pastas simples por data e sessão, nomes de arquivo padronizados.**
+
+Promove organização e acessibilidade, reduzindo tempo de busca e a necessidade de treinamento para quem inicia no projeto.
+Como validar. Solicitar a usuários novos que localizem uma sessão específica e abram o arquivo correto, medindo tempo de execução e taxa de acerto na primeira tentativa.
+
 
 ### 3.3.3. Arquitetura da Solução (sprint 3)
 
