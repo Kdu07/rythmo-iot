@@ -737,8 +737,8 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 
 ### 3.4.2. Protótipo Físico do Projeto (offline) (sprint 2)	
 
-_Aqui você deve registrar diversas situações de teste, indicando exemplos de leitura (entrada) e escrita (saída) apresentadas pelo seu sistema físico. Estes registros serão utilizados para testar seus componentes, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de possíveis falhas nas leituras de entradas e saídas. <br>
-Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do protótipo físico e descrições dos testes realizados para ilustrar o funcionamento do protótipo. A tabela a seguir serve como exemplo._
+&nbsp;&nbsp;&nbsp;&nbsp;A regularidade na execução de casos de teste é essencial para garantir a robustez e o desempenho de dispositivos eletrônicos, como o protótipo offline da Renault, criado neste empreendimento. Prosseguindo com as avaliações efetuadas na sprint inicial, esta etapa de verificações facilita a detecção e a resolução de falhas em variadas fases de construção do protótipo físico do projeto na versão offline, assegurando que o dispositivo opere de acordo com as expectativas em múltiplos cenários, até mesmo nas circunstâncias mais desafiadoras.
+&nbsp;&nbsp;&nbsp;&nbsp;Além disso, a aplicação persistente de testes auxilia na análise da resistência dos elementos e no refinamento preciso de sensores, botões e telas, certificando que as reações do dispositivo estejam em sintonia com as especificações técnicas e com a usabilidade do operador. Em resumo, tais procedimentos reduzem a probabilidade de problemas subsequentes, permitindo melhorias prévias à adoção em contextos operacionais, fortalecendo a excelência do protótipo offline da Renault.
 
 | #  | Descrição | Pré-condição | Procedimento de teste | Pós-condição / Resultado esperado | Observações (opcional) |
 |----|------------|---------------|------------------------|------------------------------------|-------------------------|
