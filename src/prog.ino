@@ -1,11 +1,12 @@
 #include <LiquidCrystal_I2C.h>
-#include <Adafruit_MMA8451.h>
+#include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
 // #include <SPIFFS.h>
 // #include <LittleFS.h>
 
 #define I2C_ADDR    0x27
+#define SENSOR_ADDR 0x1C
 #define LCD_COLUMNS 16
 #define LCD_LINES   2
 #define BUTTON_OPTIONS 5
@@ -13,9 +14,11 @@
 #define BUTTON_RESET 18
 #define BUTTON_START 16
 #define PIEZO 34
+#define LED_RED 2
+#define LED_GREEN 15
 
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
-Adafruit_MMA8451 mma = Adafruit_MMA8451();
+Adafruit_MPU6050 mpu;
 
 class Display{
   private:
@@ -39,6 +42,17 @@ class Display{
   public:
 
   bool delayMillis(int interval) {
+    intervalo = interval;
+    unsigned long currentMillis = millis();
+    if (currentMillis - previousMillis >= intervalo) {
+      previousMillis = currentMillis;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  bool delayMillis2(int interval) {
     intervalo = interval;
     unsigned long currentMillis = millis();
     if (currentMillis - previousMillis >= intervalo) {
@@ -113,25 +127,24 @@ class Display{
     } 
     // ESTADO 3: Foi iniciado (mostra sensores)
     else if (started != -1){
-      sensors_event_t event;
-      mma.getEvent(&event);
+      sensors_event_t a, g, temp;
+      mpu.getEvent(&a, &g, &temp);
       int piezo = analogRead(PIEZO);
-      if(delayMillis(300)){
-        // lcd.clear();
+      if(delayMillis(500)){
         lcd.setCursor(0,0);
         lcd.print("X:      ");
         lcd.setCursor(2,0);
-        lcd.print(event.acceleration.x);
+        lcd.print(a.acceleration.x);
 
         lcd.setCursor(8,0);
         lcd.print("Y:      ");
         lcd.setCursor(10,0);
-        lcd.print(event.acceleration.y);
+        lcd.print(a.acceleration.y);
       
         lcd.setCursor(0,1);
         lcd.print("Z:      ");
         lcd.setCursor(2 ,1);
-        lcd.print(event.acceleration.z);
+        lcd.print(a.acceleration.z);
 
         lcd.setCursor(8,1);
         lcd.print("V:      ");
@@ -214,6 +227,22 @@ class Display{
     } 
   }
 
+  void led(){
+    if (delayMillis2(550)){
+      digitalWrite(LED_RED, HIGH);
+    } else {
+      digitalWrite(LED_RED, LOW);
+    }
+  }
+
+  void ledStarted(){
+    if (started != -1){
+      digitalWrite(LED_GREEN, HIGH);
+    } else {
+      digitalWrite(LED_GREEN, LOW);
+    }
+  }
+
 };
 
 
@@ -253,33 +282,31 @@ void setup() {
   lcd.backlight();
   lcd.clear();
   
-  // Teste básico do LCD
-  lcd.setCursor(0, 0);
-  lcd.print("Teste LCD");
-  lcd.setCursor(0, 1);
-  lcd.print("Inicializando...");
-  delay(2000);
-  lcd.clear();
   
   pinMode(BUTTON_OPTIONS, INPUT_PULLUP);
   pinMode(BUTTON_SELECT, INPUT_PULLUP);
   pinMode(BUTTON_RESET, INPUT_PULLUP);
   pinMode(BUTTON_START, INPUT_PULLUP);
   pinMode(PIEZO, INPUT);
+  pinMode(LED_RED, OUTPUT);
+  pinMode(LED_GREEN, OUTPUT);
 
-  Serial.println("Inicializando MMA8451...");
-  // Especifica o endereço I2C correto (0x1C ao invés do padrão 0x1D)
-  if (!mma.begin(0x1C)) {
+  Serial.println("Inicializando MPU6050...");
+  // Inicializa o acelerômetro no endereço 0x1C
+  if (mpu.begin() == false) {
     Serial.println("Sensor init failed");
+    Serial.println("Verifique as conexões I2C!");
     lcd.clear();
     lcd.setCursor(0, 0);
-    lcd.print("MMA8451 Erro!");
-    while (true)
+    lcd.print("MPU6050");
+    while (false)
       delay(10);
   }
-  Serial.println("Found a MMA8451 sensor");
+  Serial.println("Sensor MPU6050 encontrado!");
 
-  mma.setRange(MMA8451_RANGE_2_G);
+  mpu.setAccelerometerRange(MPU6050_RANGE_16_G);
+  mpu.setGyroRange(MPU6050_RANGE_250_DEG);
+  mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
 
   // SPIFFS.begin(true);
   // LittleFS.begin(true,"/littlefs", 10, "spiffs");
@@ -288,11 +315,13 @@ void setup() {
 
 
 void loop() {
-    display.text();
-    display.options();
-    display.start();
-    display.select();
-    display.reset();
-    // display.writeData();
+  display.led();
+  display.ledStarted();
+  display.text();
+  display.options();
+  display.start();
+  display.select();
+  display.reset();
+  // display.writeData();
 }
 
