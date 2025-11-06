@@ -755,6 +755,30 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 | 11 | Verificação do LED verde aceso durante o funcionamento do protótipo. | Protótipo montado e inicializado completamente; LED verde conectado. | Após a inicialização, observar se o LED verde permanece aceso enquanto o sistema está em operação. | LED verde permanece aceso sem oscilações durante todo o funcionamento. | Teste bem sucedido |
 
 
+&emsp;Clique [aqui](https://drive.google.com/file/d/1H7OradsyvV5FF7lPTnLamWB38_OL46gR/view?usp=sharing) para acessar o vídeo do Teste 1 e 2.
+
+
+<div align="center">
+
+   <sub>Caso 2: Tempo de resposta do piezoelétrico</sub>
+
+   <img src="../assets/TaxaDeAtualizacao.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1g-3X5NSEkF6hV3FLrjkUKlLqdsbMYvWF/view?usp=sharing) para acessar o vídeo do Teste 4.
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1JR1xGoF4nzgvLgu4W3-mfu44JB3WSumL/view?usp=sharing) para acessar o vídeo do Teste 5.
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1SUi_PPNBBSeCTeTKtpvOFWUtANgu0Hy_/view?usp=sharing) para acessar o vídeo do Teste 6, 7 e 8.
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1tHVRKewaWchrnVr7DmiwzDFTH7W5hcSS/view?usp=sharing) para acessar o vídeo do Teste 9.
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1jhpy7zYRdn-DrL0kTzzQBVcE3D5SslYJ/view?usp=sharing) para acessar o vídeo do Teste 10 e 11.
+
 
 
 ### 3.4.3. Protótipo do Projeto com MQTT e I2C (sprint 3)	
