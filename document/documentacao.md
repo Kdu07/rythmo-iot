@@ -782,6 +782,8 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 
 
 
+&emsp;&emsp;&emsp;&emsp;Em resumo, os testes detalhados no protótipo offline da Renault foram muito importantes para confirmar seu bom funcionamento e resistência em várias situações. Fazer esses testes ajudou a equipe a encontrar e consertar erros no hardware e no software, principalmente nos botões, na leitura dos sensores e na reação do dispositivo em condições diferentes.
+
 
 
 ### 3.4.3. Protótipo do Projeto com MQTT e I2C (sprint 3)	
