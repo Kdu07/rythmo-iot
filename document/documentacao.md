@@ -751,6 +751,9 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 | 07 | Avaliação do tempo de resposta do acelerômetro em ambiente controlado. | Protótipo montado e alimentado; ferramentas de medição de tempo disponíveis. | Aplicar movimento controlado e medir o tempo até a atualização no LCD. | O acelerômetro responde em menos de 1 segundo, com o LCD exibindo os valores detectados. | Teste bem sucedido |
 | 08 | Medição da aceleração em diferentes eixos detectada pelo acelerômetro. | Protótipo montado e alimentado; serial monitor ou LCD para leitura. | Aplicar movimentos em direções variadas (ex: eixo X, Y, Z) e registrar os valores exibidos no LCD. | O LCD exibe valores de aceleração (ex: em g), com variações correspondentes aos eixos movimentados. | Teste bem sucedido |
 | 09 | Avaliação da integração entre acelerômetro, botões e LCD em fluxo completo. | Protótipo montado e alimentado; menu inicial no LCD. | Usar botões para navegar (OPTIONS/SELECT), aplicar movimento no acelerômetro, usar START para iniciar e RESET para reiniciar; verificar fluxo. | O sistema responde a inputs combinados; LCD mostra estados corretos baseados na aceleração. | Teste bem sucedido |
+| 10 | Verificação do LED vermelho piscando antes da inicialização do protótipo. | Protótipo montado e alimentado; LED vermelho conectado corretamente. | Ligar o protótipo e observar se o LED vermelho pisca em intervalo regular antes do sistema iniciar. | LED vermelho pisca continuamente até o sistema completar a inicialização. | Teste bem sucedido |
+| 11 | Verificação do LED verde aceso durante o funcionamento do protótipo. | Protótipo montado e inicializado completamente; LED verde conectado. | Após a inicialização, observar se o LED verde permanece aceso enquanto o sistema está em operação. | LED verde permanece aceso sem oscilações durante todo o funcionamento. | Teste bem sucedido |
+
 
 
 
