@@ -2,23 +2,25 @@
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
-// #include <SPIFFS.h>
-// #include <LittleFS.h>
+#include <SD.h>
+#include <SPI.h>
 
 #define I2C_ADDR    0x27
 #define SENSOR_ADDR 0x1C
 #define LCD_COLUMNS 16
 #define LCD_LINES   2
-#define BUTTON_OPTIONS 5
+#define BUTTON_OPTIONS 14
 #define BUTTON_SELECT 17
-#define BUTTON_RESET 18
+#define BUTTON_RESET 12
 #define BUTTON_START 16
 #define PIEZO 34
 #define LED_RED 2
 #define LED_GREEN 15
+#define SD_CS 5  // Chip Select do SD Card
 
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 Adafruit_MPU6050 mpu;
+bool sdCardOK = false; // Flag para verificar se o SD Card está funcionando
 
 class Display{
   private:
@@ -33,6 +35,7 @@ class Display{
   unsigned long previousMillis;
   int intervalo = 1000;
   int aux = 0;
+  unsigned long startTime = 0; // Tempo de início da medição
   
   // Debounce para os botões
   unsigned long lastDebounceTime = 0;
@@ -130,7 +133,7 @@ class Display{
       sensors_event_t a, g, temp;
       mpu.getEvent(&a, &g, &temp);
       int piezo = analogRead(PIEZO);
-      if(delayMillis(500)){
+      if(delayMillis(500)){ //TAXA DE ATUALIZAÇÃO DO DISPLAY LCD
         lcd.setCursor(0,0);
         lcd.print("X:      ");
         lcd.setCursor(2,0);
@@ -154,21 +157,45 @@ class Display{
     }
   }
 
-  // void writeData(){
-  //   if(started != -1){
-  //     unsigned long startTime = millis();
-  //     sensors_event_t event;
-  //     mma.getEvent(&event);
-  //     if(!SPIFFS.exists("/dados.csv")){
-  //       File dados = SPIFFS.open("/dados.csv","w");
-  //       dados.println("Time,Number,Pista,AX,AY,AZ");
-  //       dados.close();
-  //     }
-  //     File dados = SPIFFS.open("/dados.csv","a");
-  //     dados.println(String(millis()-startTime) + "," + String(number) + "," + textSelect + "," + String(event.acceleration.x) + "," + String(event.acceleration.y) + "," + String(event.acceleration.z) );
-  //     dados.close();
-  //   }  
-  // }
+  void writeData(){
+    if(started != -1 && sdCardOK){
+      sensors_event_t a, g, temp;
+      mpu.getEvent(&a, &g, &temp);
+      int piezo = analogRead(PIEZO);
+      
+      // Cria o arquivo com cabeçalho se não existir
+      if(!SD.exists("dados.csv")){
+        File dados = SD.open("dados.csv", FILE_WRITE);
+        if(dados){
+          dados.println("Time(ms),Number,Pista,AX,AY,AZ,Vibracao");
+          dados.close();
+          Serial.println("Arquivo dados.csv criado com cabeçalho");
+        } else {
+          Serial.println("Erro ao criar arquivo dados.csv");
+          sdCardOK = false; // Marca SD como não OK
+          return;
+        }
+      }
+      
+      // Abre arquivo para adicionar dados
+      File dados = SD.open("dados.csv", FILE_APPEND);
+      if(dados){
+        unsigned long currentTime = millis() - startTime;
+        String linha = String(currentTime) + "," + 
+                      String(number) + "," + 
+                      textSelect + "," + 
+                      String(a.acceleration.x, 2) + "," + 
+                      String(a.acceleration.y, 2) + "," + 
+                      String(a.acceleration.z, 2) + "," + 
+                      String(piezo);
+        dados.println(linha);
+        dados.close();
+      } else {
+        Serial.println("Erro ao abrir arquivo para escrita");
+        sdCardOK = false; // Marca SD como não OK
+      }
+    }  
+  }
 
   void options(){
     int value = digitalRead((BUTTON_OPTIONS));
@@ -207,28 +234,35 @@ class Display{
         if(aux == 0){
           lcd.clear();
           aux = 1;
+          startTime = millis(); // Inicia o cronômetro da medição
         }
         Serial.print("Start - started: ");
         Serial.println(started);
+        Serial.print("Iniciando medição número: ");
+        Serial.println(number);
     }
   }
 
   void reset(){
     int value = digitalRead((BUTTON_RESET));
     if (value == LOW){
+      if(started != -1){
+        Serial.print("Finalizando medição número: ");
+        Serial.println(number);
+        number++; // Incrementa apenas quando uma medição é finalizada
+      }
       selected = -1;
       started = -1; 
       aux = 0;
       option = 0;
       optionsToText(option);
-      number++;
       lcd.clear();
       Serial.println("Reset - voltando ao menu");
     } 
   }
 
   void led(){
-    if (delayMillis2(550)){
+    if (delayMillis2(550) && started == -1){
       digitalWrite(LED_RED, HIGH);
     } else {
       digitalWrite(LED_RED, LOW);
@@ -308,8 +342,55 @@ void setup() {
   mpu.setGyroRange(MPU6050_RANGE_250_DEG);
   mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
 
-  // SPIFFS.begin(true);
-  // LittleFS.begin(true,"/littlefs", 10, "spiffs");
+  // Inicializa o cartão SD
+  Serial.println("Inicializando SPI para SD Card...");
+  SPI.begin(); // Inicializa o barramento SPI
+  delay(100);
+  
+  Serial.println("Inicializando cartão SD...");
+  Serial.print("Pino CS: ");
+  Serial.println(SD_CS);
+  
+  if (!SD.begin(SD_CS)) {
+    Serial.println("Falha ao inicializar o cartão SD!");
+    Serial.println("Possíveis causas:");
+    Serial.println("1. Cartão não inserido");
+    Serial.println("2. Cartão corrompido ou não formatado (FAT16/FAT32)");
+    Serial.println("3. Conexões incorretas");
+    Serial.println("4. Pino CS incorreto");
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Erro SD Card");
+    lcd.setCursor(0, 1);
+    lcd.print("Verificar cartao");
+    sdCardOK = false;
+    delay(3000);
+    lcd.clear();
+  } else {
+    Serial.println("Cartão SD inicializado com sucesso!");
+    uint8_t cardType = SD.cardType();
+    Serial.print("Tipo do cartão: ");
+    if(cardType == CARD_MMC){
+        Serial.println("MMC");
+    } else if(cardType == CARD_SD){
+        Serial.println("SDSC");
+    } else if(cardType == CARD_SDHC){
+        Serial.println("SDHC");
+    } else {
+        Serial.println("UNKNOWN");
+    }
+    uint64_t cardSize = SD.cardSize() / (1024 * 1024);
+    Serial.printf("Tamanho do cartão: %lluMB\n", cardSize);
+    
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("SD Card OK!");
+    lcd.setCursor(0, 1);
+    lcd.print(String(cardSize) + "MB");
+    sdCardOK = true;
+    delay(2000);
+    lcd.clear();
+  }
 
 }
 
@@ -322,6 +403,6 @@ void loop() {
   display.start();
   display.select();
   display.reset();
-  // display.writeData();
+  display.writeData(); // Grava dados no SD Card quando started != -1
 }
 
