@@ -37,7 +37,7 @@
 ### Problema a Ser Resolvido
 
 **Contexto do Desafio**
-A Renault enfrenta um desafio técnico relacionado às análises de Squeak and Rattle (ruídos e vibrações indesejados em veículos).
+A Renault enfrenta um desafio técnico relacionado às análises de Squeak and Rattle (ruídos e pressões indesejados em veículos).
 
 **Limitação Atual:**
 As análises do tipo "e-line" (método de simulação) dependem de sinais de entrada precisos que representem deslocamento x tempo ou força x tempo. Atualmente, não existe uma base de dados estruturada que contemple as diferentes excitações que os veículos sofrem em diversos tipos de pistas.
@@ -52,7 +52,7 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 1.1.1 Objetivos Gerais
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Renault do Brasil, reconhecida por sua inovação e compromisso com a mobilidade sustentável, busca constantemente aprimorar seus processos de engenharia e qualidade. Dentro dessa visão, o projeto tem como objetivo geral desenvolver uma solução IoT capaz de coletar e armazenar dados de aceleração e força em veículos de teste, criando uma base de dados padronizada que apoie simulações de Squeak and Rattle (ruídos e vibrações estruturais).
+&nbsp;&nbsp;&nbsp;&nbsp;A Renault do Brasil, reconhecida por sua inovação e compromisso com a mobilidade sustentável, busca constantemente aprimorar seus processos de engenharia e qualidade. Dentro dessa visão, o projeto tem como objetivo geral desenvolver uma solução IoT capaz de coletar e armazenar dados de aceleração e força em veículos de teste, criando uma base de dados padronizada que apoie simulações de Squeak and Rattle (ruídos e pressões estruturais).
 
 &nbsp;&nbsp;&nbsp;&nbsp;Com isso, pretende-se tornar o processo de análise mais preciso e automatizado, reduzindo a necessidade de testes físicos e contribuindo para práticas de desenvolvimento mais eficientes e sustentáveis. O projeto também busca aproximar a universidade do ambiente industrial, permitindo a aplicação prática de tecnologias emergentes e fortalecendo a parceria entre o Inteli e a Renault.
 
@@ -64,14 +64,14 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 - Construir um banco de dados de perfis de pista: Organizar e armazenar os dados coletados, formando uma base que represente diferentes tipos de pista, velocidades e condições de rodagem.
 
-- Apoiar análises de Squeak and Rattle: Disponibilizar informações úteis para estudos e simulações que busquem compreender e reduzir ruídos e vibrações estruturais nos veículos da Renault.
+- Apoiar análises de Squeak and Rattle: Disponibilizar informações úteis para estudos e simulações que busquem compreender e reduzir ruídos e pressões estruturais nos veículos da Renault.
 
 - Assegurar a confiabilidade das medições: Documentar e padronizar todo o processo de coleta, transmissão e tratamento dos dados, garantindo a qualidade dos resultados obtidos.
 
 
 ## 1.2 Proposta da solução
 
-&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta para o projeto envolve o desenvolvimento de um dispositivo IoT (Internet das Coisas) capaz de monitorar as condições de Squeak and Rattle por meio de sensores instalados nos veículos e envio de dados por lotes. Esse dispositivo será equipado com dois sensores principais (Acelerometros e Piezoeletricos) para a captação de dados relevantes, como aceleração, vibração, velocidade e outros indicadores relevantes para a melhor interpretabilidade dos dados para os simuladores de Squeak and Rattle.
+&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta para o projeto envolve o desenvolvimento de um dispositivo IoT (Internet das Coisas) capaz de monitorar as condições de Squeak and Rattle por meio de sensores instalados nos veículos e envio de dados por lotes. Esse dispositivo será equipado com dois sensores principais (Acelerometros e Piezoeletricos) para a captação de dados relevantes, como aceleração, pressão, velocidade e outros indicadores relevantes para a melhor interpretabilidade dos dados para os simuladores de Squeak and Rattle.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Os dados captados pelos sensores serão enviados periodicamente para a nuvem e armazenados em um banco de dados relacional, garantindo um fluxo contínuo e seguro de informações.
 
@@ -79,7 +79,7 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 ## 1.3 Justificativa
 
-&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta busca suprir a falta de dados padronizados sobre vibrações e ruídos em veículos, essenciais para análises precisas de Squeak and Rattle. O uso de um dispositivo IoT com sensores acelerômetros e piezoelétricos permite coletar e enviar dados reais de forma automatizada e segura, criando uma base confiável para futuras simulações.
+&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta busca suprir a falta de dados padronizados sobre pressões e ruídos em veículos, essenciais para análises precisas de Squeak and Rattle. O uso de um dispositivo IoT com sensores acelerômetros e piezoelétricos permite coletar e enviar dados reais de forma automatizada e segura, criando uma base confiável para futuras simulações.
 
 &nbsp;&nbsp;&nbsp;&nbsp;O envio das informações para a nuvem e seu armazenamento em um banco de dados relacional garantem melhor organização e acesso aos dados, enquanto a interface de controle intuitiva torna o sistema adaptável a diferentes condições de teste. Seus benefícios incluem a redução do tempo e custo dos testes, além de aumentar a precisão das análises, contribuindo para a melhoria contínua dos processos de engenharia da Renault.
 
@@ -130,7 +130,7 @@ Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para 
 &nbsp;&nbsp;&nbsp;&nbsp;A seguir, a análise das 5 forças de Porter no contexto da Renault Brasil:
 
 <div align="center">
-<sup>Figura # - 5 Forças de Porter </sup>
+<sup>Figura 1 - 5 Forças de Porter </sup>
    
 <img src="../assets/5-forcas.png"> 
 
@@ -150,9 +150,9 @@ Dessa forma, em um mercado altamente disputado e em rápida transformação, a R
 ### 3.1.2.1  Visualização da análise SWOT:
 
 <div align="center">
-Figura 4 - Análise SWOT
-<img src="../document/analiseSWOT.png"
-<sup>Fonte: Material alterado pelos autores com base no tamplete disponível em: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/</sup>
+Figura 2 - Análise SWOT
+<img src="../document/analiseSWOT.png"/>
+<sup> Fonte: Material alterado pelos autores com base no tamplete disponível em: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/</sup>
 </div>
  
 
@@ -262,7 +262,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 &emsp; O Canvas de Proposta de Valor é uma ferramenta desenvolvida para ajudar empresas a compreender como um projeto pode atender de forma efetiva às necessidades e expectativas de seus clientes. Criado por Alexander Osterwalder, o modelo permite estruturar os elementos que realmente geram valor para o público-alvo, destacando os ganhos proporcionados por um produto ou serviço e as dores que ele se propõe a resolver. Essa abordagem contribui para uma visão mais estratégica e centrada no cliente, garantindo que as soluções desenvolvidas estejam alinhadas ao que realmente importa para o consumidor (Osterwalder et al., 2014).
 
-&emsp; No contexto da Renault Brasil, a busca por inovação constante no processo de desenvolvimento automotivo trouxe à tona um desafio importante: aprimorar as simulações de Squeak and Rattle (S&R) — ruídos e vibrações indesejadas que afetam o conforto e a percepção de qualidade dos veículos. Para enfrentar esse problema, a empresa aposta em uma solução baseada em Internet das Coisas (IoT), capaz de capturar dados de velocidade e aceleração em tempo real.
+&emsp; No contexto da Renault Brasil, a busca por inovação constante no processo de desenvolvimento automotivo trouxe à tona um desafio importante: aprimorar as simulações de Squeak and Rattle (S&R) — ruídos e pressões indesejadas que afetam o conforto e a percepção de qualidade dos veículos. Para enfrentar esse problema, a empresa aposta em uma solução baseada em Internet das Coisas (IoT), capaz de capturar dados de velocidade e aceleração em tempo real.
 
 &emsp; Com isso, torna-se possível realizar análises mais precisas e preditivas ainda nas fases iniciais de desenvolvimento, identificando potenciais falhas estruturais antes mesmo da construção dos protótipos físicos. O resultado é um processo mais ágil, econômico e assertivo, que reduz custos, retrabalhos e tempo de projeto, ao mesmo tempo em que eleva o padrão de qualidade e o conforto percebido pelo cliente final.
 
@@ -286,7 +286,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 #### 3.1.4.3 Produtos e Serviços
 
-- Sistema IoT para captura e transmissão de dados de velocidade, aceleração e vibração.
+- Sistema IoT para captura e transmissão de dados de velocidade, aceleração e pressão.
 
 - Plataforma integrada de análise de dados conectada aos softwares de simulação da Renault.
 
@@ -336,7 +336,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 - Desenvolver veículos que ofereçam conforto acústico e robustez estrutural.
 
-- Validar o desempenho de ruído e vibração antes da construção de protótipos.
+- Validar o desempenho de ruído e pressão antes da construção de protótipos.
 
 - Antecipar falhas de Squeak and Rattle com base em dados reais e simulações inteligentes.
 
@@ -346,14 +346,14 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 #### 3.1.4.9 Conclusão
 
-&emsp; A solução proposta para a Renault Brasil redefine o modo como a engenharia automotiva lida com ruídos e vibrações, ao integrar tecnologias de IoT e IA no processo de simulação. A coleta de dados reais de aceleração e velocidade permite uma análise preditiva mais confiável e acessível, reduzindo a dependência de protótipos físicos e aumentando a eficiência das equipes.
+&emsp; A solução proposta para a Renault Brasil redefine o modo como a engenharia automotiva lida com ruídos e pressões, ao integrar tecnologias de IoT e IA no processo de simulação. A coleta de dados reais de aceleração e velocidade permite uma análise preditiva mais confiável e acessível, reduzindo a dependência de protótipos físicos e aumentando a eficiência das equipes.
 
 &emsp; Com dashboards intuitivos, relatórios automáticos e algoritmos inteligentes, os engenheiros passam a contar com informações em tempo real para tomar decisões mais assertivas. O resultado é um processo de desenvolvimento mais ágil, sustentável e orientado por dados, que reforça a posição da Renault como uma marca inovadora e comprometida com a excelência técnica.
 
 &emsp; Essa abordagem inaugura um novo paradigma na engenharia automotiva: unir tecnologia e engenharia para criar veículos mais silenciosos, confortáveis e sofisticados — refletindo não apenas eficiência técnica, mas também o cuidado com a experiência do motorista e o legado da marca Renault.
 
 <div align="center">
-<sup>Figura # - Canvas Proposta de Valor </sup>
+<sup>Figura 3- Canvas Proposta de Valor </sup>
 
 <img src="../assets/canvas-proposta-de-valor.png">
 
@@ -368,7 +368,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 &emsp; No contexto da Renault, a matriz de riscos permite identificar ameaças e falhas que possam comprometer as operações de telemetria e análise de dados veiculares em pista, além de, por meio de seu eixo de oportunidades, explorar caminhos voltados à inovação e à segurança dos dados na infraestrutura IoT em desenvolvimento pelo grupo. Diante da crescente demanda por otimização dos processos de engenharia automotiva e das rápidas transformações tecnológicas no setor de IoT, essa ferramenta assegura resiliência e agilidade, fortalecendo a capacidade da Renault em desenvolver veículos mais eficientes e seguros, especialmente na identificação e mitigação de problemas de squeak and rattle.
 
 <div align="center">
-<sup>Figura # - Matriz de Riscos e Oportunidades </sup>
+<sup>Figura 4 - Matriz de Riscos e Oportunidades </sup>
    
 <img src="../assets/matriz-de-riscos.png"> 
 
@@ -376,7 +376,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
    
 </div>
 
-&emsp; A matriz de risco identificou algumas ameaças importantes para o projeto de telemetria veicular. Entre elas, destaca-se a sobrecarga de processamento do microcontrolador, que pode não conseguir lidar com grandes volumes de dados de sensores de velocidade e aceleração em alta frequência, causando perda de amostras críticas e comprometendo a precisão das simulações. Outro fator crítico é a vulnerabilidade de segurança dos dados, onde informações sensíveis de testes podem ser interceptados se não houver criptografia adequada, expondo dados estratégicos sobre o desenvolvimento de novos veículos. Adicionalmente, a instabilidade de conectividade em áreas com baixa cobertura de rede pode causar atraso ou perda de pacotes durante a transmissão dos dados para o banco de dados remoto, prejudicando a continuidade do monitoramento em tempo real. As condições adversas do ambiente de pista, como poeira, calor extremo, vibração e umidade, também representam ameaças ao funcionamento adequado dos sensores, podendo alterar medições e gerar dados inconsistentes que comprometem as análises de squeak and rattle.
+&emsp; A matriz de risco identificou algumas ameaças importantes para o projeto de telemetria veicular. Entre elas, destaca-se a sobrecarga de processamento do microcontrolador, que pode não conseguir lidar com grandes volumes de dados de sensores de velocidade e aceleração em alta frequência, causando perda de amostras críticas e comprometendo a precisão das simulações. Outro fator crítico é a vulnerabilidade de segurança dos dados, onde informações sensíveis de testes podem ser interceptados se não houver criptografia adequada, expondo dados estratégicos sobre o desenvolvimento de novos veículos. Adicionalmente, a instabilidade de conectividade em áreas com baixa cobertura de rede pode causar atraso ou perda de pacotes durante a transmissão dos dados para o banco de dados remoto, prejudicando a continuidade do monitoramento em tempo real. As condições adversas do ambiente de pista, como poeira, calor extremo, pressão e umidade, também representam ameaças ao funcionamento adequado dos sensores, podendo alterar medições e gerar dados inconsistentes que comprometem as análises de squeak and rattle.
 
 &emsp; Por outro lado, a matriz de risco também ressalta oportunidades estratégicas que impulsionam a inovação e ampliam o valor do projeto. O aproveitamento de dados reais de pista aumenta significativamente a precisão dos modelos de simulação de squeak and rattle, reduzindo custos e tempo no desenvolvimento de novos veículos ao permitir testes virtuais mais confiáveis antes da produção. Outra oportunidade crucial é a padronização de dados e aprimoramento do dashboard com filtros e validação automática, tornando as análises mais claras e evitando interpretações incorretas que poderiam levar a decisões equivocadas de engenharia. O desenvolvimento de um sistema de transmissão resiliente e inteligente de dados também se destaca, viabilizando o uso da solução em pistas remotas e expandindo as possibilidades de testes em diferentes condições. A implementação de criptografia e segurança alinhada à LGPD representa uma oportunidade de garantir confiança no uso corporativo e proteção da propriedade intelectual. Por fim, o pré-processamento local dos dados otimiza a eficiência do sistema, reduzindo o volume de informações desnecessárias enviadas ao servidor e melhorando o desempenho geral da solução.
 
@@ -524,17 +524,122 @@ Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
 
 ### 3.2.2. Jornada do Usuário e Storyboard (sprint 2)	
 
-_Coloque aqui seu Mapa de Jornada do Usuário:_
-- _Ferramenta visual da sequência de interações do usuário._
-- _Retrata sentimentos, obstáculos e satisfação ao longo de um processo._
-- _Identifica oportunidades de melhoria na experiência._
-- _Fazer pelo menos um mapa de jornada do usuário_
+#### 3.2.2.2 Fundamentação Teórica de um storyboard
 
-_Coloque aqui seu Storyboard:_
-- _Ilustração sequencial da interação do usuário com a solução._
-- _Enfatiza fluxo, interações e narrativa visual._
-- _Destaca pontos de atrito ou oportunidades na experiência._
-- _Criar ao menos um storyboard._
+&emsp; De acordo com Marissa Sapega, um storyboard é uma representação gráfica de uma narrativa, conceito ou roteiro, dividida em cenas sequenciais (painéis). Essas ferramentas visuais são tradicionalmente utilizadas para mapear como um script ou história se desenrolará uma vez animado ou encenado, mas pessoas as utilizam para diversas situações. Sapega explica que "storyboarding" é simplesmente o ato de criar um storyboard, e para obter os melhores resultados, é necessário equilibrar o fornecimento de informações visuais suficientes para contar a história de forma compreensível, sem torná-la excessivamente detalhada.
+
+&emsp; No contexto do nosso projeto Rythmo, o storyboard é utilizado para ilustrar como a solução IoT será utilizada no cotidiano da engenheira de simulação Maria Oliveira, servindo como um guia visual prático das suas interações com o sistema. A vantagem de usar imagens sequenciais é que elas tornam a jornada do usuário fácil de entender à primeira vista e facilitam a memorização dos pontos de contato críticos entre a persona e o produto.
+
+#### 3.2.2.3 Estrutura de um storyboard
+Em geral, a criação de um storyboard inclui três elementos principais:
+
+- Cenário: Os storyboards são baseados em um cenário ou em uma história de usuário específica, claramente especificado ao longo da narrativa visual.
+- Visual: São as representações gráficas ou ilustrações da interação de cada etapa do cenário.
+- Legenda: Cada visual tem uma descrição correspondente que explica brevemente as ações do usuário, ambiente, estado emocional e contexto técnico.
+
+
+#### 3.2.2.4 Aplicação no Projeto
+&emsp; Nesse sentido, no projeto Rythmo, o storyboard desempenha um papel fundamental ao permitir a visualização de como a persona Maria Oliveira, engenheira de simulação da Renault, interage com o sistema IoT de coleta de dados de Squeak and Rattle. O storyboard é baseado na jornada dessa persona específica, que enfrenta frustrações com a falta de dados confiáveis para simulações CAE e descobre na solução proposta uma ferramenta transformadora para seu trabalho.
+
+&emsp; A criação de um storyboard detalhado para Maria permite identificar melhor suas necessidades técnicas e expectativas profissionais, ajudando nas tomadas de decisões do projeto em relação à interface do dashboard, funcionalidades de exportação de dados e integração com softwares de simulação existentes. Além disso, refina a usabilidade do produto, tornando o sistema mais intuitivo e alinhado às metas de precisão e eficiência nas análises de engenharia automotiva.
+
+#### 3.2.2.5 Storyboard Maria Oliveira
+
+##### 3.2.2.5.1 Figura do storyboard da Maria
+
+<div align="center">
+
+<sub> Figura 5 - Storyboard Maria Oliveira </sub>
+
+<img src="../assets/storyboard-maria.png">
+
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+
+</div>
+
+##### 3.2.2.5.2 Descrição das tarefas no storyboard da Maria
+
+- Quadro 1: Maria está em sua estação de trabalho, cercada por monitores mostrando simulações CAE. Ela se frusta com resultados inconsistentes, devido a falta de dados reais confiáveis.
+- Quadro 2: Maria participa de uma reunião onde é apresentado o sistema IoT Rythmo. Seus olhos se iluminam ao compreender que finalmente terá acesso a dados reais de aceleração e força coletados diretamente das pistas de teste.
+- Quadro 3: Em sua estação, Maria acessa pela primeira vez o dashboard do sistema Rythmo. A interface intuitiva exibe dados organizados por tipo de pista, velocidade e condições climáticas. Ela sorri ao visualizar gráficos de aceleração em tempo real.
+- Quadro 4: Maria exporta dados para CSV e integra com seu software de simulação. Ela compara sinais de diferentes perfis de pista (lisa, esburacada, paralelepípedo), identificando padrões que antes eram impossíveis de detectar.
+- Quadro 5: Com os dados reais, Maria ajusta seus modelos de simulação e-line. Os resultados agora convergem perfeitamente com os testes físicos. Ela comemora discretamente o sucesso, erguendo o punho em sinal de vitória.
+- Quadro 6: Maria apresenta seus resultados em reunião com a equipe de P&D (Pesquisa e Desenvolvimento). Ela demonstra como o sistema Rythmo reduziu o tempo de desenvolvimento e aumentou a precisão das análises de Squeak and Rattle, estabelecendo uma nova base de dados padronizada para projetos futuros.
+
+#### 3.2.2.6 Storyboard João Silva
+
+##### 3.2.2.6.1 Figura do storyboard do João
+
+<div align="center">
+
+<sub> Figura 6 - Storyboard João Silva </sub>
+
+<img src="../assets/storyboard-joao.png">
+
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+
+</div>
+
+##### 3.2.2.5.2 Descrição das tarefas no storyboard do João
+
+- Quadro 1: João chega ao pátio do campo de provas com o case do kit IoT Rythmo. Ele se aproxima do veículo de testes e verifica visualmente seu estado antes de iniciar a instalação, demonstrando sua rotina profissional de preparação. O case contém ESP32, sensores e cabos organizados, prontos para instalação rápida.
+- Quadro 2: Dentro do veículo, João trabalha metodicamente fixando a central ESP32 no console central. Posiciona o acelerômetro na porta frontal direita para captar vibrações laterais e instala o sensor de força próximo ao painel. Os cabos são organizados com etiquetas coloridas: azul para aceleração e vermelho para força, facilitando identificação futura.
+- Quadro 3: João conecta a alimentação do sistema à fonte de energia do veículo. Ao ligar, o display LCD acende mostrando a tela inicial. João ativa o hotspot em seu celular e, usando os botões físicos (Options, Select, Reset), navega até encontrar "Paralelepípedo" na lista de pistas. Após pressionar "Select", o display exibe "Selected Pista: Paralelepípedo", confirmando a configuração.
+- Quadro 4: João pressiona o botão "Start" para iniciar a coleta. O display LCD muda para o modo de medição, exibindo em tempo real: primeira linha com "X:0.0 Y:0.0 Z:9.8" (aceleração nos eixos em m/s²) e segunda linha com "V:0" (sensor de força). Esta configuração minimalista permite monitoramento rápido sem distrações durante a condução.
+- Quadro 5: João conduz o veículo pela pista de paralelepípedos com concentração profissional, ambas as mãos no volante. A pista gera vibrações características capturadas pelos sensores em tempo real. O display continua mostrando as variações de X, Y, Z e V conforme o veículo passa pelas irregularidades, sem necessidade de interação durante a condução.
+- Quadro 6: Ao completar o trajeto, João encosta o veículo em local seguro e pressiona "Reset". O display LCD retorna à tela inicial "Select Pista: Lisa", indicando que o sistema está pronto para nova sessão. Os dados foram automaticamente armazenados com timestamps e associados ao perfil "Paralelepípedo", garantindo rastreabilidade completa para análises futuras.
+
+#### 3.2.2.7 Conclusão
+
+&nbsp;&nbsp;&nbsp;&nbsp; A criação dos storyboards para as personas Maria Oliveira e João Silva foi fundamental para visualizar e compreender as interações críticas entre os usuários e o sistema IoT Rythmo. Ao mapear suas jornadas, conseguimos identificar pontos de contato essenciais, necessidades específicas e expectativas que guiaram o desenvolvimento do projeto. Esses storyboards não apenas facilitaram a comunicação entre a equipe de desenvolvimento, mas também asseguraram que o design do produto fosse centrado no usuário, promovendo uma experiência intuitiva e eficaz.
+
+### 3.2.3. Jornada do Usuário (sprint 2)
+
+&nbsp;&nbsp;&nbsp;&nbsp;De acordo com Gibbons (2018), a jornada do usuário é uma ferramenta estratégica que mapeia visualmente a experiência completa de um usuário ao interagir com um produto ou serviço. Esta ferramenta permite compreender profundamente as necessidades, comportamentos, emoções e pontos de contato do usuário ao longo de diferentes fases, identificando oportunidades de melhoria e otimização da experiência. No contexto do projeto Rythmo para a Renault, o mapeamento das jornadas do piloto de teste João Silva e da engenheira de simulação Maria Oliveira é fundamental para compreender como a solução IoT impacta positivamente seus fluxos de trabalho complementares.
+
+
+#### 3.2.3.1 **Jornada de Usuário - João Silva**
+
+**Etapas da Jornada de João Silva (Antes da Solução):**
+
+<div align="center">
+<sub> Figura 7- Jornada de João Silva (Antes da Solução) </sub>
+<img src="../assets/jornada-joao-silva-current.png">
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+</div>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;A jornada de João Silva antes da implementação da solução IoT é marcada por desafios que impactam a eficiência e a qualidade dos dados coletados durante os testes de Squeak and Rattle. Decidimos analisar a jornada antes da solução para identificar pontos críticos que poderiam ser aprimorados com a introdução do sistema Rythmo. Uma dessas oportunidades é integração de uma coleta de dados automatizada, isso é importante pois atualmente as análises de ruído e de problemas estruturais do veículo dependem inteiramente de observações subjetivas e percepções sensoriais do piloto, que podem levar a inconsistências e perda de informações valiosas. Introduzir uma camada de dados objetivos e mensuráveis, como aceleração e força, permitiria uma avaliação mais precisa e confiável dos problemas de Squeak and Rattle.
+
+<br/>
+
+**Etapas da Jornada de João Silva (Depois da Solução):**
+
+<div align="center">
+<sub> Figura 8 - Jornada de João Silva (Depois da Solução) </sub>
+<img src="../assets/jornada-joao-silva-future.png">
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+</div>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp; A jornada de João Silva após a implementação da solução IoT Rythmo apresenta melhorias significativas na eficiência e na qualidade dos dados coletados durante os testes de Squeak and Rattle. Com a introdução do sistema, João agora pode contar com uma coleta automatizada de dados de aceleração e força, eliminando a dependência exclusiva de observações subjetivas. Isso não apenas aumenta a precisão das análises, mas também permite que João e a equipe de engenharia identifiquem padrões e correlações que antes passariam despercebidos. 
+
+<br/>
+
+**Jornada de usuário da Maria Oliveira (Depois da Solução):**
+
+<div align="center">
+<sub> Figura 9 - Jornada de Maria Oliveira (Depois da Solução) </sub>
+<img src="../assets/jornada-maria-oliveira-future.png">
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Além da jornada de João Silva, também mapeamos a jornada da engenheira de simulação Maria Oliveira, que desempenha um papel crucial na melhoria das simulações de Squeak and Rattle, utilizando os dados coletados pelo sistema IoT Rythmo dentro de seu fluxo de trabalho. O escopo do projeto abrange apenas até a fase 2, providenciando o acesso e a visualização dos dados pela plataforma, mas sentimos a necessidade de ir além e ilustrar a jornada completa dela, destacando a importância dos dados coletados para suas análises e simulações. Como esses dados serão utlizados na prática depende das ferramentas e processos internos da Renault, mas ao mapear essa jornada,conseguimos identificar claramente como a solução IoT impacta positivamente o trabalho de Maria, permitindo que ela realize análises mais precisas e fundamentadas, contribuindo para o desenvolvimento de veículos mais duráveis e confortáveis.
+
+
+
+
+
 
 ## 3.3. Solução Técnica	
 
@@ -562,12 +667,40 @@ _Coloque aqui seu Storyboard:_
 
 ### 3.3.2. Requisitos Não Funcionais (sprint 2)	
 
-_Descreva quais são os requisitos não funcionais e sua relação com aspectos de qualidade seguindo a norma ISO25010 (visão de aspectos de qualidade). Evolua estes requisitos conforme o desenvolvimento do projeto._
+Conforme Sommerville e Sawyer, requisitos não funcionais definem como o sistema opera e quais atributos de qualidade deve comprovar, abrangendo categorias de produto, organizacionais e externas. Segue a apresentação dos requisitos não funcionais, cada um mapeado à característica correspondente da ISO 25010 e acompanhado de método objetivo de verificação em ambiente controlado.
 
 | **RNF#** | **Descrição** | **Aspecto de qualidade** | 
 |----------|----------|----------|
-|RNF01|Ex. O painel dashboard deve estar disponível 99% do tempo|Ex. Disponibilidade|
-|RNF02|Preencha aqui seus requisitos|Preencha aqui o aspecto de qualidade|
+|RNF01|Os dados coletados devem ser enviados ao armazenamento central mantendo cópia local. Se a rede estiver indisponível, os dados ficam guardados e são enviados automaticamente quando a conexão voltar. | Confiabilidade |
+|RNF02|O tempo de envio de cada pacote do sensor para o armazenamento central deve ser de até sessenta segundos durante os testes. | Desempenho |
+|RNF03|O dispositivo deve possuir capacidade de armazenamento local para pelo menos uma hora de coleta contínua de sinais. | Espaço |
+|RNF04|O sistema deve gerar um registro de sessão com data e hora de início e de término, volume de dados gravados e estado do envio, disponível para consulta pelos times técnicos.| Operacional |
+|RNF05|Os dados exportados devem ser fáceis de localizar e entender por novos usuários. Adotar estrutura de pastas simples por data e sessão, nomes de arquivo padronizados| Usabilidade |
+
+#### **RNF01 - Os dados coletados devem ser enviados ao armazenamento central mantendo cópia local. Se a rede estiver indisponível, os dados ficam guardados e são enviados automaticamente quando a conexão voltar.**
+
+Este requisito garante continuidade de coleta e proteção do histórico, evitando perda de informação durante testes e coletas em campo. Suporta comparações entre campanhas e dá previsibilidade ao fluxo de trabalho técnico.
+Como validar. Simular ausência de rede durante a coleta, confirmar a gravação local dos arquivos e verificar o envio automático após o retorno da conexão, conferindo contagem de registros e integridade no destino.
+
+#### **RNF02 - O tempo de envio de cada pacote do sensor para o armazenamento central deve ser de até sessenta segundos durante os testes.**
+Define um limite claro para o tempo de entrega dos dados, permitindo uso rápido pelas equipes e respostas mais ágeis em rotinas de engenharia.
+Como validar. Marcar horários no ponto de captura e no recebimento no repositório, executar sessões controladas e confirmar que os tempos medidos permanecem dentro de sessenta segundos.
+
+#### **RNF03 - O dispositivo deve possuir capacidade de armazenamento local para pelo menos uma hora de coleta contínua de sinais.**
+
+Assegura que a coleta prossiga mesmo sem conectividade, cobrindo janelas de oscilação de rede ou deslocamentos operacionais, sem interrupções.
+Como validar. Realizar uma sessão contínua de uma hora com a rede desligada, verificar a presença e a integridade dos arquivos locais e confirmar que não houve truncamentos.
+
+#### **RNF04 - O sistema deve gerar um registro de sessão com data e hora de início e de término, volume de dados gravados e estado do envio, disponível para consulta pelos times técnicos.**
+
+Fornece rastreabilidade e visibilidade do processo, facilitando auditoria, suporte e comparação entre sessões e veículos.
+Como validar. Encerrar uma sessão e verificar a criação do registro correspondente, conferindo consistência entre horários, volume gravado e status de entrega no armazenamento central.
+
+#### **RNF05 - Os dados exportados devem ser fáceis de localizar e entender por novos usuários. Adotar estrutura de pastas simples por data e sessão, nomes de arquivo padronizados.**
+
+Promove organização e acessibilidade, reduzindo tempo de busca e a necessidade de treinamento para quem inicia no projeto.
+Como validar. Solicitar a usuários novos que localizem uma sessão específica e abram o arquivo correto, medindo tempo de execução e taxa de acerto na primeira tentativa.
+
 
 ### 3.3.3. Arquitetura da Solução (sprint 3)
 
@@ -737,12 +870,96 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 
 ### 3.4.2. Protótipo Físico do Projeto (offline) (sprint 2)	
 
-_Aqui você deve registrar diversas situações de teste, indicando exemplos de leitura (entrada) e escrita (saída) apresentadas pelo seu sistema físico. Estes registros serão utilizados para testar seus componentes, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de possíveis falhas nas leituras de entradas e saídas. <br>
-Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do protótipo físico e descrições dos testes realizados para ilustrar o funcionamento do protótipo. A tabela a seguir serve como exemplo._
+&nbsp;&nbsp;&nbsp;&nbsp;A execução regular e sistemática dos casos de teste é fundamental para assegurar a robustez, a confiabilidade e o desempenho dos dispositivos eletrônicos, como o protótipo offline da Renault, desenvolvido neste projeto. Dando continuidade às avaliações realizadas na sprint inicial, esta fase de testes físicos tem como objetivo identificar e corrigir falhas em diferentes estágios de construção do protótipo, garantindo que o dispositivo funcione conforme o esperado em diversos cenários, inclusive nas condições mais adversas.
 
-**#** | **Descrição** | **Pré-condição** | **Procedimento de teste** | **Pós-condição/Resultado esperado** | **Observações** (opcional)
-|----------|----------|----------|----------|----------|----------|
-|01|ex. Verificação de conexão de rede bem-sucedida. | ex. O dispositivo está desligado.| ex. Ligue o dispositivo, aguarde alguns segundos e verifique se ele estabelece uma conexão bem-sucedida com a rede Wi-Fi. | ex. O LED verde indicador de conexão acende de forma contínua, sinalizando uma conexão bem-sucedida à rede. |
+&nbsp;&nbsp;&nbsp;&nbsp;Esses registros experimentais, acompanhados de figuras ilustrativas do protótipo físico e descrições detalhadas das situações testadas, permitem compreender o comportamento do sistema em operação e validar sua integração entre hardware e software. Em síntese, tais procedimentos reduzem a probabilidade de falhas futuras, promovendo melhorias antecipadas antes da adoção em ambientes reais e reforçando o compromisso com a excelência e a confiabilidade do protótipo offline da Renault.
+
+A seguir, são apresentados os principais cenários de teste executados: 
+
+
+| #  | Descrição | Pré-condição | Procedimento de teste | Pós-condição/Resultado esperado | Observações (opcional) |
+|----|------------|---------------|------------------------|----------------------------------|------------------------|
+| 01 | Verificação da funcionalidade básica do sensor piezoelétrico ao aplicar pressão. | Protótipo montado e alimentado via USB ou bateria, em ambiente controlado sem pressões externas. | Aplicar uma pressão leve no sensor (ex: batida com o dedo) e observar a resposta no LCD. Repetir com pressão nula para verificar falsos positivos. | O LCD exibe o valor detectado ou indicação de pressão; sem detecções em repouso. | Teste bem sucedido |
+| 02 | Avaliação do tempo de resposta do sensor piezoelétrico em ambiente controlado. | Protótipo montado e alimentado; ferramentas de medição de tempo disponíveis. | Aplicar pressão controlada e medir o tempo até a atualização no LCD. | O sensor responde em menos de 1 segundo, com o LCD exibindo o valor detectado. | Teste bem sucedido |
+| 03 | Medição da intensidade de pressão detectada pelo sensor piezoelétrico. | Protótipo montado e alimentado; serial monitor ou LCD para leitura. | Aplicar pressões de intensidades variadas (baixa, média, alta) e registrar os valores exibidos no LCD. | O LCD exibe valores entre 0 e 4095, com valores mais altos indicando pressões mais fortes. | Teste bem sucedido |
+| 04 | Verificação da funcionalidade dos botões para navegação (OPTIONS, SELECT, RESET, START). | Protótipo montado e alimentado; LCD visível. | Pressionar cada botão individualmente e observar a resposta no LCD (ex: navegação de menu, seleção, reset ou início). | Cada botão aciona a função correspondente; LCD atualiza imediatamente sem falhas. | Teste bem sucedido |
+| 05 | Avaliação da integração entre sensor piezoelétrico, botões e LCD em fluxo completo. | Protótipo montado e alimentado; menu inicial no LCD. | Usar botões para navegar (OPTIONS/SELECT), aplicar pressão no sensor, usar START para iniciar e RESET para reiniciar; verificar fluxo. | O sistema responde a inputs combinados; LCD mostra estados corretos. | Teste bem sucedido |
+| 06 | Verificação da funcionalidade básica do acelerômetro ao aplicar movimento. | Protótipo montado e alimentado via USB ou bateria, em ambiente controlado sem movimentos externos. | Aplicar um movimento leve no protótipo (ex: inclinação ou agitação) e observar a resposta no LCD. Repetir em repouso para verificar falsos positivos. | O LCD exibe os valores de aceleração detectados nos eixos (X, Y, Z); sem detecções em repouso. | Teste bem sucedido |
+| 07 | Avaliação do tempo de resposta do acelerômetro em ambiente controlado. | Protótipo montado e alimentado; ferramentas de medição de tempo disponíveis. | Aplicar movimento controlado e medir o tempo até a atualização no LCD. | O acelerômetro responde em menos de 1 segundo, com o LCD exibindo os valores detectados. | Teste bem sucedido |
+| 08 | Medição da aceleração em diferentes eixos detectada pelo acelerômetro. | Protótipo montado e alimentado; serial monitor ou LCD para leitura. | Aplicar movimentos em direções variadas (ex: eixo X, Y, Z) e registrar os valores exibidos no LCD. | O LCD exibe valores de aceleração (ex: em g), com variações correspondentes aos eixos movimentados. | Teste bem sucedido |
+| 09 | Avaliação da integração entre acelerômetro, botões e LCD em fluxo completo. | Protótipo montado e alimentado; menu inicial no LCD. | Usar botões para navegar (OPTIONS/SELECT), aplicar movimento no acelerômetro, usar START para iniciar e RESET para reiniciar; verificar fluxo. | O sistema responde a inputs combinados; LCD mostra estados corretos baseados na aceleração. | Teste bem sucedido |
+| 10 | Verificação do LED vermelho piscando antes da inicialização do protótipo. | Protótipo montado e alimentado; LED vermelho conectado corretamente. | Ligar o protótipo e observar se o LED vermelho pisca em intervalo regular antes do sistema iniciar. | LED vermelho pisca continuamente até o sistema completar a inicialização. | Teste bem sucedido |
+| 11 | Verificação do LED verde aceso durante o funcionamento do protótipo. | Protótipo montado e inicializado completamente; LED verde conectado. | Após a inicialização, observar se o LED verde permanece aceso enquanto o sistema está em operação. | LED verde permanece aceso sem oscilações durante todo o funcionamento. | Teste bem sucedido |
+
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1H7OradsyvV5FF7lPTnLamWB38_OL46gR/view?usp=sharing) para acessar o vídeo do Teste 1 e 2.
+
+
+<div align="center">
+
+   <sub>Caso 2: Tempo de resposta do piezoelétrico</sub>
+
+   <img src="../assets/TaxaDeAtualizacao.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+
+
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1jhpy7zYRdn-DrL0kTzzQBVcE3D5SslYJ/view?usp=sharing) para acessar o vídeo do Teste 3.
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1g-3X5NSEkF6hV3FLrjkUKlLqdsbMYvWF/view?usp=sharing) para acessar o vídeo do Teste 4.
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1JR1xGoF4nzgvLgu4W3-mfu44JB3WSumL/view?usp=sharing) para acessar o vídeo do Teste 5.
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1SUi_PPNBBSeCTeTKtpvOFWUtANgu0Hy_/view?usp=sharing) para acessar o vídeo do Teste 6, 7 e 8.
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1tHVRKewaWchrnVr7DmiwzDFTH7W5hcSS/view?usp=sharing) para acessar o vídeo do Teste 9.
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1HWoo3YmrQKnCQ3tpl2Ot0ewT7RNkMUaB/view?usp=sharing) para acessar o vídeo do Teste 10 e 11.
+
+
+### Análise descritiva dos testes:
+
+&emsp;&emsp;&emsp;&emsp;**Teste 01:** Verificação da funcionalidade básica do sensor piezoelétrico ao aplicar pressão.
+No teste, montei o protótipo e o alimentei via USB em um local sem pressões. Bati levemente com o dedo no sensor piezoelétrico, e o LCD mostrou imediatamente uma indicação de pressão com o valor detectado. Depois, deixei em repouso por alguns segundos, e nada apareceu no LCD, sem falsos positivos.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 02:** Avaliação do tempo de resposta do sensor piezoelétrico em ambiente controlado.
+Com o protótipo montado e ligado, usei um cronômetro para medir o tempo. Apliquei uma pressão controlada batendo no sensor, e cronometrei até o LCD atualizar com o valor que levou menos de 1 segundo, como esperado.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 03:** Medição da intensidade de pressão detectada pelo sensor piezoelétrico.
+Liguei o protótipo e usei o LCD para ler os valores. Apliquei pressões leves (batida fraca), médias (batida normal) e altas (batida forte), anotando os números no LCD: valores baixos em torno de 500 para leves, até 3000 para altas, confirmando que números maiores indicam pressões mais fortes.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 04:** Verificação da funcionalidade dos botões para navegação (OPTIONS, SELECT, RESET, START).
+Com o protótipo ligado e o LCD visível, pressionei cada botão um por um: OPTIONS mudou as opções no menu, SELECT confirmou a escolha, RESET voltou ao início, e START iniciou a função. O LCD atualizou na hora sem erros.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 05:** Avaliação da integração entre sensor piezoelétrico, botões e LCD em fluxo completo.
+Iniciei no menu do LCD com o protótipo ligado. Usei OPTIONS e SELECT para navegar, bati no sensor para simular input, pressionei START para começar o processo, e RESET para reiniciar tudo. O LCD mostrou os estados corretos em cada passo, integrando tudo sem problemas.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 06:** Verificação da funcionalidade básica do acelerômetro ao aplicar movimento.
+Monte o protótipo e liguei via bateria em um lugar parado. Inclinei levemente o dispositivo para simular movimento, e o LCD exibiu valores de aceleração nos eixos X, Y e Z. Em repouso, os valores ficaram zerados, sem falsos positivos.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 07:** Avaliação do tempo de resposta do acelerômetro em ambiente controlado.
+Com o protótipo ligado e cronômetro pronto, agitei o dispositivo de forma controlada e medi o tempo até o LCD atualizar os valores de aceleração que foi menos de 1 segundo, com os dados aparecendo corretamente.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 08:** Medição da aceleração em diferentes eixos detectada pelo acelerômetro.
+Liguei o protótipo e observei o LCD. Movi o dispositivo no eixo X (esquerda-direita), Y (frente-trás) e Z (cima-baixo), registrando os valores em g no LCD, que variaram conforme a direção do movimento.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 09:** Avaliação da integração entre acelerômetro, botões e LCD em fluxo completo.
+Com o menu inicial no LCD, usei OPTIONS e SELECT para navegar, agitei o acelerômetro para input de movimento, pressionei START para iniciar e RESET para reiniciar. O LCD atualizou os estados baseados na aceleração, respondendo bem aos inputs combinados.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 10:** Verificação do LED vermelho piscando antes da inicialização do protótipo.
+Monte o protótipo com o LED vermelho conectado e liguei. Observei o LED piscando em intervalos regulares enquanto o sistema carregava, e ele parou de piscar só depois da inicialização completa.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 11:** Verificação do LED verde aceso durante o funcionamento do protótipo.
+Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que ele ficou aceso o tempo todo durante a operação, sem piscar ou apagar, enquanto usava as funções normais.
+
+
+&emsp;&emsp;&emsp;&emsp;Em resumo, os testes detalhados no protótipo offline da Renault foram muito importantes para confirmar seu bom funcionamento e resistência em várias situações. Fazer esses testes ajudou a equipe a encontrar e consertar erros no hardware e no software, principalmente nos botões, na leitura dos sensores e na reação do dispositivo em condições diferentes.
+
+
 
 ### 3.4.3. Protótipo do Projeto com MQTT e I2C (sprint 3)	
 
@@ -770,6 +987,8 @@ _Escreva, de forma resumida, sobre os principais resultados do seu projeto e fa�
 
 ## <a name="c5"></a>5. Referências
 
+SAPEGA, Marissa. What is a storyboard? CareerFoundry, [s.l.], [s.d.]. Disponível em: https://careerfoundry.com/en/blog/ui-design/what-is-a-storyboard/#what-is-a-storyboard. Acesso em: 1 nov. 2025.
+
 INVESTOPEDIA. Porter’s 5 Forces: Definition and Examples. Disponível em: https://www.investopedia.com/terms/p/porter.asp. Acesso em: 23 out. 2025.
 
 PORTER, Michael E. Competitive strategy: techniques for analyzing industries and competitors. New York: Free Press, 2008.
@@ -786,3 +1005,4 @@ WIEGERS, Karl; BEATTY, Joy. Software requirements. 3. ed. Redmond: Microsoft Pre
 
 TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenharia. São Paulo: Atlas, 2020.
 
+GIBBONS, S. Journey Mapping 101. Nielsen Norman Group, 2018. Disponível em: https://www.nngroup.com/articles/journey-mapping-101/. Acesso em: 5 nov. 2025.
