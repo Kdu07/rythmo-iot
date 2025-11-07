@@ -769,6 +769,10 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 </div>
 
 
+
+
+&emsp;Clique [aqui](https://drive.google.com/file/d/1jhpy7zYRdn-DrL0kTzzQBVcE3D5SslYJ/view?usp=sharing) para acessar o vídeo do Teste 3.
+
 &emsp;Clique [aqui](https://drive.google.com/file/d/1g-3X5NSEkF6hV3FLrjkUKlLqdsbMYvWF/view?usp=sharing) para acessar o vídeo do Teste 4.
 
 &emsp;Clique [aqui](https://drive.google.com/file/d/1JR1xGoF4nzgvLgu4W3-mfu44JB3WSumL/view?usp=sharing) para acessar o vídeo do Teste 5.
