@@ -130,7 +130,7 @@ Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para 
 &nbsp;&nbsp;&nbsp;&nbsp;A seguir, a análise das 5 forças de Porter no contexto da Renault Brasil:
 
 <div align="center">
-<sup>Figura # - 5 Forças de Porter </sup>
+<sup>Figura 1 - 5 Forças de Porter </sup>
    
 <img src="../assets/5-forcas.png"> 
 
@@ -150,9 +150,9 @@ Dessa forma, em um mercado altamente disputado e em rápida transformação, a R
 ### 3.1.2.1  Visualização da análise SWOT:
 
 <div align="center">
-Figura 4 - Análise SWOT
-<img src="../document/analiseSWOT.png"
-<sup>Fonte: Material alterado pelos autores com base no tamplete disponível em: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/</sup>
+Figura 2 - Análise SWOT
+<img src="../document/analiseSWOT.png"/>
+<sup> Fonte: Material alterado pelos autores com base no tamplete disponível em: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/</sup>
 </div>
  
 
@@ -353,7 +353,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 &emsp; Essa abordagem inaugura um novo paradigma na engenharia automotiva: unir tecnologia e engenharia para criar veículos mais silenciosos, confortáveis e sofisticados — refletindo não apenas eficiência técnica, mas também o cuidado com a experiência do motorista e o legado da marca Renault.
 
 <div align="center">
-<sup>Figura # - Canvas Proposta de Valor </sup>
+<sup>Figura 3- Canvas Proposta de Valor </sup>
 
 <img src="../assets/canvas-proposta-de-valor.png">
 
@@ -368,7 +368,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 &emsp; No contexto da Renault, a matriz de riscos permite identificar ameaças e falhas que possam comprometer as operações de telemetria e análise de dados veiculares em pista, além de, por meio de seu eixo de oportunidades, explorar caminhos voltados à inovação e à segurança dos dados na infraestrutura IoT em desenvolvimento pelo grupo. Diante da crescente demanda por otimização dos processos de engenharia automotiva e das rápidas transformações tecnológicas no setor de IoT, essa ferramenta assegura resiliência e agilidade, fortalecendo a capacidade da Renault em desenvolver veículos mais eficientes e seguros, especialmente na identificação e mitigação de problemas de squeak and rattle.
 
 <div align="center">
-<sup>Figura # - Matriz de Riscos e Oportunidades </sup>
+<sup>Figura 4 - Matriz de Riscos e Oportunidades </sup>
    
 <img src="../assets/matriz-de-riscos.png"> 
 
@@ -549,7 +549,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 <div align="center">
 
-<sub> Figura # - Storyboard Maria Oliveira </sub>
+<sub> Figura 5 - Storyboard Maria Oliveira </sub>
 
 <img src="../assets/storyboard-maria.png">
 
@@ -572,7 +572,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 <div align="center">
 
-<sub> Figura # - Storyboard João Silva </sub>
+<sub> Figura 6 - Storyboard João Silva </sub>
 
 <img src="../assets/storyboard-joao.png">
 
@@ -592,6 +592,52 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 #### 3.2.2.7 Conclusão
 
 &nbsp;&nbsp;&nbsp;&nbsp; A criação dos storyboards para as personas Maria Oliveira e João Silva foi fundamental para visualizar e compreender as interações críticas entre os usuários e o sistema IoT Rythmo. Ao mapear suas jornadas, conseguimos identificar pontos de contato essenciais, necessidades específicas e expectativas que guiaram o desenvolvimento do projeto. Esses storyboards não apenas facilitaram a comunicação entre a equipe de desenvolvimento, mas também asseguraram que o design do produto fosse centrado no usuário, promovendo uma experiência intuitiva e eficaz.
+
+### 3.2.3. Jornada do Usuário (sprint 2)
+
+&nbsp;&nbsp;&nbsp;&nbsp;De acordo com Gibbons (2018), a jornada do usuário é uma ferramenta estratégica que mapeia visualmente a experiência completa de um usuário ao interagir com um produto ou serviço. Esta ferramenta permite compreender profundamente as necessidades, comportamentos, emoções e pontos de contato do usuário ao longo de diferentes fases, identificando oportunidades de melhoria e otimização da experiência. No contexto do projeto Rythmo para a Renault, o mapeamento das jornadas do piloto de teste João Silva e da engenheira de simulação Maria Oliveira é fundamental para compreender como a solução IoT impacta positivamente seus fluxos de trabalho complementares.
+
+
+#### 3.2.3.1 **Jornada de Usuário - João Silva**
+
+**Etapas da Jornada de João Silva (Antes da Solução):**
+
+<div align="center">
+<sub> Figura 7- Jornada de João Silva (Antes da Solução) </sub>
+<img src="../assets/jornada-joao-silva-current.png">
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+</div>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;A jornada de João Silva antes da implementação da solução IoT é marcada por desafios que impactam a eficiência e a qualidade dos dados coletados durante os testes de Squeak and Rattle. Decidimos analisar a jornada antes da solução para identificar pontos críticos que poderiam ser aprimorados com a introdução do sistema Rythmo. Uma dessas oportunidades é integração de uma coleta de dados automatizada, isso é importante pois atualmente as análises de ruído e de problemas estruturais do veículo dependem inteiramente de observações subjetivas e percepções sensoriais do piloto, que podem levar a inconsistências e perda de informações valiosas. Introduzir uma camada de dados objetivos e mensuráveis, como aceleração e força, permitiria uma avaliação mais precisa e confiável dos problemas de Squeak and Rattle.
+
+<br/>
+
+**Etapas da Jornada de João Silva (Depois da Solução):**
+
+<div align="center">
+<sub> Figura 8 - Jornada de João Silva (Depois da Solução) </sub>
+<img src="../assets/jornada-joao-silva-future.png">
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+</div>
+<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp; A jornada de João Silva após a implementação da solução IoT Rythmo apresenta melhorias significativas na eficiência e na qualidade dos dados coletados durante os testes de Squeak and Rattle. Com a introdução do sistema, João agora pode contar com uma coleta automatizada de dados de aceleração e força, eliminando a dependência exclusiva de observações subjetivas. Isso não apenas aumenta a precisão das análises, mas também permite que João e a equipe de engenharia identifiquem padrões e correlações que antes passariam despercebidos. 
+
+<br/>
+
+**Jornada de usuário da Maria Oliveira (Depois da Solução):**
+
+<div align="center">
+<sub> Figura 9 - Jornada de Maria Oliveira (Depois da Solução) </sub>
+<img src="../assets/jornada-maria-oliveira-future.png">
+<sub> Fonte: Material produzido pelos autores (2025) </sub>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Além da jornada de João Silva, também mapeamos a jornada da engenheira de simulação Maria Oliveira, que desempenha um papel crucial na melhoria das simulações de Squeak and Rattle, utilizando os dados coletados pelo sistema IoT Rythmo dentro de seu fluxo de trabalho. O escopo do projeto abrange apenas até a fase 2, providenciando o acesso e a visualização dos dados pela plataforma, mas sentimos a necessidade de ir além e ilustrar a jornada completa dela, destacando a importância dos dados coletados para suas análises e simulações. Como esses dados serão utlizados na prática depende das ferramentas e processos internos da Renault, mas ao mapear essa jornada,conseguimos identificar claramente como a solução IoT impacta positivamente o trabalho de Maria, permitindo que ela realize análises mais precisas e fundamentadas, contribuindo para o desenvolvimento de veículos mais duráveis e confortáveis.
+
+
+
 
 
 
@@ -959,3 +1005,4 @@ WIEGERS, Karl; BEATTY, Joy. Software requirements. 3. ed. Redmond: Microsoft Pre
 
 TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenharia. São Paulo: Atlas, 2020.
 
+GIBBONS, S. Journey Mapping 101. Nielsen Norman Group, 2018. Disponível em: https://www.nngroup.com/articles/journey-mapping-101/. Acesso em: 5 nov. 2025.
