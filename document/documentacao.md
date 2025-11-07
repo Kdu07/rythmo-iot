@@ -784,6 +784,40 @@ Após o desenvolvimento da simulação no Wokwi, realizamos alguns casos de test
 &emsp;Clique [aqui](https://drive.google.com/file/d/1HWoo3YmrQKnCQ3tpl2Ot0ewT7RNkMUaB/view?usp=sharing) para acessar o vídeo do Teste 10 e 11.
 
 
+### Análise descritiva dos testes:
+
+&emsp;&emsp;&emsp;&emsp;**Teste 01:** Verificação da funcionalidade básica do sensor piezoelétrico ao aplicar vibração.
+No teste, montei o protótipo e o alimentei via USB em um local sem vibrações. Bati levemente com o dedo no sensor piezoelétrico, e o LCD mostrou imediatamente uma indicação de vibração com o valor detectado. Depois, deixei em repouso por alguns segundos, e nada apareceu no LCD, sem falsos positivos.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 02:** Avaliação do tempo de resposta do sensor piezoelétrico em ambiente controlado.
+Com o protótipo montado e ligado, usei um cronômetro para medir o tempo. Apliquei uma vibração controlada batendo no sensor, e cronometrei até o LCD atualizar com o valor que levou menos de 1 segundo, como esperado.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 03:** Medição da intensidade de vibração detectada pelo sensor piezoelétrico.
+Liguei o protótipo e usei o LCD para ler os valores. Apliquei vibrações leves (batida fraca), médias (batida normal) e altas (batida forte), anotando os números no LCD: valores baixos em torno de 500 para leves, até 3000 para altas, confirmando que números maiores indicam vibrações mais fortes.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 04:** Verificação da funcionalidade dos botões para navegação (OPTIONS, SELECT, RESET, START).
+Com o protótipo ligado e o LCD visível, pressionei cada botão um por um: OPTIONS mudou as opções no menu, SELECT confirmou a escolha, RESET voltou ao início, e START iniciou a função. O LCD atualizou na hora sem erros.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 05:** Avaliação da integração entre sensor piezoelétrico, botões e LCD em fluxo completo.
+Iniciei no menu do LCD com o protótipo ligado. Usei OPTIONS e SELECT para navegar, bati no sensor para simular input, pressionei START para começar o processo, e RESET para reiniciar tudo. O LCD mostrou os estados corretos em cada passo, integrando tudo sem problemas.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 06:** Verificação da funcionalidade básica do acelerômetro ao aplicar movimento.
+Monte o protótipo e liguei via bateria em um lugar parado. Inclinei levemente o dispositivo para simular movimento, e o LCD exibiu valores de aceleração nos eixos X, Y e Z. Em repouso, os valores ficaram zerados, sem falsos positivos.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 07:** Avaliação do tempo de resposta do acelerômetro em ambiente controlado.
+Com o protótipo ligado e cronômetro pronto, agitei o dispositivo de forma controlada e medi o tempo até o LCD atualizar os valores de aceleração que foi menos de 1 segundo, com os dados aparecendo corretamente.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 08:** Medição da aceleração em diferentes eixos detectada pelo acelerômetro.
+Liguei o protótipo e observei o LCD. Movi o dispositivo no eixo X (esquerda-direita), Y (frente-trás) e Z (cima-baixo), registrando os valores em g no LCD, que variaram conforme a direção do movimento.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 09:** Avaliação da integração entre acelerômetro, botões e LCD em fluxo completo.
+Com o menu inicial no LCD, usei OPTIONS e SELECT para navegar, agitei o acelerômetro para input de movimento, pressionei START para iniciar e RESET para reiniciar. O LCD atualizou os estados baseados na aceleração, respondendo bem aos inputs combinados.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 10:** Verificação do LED vermelho piscando antes da inicialização do protótipo.
+Monte o protótipo com o LED vermelho conectado e liguei. Observei o LED piscando em intervalos regulares enquanto o sistema carregava, e ele parou de piscar só depois da inicialização completa.
+
+&emsp;&emsp;&emsp;&emsp;**Teste 11:** Verificação do LED verde aceso durante o funcionamento do protótipo.
+Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que ele ficou aceso o tempo todo durante a operação, sem piscar ou apagar, enquanto usava as funções normais.
 
 
 &emsp;&emsp;&emsp;&emsp;Em resumo, os testes detalhados no protótipo offline da Renault foram muito importantes para confirmar seu bom funcionamento e resistência em várias situações. Fazer esses testes ajudou a equipe a encontrar e consertar erros no hardware e no software, principalmente nos botões, na leitura dos sensores e na reação do dispositivo em condições diferentes.
