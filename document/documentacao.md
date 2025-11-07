@@ -37,7 +37,7 @@
 ### Problema a Ser Resolvido
 
 **Contexto do Desafio**
-A Renault enfrenta um desafio técnico relacionado às análises de Squeak and Rattle (ruídos e vibrações indesejados em veículos).
+A Renault enfrenta um desafio técnico relacionado às análises de Squeak and Rattle (ruídos e preções indesejados em veículos).
 
 **Limitação Atual:**
 As análises do tipo "e-line" (método de simulação) dependem de sinais de entrada precisos que representem deslocamento x tempo ou força x tempo. Atualmente, não existe uma base de dados estruturada que contemple as diferentes excitações que os veículos sofrem em diversos tipos de pistas.
@@ -52,7 +52,7 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 1.1.1 Objetivos Gerais
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Renault do Brasil, reconhecida por sua inovação e compromisso com a mobilidade sustentável, busca constantemente aprimorar seus processos de engenharia e qualidade. Dentro dessa visão, o projeto tem como objetivo geral desenvolver uma solução IoT capaz de coletar e armazenar dados de aceleração e força em veículos de teste, criando uma base de dados padronizada que apoie simulações de Squeak and Rattle (ruídos e vibrações estruturais).
+&nbsp;&nbsp;&nbsp;&nbsp;A Renault do Brasil, reconhecida por sua inovação e compromisso com a mobilidade sustentável, busca constantemente aprimorar seus processos de engenharia e qualidade. Dentro dessa visão, o projeto tem como objetivo geral desenvolver uma solução IoT capaz de coletar e armazenar dados de aceleração e força em veículos de teste, criando uma base de dados padronizada que apoie simulações de Squeak and Rattle (ruídos e preções estruturais).
 
 &nbsp;&nbsp;&nbsp;&nbsp;Com isso, pretende-se tornar o processo de análise mais preciso e automatizado, reduzindo a necessidade de testes físicos e contribuindo para práticas de desenvolvimento mais eficientes e sustentáveis. O projeto também busca aproximar a universidade do ambiente industrial, permitindo a aplicação prática de tecnologias emergentes e fortalecendo a parceria entre o Inteli e a Renault.
 
@@ -64,14 +64,14 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 - Construir um banco de dados de perfis de pista: Organizar e armazenar os dados coletados, formando uma base que represente diferentes tipos de pista, velocidades e condições de rodagem.
 
-- Apoiar análises de Squeak and Rattle: Disponibilizar informações úteis para estudos e simulações que busquem compreender e reduzir ruídos e vibrações estruturais nos veículos da Renault.
+- Apoiar análises de Squeak and Rattle: Disponibilizar informações úteis para estudos e simulações que busquem compreender e reduzir ruídos e preções estruturais nos veículos da Renault.
 
 - Assegurar a confiabilidade das medições: Documentar e padronizar todo o processo de coleta, transmissão e tratamento dos dados, garantindo a qualidade dos resultados obtidos.
 
 
 ## 1.2 Proposta da solução
 
-&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta para o projeto envolve o desenvolvimento de um dispositivo IoT (Internet das Coisas) capaz de monitorar as condições de Squeak and Rattle por meio de sensores instalados nos veículos e envio de dados por lotes. Esse dispositivo será equipado com dois sensores principais (Acelerometros e Piezoeletricos) para a captação de dados relevantes, como aceleração, vibração, velocidade e outros indicadores relevantes para a melhor interpretabilidade dos dados para os simuladores de Squeak and Rattle.
+&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta para o projeto envolve o desenvolvimento de um dispositivo IoT (Internet das Coisas) capaz de monitorar as condições de Squeak and Rattle por meio de sensores instalados nos veículos e envio de dados por lotes. Esse dispositivo será equipado com dois sensores principais (Acelerometros e Piezoeletricos) para a captação de dados relevantes, como aceleração, preção, velocidade e outros indicadores relevantes para a melhor interpretabilidade dos dados para os simuladores de Squeak and Rattle.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Os dados captados pelos sensores serão enviados periodicamente para a nuvem e armazenados em um banco de dados relacional, garantindo um fluxo contínuo e seguro de informações.
 
@@ -79,7 +79,7 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 ## 1.3 Justificativa
 
-&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta busca suprir a falta de dados padronizados sobre vibrações e ruídos em veículos, essenciais para análises precisas de Squeak and Rattle. O uso de um dispositivo IoT com sensores acelerômetros e piezoelétricos permite coletar e enviar dados reais de forma automatizada e segura, criando uma base confiável para futuras simulações.
+&nbsp;&nbsp;&nbsp;&nbsp;A solução proposta busca suprir a falta de dados padronizados sobre preções e ruídos em veículos, essenciais para análises precisas de Squeak and Rattle. O uso de um dispositivo IoT com sensores acelerômetros e piezoelétricos permite coletar e enviar dados reais de forma automatizada e segura, criando uma base confiável para futuras simulações.
 
 &nbsp;&nbsp;&nbsp;&nbsp;O envio das informações para a nuvem e seu armazenamento em um banco de dados relacional garantem melhor organização e acesso aos dados, enquanto a interface de controle intuitiva torna o sistema adaptável a diferentes condições de teste. Seus benefícios incluem a redução do tempo e custo dos testes, além de aumentar a precisão das análises, contribuindo para a melhoria contínua dos processos de engenharia da Renault.
 
@@ -262,7 +262,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 &emsp; O Canvas de Proposta de Valor é uma ferramenta desenvolvida para ajudar empresas a compreender como um projeto pode atender de forma efetiva às necessidades e expectativas de seus clientes. Criado por Alexander Osterwalder, o modelo permite estruturar os elementos que realmente geram valor para o público-alvo, destacando os ganhos proporcionados por um produto ou serviço e as dores que ele se propõe a resolver. Essa abordagem contribui para uma visão mais estratégica e centrada no cliente, garantindo que as soluções desenvolvidas estejam alinhadas ao que realmente importa para o consumidor (Osterwalder et al., 2014).
 
-&emsp; No contexto da Renault Brasil, a busca por inovação constante no processo de desenvolvimento automotivo trouxe à tona um desafio importante: aprimorar as simulações de Squeak and Rattle (S&R) — ruídos e vibrações indesejadas que afetam o conforto e a percepção de qualidade dos veículos. Para enfrentar esse problema, a empresa aposta em uma solução baseada em Internet das Coisas (IoT), capaz de capturar dados de velocidade e aceleração em tempo real.
+&emsp; No contexto da Renault Brasil, a busca por inovação constante no processo de desenvolvimento automotivo trouxe à tona um desafio importante: aprimorar as simulações de Squeak and Rattle (S&R) — ruídos e preções indesejadas que afetam o conforto e a percepção de qualidade dos veículos. Para enfrentar esse problema, a empresa aposta em uma solução baseada em Internet das Coisas (IoT), capaz de capturar dados de velocidade e aceleração em tempo real.
 
 &emsp; Com isso, torna-se possível realizar análises mais precisas e preditivas ainda nas fases iniciais de desenvolvimento, identificando potenciais falhas estruturais antes mesmo da construção dos protótipos físicos. O resultado é um processo mais ágil, econômico e assertivo, que reduz custos, retrabalhos e tempo de projeto, ao mesmo tempo em que eleva o padrão de qualidade e o conforto percebido pelo cliente final.
 
@@ -286,7 +286,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 #### 3.1.4.3 Produtos e Serviços
 
-- Sistema IoT para captura e transmissão de dados de velocidade, aceleração e vibração.
+- Sistema IoT para captura e transmissão de dados de velocidade, aceleração e preção.
 
 - Plataforma integrada de análise de dados conectada aos softwares de simulação da Renault.
 
@@ -336,7 +336,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 - Desenvolver veículos que ofereçam conforto acústico e robustez estrutural.
 
-- Validar o desempenho de ruído e vibração antes da construção de protótipos.
+- Validar o desempenho de ruído e preção antes da construção de protótipos.
 
 - Antecipar falhas de Squeak and Rattle com base em dados reais e simulações inteligentes.
 
@@ -346,7 +346,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 
 #### 3.1.4.9 Conclusão
 
-&emsp; A solução proposta para a Renault Brasil redefine o modo como a engenharia automotiva lida com ruídos e vibrações, ao integrar tecnologias de IoT e IA no processo de simulação. A coleta de dados reais de aceleração e velocidade permite uma análise preditiva mais confiável e acessível, reduzindo a dependência de protótipos físicos e aumentando a eficiência das equipes.
+&emsp; A solução proposta para a Renault Brasil redefine o modo como a engenharia automotiva lida com ruídos e preções, ao integrar tecnologias de IoT e IA no processo de simulação. A coleta de dados reais de aceleração e velocidade permite uma análise preditiva mais confiável e acessível, reduzindo a dependência de protótipos físicos e aumentando a eficiência das equipes.
 
 &emsp; Com dashboards intuitivos, relatórios automáticos e algoritmos inteligentes, os engenheiros passam a contar com informações em tempo real para tomar decisões mais assertivas. O resultado é um processo de desenvolvimento mais ágil, sustentável e orientado por dados, que reforça a posição da Renault como uma marca inovadora e comprometida com a excelência técnica.
 
@@ -376,7 +376,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
    
 </div>
 
-&emsp; A matriz de risco identificou algumas ameaças importantes para o projeto de telemetria veicular. Entre elas, destaca-se a sobrecarga de processamento do microcontrolador, que pode não conseguir lidar com grandes volumes de dados de sensores de velocidade e aceleração em alta frequência, causando perda de amostras críticas e comprometendo a precisão das simulações. Outro fator crítico é a vulnerabilidade de segurança dos dados, onde informações sensíveis de testes podem ser interceptados se não houver criptografia adequada, expondo dados estratégicos sobre o desenvolvimento de novos veículos. Adicionalmente, a instabilidade de conectividade em áreas com baixa cobertura de rede pode causar atraso ou perda de pacotes durante a transmissão dos dados para o banco de dados remoto, prejudicando a continuidade do monitoramento em tempo real. As condições adversas do ambiente de pista, como poeira, calor extremo, vibração e umidade, também representam ameaças ao funcionamento adequado dos sensores, podendo alterar medições e gerar dados inconsistentes que comprometem as análises de squeak and rattle.
+&emsp; A matriz de risco identificou algumas ameaças importantes para o projeto de telemetria veicular. Entre elas, destaca-se a sobrecarga de processamento do microcontrolador, que pode não conseguir lidar com grandes volumes de dados de sensores de velocidade e aceleração em alta frequência, causando perda de amostras críticas e comprometendo a precisão das simulações. Outro fator crítico é a vulnerabilidade de segurança dos dados, onde informações sensíveis de testes podem ser interceptados se não houver criptografia adequada, expondo dados estratégicos sobre o desenvolvimento de novos veículos. Adicionalmente, a instabilidade de conectividade em áreas com baixa cobertura de rede pode causar atraso ou perda de pacotes durante a transmissão dos dados para o banco de dados remoto, prejudicando a continuidade do monitoramento em tempo real. As condições adversas do ambiente de pista, como poeira, calor extremo, preção e umidade, também representam ameaças ao funcionamento adequado dos sensores, podendo alterar medições e gerar dados inconsistentes que comprometem as análises de squeak and rattle.
 
 &emsp; Por outro lado, a matriz de risco também ressalta oportunidades estratégicas que impulsionam a inovação e ampliam o valor do projeto. O aproveitamento de dados reais de pista aumenta significativamente a precisão dos modelos de simulação de squeak and rattle, reduzindo custos e tempo no desenvolvimento de novos veículos ao permitir testes virtuais mais confiáveis antes da produção. Outra oportunidade crucial é a padronização de dados e aprimoramento do dashboard com filtros e validação automática, tornando as análises mais claras e evitando interpretações incorretas que poderiam levar a decisões equivocadas de engenharia. O desenvolvimento de um sistema de transmissão resiliente e inteligente de dados também se destaca, viabilizando o uso da solução em pistas remotas e expandindo as possibilidades de testes em diferentes condições. A implementação de criptografia e segurança alinhada à LGPD representa uma oportunidade de garantir confiança no uso corporativo e proteção da propriedade intelectual. Por fim, o pré-processamento local dos dados otimiza a eficiência do sistema, reduzindo o volume de informações desnecessárias enviadas ao servidor e melhorando o desempenho geral da solução.
 
@@ -746,11 +746,11 @@ A seguir, são apresentados os principais cenários de teste executados:
 
 | #  | Descrição | Pré-condição | Procedimento de teste | Pós-condição/Resultado esperado | Observações (opcional) |
 |----|------------|---------------|------------------------|----------------------------------|------------------------|
-| 01 | Verificação da funcionalidade básica do sensor piezoelétrico ao aplicar pressão. | Protótipo montado e alimentado via USB ou bateria, em ambiente controlado sem vibrações externas. | Aplicar uma pressão leve no sensor (ex: batida com o dedo) e observar a resposta no LCD. Repetir com pressão nula para verificar falsos positivos. | O LCD exibe o valor detectado ou indicação de pressão; sem detecções em repouso. | Teste bem sucedido |
-| 02 | Avaliação do tempo de resposta do sensor piezoelétrico em ambiente controlado. | Protótipo montado e alimentado; ferramentas de medição de tempo disponíveis. | Aplicar vibração controlada e medir o tempo até a atualização no LCD. | O sensor responde em menos de 1 segundo, com o LCD exibindo o valor detectado. | Teste bem sucedido |
-| 03 | Medição da intensidade de vibração detectada pelo sensor piezoelétrico. | Protótipo montado e alimentado; serial monitor ou LCD para leitura. | Aplicar vibrações de intensidades variadas (baixa, média, alta) e registrar os valores exibidos no LCD. | O LCD exibe valores entre 0 e 4095, com valores mais altos indicando vibrações mais fortes. | Teste bem sucedido |
+| 01 | Verificação da funcionalidade básica do sensor piezoelétrico ao aplicar pressão. | Protótipo montado e alimentado via USB ou bateria, em ambiente controlado sem preções externas. | Aplicar uma pressão leve no sensor (ex: batida com o dedo) e observar a resposta no LCD. Repetir com pressão nula para verificar falsos positivos. | O LCD exibe o valor detectado ou indicação de pressão; sem detecções em repouso. | Teste bem sucedido |
+| 02 | Avaliação do tempo de resposta do sensor piezoelétrico em ambiente controlado. | Protótipo montado e alimentado; ferramentas de medição de tempo disponíveis. | Aplicar preção controlada e medir o tempo até a atualização no LCD. | O sensor responde em menos de 1 segundo, com o LCD exibindo o valor detectado. | Teste bem sucedido |
+| 03 | Medição da intensidade de pressão detectada pelo sensor piezoelétrico. | Protótipo montado e alimentado; serial monitor ou LCD para leitura. | Aplicar preções de intensidades variadas (baixa, média, alta) e registrar os valores exibidos no LCD. | O LCD exibe valores entre 0 e 4095, com valores mais altos indicando preções mais fortes. | Teste bem sucedido |
 | 04 | Verificação da funcionalidade dos botões para navegação (OPTIONS, SELECT, RESET, START). | Protótipo montado e alimentado; LCD visível. | Pressionar cada botão individualmente e observar a resposta no LCD (ex: navegação de menu, seleção, reset ou início). | Cada botão aciona a função correspondente; LCD atualiza imediatamente sem falhas. | Teste bem sucedido |
-| 05 | Avaliação da integração entre sensor piezoelétrico, botões e LCD em fluxo completo. | Protótipo montado e alimentado; menu inicial no LCD. | Usar botões para navegar (OPTIONS/SELECT), aplicar vibração no sensor, usar START para iniciar e RESET para reiniciar; verificar fluxo. | O sistema responde a inputs combinados; LCD mostra estados corretos. | Teste bem sucedido |
+| 05 | Avaliação da integração entre sensor piezoelétrico, botões e LCD em fluxo completo. | Protótipo montado e alimentado; menu inicial no LCD. | Usar botões para navegar (OPTIONS/SELECT), aplicar preção no sensor, usar START para iniciar e RESET para reiniciar; verificar fluxo. | O sistema responde a inputs combinados; LCD mostra estados corretos. | Teste bem sucedido |
 | 06 | Verificação da funcionalidade básica do acelerômetro ao aplicar movimento. | Protótipo montado e alimentado via USB ou bateria, em ambiente controlado sem movimentos externos. | Aplicar um movimento leve no protótipo (ex: inclinação ou agitação) e observar a resposta no LCD. Repetir em repouso para verificar falsos positivos. | O LCD exibe os valores de aceleração detectados nos eixos (X, Y, Z); sem detecções em repouso. | Teste bem sucedido |
 | 07 | Avaliação do tempo de resposta do acelerômetro em ambiente controlado. | Protótipo montado e alimentado; ferramentas de medição de tempo disponíveis. | Aplicar movimento controlado e medir o tempo até a atualização no LCD. | O acelerômetro responde em menos de 1 segundo, com o LCD exibindo os valores detectados. | Teste bem sucedido |
 | 08 | Medição da aceleração em diferentes eixos detectada pelo acelerômetro. | Protótipo montado e alimentado; serial monitor ou LCD para leitura. | Aplicar movimentos em direções variadas (ex: eixo X, Y, Z) e registrar os valores exibidos no LCD. | O LCD exibe valores de aceleração (ex: em g), com variações correspondentes aos eixos movimentados. | Teste bem sucedido |
@@ -790,14 +790,14 @@ A seguir, são apresentados os principais cenários de teste executados:
 
 ### Análise descritiva dos testes:
 
-&emsp;&emsp;&emsp;&emsp;**Teste 01:** Verificação da funcionalidade básica do sensor piezoelétrico ao aplicar vibração.
-No teste, montei o protótipo e o alimentei via USB em um local sem vibrações. Bati levemente com o dedo no sensor piezoelétrico, e o LCD mostrou imediatamente uma indicação de vibração com o valor detectado. Depois, deixei em repouso por alguns segundos, e nada apareceu no LCD, sem falsos positivos.
+&emsp;&emsp;&emsp;&emsp;**Teste 01:** Verificação da funcionalidade básica do sensor piezoelétrico ao aplicar preção.
+No teste, montei o protótipo e o alimentei via USB em um local sem preções. Bati levemente com o dedo no sensor piezoelétrico, e o LCD mostrou imediatamente uma indicação de preção com o valor detectado. Depois, deixei em repouso por alguns segundos, e nada apareceu no LCD, sem falsos positivos.
 
 &emsp;&emsp;&emsp;&emsp;**Teste 02:** Avaliação do tempo de resposta do sensor piezoelétrico em ambiente controlado.
-Com o protótipo montado e ligado, usei um cronômetro para medir o tempo. Apliquei uma vibração controlada batendo no sensor, e cronometrei até o LCD atualizar com o valor que levou menos de 1 segundo, como esperado.
+Com o protótipo montado e ligado, usei um cronômetro para medir o tempo. Apliquei uma preção controlada batendo no sensor, e cronometrei até o LCD atualizar com o valor que levou menos de 1 segundo, como esperado.
 
-&emsp;&emsp;&emsp;&emsp;**Teste 03:** Medição da intensidade de vibração detectada pelo sensor piezoelétrico.
-Liguei o protótipo e usei o LCD para ler os valores. Apliquei vibrações leves (batida fraca), médias (batida normal) e altas (batida forte), anotando os números no LCD: valores baixos em torno de 500 para leves, até 3000 para altas, confirmando que números maiores indicam vibrações mais fortes.
+&emsp;&emsp;&emsp;&emsp;**Teste 03:** Medição da intensidade de preção detectada pelo sensor piezoelétrico.
+Liguei o protótipo e usei o LCD para ler os valores. Apliquei preções leves (batida fraca), médias (batida normal) e altas (batida forte), anotando os números no LCD: valores baixos em torno de 500 para leves, até 3000 para altas, confirmando que números maiores indicam preções mais fortes.
 
 &emsp;&emsp;&emsp;&emsp;**Teste 04:** Verificação da funcionalidade dos botões para navegação (OPTIONS, SELECT, RESET, START).
 Com o protótipo ligado e o LCD visível, pressionei cada botão um por um: OPTIONS mudou as opções no menu, SELECT confirmou a escolha, RESET voltou ao início, e START iniciou a função. O LCD atualizou na hora sem erros.
