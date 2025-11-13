@@ -1006,3 +1006,107 @@ WIEGERS, Karl; BEATTY, Joy. Software requirements. 3. ed. Redmond: Microsoft Pre
 TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenharia. São Paulo: Atlas, 2020.
 
 GIBBONS, S. Journey Mapping 101. Nielsen Norman Group, 2018. Disponível em: https://www.nngroup.com/articles/journey-mapping-101/. Acesso em: 5 nov. 2025.
+
+
+## <a name="c6"></a>6. Anexos
+
+### 6.1. Análise Experimental de Circuito RC
+
+Nesta seção, apresentamos uma análise experimental detalhada de um circuito RC (resistor-capacitor) para validar os conceitos teóricos relacionados à constante de tempo e ao comportamento dinâmico do circuito. O objetivo é comparar os resultados experimentais com as previsões teóricas, destacando quaisquer discrepâncias e discutindo suas possíveis causas.
+
+#### 6.1.1. Fundamentação Teórica
+
+Um circuito RC é um circuito elétrico composto por um resistor (R) e um capacitor (C) conectados em série ou paralelo. É um dos circuitos mais básicos e importantes na análise de circuitos, servindo como filtro, temporizador ou elemento de armazenamento de energia.
+
+A tensão no capacitor em um circuito RC segue comportamentos diferentes dependendo se está carregando ou descarregando:
+
+Durante o carregamento (capacitor inicialmente descarregado conectado a uma fonte V₀):
+
+$$V_C(t) = V_f \cdot (1 - e^{-t/RC})$$
+
+Onde:
+
+- $V_C(t)$ é a tensão no capacitor no instante $t$
+- $V_f$ é a tensão da fonte
+- $e$ é a base do logaritmo natural (≈ 2,718)
+- $t$ é o tempo
+- $RC$ é a constante de tempo
+
+O capacitor começa em 0V e cresce exponencialmente até atingir $V_f$.
+
+Durante o descarregamento (capacitor inicialmente carregado com tensão $V_f$):
+
+$$V_C(t) = V_f \cdot e^{-t/RC}$$
+
+O capacitor começa em $V_f$ e decai exponencialmente até 0V.
+
+A constante de tempo é o parâmetro mais importante do circuito RC, definida como:
+$$\tau = R \times C$$
+Onde:
+
+$\tau$ (tau) é a constante de tempo em segundos
+
+$R$ é a resistência em ohms (Ω)
+
+$C$ é a capacitância em farads (F)
+
+Significado físico:
+
+A constante de tempo representa o tempo necessário para que a tensão no capacitor atinja aproximadamente 63,2% do seu valor final durante o carregamento (ou decaia para 36,8% do valor inicial durante o descarregamento).
+Regra prática:
+
+Após 1$\tau$: o capacitor atinge ~63% da carga total
+
+Após 2$\tau$: atinge ~86% da carga total
+
+Após 3$\tau$: atinge ~95% da carga total
+
+Após 5$\tau$: atinge ~99% da carga total (considera-se completamente carregado)
+
+#### 6.1.2. Projeto e Cáculo
+
+O cirquito RC foi projetado com uma fonte de $5V$, dois resistores em série,um definido pelo numero do grupo ($75kΩ$) e o outro que deve ser calculado baseado em um $\tau$ de $60s$ e arredondado para uma tabela das resistencias disponíveis, e um capacitor de $2200μF$.
+
+Primeiro temos que organizar as variaveis na fórmula da constante de tempo:
+
+$$R_{eq} = \frac{\tau}{C}$$
+
+Substituindo os valores conhecidos:
+
+$$R_{eq} = \frac{60s}{2200μF} = \frac{60s}{2200 \times 10^{-6}F} = 27273\Omega$$
+
+Tendo a Resistencia Equivalente($R_{eq}$), podemos calcular o valor do segundo resistor:
+
+$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
+
+$$\frac{1}{27273\Omega} = \frac{1}{75000\Omega} + \frac{1}{R_2}$$
+
+$$\frac{1}{R_2} = \frac{1}{27273\Omega} - \frac{1}{75000\Omega}$$
+
+$$\frac{1}{R_2} = \frac{47727\Omega}{2045475000\Omega^{2}} $$
+
+$${R_2} = \frac{2045475000\Omega^{2}}{47727\Omega} = 42858\Omega$$
+
+Então, o valor do segundo resistor deve ser $42.8k\Omega$. O valor mais próximo disponível na tabela de resistores é $43k\Omega$.
+
+Agora precisamos calcular o valor de $\tau$ com o valor arredondado do resistor, por isso devemos encontrar novanmente a resistencia equivalente:
+
+$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
+
+$$\frac{1}{R_{eq}} = \frac{1}{75000\Omega} + \frac{1}{43000\Omega}$$
+
+$$\frac{1}{R_{eq}} = \frac{118000\Omega}{3225000000\Omega^{2}} $$
+
+$${R_{eq}} = \frac{3225000000\Omega^{2}}{118000\Omega} = 27331\Omega$$
+
+Finalmente, podemos calcular o valor de $\tau$ com o valor arredondado do resistor:
+
+$$\tau = R_{eq} \times C$$
+
+$$\tau = 27331\Omega \times 2200μF = 27331\Omega \times 2200 \times 10^{-6}F $$
+
+$$\tau = 60.13s \approx 60s$$
+
+O valor de $\tau$ com o resistor arredondado é aproximadamente $60s$, o que é aceitável dentro da margem de $\plusmn10$ para este experimento.
+
+
