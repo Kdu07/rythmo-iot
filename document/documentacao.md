@@ -1030,7 +1030,7 @@ Onde:
 - $V_f$ é a tensão da fonte
 - $e$ é a base do logaritmo natural (≈ 2,718)
 - $t$ é o tempo
-- $RC$ é a constante de tempo
+- $RC (\tau)$ é a constante de tempo (produto da resistência e capacitância) 
 
 O capacitor começa em 0V e cresce exponencialmente até atingir $V_f$.
 
