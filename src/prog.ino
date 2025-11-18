@@ -6,14 +6,13 @@
 #include <SD.h>
 #include <SPI.h>
 
-
 #define I2C_ADDR    0x27
 #define SENSOR_ADDR 0x1C
 #define LCD_COLUMNS 16
 #define LCD_LINES   2
-#define BUTTON_OPTIONS 5
+#define BUTTON_OPTIONS 14
 #define BUTTON_SELECT 17
-#define BUTTON_RESET 18
+#define BUTTON_RESET 12
 #define BUTTON_START 16
 #define PIEZO 34
 #define LED_RED 2
@@ -25,7 +24,7 @@ Adafruit_MPU6050 mpu;
 bool sdCardOK = false; // Flag para verificar se o SD Card está funcionando
 
 // Estado do esp
-unsigned short state = 0; // 0 - Desligado; 1 - Seleção de Pista; 2 - Seleção de WiFi; 3 - Medição em Andamento
+unsigned short state = 0; // 0 - Desligado; 1 - Seleção de Pista; 2 - Procurando redes; 3 - Seleção de WiFi; 4 - Conectando a rede; 5 - Medição em Andamento
 
 
 class Display{
@@ -47,6 +46,11 @@ class Display{
   unsigned long lastDebounceTime = 0;
   unsigned long debounceDelay = 300; // 300ms de debounce
   
+  // Variaveis de WiFi
+  static const int MAX_NETWORKS = 5;
+  String availableNetworks[MAX_NETWORKS];
+  int networkCount = 0;
+  int currentNetworkIndex = 0;
 
   public:
 
@@ -136,6 +140,19 @@ class Display{
         lcd.print("Procurando");
         lcd.setCursor(0,1);
         lcd.print("redes...");
+      } else if(state == 3) {
+        if(networkCount == 0) {
+          lcd.clear();
+          lcd.setCursor(0, 0);
+          lcd.print("Nenhuma rede");
+          lcd.setCursor(0, 1);
+          lcd.print("encontrada...");
+        } else {
+          lcd.setCursor(0,0);
+          lcd.print("Rede WiFi ["+String(currentNetworkIndex+1)+"]");
+          lcd.setCursor(0,1);
+          lcd.print(availableNetworks[currentNetworkIndex]);
+        }
       }
     } 
     // ESTADO 3: Foi iniciado (mostra sensores)
@@ -207,10 +224,94 @@ class Display{
     }  
   }
 
+  void scanWiFiNetworks() {
+    Serial.println("Procurando redes WiFi...");
+    
+    WiFi.mode(WIFI_STA);
+    WiFi.disconnect();
+    delay(100);
+    
+    int n = WiFi.scanNetworks();
+    Serial.print("Scan completo. Encontradas ");
+    Serial.print(n);
+    Serial.println(" redes");
+    
+    networkCount = 0;
+
+    // Filtro para redes sem senha
+    for (int i = 0; i < n && networkCount < MAX_NETWORKS; i++) {
+      if (WiFi.encryptionType(i) == WIFI_AUTH_OPEN) {
+        availableNetworks[networkCount] = WiFi.SSID(i);
+        Serial.print("Rede aberta encontrada: ");
+        Serial.println(availableNetworks[networkCount]);
+        networkCount++;
+      }
+    }
+    
+    WiFi.scanDelete(); // Tira resultados da memoria
+    
+    Serial.print("Redes abertas encontradas: ");
+    Serial.println(networkCount);
+    
+    state = 3;
+  }
+
+  void connectToWiFi() {
+    if(currentNetworkIndex >= networkCount) {
+      Serial.println("Índice de rede inválido");
+      return;
+    }
+    
+    String ssid = availableNetworks[currentNetworkIndex];
+    
+    Serial.print("Conectando à rede: ");
+    Serial.println(ssid);
+    
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Conectando...");
+    lcd.setCursor(0, 1);
+    lcd.print(ssid);
+    
+    WiFi.begin(ssid.c_str()); // Conecta à rede aberta (sem senha)
+    
+    int attempts = 0;
+    while (WiFi.status() != WL_CONNECTED && attempts < 20) { // 10 segundos timeout
+      delay(500);
+      Serial.print(".");
+      attempts++;
+    }
+    
+    if (WiFi.status() == WL_CONNECTED) {
+      Serial.println("\nConectado com sucesso!");
+      Serial.print("IP: ");
+      Serial.println(WiFi.localIP());
+      
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Conectado!");
+      lcd.setCursor(0, 1);
+      lcd.print(WiFi.localIP());
+      
+      delay(2000);
+      state = 4; // Avança para o estado de medição
+    } else {
+      Serial.println("\nFalha ao conectar!");
+      
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Falha conexao");
+      lcd.setCursor(0, 1);
+      lcd.print("Tentar novamente");
+      
+      delay(2000);
+      // Volta para seleção de rede
+    }
+  }
+
   // Botão de opções
   void options(){
     int value = digitalRead((BUTTON_OPTIONS));
-    Serial.println(value);
     if (value == LOW && (millis() - lastDebounceTime) > debounceDelay){
       lastDebounceTime = millis();
       if(state == 1 && selected == -1) {
@@ -259,13 +360,16 @@ class Display{
           Serial.println("Mudando para estado 2");
           state = 2;
           lcd.clear(); 
+          scanWiFiNetworks();
           return;
         }
-        
+
         // Se o estado não for do WiFi, não faz nada
-        if(state != 2) {  
+        if(state != 3) {  
           return;
         }
+
+        connectToWiFi();
 
         started = option;
         if(aux == 0){
@@ -276,7 +380,7 @@ class Display{
         Serial.println(started);
         Serial.print("Iniciando medição número: ");
         Serial.println(number);
-        state = 3;
+        state = 4;
         lcd.clear();
     }
   }
