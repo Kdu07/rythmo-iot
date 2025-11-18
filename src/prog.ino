@@ -2,16 +2,18 @@
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
+#include <WiFi.h>
 #include <SD.h>
 #include <SPI.h>
+
 
 #define I2C_ADDR    0x27
 #define SENSOR_ADDR 0x1C
 #define LCD_COLUMNS 16
 #define LCD_LINES   2
-#define BUTTON_OPTIONS 14
+#define BUTTON_OPTIONS 5
 #define BUTTON_SELECT 17
-#define BUTTON_RESET 12
+#define BUTTON_RESET 18
 #define BUTTON_START 16
 #define PIEZO 34
 #define LED_RED 2
@@ -21,6 +23,10 @@
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 Adafruit_MPU6050 mpu;
 bool sdCardOK = false; // Flag para verificar se o SD Card está funcionando
+
+// Estado do esp
+unsigned short state = 0; // 0 - Desligado; 1 - Seleção de Pista; 2 - Seleção de WiFi; 3 - Medição em Andamento
+
 
 class Display{
   private:
@@ -36,7 +42,7 @@ class Display{
   int intervalo = 1000;
   int aux = 0;
   unsigned long startTime = 0; // Tempo de início da medição
-  
+
   // Debounce para os botões
   unsigned long lastDebounceTime = 0;
   unsigned long debounceDelay = 300; // 300ms de debounce
@@ -117,16 +123,20 @@ class Display{
     } 
     // ESTADO 2: Algo foi selecionado MAS ainda não foi iniciado
     else if (selected != -1 && started == -1){
-      if(lastState != option){
-        lastState = option;
-        lcd.clear();
-        Serial.println("ESTADO 2: Pista Selecionada");
+       if(state == 1) {  
+         if(delayMillis(450)){
+          lcd.clear();
+        }
+        lcd.setCursor(0,0);
+        lcd.print(textSelected);
+        lcd.setCursor(0,1);
+        lcd.print(textSelect);
+      } else if(state == 2) {
+        lcd.setCursor(0,0);
+        lcd.print("Procurando");
+        lcd.setCursor(0,1);
+        lcd.print("redes...");
       }
-      lcd.setCursor(0,0);
-      lcd.print(textSelected);
-      lcd.setCursor(0,1);
-      lcd.print(textSelect);
-      delayMillis(1000);
     } 
     // ESTADO 3: Foi iniciado (mostra sensores)
     else if (started != -1){
@@ -197,68 +207,104 @@ class Display{
     }  
   }
 
+  // Botão de opções
   void options(){
     int value = digitalRead((BUTTON_OPTIONS));
-    if (value == LOW && selected == -1 && (millis() - lastDebounceTime) > debounceDelay){
+    Serial.println(value);
+    if (value == LOW && (millis() - lastDebounceTime) > debounceDelay){
       lastDebounceTime = millis();
-      if(option < 4){
-        option++;
-        optionsToText(option);
-      } else {
-        option = 0;
-        optionsToText(option);
+      if(state == 1 && selected == -1) {
+        if(option < 4){
+          option++;
+          optionsToText(option);
+        } else {
+          option = 0;
+          optionsToText(option);
+        }
+        Serial.print("Options - option: ");
+        Serial.println(option);
+      } else if(state == 2) {
+        Serial.println("Estado 2 - Options");
       }
-      Serial.print("Options - option: ");
-      Serial.println(option);
-    } 
+    }
   }
 
+  // Botão de seleção
   void select(){
     int value = digitalRead((BUTTON_SELECT));
     if (value == LOW && (millis() - lastDebounceTime) > debounceDelay){
       lastDebounceTime = millis();
-      selected = option;
-      aux = 0;
-      Serial.print("Select - selected: ");
-      Serial.print(selected);
-      Serial.print(" started: ");
-      Serial.println(started);
-    } 
+      if(state == 1) {
+        selected = option;
+        aux = 0;
+        Serial.print("Select - selected: ");
+        Serial.print(selected);
+        Serial.print(" started: ");
+        Serial.println(started);
+      } else if(state == 2) {
+        Serial.println(selected);
+        Serial.println("Estado 2 - Select");
+      }
+    }
   }
 
+  // Botoão de start
   void start(){
     int value = digitalRead((BUTTON_START));
-    if (value == LOW && (millis() - lastDebounceTime) > debounceDelay && selected != -1 ){
+    if (value == LOW && (millis() - lastDebounceTime) > debounceDelay){
         lastDebounceTime = millis();
+        
+        // Muda o estado para seleção de WiFi
+        if(state == 1 && selected != -1) {
+          Serial.println("Mudando para estado 2");
+          state = 2;
+          lcd.clear(); 
+          return;
+        }
+        
+        // Se o estado não for do WiFi, não faz nada
+        if(state != 2) {  
+          return;
+        }
+
         started = option;
         if(aux == 0){
-          lcd.clear();
-          aux = 1;
-          startTime = millis(); // Inicia o cronômetro da medição
+          startTime = millis();
+          aux++;
         }
         Serial.print("Start - started: ");
         Serial.println(started);
         Serial.print("Iniciando medição número: ");
         Serial.println(number);
+        state = 3;
+        lcd.clear();
     }
   }
 
+
+  // Botão de reset
   void reset(){
     int value = digitalRead((BUTTON_RESET));
     if (value == LOW){
-      if(started != -1){
-        Serial.print("Finalizando medição número: ");
-        Serial.println(number);
-        number++; // Incrementa apenas quando uma medição é finalizada
+      // Reseta a pista
+      if(state == 1) {
+        if(started != -1){
+          Serial.print("Finalizando medição número: ");
+          Serial.println(number);
+          number++; // Incrementa apenas quando uma medição é finalizada
+        }
+        selected = -1;
+        started = -1; 
+        aux = 0;
+        option = 0;
+        optionsToText(option);
+        lcd.clear();
+        Serial.println("Reset - voltando ao menu");
+      // Reseta a Rede WiFi
+      } else if(state == 2) {
+        Serial.println("Estado 2 - Reset");
       }
-      selected = -1;
-      started = -1; 
-      aux = 0;
-      option = 0;
-      optionsToText(option);
-      lcd.clear();
-      Serial.println("Reset - voltando ao menu");
-    } 
+    }
   }
 
   void led(){
@@ -392,6 +438,7 @@ void setup() {
     lcd.clear();
   }
 
+  state = 1;
 }
 
 
