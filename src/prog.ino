@@ -40,17 +40,22 @@ class Display{
   unsigned long previousMillis;
   int intervalo = 1000;
   int aux = 0;
-  unsigned long startTime = 0; // Tempo de início da medição
+  unsigned long startTime = 0;
+  int lastDisplayedState = -1; // Track last displayed state to prevent unnecessary clears
 
   // Debounce para os botões
   unsigned long lastDebounceTime = 0;
-  unsigned long debounceDelay = 300; // 300ms de debounce
+  unsigned long debounceDelay = 300;
   
   // Variaveis de WiFi
   static const int MAX_NETWORKS = 5;
   String availableNetworks[MAX_NETWORKS];
   int networkCount = 0;
   int currentNetworkIndex = 0;
+
+  // Timing para mensagens
+  unsigned long messageStartTime = 0;
+  int messageState = 0; // 0 = no message, 1 = showing message
 
   public:
 
@@ -115,43 +120,52 @@ class Display{
   void text(){
     // ESTADO 1: Nada foi selecionado ainda
     if (selected == -1){
-      if(lastState != option){
+      if(lastState != option || lastDisplayedState != 1){
         lastState = option;
+        lastDisplayedState = 1;
         lcd.clear();
         Serial.println("ESTADO 1: Menu de Selecao");
+        lcd.setCursor(0,0);
+        lcd.print(textOption);
+        lcd.setCursor(0,1);
+        lcd.print(textSelect);
       }
-      lcd.setCursor(0,0);
-      lcd.print(textOption);
-      lcd.setCursor(0,1);
-      lcd.print(textSelect);
     } 
     // ESTADO 2: Algo foi selecionado MAS ainda não foi iniciado
     else if (selected != -1 && started == -1){
        if(state == 1) {  
-         if(delayMillis(450)){
+        if(lastDisplayedState != 2) {
+          lastDisplayedState = 2;
           lcd.clear();
-        }
-        lcd.setCursor(0,0);
-        lcd.print(textSelected);
-        lcd.setCursor(0,1);
-        lcd.print(textSelect);
-      } else if(state == 2) {
-        lcd.setCursor(0,0);
-        lcd.print("Procurando");
-        lcd.setCursor(0,1);
-        lcd.print("redes...");
-      } else if(state == 3) {
-        if(networkCount == 0) {
-          lcd.clear();
-          lcd.setCursor(0, 0);
-          lcd.print("Nenhuma rede");
-          lcd.setCursor(0, 1);
-          lcd.print("encontrada...");
-        } else {
           lcd.setCursor(0,0);
-          lcd.print("Rede WiFi ["+String(currentNetworkIndex+1)+"]");
+          lcd.print(textSelected);
           lcd.setCursor(0,1);
-          lcd.print(availableNetworks[currentNetworkIndex]);
+          lcd.print(textSelect);
+        }
+      } else if(state == 2) {
+        if(lastDisplayedState != 3) {
+          lastDisplayedState = 3;
+          lcd.clear();
+          lcd.setCursor(0,0);
+          lcd.print("Procurando");
+          lcd.setCursor(0,1);
+          lcd.print("redes...");
+        }
+      } else if(state == 3) {
+        if(lastDisplayedState != 4) {
+          lastDisplayedState = 4;
+          lcd.clear();
+          if(networkCount == 0) {
+            lcd.setCursor(0, 0);
+            lcd.print("Nenhuma rede");
+            lcd.setCursor(0, 1);
+            lcd.print("encontrada...");
+          } else {
+            lcd.setCursor(0,0);
+            lcd.print("Rede WiFi ["+String(currentNetworkIndex+1)+"]");
+            lcd.setCursor(0,1);
+            lcd.print(availableNetworks[currentNetworkIndex]);
+          }
         }
       }
     } 
@@ -161,6 +175,10 @@ class Display{
       mpu.getEvent(&a, &g, &temp);
       int piezo = analogRead(PIEZO);
       if(delayMillis(500)){ //TAXA DE ATUALIZAÇÃO DO DISPLAY LCD
+        if(lastDisplayedState != 5) {
+          lastDisplayedState = 5;
+          lcd.clear();
+        }
         lcd.setCursor(0,0);
         lcd.print("X:      ");
         lcd.setCursor(2,0);
@@ -226,10 +244,15 @@ class Display{
 
   void scanWiFiNetworks() {
     Serial.println("Procurando redes WiFi...");
-    
+
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Procurando");
+    lcd.setCursor(0,1);
+    lcd.print("redes...");
+
     WiFi.mode(WIFI_STA);
     WiFi.disconnect();
-    delay(100);
     
     int n = WiFi.scanNetworks();
     Serial.print("Scan completo. Encontradas ");
@@ -248,12 +271,13 @@ class Display{
       }
     }
     
-    WiFi.scanDelete(); // Tira resultados da memoria
+    WiFi.scanDelete();
     
     Serial.print("Redes abertas encontradas: ");
     Serial.println(networkCount);
     
     state = 3;
+    lastDisplayedState = -1; // Force LCD update
   }
 
   void connectToWiFi() {
@@ -273,13 +297,14 @@ class Display{
     lcd.setCursor(0, 1);
     lcd.print(ssid);
     
-    WiFi.begin(ssid.c_str()); // Conecta à rede aberta (sem senha)
+    WiFi.begin(ssid.c_str());
     
-    int attempts = 0;
-    while (WiFi.status() != WL_CONNECTED && attempts < 20) { // 10 segundos timeout
-      delay(500);
-      Serial.print(".");
-      attempts++;
+    unsigned long connectStartTime = millis();
+    while (WiFi.status() != WL_CONNECTED && (millis() - connectStartTime) < 10000) {
+      // Wait without blocking
+      if((millis() - connectStartTime) % 500 == 0) {
+        Serial.print(".");
+      }
     }
     
     if (WiFi.status() == WL_CONNECTED) {
@@ -293,8 +318,9 @@ class Display{
       lcd.setCursor(0, 1);
       lcd.print(WiFi.localIP());
       
-      delay(2000);
-      state = 4; // Avança para o estado de medição
+      messageStartTime = millis();
+      messageState = 1;
+      state = 4;
     } else {
       Serial.println("\nFalha ao conectar!");
       
@@ -304,9 +330,10 @@ class Display{
       lcd.setCursor(0, 1);
       lcd.print("Tentar novamente");
       
-      delay(2000);
-      // Volta para seleção de rede
+      messageStartTime = millis();
+      messageState = 2;
     }
+    lastDisplayedState = -1; // Force LCD update on next state
   }
 
   // Botão de opções
@@ -359,7 +386,7 @@ class Display{
         if(state == 1 && selected != -1) {
           Serial.println("Mudando para estado 2");
           state = 2;
-          lcd.clear(); 
+          lastDisplayedState = -1;
           scanWiFiNetworks();
           return;
         }
@@ -381,7 +408,7 @@ class Display{
         Serial.print("Iniciando medição número: ");
         Serial.println(number);
         state = 4;
-        lcd.clear();
+        lastDisplayedState = -1;
     }
   }
 
@@ -395,13 +422,14 @@ class Display{
         if(started != -1){
           Serial.print("Finalizando medição número: ");
           Serial.println(number);
-          number++; // Incrementa apenas quando uma medição é finalizada
+          number++;
         }
         selected = -1;
         started = -1; 
         aux = 0;
         option = 0;
         optionsToText(option);
+        lastDisplayedState = -1;
         lcd.clear();
         Serial.println("Reset - voltando ao menu");
       // Reseta a Rede WiFi
@@ -435,7 +463,6 @@ Display display;
 void setup() {
   // Init
   Serial.begin(9600);
-  delay(1000); // Aguarda inicialização da serial
   
   Serial.println("Iniciando sistema...");
   
@@ -484,7 +511,7 @@ void setup() {
     lcd.setCursor(0, 0);
     lcd.print("MPU6050");
     while (false)
-      delay(10);
+      ;
   }
   Serial.println("Sensor MPU6050 encontrado!");
 
@@ -494,8 +521,7 @@ void setup() {
 
   // Inicializa o cartão SD
   Serial.println("Inicializando SPI para SD Card...");
-  SPI.begin(); // Inicializa o barramento SPI
-  delay(100);
+  SPI.begin();
   
   Serial.println("Inicializando cartão SD...");
   Serial.print("Pino CS: ");
@@ -514,7 +540,10 @@ void setup() {
     lcd.setCursor(0, 1);
     lcd.print("Verificar cartao");
     sdCardOK = false;
-    delay(3000);
+    unsigned long errorMsgStart = millis();
+    while(millis() - errorMsgStart < 3000) {
+      // Wait without blocking
+    }
     lcd.clear();
   } else {
     Serial.println("Cartão SD inicializado com sucesso!");
@@ -538,7 +567,10 @@ void setup() {
     lcd.setCursor(0, 1);
     lcd.print(String(cardSize) + "MB");
     sdCardOK = true;
-    delay(2000);
+    unsigned long sdMsgStart = millis();
+    while(millis() - sdMsgStart < 2000) {
+      // Wait without blocking
+    }
     lcd.clear();
   }
 
