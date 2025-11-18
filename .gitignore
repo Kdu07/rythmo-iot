@@ -2,7 +2,7 @@
 *.d
 
 # Databases
-*.csv
+
 *.tsv
 *.xls
 *.xlsx
