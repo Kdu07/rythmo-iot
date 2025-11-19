@@ -2,49 +2,68 @@
 #include <LiquidCrystal_I2C.h>
 #include <SPI.h>
 #include <SD.h>
-#include <math.h> // sqrt se precisar (opcional)
+#include <math.h>
 
-// === Configurações de hardware ===
+// ================= UBIDOTS / MQTT ======================
+#include <WiFi.h>
+#include <UbidotsEsp32Mqtt.h>
+
+const char *WIFI_SSID = "Inteli.Iot";
+const char *WIFI_PASS = "";
+
+const char *UBIDOTS_TOKEN = "";
+const char *DEVICE_LABEL = "esp32_t15_grupo3";
+
+const char *VARIABLE_LABEL1 = "acelerometro-x";
+const char *VARIABLE_LABEL2 = "acelerometro-y";
+const char *VARIABLE_LABEL3 = "acelerometro-z";
+const char *VARIABLE_LABEL4 = "piezoeletrico";
+
+const char *CLIENT_ID = "grupo3";
+Ubidots ubidots(UBIDOTS_TOKEN, CLIENT_ID);
+
+// Timer MQTT
+unsigned long lastPublish = 0;
+const int MQTT_INTERVAL = 1000;
+
+// ===== HARDWARE =====
 #define I2C_ADDR 0x27
 #define LCD_COLUMNS 16
 #define LCD_LINES 2
 
-// Botões (INPUT_PULLUP)
 #define BUTTON_OPTIONS 14
 #define BUTTON_SELECT 17
 #define BUTTON_RESET 12
 #define BUTTON_START 16
 
-#define PIEZO_PIN 34 // ADC1_CH6 (por exemplo)
+#define PIEZO_PIN 34
 #define LED_RED 2
 #define LED_GREEN 15
 
-// SD
-#define SD_CS_PIN 5 // Chip select do SD (ajustar conforme seu wiring)
+#define SD_CS_PIN 5
 const char *DATA_FILENAME = "/dados.csv";
 
-// MPU6050 I2C
-const int MPU_ADDR = 0x68; // endereço padrão do MPU6050
+const int MPU_ADDR = 0x68;
 
-// === Objetos ===
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 
-// Estado SD global
 bool sdCardOK = false;
 
-// ====== Funções MPU6050 (implementação fornecida) ======
+// =============================================================================
+// MPU FUNCTIONS
+// =============================================================================
 bool initMPU()
 {
   Wire.beginTransmission(MPU_ADDR);
-  Wire.write(0x6B); // PWR_MGMT_1
-  Wire.write(0);    // Acorda o MPU6050
+  Wire.write(0x6B);
+  Wire.write(0);
   return (Wire.endTransmission() == 0);
 }
 
 bool readMPU(int16_t &ax_raw, int16_t &ay_raw, int16_t &az_raw)
 {
   Wire.beginTransmission(MPU_ADDR);
-  Wire.write(0x3B); // Registrador ACCEL_XOUT_H
+  Wire.write(0x3B);
   if (Wire.endTransmission(false) != 0)
     return false;
   if (Wire.requestFrom(MPU_ADDR, 6, true) != 6)
@@ -55,7 +74,42 @@ bool readMPU(int16_t &ax_raw, int16_t &ay_raw, int16_t &az_raw)
   return true;
 }
 
-// ====== Classe para UI / controle ======
+// =============================================================================
+// MQTT CALLBACK
+// =============================================================================
+void callback(char *topic, byte *payload, unsigned int length)
+{
+  Serial.print("Mensagem MQTT: ");
+  for (int i = 0; i < length; i++)
+    Serial.print((char)payload[i]);
+  Serial.println();
+}
+
+// =============================================================================
+// FUNÇÃO DE ENVIO PARA UBIDOTS (CHAMADA SOMENTE DURANTE A MEDIÇÃO)
+// =============================================================================
+void sendToUbidots(float ax, float ay, float az, float piezo)
+{
+  if (!ubidots.connected())
+    ubidots.reconnect();
+
+  if (millis() - lastPublish < MQTT_INTERVAL)
+    return;
+
+  ubidots.add(VARIABLE_LABEL1, ax);
+  ubidots.add(VARIABLE_LABEL2, ay);
+  ubidots.add(VARIABLE_LABEL3, az);
+  ubidots.add(VARIABLE_LABEL4, piezo);
+
+  ubidots.publish(DEVICE_LABEL);
+  lastPublish = millis();
+
+  Serial.println("Dados enviados ao Ubidots!");
+}
+
+// =============================================================================
+// UI MANAGER
+// =============================================================================
 class UIManager
 {
 public:
@@ -67,17 +121,17 @@ public:
     selected = -1;
     started = -1;
     number = 1;
+
     lastLCDUpdate = 0;
     lcdUpdateInterval = 500;
-    ledBlinkInterval = 550;
     lastLedMillis = 0;
     lastSaveMillis = 0;
-    startTime = 0;
-    // carregar texto inicial
+
     updateOptionText();
   }
 
-  // Chamado no loop
+  void setSdOk(bool v) { sdCardOK_global = v; }
+
   void update()
   {
     readButtons();
@@ -86,210 +140,167 @@ public:
     writeDataIfNeeded();
   }
 
-  // Exposição para setar SD OK após setup
-  void setSdOk(bool v) { sdCardOK_global = v; }
-
 private:
-  // Estado
   int option = 0;
   int selected = -1;
   int started = -1;
   int number = 1;
-  int aux = 0;
 
-  // Texto da opção atual
   String optionText = "Lisa";
   static const int NUM_OPTIONS = 5;
 
-  // Timing
-  unsigned long lastLCDUpdate = 0;
-  unsigned long lcdUpdateInterval = 500;
-  unsigned long lastLedMillis = 0;
+  unsigned long lastLCDUpdate;
+  unsigned long lcdUpdateInterval;
+
+  unsigned long lastLedMillis;
   unsigned long ledBlinkInterval = 550;
+
   unsigned long startTime = 0;
-  unsigned long lastSaveMillis = 0;
-  const unsigned long saveInterval = 200; // grava a cada 200 ms (ajustável)
+  unsigned long lastSaveMillis;
+  const unsigned long saveInterval = 200;
 
-  // Debounce por botão
-  const unsigned long debounceDelay = 250; // ms
-  unsigned long lastOptionDebounce = 0;
-  unsigned long lastSelectDebounce = 0;
-  unsigned long lastStartDebounce = 0;
-  unsigned long lastResetDebounce = 0;
-
-  // sd flag (usado pela classe)
   bool sdCardOK_global = false;
 
-  // rastreamento para limpar lcd quando mudanca de estado
   int lastState = -99;
 
-  // ----- Botões e debounce -----
+  // ---------------------------------------------------------------
+  // BOTÕES
+  // ---------------------------------------------------------------
   void readButtons()
   {
-    // options
-    if (buttonPressed(BUTTON_OPTIONS, &lastOptionDebounce))
+    if (buttonPressed(BUTTON_OPTIONS))
     {
       option = (option + 1) % NUM_OPTIONS;
       updateOptionText();
-      Serial.print("Options -> option: ");
-      Serial.println(option);
     }
-    // select
-    if (buttonPressed(BUTTON_SELECT, &lastSelectDebounce))
+
+    if (buttonPressed(BUTTON_SELECT))
     {
       if (selected == -1)
-      {
         selected = option;
-        Serial.print("Select -> selected: ");
-        Serial.println(selected);
-      }
     }
-    // start
-    if (buttonPressed(BUTTON_START, &lastStartDebounce))
+
+    if (buttonPressed(BUTTON_START))
     {
       if (selected != -1 && started == -1)
       {
+        lcd.clear();
         started = selected;
         startTime = millis();
-        aux = 1;
-        Serial.print("Start -> started: ");
-        Serial.println(started);
-        Serial.print("Iniciando medicao numero: ");
-        Serial.println(number);
+        Serial.println(">>> MEDIÇÃO INICIADA <<<");
       }
     }
-    // reset
-    if (buttonPressed(BUTTON_RESET, &lastResetDebounce, false))
-    { // sem debounce extra (pode ser instantâneo)
+
+    if (buttonPressed(BUTTON_RESET, false))
+    {
       if (started != -1)
-      {
-        Serial.print("Finalizando medicao numero: ");
-        Serial.println(number);
         number++;
-      }
-      // reset estado
+
       selected = -1;
       started = -1;
-      aux = 0;
       option = 0;
+
       updateOptionText();
       lcd.clear();
-      Serial.println("Reset -> voltando ao menu");
     }
   }
 
-  // Retorna true se botão (INPUT_PULLUP) foi lido como pressionado (LOW) e passou debounce
-  bool buttonPressed(uint8_t pin, unsigned long *lastDebounceVar, bool useDebounce = true)
+  bool buttonPressed(uint8_t pin, bool debounce = true)
   {
+    static unsigned long lastDebounce = 0;
+    const unsigned long debounceDelay = 250;
+
     int val = digitalRead(pin);
     unsigned long now = millis();
+
     if (val == LOW)
     {
-      if (!useDebounce)
-        return true;
-      if (now - *lastDebounceVar > debounceDelay)
+      if (!debounce || (now - lastDebounce > debounceDelay))
       {
-        *lastDebounceVar = now;
+        lastDebounce = now;
         return true;
       }
     }
     return false;
   }
 
-  // ----- LCD -----
+  // ---------------------------------------------------------------
+  // LCD
+  // ---------------------------------------------------------------
   void updateLCD()
   {
     unsigned long now = millis();
+
     if (selected == -1)
     {
-      // menu de seleção
       if (lastState != option)
       {
         lastState = option;
         lcd.clear();
       }
-      if (now - lastLCDUpdate >= lcdUpdateInterval)
+
+      if (now - lastLCDUpdate > lcdUpdateInterval)
       {
+        lcd.clear();
         lastLCDUpdate = now;
         lcd.setCursor(0, 0);
-        lcd.print("Select Pista:    ");
+        lcd.print("Select Pista:");
         lcd.setCursor(0, 1);
-        lcd.print(optionText + "        ");
+        lcd.print(optionText + "    ");
       }
     }
-    else if (selected != -1 && started == -1)
+    else if (started == -1)
     {
-      // selecionado mas não iniciado
-      if (now - lastLCDUpdate >= 1000)
-      {
-        lastLCDUpdate = now;
-        lcd.setCursor(0, 0);
-        lcd.print("Selected Pista:  ");
-        lcd.setCursor(0, 1);
-        lcd.print(optionText + "        ");
-      }
+      lcd.setCursor(0, 0);
+      lcd.print("Selected Pista:");
+      lcd.setCursor(0, 1);
+      lcd.print(optionText + "    ");
     }
-    else if (started != -1)
+    else
     {
-      // em execução: mostra sensores
-      if (now - lastLCDUpdate >= lcdUpdateInterval)
+      if (now - lastLCDUpdate > lcdUpdateInterval)
       {
+
         lastLCDUpdate = now;
+
         int16_t rx, ry, rz;
-        bool ok = readMPU(rx, ry, rz);
-        float ax = 0, ay = 0, az = 0;
-        if (ok)
-        {
-          ax = rx / 16384.0;
-          ay = ry / 16384.0;
-          az = rz / 16384.0;
-        }
-        else
-        {
-          // Em caso de falha, mostrar zeros e tentar re-inicializar
-          Serial.println("Falha leitura MPU no updateLCD");
-          initMPU();
-        }
+        readMPU(rx, ry, rz);
+
+        float ax = rx / 16384.0;
+        float ay = ry / 16384.0;
+        float az = rz / 16384.0;
+
         int piezo = analogRead(PIEZO_PIN);
 
         lcd.setCursor(0, 0);
         lcd.print("X:");
-        printAlignedFloat(ax, 2, 6);
+        lcd.print(ax, 2);
         lcd.setCursor(8, 0);
         lcd.print("Y:");
-        printAlignedFloat(ay, 2, 6);
+        lcd.print(ay, 2);
 
         lcd.setCursor(0, 1);
         lcd.print("Z:");
-        printAlignedFloat(az, 2, 6);
+        lcd.print(az, 2);
         lcd.setCursor(8, 1);
         lcd.print("V:");
         lcd.print(piezo);
-        lcd.print("   ");
+
+        sendToUbidots(ax, ay, az, piezo);
       }
     }
   }
 
-  // Imprime float com precisão e posição coerente
-  void printAlignedFloat(float v, int decimals, int width)
-  {
-    String s = String(v, decimals);
-    // ajusta para ter pelo menos width caracteres
-    while ((int)s.length() < width)
-      s = " " + s;
-    lcd.print(s);
-  }
-
-  // ----- LEDs -----
+  // ---------------------------------------------------------------
+  // LED
+  // ---------------------------------------------------------------
   void updateLEDs()
   {
-    unsigned long now = millis();
-    // piscando LED_RED enquanto não iniciado
     if (started == -1)
     {
-      if (now - lastLedMillis >= ledBlinkInterval)
+      if (millis() - lastLedMillis > ledBlinkInterval)
       {
-        lastLedMillis = now;
+        lastLedMillis = millis();
         digitalWrite(LED_RED, !digitalRead(LED_RED));
       }
     }
@@ -297,74 +308,48 @@ private:
     {
       digitalWrite(LED_RED, LOW);
     }
-    // LED verde ligado quando started
-    digitalWrite(LED_GREEN, (started != -1) ? HIGH : LOW);
+
+    digitalWrite(LED_GREEN, started != -1 ? HIGH : LOW);
   }
 
-  // ----- SD / gravação -----
+  // ---------------------------------------------------------------
+  // SD
+  // ---------------------------------------------------------------
   void writeDataIfNeeded()
   {
-    // grava em intervalos (para não gravar cada loop)
     if (started == -1 || !sdCardOK_global)
       return;
 
-    unsigned long now = millis();
-    if (now - lastSaveMillis < saveInterval)
-      return; // aguarda próximo intervalo
-    lastSaveMillis = now;
+    if (millis() - lastSaveMillis < saveInterval)
+      return;
+
+    lastSaveMillis = millis();
 
     int16_t rx, ry, rz;
-    bool ok = readMPU(rx, ry, rz);
-    float ax = 0, ay = 0, az = 0;
-    if (ok)
-    {
-      ax = rx / 16384.0;
-      ay = ry / 16384.0;
-      az = rz / 16384.0;
-    }
-    else
-    {
-      Serial.println("Falha leitura MPU no writeDataIfNeeded");
-      // tenta re-inicializar mas continua (não interrompe gravação do SD)
-      initMPU();
-    }
+    readMPU(rx, ry, rz);
 
+    float ax = rx / 16384.0;
+    float ay = ry / 16384.0;
+    float az = rz / 16384.0;
     int piezo = analogRead(PIEZO_PIN);
 
-    // cria arquivo com cabeçalho se não existir
+    // ====== SALVA NO SD ======
     if (!SD.exists(DATA_FILENAME))
     {
       File f = SD.open(DATA_FILENAME, FILE_WRITE);
-      if (f)
-      {
-        f.println("Time(ms),Number,Pista,AX,AY,AZ,Vibracao");
-        f.close();
-        Serial.println("Arquivo criado com cabecalho");
-      }
-      else
-      {
-        Serial.println("Erro ao criar arquivo (cabecalho)");
-        sdCardOK_global = false;
-        return;
-      }
+      f.println("Time,Number,Pista,AX,AY,AZ,PIEZO");
+      f.close();
     }
 
     File f = SD.open(DATA_FILENAME, FILE_APPEND);
-    if (!f)
-    {
-      Serial.println("Erro ao abrir arquivo para escrita");
-      sdCardOK_global = false;
-      return;
-    }
     unsigned long t = millis() - startTime;
-    String line = String(t) + "," + String(number) + "," + optionText + "," +
-                  String(ax, 2) + "," + String(ay, 2) + "," +
-                  String(az, 2) + "," + String(piezo);
-    f.println(line);
+
+    f.printf("%lu,%d,%s,%.2f,%.2f,%.2f,%d\n",
+             t, number, optionText.c_str(), ax, ay, az, piezo);
+
     f.close();
   }
 
-  // Atualiza optionText com base em option
   void updateOptionText()
   {
     switch (option)
@@ -384,31 +369,26 @@ private:
     case 4:
       optionText = "Placeholder2";
       break;
-    default:
-      optionText = "Unknown";
-      break;
     }
   }
 };
 
-// === Instância ===
 UIManager ui;
 
-// ================= Setup / Loop =================
+// =============================================================================
+// SETUP
+// =============================================================================
 void setup()
 {
   Serial.begin(115200);
   delay(200);
 
-  Serial.println("=== Inicializando sistema ===");
-
-  // I2C
-  Wire.begin(21, 22); // SDA=21, SCL=22 (padrões ESP32)
+  // LCD + I2C
+  Wire.begin(21, 22);
   lcd.init();
   lcd.backlight();
-  lcd.clear();
 
-  // Pinos
+  // Botões / LEDs
   pinMode(BUTTON_OPTIONS, INPUT_PULLUP);
   pinMode(BUTTON_SELECT, INPUT_PULLUP);
   pinMode(BUTTON_RESET, INPUT_PULLUP);
@@ -417,74 +397,34 @@ void setup()
   pinMode(LED_RED, OUTPUT);
   pinMode(LED_GREEN, OUTPUT);
 
-  // Inicializa MPU (usando sua implementação)
-  Serial.println("Inicializando MPU6050...");
+  // MPU
   if (!initMPU())
   {
-    Serial.println("ERRO: MPU6050 NAO ENCONTRADO. Verifique conexoes I2C.");
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("MPU6050 ERR");
-    // Bloqueia para debug (pode ser alterado para continuar sem MPU)
-    while (1)
-    {
-      delay(1000);
-    }
-  }
-  else
-  {
-    Serial.println("MPU6050 inicializado.");
+    lcd.print("MPU ERROR");
+    while (true)
+      ;
   }
 
-  // SD (SPI)
-  Serial.println("Inicializando SPI e SD...");
-  SPI.begin(18, 19, 23, SD_CS_PIN); // SCK,MISO,MOSI,SS
-  delay(10);
-  if (!SD.begin(SD_CS_PIN))
-  {
-    Serial.println("Falha ao inicializar SD! Verifique conexoes e formatacao (FAT32/FAT16).");
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("Erro SD Card");
-    lcd.setCursor(0, 1);
-    lcd.print("Verificar cartao");
-    sdCardOK = false;
-    delay(2000);
-    lcd.clear();
-  }
-  else
-  {
-    sdCardOK = true;
-    uint8_t cardType = SD.cardType();
-    Serial.print("SD iniciado. Tipo: ");
-    if (cardType == CARD_MMC)
-      Serial.println("MMC");
-    else if (cardType == CARD_SD)
-      Serial.println("SDSC");
-    else if (cardType == CARD_SDHC)
-      Serial.println("SDHC");
-    else
-      Serial.println("UNKNOWN");
-    uint64_t cardSize = SD.cardSize() / (1024 * 1024);
-    Serial.printf("Tamanho (MB): %llu\n", cardSize);
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("SD Card OK!");
-    lcd.setCursor(0, 1);
-    lcd.print(String(cardSize) + "MB");
-    delay(1500);
-    lcd.clear();
-  }
+  // SD
+  SPI.begin(18, 19, 23, SD_CS_PIN);
+  sdCardOK = SD.begin(SD_CS_PIN);
 
-  // inicializa UI manager
+  // UBIDOTS MQTT
+  ubidots.setDebug(true);
+  ubidots.connectToWifi(WIFI_SSID, WIFI_PASS);
+  ubidots.setCallback(callback);
+  ubidots.setup();
+  ubidots.reconnect();
+
   ui.begin();
   ui.setSdOk(sdCardOK);
-
-  Serial.println("Setup finalizado.");
 }
 
+// =============================================================================
+// LOOP
+// =============================================================================
 void loop()
 {
+  ubidots.loop();
   ui.update();
-  // loop não bloqueante
 }
