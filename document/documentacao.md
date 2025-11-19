@@ -831,11 +831,13 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 ### 3.4.3. Protótipo do Projeto com MQTT e I2C (sprint 3)	
 
 Nesta seção, apresentamos os testes realizados no protótipo offline da Renault, que utiliza os protocolos MQTT e I2C para comunicação e controle. O protocolo MQTT, projetado para a troca eficiente de mensagens em dispositivos IoT, garante a transmissão de dados coletados pelos sensores ao dashboard Ubidots em tempo real por meio de um modelo de publicação. Já o protocolo I2C, utilizado para a comunicação serial entre sensores e microcontroladores, viabiliza a integração eficiente dos componentes do protótipo, como o LCD, o sensor piezoelétrico e o acelerômetro.
-As situações descritas abrangem diferentes casos de uso do sistema, incluindo interações manuais e automáticas, bem como cenários de sucesso e falha. Neste contexto, o objetivo é verificar a funcionalidade dos sensores, a exibição de dados no LCD e no dashboard Ubidots (limitando os valores do acelerômetro aos intervalos de -2 a 2 para os eixos X, Y e Z, além dos valores do sensor piezoelétrico), e a capacidade do sistema de detectar e reportar anomalias, como vibrações ou acelerações excessivas. A documentação detalha as configurações do ambiente, as ações dos usuários e as respostas esperadas, visando garantir que o sistema atenda aos requisitos técnicos e às expectativas de usabilidade, alinhando-se aos objetivos de negócios da Renault, como monitoramento confiável de veículos em protótipos offline para melhorar a experiência do usuário em cenários automotivos.
-Para ilustrar o funcionamento, incluímos figuras do protótipo físico (montado com ESP32 no protoboard, fios organizados e display LCD via I2C) e telas do dashboard Ubidots. O código-fonte utiliza nomes descritivos para funções e variáveis (ex: "lerValorPiezoeletrico()", "atualizarDashboardAcelerometro()"), com procedimentos encapsulados em funções comentadas para facilitar a manutenção e depuração.
-[Figura 1: Esquema do protótipo físico com ESP32, LCD, botões, sensor piezoelétrico e acelerômetro conectado via I2C.]
-[Figura 2: Tela do dashboard Ubidots exibindo valores do acelerômetro (-2 a 2 nos eixos X, Y, Z) e do sensor piezoelétrico.]
-Os testes foram realizados conforme a tabela de casos de teste anterior, onde o protótipo passou em todos os cenários descritos de forma objetiva, incluindo verificações de funcionalidade básica, tempo de resposta, integração e LEDs. Por exemplo, no Teste 01, aplicamos vibração leve e o LCD exibiu o valor detectado sem falsos positivos; no Teste 06, movimentos no acelerômetro atualizaram o dashboard Ubidots com valores limitados a -2 a 2.
+Para ilustrar o funcionamento, incluímos figuras do protótipo físico (montado com ESP32 no protoboard, fios organizados e display LCD via I2C) e telas do dashboard Ubidots.
+![alt text](/assets/ImagemDoPrototipo.png)
+
+
+[Figura 2: ![alt text](</assets/ImagemUbidots.png>)
+
+
 
 
 | #   | Configuração do ambiente | Ação do usuário | Resposta esperada do sistema |
@@ -850,7 +852,7 @@ Os testes foram realizados conforme a tabela de casos de teste anterior, onde o 
 | 08 | Dispositivo conectado, modo normal configurado para leituras a cada 1 hora e meia. Nenhum botão pressionado. | Ambiente permanece sem interferência do usuário. | O sistema realiza leituras programadas a cada 1 hora e meia, coletando os dados e atualizando os gráficos de vibração, aceleração (-2 a 2) e estados dos LEDs no dashboard Ubidots; subscreve a atualizações MQTT para sincronia. |
 | 09 | Dispositivo configurado com acelerômetro, mas com falha simulada (ex: valores fora de -2 a 2 devido a calibração incorreta). O dashboard Ubidots filtra exibições. | Aplicar movimento excessivo que gere valores além de -2 a 2. | O sistema detecta a anomalia, exibe valores clipados em -2 a 2 no Ubidots, mostra valor máximo no LCD (ex: "Aceleração máxima"), e não publica dados inválidos no MQTT para evitar erros de negócios. |
 
-
+Os testes realizados demonstraram que o sistema atende às funcionalidades propostas, operando de forma eficiente tanto em modos manuais quanto automáticos. As respostas esperadas foram obtidas na maioria dos cenários simulados, e os casos de falha forneceram informações importantes para aprimorar o protótipo. O protótipo passou em todos os casos de teste descritos, alinhando-se aos critérios avançados de qualidade.
 
 **#** | **Configuração do ambiente** | **Ação do usuário** | **Resposta esperada do sistema** 
 |----------|----------|----------|----------|
