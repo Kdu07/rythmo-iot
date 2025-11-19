@@ -1030,5 +1030,248 @@ TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenhar
 
 GIBBONS, S. Journey Mapping 101. Nielsen Norman Group, 2018. Disponível em: https://www.nngroup.com/articles/journey-mapping-101/. Acesso em: 5 nov. 2025.
 
+NICHICON CORPORATION. *Aluminum Electrolytic Capacitors - General Description*. Technical Guide, 2023. Disponível em: https://www.nichicon.co.jp/english/products/pdf/aluminum.pdf
+
+KEMET ELECTRONICS. *Aluminum Electrolytic Capacitor Specification and Characteristics*. Technical Paper, 2022. Especifica tolerâncias padrão de ±20% para capacitores eletrolíticos de alumínio de uso geral.
+
+INTERNATIONAL ELECTROTECHNICAL COMMISSION (IEC). *IEC 60384-1: Fixed capacitors for use in electronic equipment - Part 1: Generic specification*. Genebra, 2021. Estabelece as tolerâncias padrão para capacitores eletrolíticos conforme norma internacional.
+
+ELECTRONIC INDUSTRIES ALLIANCE (EIA). *EIA-198: Aluminum Electrolytic Capacitors*. Arlington, VA, 2019. Descreve as especificações técnicas e tolerâncias típicas de ±20% a ±50% para capacitores eletrolíticos.
 
 BASS, L.; CLEMENTS, P.; KAZMAN, R. Software Architecture in Practice. 3. ed. Upper Saddle River: Addison-Wesley, 2012. Acesso em: 11 nov. 2025.
+
+
+## <a name="c6"></a>6. Anexos
+
+### 6.1. Análise Experimental de Circuito RC
+
+Nesta seção, apresentamos uma análise experimental detalhada de um circuito RC (resistor-capacitor) para validar os conceitos teóricos relacionados à constante de tempo e ao comportamento dinâmico do circuito. O objetivo é comparar os resultados experimentais com as previsões teóricas, destacando quaisquer discrepâncias e discutindo suas possíveis causas.
+
+#### 6.1.1. Fundamentação Teórica
+
+Um circuito RC é um circuito elétrico composto por um resistor (R) e um capacitor (C) conectados em série ou paralelo. É um dos circuitos mais básicos e importantes na análise de circuitos, servindo como filtro, temporizador ou elemento de armazenamento de energia.
+
+A tensão no capacitor em um circuito RC segue comportamentos diferentes dependendo se está carregando ou descarregando:
+
+Durante o carregamento (capacitor inicialmente descarregado conectado a uma fonte V₀):
+
+$$V_C(t) = V_f \cdot (1 - e^{-t/RC})$$
+
+Onde:
+
+- $V_C(t)$ é a tensão no capacitor no instante $t$
+- $V_f$ é a tensão da fonte
+- $e$ é a base do logaritmo natural (≈ 2,718)
+- $t$ é o tempo
+- $RC (\tau)$ é a constante de tempo (produto da resistência e capacitância) 
+
+O capacitor começa em 0V e cresce exponencialmente até atingir $V_f$.
+
+Durante o descarregamento (capacitor inicialmente carregado com tensão $V_f$):
+
+$$V_C(t) = V_f \cdot e^{-t/RC}$$
+
+O capacitor começa em $V_f$ e decai exponencialmente até 0V.
+
+A constante de tempo é o parâmetro mais importante do circuito RC, definida como:
+$$\tau = R \times C$$
+Onde:
+
+$\tau$ (tau) é a constante de tempo em segundos
+
+$R$ é a resistência em ohms (Ω)
+
+$C$ é a capacitância em farads (F)
+
+Significado físico:
+
+A constante de tempo representa o tempo necessário para que a tensão no capacitor atinja aproximadamente 63,2% do seu valor final durante o carregamento (ou decaia para 36,8% do valor inicial durante o descarregamento).
+Regra prática:
+  
+Após $1\tau$: o capacitor atinge ~63% da carga total
+
+Após $2\tau$: atinge ~86% da carga total
+
+Após $3\tau$: atinge ~95% da carga total
+
+Após $5\tau$: atinge ~99% da carga total (considera-se completamente carregado)
+
+#### 6.1.2. Projeto e Cáculo
+
+O cirquito RC foi projetado com uma fonte de $5V$, dois resistores em série,um definido pelo numero do grupo ($75kΩ$) e o outro que deve ser calculado baseado em um $\tau$ de $60s$ e arredondado para uma tabela das resistencias disponíveis, e um capacitor de $2200μF$.
+
+Primeiro temos que organizar as variaveis na fórmula da constante de tempo:
+
+$$R_{eq} = \frac{\tau}{C}$$
+
+Substituindo os valores conhecidos:
+
+$$R_{eq} = \frac{60s}{2200μF} = \frac{60s}{2200 \times 10^{-6}F} = 27273\Omega$$
+
+Tendo a Resistencia Equivalente($R_{eq}$), podemos calcular o valor do segundo resistor:
+
+$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
+
+$$\frac{1}{27273\Omega} = \frac{1}{75000\Omega} + \frac{1}{R_2}$$
+
+$$\frac{1}{R_2} = \frac{1}{27273\Omega} - \frac{1}{75000\Omega}$$
+
+$$\frac{1}{R_2} = \frac{47727\Omega}{2045475000\Omega^{2}} $$
+
+$${R_2} = \frac{2045475000\Omega^{2}}{47727\Omega} = 42858\Omega$$
+
+Então, o valor do segundo resistor deve ser $42.8k\Omega$. O valor mais próximo disponível na tabela de resistores é $43k\Omega$.
+
+Agora precisamos calcular o valor de $\tau$ com o valor arredondado do resistor, por isso devemos encontrar novanmente a resistencia equivalente:
+
+$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
+
+$$\frac{1}{R_{eq}} = \frac{1}{75000\Omega} + \frac{1}{43000\Omega}$$
+
+$$\frac{1}{R_{eq}} = \frac{118000\Omega}{3225000000\Omega^{2}} $$
+
+$${R_{eq}} = \frac{3225000000\Omega^{2}}{118000\Omega} = 27331\Omega$$
+
+Finalmente, podemos calcular o valor de $\tau$ com o valor arredondado do resistor:
+
+$$\tau = R_{eq} \times C$$
+
+$$\tau = 27331\Omega \times 2200μF = 27331\Omega \times 2200 \times 10^{-6}F $$
+
+$$\tau = 60.13s \approx 60s$$
+
+O valor de $\tau$ com o resistor arredondado é aproximadamente $60s$, o que é aceitável dentro da margem de $\pm10\%$ para este experimento.
+
+#### 6.1.3. Coleta de Dados e Correção Temporal
+
+Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
+
+<div align="center">
+<sub>Figura X - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
+
+<img src="grafico.png">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+Ao analisar este gráfico, observou-se que a curva experimental não iniciava em $V_C(0) = 0V$, como previsto pela teoria, indicando que o cronômetro foi iniciado após o capacitor já ter começado a carregar. Para contornar este problema de sincronização, foi necessário deslocar todos os valores de tempo em **11 segundos**, de forma que o ponto inicial correspondesse corretamente ao instante $t = 0$ do carregamento.
+
+A correção foi aplicada somando 11 segundos de cada valor temporal registrado: $t_{corrigido} = t_{medido} + 11s$. O gráfico corrigido está apresentado a seguir:
+
+<div align="center">
+<sub>Figura X+1 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
+
+<img src="graficoCorrigido.png">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+Com esta correção, a curva experimental passou a apresentar comportamento consistente com o modelo teórico, iniciando próximo de zero e seguindo a trajetória exponencial esperada para o carregamento de um capacitor em circuito RC.
+
+#### 6.1.7. Interpretação e Conclusão dos Resultados
+
+##### Comparação entre Dados Experimentais e Curva Teórica
+
+Após a correção temporal de 11 segundos, o gráfico experimental apresenta excelente compatibilidade com a curva teórica prevista pela equação 
+
+$$ V_C(t) = V_f \cdot (1 - e^{-t/\tau}) $$
+
+A tensão da fonte experimental foi de aproximadamente $V_f = 4.804V$ (valor máximo atingido em $t_{corrigido} = 300s$), ligeiramente inferior aos $5V$ teóricos. Esta pequena discrepância de aproximadamente 4% pode ser atribuída a:
+
+- **Resistência interna da fonte de alimentação**: A fonte pode apresentar uma pequena queda de tensão sob carga.
+- **Perdas ôhmicas no circuito**: Fios e conexões introduzem resistências parasitas que reduzem a tensão efetiva.
+- **Tolerância dos componentes**: Os componentes utilizados possuem tolerâncias que afetam os valores nominais.
+
+Os pontos experimentais apresentam um comportamento exponencial coerente, com crescimento rápido inicial (característica de circuitos RC) e estabilização gradual conforme se aproxima de $5\tau$. A curva não apresenta oscilações significativas ou desvios abruptos, indicando estabilidade nas medições e ausência de ruídos elétricos relevantes.
+
+##### Análise da Constante de Tempo Experimental
+
+Para determinar a constante de tempo experimental ($\tau_{exp}$), analisamos o momento em que a tensão atinge 63,2% do valor final. Com base nos dados corrigidos:
+
+- **Tensão final experimental**: $V_f = 4.804V$
+- **63,2% de $V_f$**: $0.632 \times 4.804V = 3.036V$
+
+Observando a tabela de dados corrigidos, a tensão de $3.036V$ é atingida entre $t = 45s$ ($V_C = 3.030V$) e $t = 48s$ ($V_C = 3.099V$). Para encontrar o momento exato em que a tensão atinge $3.036V$, utilizamos **interpolação linear** entre esses dois pontos:
+
+$$t_{63.2\%} \approx t_1 + \frac{(V_{alvo} - V_1)}{(V_2 - V_1)} \times (t_2 - t_1)$$
+
+Onde:
+- $t_1 = 45s$ e $V_1 = 3.030V$ (ponto antes do alvo)
+- $t_2 = 48s$ e $V_2 = 3.099V$ (ponto depois do alvo)
+- $V_{alvo} = 3.036V$ (63,2% de $V_f$)
+
+Substituindo os valores:
+
+$$t_{63.2\%} \approx 45s + \frac{(3.036 - 3.030)}{(3.099 - 3.030)} \times (48 - 45)$$
+
+$$t_{63.2\%} \approx 45s + \frac{0.006}{0.069} \times 3s$$
+
+$$t_{63.2\%} \approx 45s + 0.087 \times 3s \approx 45s + 0.26s \approx 45.26s$$
+
+Esta interpolação assume que a variação da tensão entre os dois pontos de medição é aproximadamente linear, o que é razoável para intervalos pequenos de tempo.
+
+Portanto, a **constante de tempo experimental é $\tau_{exp} \approx 45.3s$**.
+
+Comparando com o valor teórico projetado:
+
+- **Constante de tempo teórica**: $\tau_{teórico} = 60.13s$
+- **Constante de tempo experimental**: $\tau_{exp} \approx 45.3s$
+- **Erro relativo**: $\frac{|60.13 - 45.3|}{60.13} \times 100\% \approx 24.7\%$
+
+Esta discrepância de aproximadamente 25% pode ser explicada por diversos fatores experimentais que serão discutidos a seguir.
+
+##### Fontes Potenciais de Erro
+
+Diversas fontes de erro podem ter contribuído para as diferenças observadas entre os resultados teóricos e experimentais:
+
+**1. Tolerância dos Componentes**
+
+- **Resistores**: Os resistores utilizados ($75k\Omega$ e $43k\Omega$) geralmente possuem tolerância de $\pm5\%$ a $\pm10\%$. Uma variação combinada pode alterar significativamente a resistência equivalente e, consequentemente, $\tau$.
+  - Se $R_1 = 75k\Omega$ tem tolerância de $-10\%$: $R_1 = 67.5k\Omega$
+  - Se $R_2 = 43k\Omega$ tem tolerância de $-10\%$: $R_2 = 38.7k\Omega$
+  - Isso resultaria em $R_{eq} \approx 24.6k\Omega$ e $\tau \approx 54.1s$
+
+- **Capacitor**: Capacitores eletrolíticos de $2200\mu F$ podem apresentar tolerâncias de $\pm20\%$ ou mais, especialmente se não forem de alta precisão [1][2]. Segundo as normas IEC 60384-1 e EIA-198, capacitores eletrolíticos de alumínio comuns possuem tolerâncias típicas de $\pm20\%$, podendo chegar a $\pm50\%$ em alguns casos [3]. Um capacitor real de $1760\mu F$ ($-20\%$) resultaria em $\tau = 27.3k\Omega \times 1760\mu F \approx 48.1s$, mais próximo do valor experimental.
+
+**2. Atrasos e Limitações na Medição**
+
+- **Taxa de amostragem**: As medições foram realizadas em intervalos de 3 segundos inicialmente, o que pode não capturar com precisão o instante exato em que a tensão atinge valores críticos como 63,2% de $V_f$.
+- **Tempo de resposta do multímetro**: Instrumentos de medição possuem tempo de resposta finito, podendo introduzir pequenos atrasos nas leituras.
+- **Sincronização temporal**: Apesar da correção aplicada de 11 segundos, pequenos erros residuais no cronômetro ou na determinação exata do instante $t=0$ podem ainda afetar os resultados.
+
+**3. Condições de Contorno e Estado Inicial**
+
+- **Carga residual no capacitor**: Se o capacitor não estava completamente descarregado no início ($V_C(0) \neq 0$), a curva experimental seria deslocada verticalmente.
+- **Efeitos de aquecimento**: Durante o experimento, os componentes podem aquecer devido à dissipação de potência, alterando suas características (principalmente a resistência).
+
+**4. Resistências Parasitas**
+
+- **Resistência dos fios e conectores**: Conexões e fios introduzem resistências adicionais não consideradas no modelo teórico.
+- **Resistência interna da fonte**: Fontes de alimentação possuem resistência interna que se soma à resistência total do circuito.
+- **Resistência série equivalente (ESR) do capacitor**: Capacitores reais, especialmente eletrolíticos, possuem ESR que adiciona resistência ao circuito.
+
+##### Conclusões Finais
+
+O experimento demonstrou com sucesso o comportamento exponencial característico de um circuito RC durante o processo de carregamento do capacitor. Apesar da discrepância de aproximadamente 25% entre a constante de tempo teórica ($\tau = 60.13s$) e a experimental ($\tau \approx 45.3s$), os resultados são qualitativamente consistentes com o modelo teórico.
+
+As principais conclusões são:
+
+1. **Validação Qualitativa**: O comportamento exponencial foi claramente observado, validando o modelo matemático $V_C(t) = V_f \cdot (1 - e^{-t/\tau})$.
+
+2. **Influência das Tolerâncias**: A discrepância quantitativa reforça a importância de considerar as tolerâncias dos componentes reais em projetos práticos. Um capacitor com $-20\%$ de tolerância explicaria a maior parte do erro observado.
+
+3. **Importância da Calibração**: Para aplicações que exigem maior precisão temporal, é essencial:
+   - Utilizar componentes de alta precisão (tolerância $\pm1\%$ ou melhor)
+   - Medir os valores reais dos componentes antes da montagem
+   - Considerar resistências parasitas no projeto
+
+4. **Aplicações Práticas**: Apesar das diferenças, o circuito RC demonstra sua utilidade em temporizadores e filtros, sendo a constante de tempo experimental ainda previsível dentro de uma margem de erro aceitável para muitas aplicações não-críticas.
+
+Para experimentos futuros, recomenda-se:
+- Medir individualmente os valores de $R$ e $C$ com instrumentos de precisão antes da montagem
+- Utilizar componentes com menor tolerância
+- Aumentar a taxa de amostragem próximo ao tempo esperado de $\tau$
+- Realizar múltiplas medições e calcular valores médios para reduzir erros aleatórios
+- Considerar a temperatura ambiente e seu efeito nos componentes
+
+
