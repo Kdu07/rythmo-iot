@@ -87,7 +87,7 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 # <a name="c2"></a>2. Metodologia (sprint 3)
 
-O RM-ODP (Reference Model of Open Distributed Processing) é um modelo de referência criado no início dos anos 1990 em uma iniciativa conjunta da ISO/IEC e da ITU-T, com forte contribuição de pesquisadores e profissionais de engenharia de software e telecomunicações. Seu objetivo é fornecer uma base conceitual sólida para projetar e padronizar sistemas distribuídos complexos, promovendo interoperabilidade e clareza arquitetural por meio de cinco visões complementares. Mais do que um “manual técnico”, o RM-ODP é um jeito organizado de pensar um sistema a partir de diferentes perspectivas que se encaixam como peças de um quebra-cabeça.
+&nbsp;&nbsp;&nbsp;&nbsp;O RM-ODP (Reference Model of Open Distributed Processing) é um modelo de referência criado no início dos anos 1990 em uma iniciativa conjunta da ISO/IEC e da ITU-T, com forte contribuição de pesquisadores e profissionais de engenharia de software e telecomunicações (ISO/IEC 10746-1, 1998). Seu objetivo é fornecer uma base conceitual sólida para projetar e padronizar sistemas distribuídos complexos, promovendo interoperabilidade e clareza arquitetural por meio de cinco visões complementares. Mais do que um “manual técnico”, o RM-ODP é um jeito organizado de pensar um sistema a partir de diferentes perspectivas que se encaixam como peças de um quebra-cabeça.
 </br>
 
 <div align="center">
@@ -1031,3 +1031,5 @@ WIEGERS, Karl; BEATTY, Joy. Software requirements. 3. ed. Redmond: Microsoft Pre
 TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenharia. São Paulo: Atlas, 2020.
 
 GIBBONS, S. Journey Mapping 101. Nielsen Norman Group, 2018. Disponível em: https://www.nngroup.com/articles/journey-mapping-101/. Acesso em: 5 nov. 2025.
+
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. Information technology – Open Distributed Processing – Reference model. Geneva: ISO, 1998–2001. 4 parts (ISO/IEC 10746-1 to -4).
