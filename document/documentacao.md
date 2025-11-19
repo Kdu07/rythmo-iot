@@ -87,7 +87,23 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 # <a name="c2"></a>2. Metodologia (sprint 3)
 
-_Descreva as etapas da metodologia RM-ODP que foram utilizadas para o desenvolvimento, citando o referencial teórico. Você deve apenas enunciar os métodos, sem dizer ainda como ele foi aplicado e quais resultados obtidos._
+O RM-ODP (Reference Model of Open Distributed Processing) é um modelo de referência criado no início dos anos 1990 em uma iniciativa conjunta da ISO/IEC e da ITU-T, com forte contribuição de pesquisadores e profissionais de engenharia de software e telecomunicações. Seu objetivo é fornecer uma base conceitual sólida para projetar e padronizar sistemas distribuídos complexos, promovendo interoperabilidade e clareza arquitetural por meio de cinco visões complementares. Mais do que um “manual técnico”, o RM-ODP é um jeito organizado de pensar um sistema a partir de diferentes perspectivas que se encaixam como peças de um quebra-cabeça.
+</br>
+- Visão Empresarial: Foca no “porquê” e no “para quê”. Define objetivos de negócio, escopo, políticas e responsabilidades. É onde se alinham missão, regras e valor entregue, garantindo que a tecnologia sirva à estratégia.
+
+
+- Visão de Informação: Descreve o “o quê”. Modela os conceitos, seus significados, relacionamentos e restrições de integridade. Aqui se busca consistência semântica e compartilhamento confiável de informações ao longo do sistema.
+
+
+- Visão Computacional: Separa o sistema em componentes de software e suas interfaces, deixando claro “quem conversa com quem” e por quais contratos. Favorece modularidade, reuso e independência entre partes.
+
+
+- Visão de Engenharia: Trata do “como fazer acontecer” em um ambiente distribuído. Define mecanismos de comunicação, middleware, canais, transparências (como de localização e falhas) e infraestrutura para que os componentes cooperem de forma eficiente.
+
+
+- Visão de Tecnologia: Escolhe as “ferramentas e peças” concretas. Especifica plataformas, frameworks, protocolos, bancos de dados e demais tecnologias que materializam as decisões das visões anteriores, respeitando padrões e viabilizando a implementação.
+
+
 
 # <a name="c3"></a>3. Desenvolvimento e Resultados 
 
