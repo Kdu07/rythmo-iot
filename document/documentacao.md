@@ -89,6 +89,15 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 O RM-ODP (Reference Model of Open Distributed Processing) é um modelo de referência criado no início dos anos 1990 em uma iniciativa conjunta da ISO/IEC e da ITU-T, com forte contribuição de pesquisadores e profissionais de engenharia de software e telecomunicações. Seu objetivo é fornecer uma base conceitual sólida para projetar e padronizar sistemas distribuídos complexos, promovendo interoperabilidade e clareza arquitetural por meio de cinco visões complementares. Mais do que um “manual técnico”, o RM-ODP é um jeito organizado de pensar um sistema a partir de diferentes perspectivas que se encaixam como peças de um quebra-cabeça.
 </br>
+
+<div align="center">
+Figura X - RM-ODP
+<img src="../assets/rm-odp.png"/>
+<sup> Fonte: Material feito pelos autores (2025)</sup>
+</div>
+
+</br>
+
 - Visão Empresarial: Foca no “porquê” e no “para quê”. Define objetivos de negócio, escopo, políticas e responsabilidades. É onde se alinham missão, regras e valor entregue, garantindo que a tecnologia sirva à estratégia.
 
 
