@@ -830,12 +830,33 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 ### 3.4.3. Protótipo do Projeto com MQTT e I2C (sprint 3)	
 
-Nesta seção, apresentamos os testes realizados no protótipo offline da Renault, que utiliza os protocolos MQTT e I2C para comunicação e controle. O protocolo MQTT, projetado para a troca eficiente de mensagens em dispositivos IoT, garante a transmissão de dados coletados pelos sensores ao dashboard Ubidots em tempo real por meio de um modelo de publicação. Já o protocolo I2C, utilizado para a comunicação serial entre sensores e microcontroladores, viabiliza a integração eficiente dos componentes do protótipo, como o LCD, o sensor piezoelétrico e o acelerômetro.
-Para ilustrar o funcionamento, incluímos figuras do protótipo físico (montado com ESP32 no protoboard, fios organizados e display LCD via I2C) e telas do dashboard Ubidots.
-![alt text](/assets/ImagemDoPrototipo.png)
+&emsp;&emsp;&emsp;&emsp;Nesta seção, apresentamos os testes realizados no protótipo offline da Renault, que utiliza os protocolos MQTT e I2C para comunicação e controle. O protocolo MQTT, projetado para a troca eficiente de mensagens em dispositivos IoT, garante a transmissão de dados coletados pelos sensores ao dashboard Ubidots em tempo real por meio de um modelo de publicação. Já o protocolo I2C, utilizado para a comunicação serial entre sensores e microcontroladores, viabiliza a integração eficiente dos componentes do protótipo, como o LCD, o sensor piezoelétrico e o acelerômetro.
+
+&emsp;&emsp;&emsp;&emsp;Para ilustrar o funcionamento, incluímos figuras do protótipo físico (montado com ESP32 no protoboard, fios organizados e display LCD via I2C) e telas do dashboard Ubidots.
+
+<div align="center">
+
+   <sub>Figura 1: Imagem do protótipo</sub>
+
+   <img src="../assets/ImagemDoPrototipo.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
 
 
-[Figura 2: ![alt text](</assets/ImagemUbidots.png>)
+
+
+<div align="center">
+
+   <sub>Figura 2: Imagem do Ubidots</sub>
+
+   <img src="../assets/ImagemUbidots.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
 
 
 
@@ -852,7 +873,7 @@ Para ilustrar o funcionamento, incluímos figuras do protótipo físico (montado
 | 08 | Dispositivo conectado, modo normal configurado para leituras a cada 1 hora e meia. Nenhum botão pressionado. | Ambiente permanece sem interferência do usuário. | O sistema realiza leituras programadas a cada 1 hora e meia, coletando os dados e atualizando os gráficos de vibração, aceleração (-2 a 2) e estados dos LEDs no dashboard Ubidots; subscreve a atualizações MQTT para sincronia. |
 | 09 | Dispositivo configurado com acelerômetro, mas com falha simulada (ex: valores fora de -2 a 2 devido a calibração incorreta). O dashboard Ubidots filtra exibições. | Aplicar movimento excessivo que gere valores além de -2 a 2. | O sistema detecta a anomalia, exibe valores clipados em -2 a 2 no Ubidots, mostra valor máximo no LCD (ex: "Aceleração máxima"), e não publica dados inválidos no MQTT para evitar erros de negócios. |
 
-Os testes realizados demonstraram que o sistema atende às funcionalidades propostas, operando de forma eficiente tanto em modos manuais quanto automáticos. As respostas esperadas foram obtidas na maioria dos cenários simulados, e os casos de falha forneceram informações importantes para aprimorar o protótipo. O protótipo passou em todos os casos de teste descritos, alinhando-se aos critérios avançados de qualidade.
+&emsp;&emsp;&emsp;&emsp;Os testes realizados demonstraram que o sistema atende às funcionalidades propostas, operando de forma eficiente tanto em modos manuais quanto automáticos. As respostas esperadas foram obtidas na maioria dos cenários simulados, e os casos de falha forneceram informações importantes para aprimorar o protótipo. O protótipo passou em todos os casos de teste descritos, alinhando-se aos critérios avançados de qualidade.
 
 **#** | **Configuração do ambiente** | **Ação do usuário** | **Resposta esperada do sistema** 
 |----------|----------|----------|----------|
