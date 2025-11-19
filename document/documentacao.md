@@ -1109,7 +1109,11 @@ $$\tau = 60.13s \approx 60s$$
 
 O valor de $\tau$ com o resistor arredondado é aproximadamente $60s$, o que é aceitável dentro da margem de $\pm10\%$ para este experimento.
 
-#### 6.1.3. Coleta de Dados e Correção Temporal
+#### 6.1.3. Montagem do protótipo
+
+
+
+#### 6.1.6. Gráfico experimental
 
 Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
 
