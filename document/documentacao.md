@@ -1011,8 +1011,49 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 ### 3.4.3. Protótipo do Projeto com MQTT e I2C (sprint 3)	
 
-_Aqui você deve registrar diversas situações de uso de seu sistema como um todo, indicando exemplos de ação do usuário e resposta do sistema, apontando como o ambiente deverá estar configurado para receber a ação e produzir a resposta. Estes registros serão utilizados para testar seu sistema, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de falha nos comportamentos do sistema. <br>
-Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do protótipo físico e dashboards, além de descrições dos testes realizados para ilustrar o funcionamento do protótipo. A tabela a seguir serve como exemplo._
+&emsp;&emsp;&emsp;&emsp;Nesta seção, apresentamos os testes realizados no protótipo offline da Renault, que utiliza os protocolos MQTT e I2C para comunicação e controle. O protocolo MQTT, projetado para a troca eficiente de mensagens em dispositivos IoT, garante a transmissão de dados coletados pelos sensores ao dashboard Ubidots em tempo real por meio de um modelo de publicação. Já o protocolo I2C, utilizado para a comunicação serial entre sensores e microcontroladores, viabiliza a integração eficiente dos componentes do protótipo, como o LCD, o sensor piezoelétrico e o acelerômetro.
+
+&emsp;&emsp;&emsp;&emsp;Para ilustrar o funcionamento, incluímos figuras do protótipo físico (montado com ESP32 no protoboard, fios organizados e display LCD via I2C) e telas do dashboard Ubidots.
+
+<div align="center">
+
+   <sub>Figura 1: Imagem do protótipo</sub>
+
+   <img src="../assets/ImagemDoPrototipo.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+
+
+
+<div align="center">
+
+   <sub>Figura 2: Imagem do Ubidots</sub>
+
+   <img src="../assets/ImagemUbidots.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+
+
+
+
+| #   | Configuração do ambiente | Ação do usuário | Resposta esperada do sistema |
+|---|---|---|---|
+| 01 | Dispositivo configurado com sensor piezoelétrico e conectado ao sistema via MQTT. O dashboard Ubidots está configurado para monitoramento em tempo real, exibindo apenas valores do piezoelétrico. | Vibração detectada no ambiente (ex: batida leve aplicada manualmente no sensor). | O sistema publica o valor detectado no dashboard Ubidots em tempo real e exibe o valor no LCD; protótipo publica no tópico MQTT correspondente. |
+| 02 | Dispositivo configurado com acelerômetro ativo, leitura programada a cada 2 minutos, valores limitados a -2 a 2 nos eixos X, Y, Z no Ubidots. | Usuário pressiona o botão SELECT para realizar uma leitura manual. | O sistema interrompe o modo automático, realiza a leitura de aceleração nos eixos (limitada a -2 a 2), exibe os valores no LCD e no dashboard Ubidots, e publica no tópico MQTT. |
+| 03 | Ambiente configurado para modo normal, leitura automática configurada a cada 2 minutos, sem intervenção manual; protótipo subscreve a tópicos MQTT para atualizações. | Usuário espera pela próxima leitura automática. | O sistema realiza a leitura dos sensores, envia os dados coletados ao dashboard Ubidots (valores piezoelétrico e acelerômetro -2 a 2), atualizando os cards em tempo real; LEDs indicam status (verde aceso). |
+| 04 | Dashboard Ubidots em modo de visão geral, com integração habilitada e dados do dispositivo configurados via ESP32, limitando exibição a valores relevantes. | Usuário acessa a página de visão geral no dashboard Ubidots. | O sistema exibe os valores de vibração (piezoelétrico) e aceleração (-2 a 2 nos eixos), além de informações complementares como data e horário da última coleta de dados. |
+| 05 | Dispositivo conectado e configurado para leituras automáticas. Sensores apresentam falha momentânea na coleta de dados de vibração (ex: conexão I2C instável). | Sistema tenta realizar a leitura automática programada. | Dashboard Ubidots exibe os dados disponíveis; pelo erro ou ausência de dados no card de vibração, ele continua informando as últimas coletas válidas, e o LCD mostra valor zero ou erro; protótipo não publica dados inválidos no MQTT. |
+| 06 | Dashboard Ubidots com gráficos configurados para exibição de vibração e aceleração (limitada a -2 a 2). Sensores operando normalmente. | Usuário acessa a página de gráficos comparativos no dashboard Ubidots. | O sistema exibe os gráficos de vibração (piezoelétrico) e aceleração (-2 a 2 nos eixos), permitindo a comparação entre os parâmetros ao longo do tempo. |
+| 07 | Dispositivo configurado para leitura manual. Usuário pressiona o botão OPTIONS durante a execução do modo automático. | Usuário tenta realizar leitura manual enquanto o sistema está operando em modo automático. | O sistema interrompe momentaneamente o modo automático e realiza a leitura manual, exibindo os valores no LCD e enviando as informações ao dashboard Ubidots (com limites aplicados); publica no tópico MQTT. |
+
+
+&emsp;&emsp;&emsp;&emsp;Os testes realizados demonstraram que o sistema atende às funcionalidades propostas, operando de forma eficiente tanto em modos manuais quanto automáticos. As respostas esperadas foram obtidas na maioria dos cenários simulados, e os casos de falha forneceram informações importantes para aprimorar o protótipo. O protótipo passou em todos os casos de teste descritos, alinhando-se aos critérios avançados de qualidade.
 
 **#** | **Configuração do ambiente** | **Ação do usuário** | **Resposta esperada do sistema** 
 |----------|----------|----------|----------|
