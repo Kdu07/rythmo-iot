@@ -1111,7 +1111,45 @@ O valor de $\tau$ com o resistor arredondado é aproximadamente $60s$, o que é 
 
 #### 6.1.3. Montagem do protótipo
 
+&emsp; A montagem segue o arranjo calculado com dois resistores em paralelo. Os resistores R1 e R2 ligam os mesmos dois nós, de um lado o trilho de cinco volts e do outro o nó de medição. O terminal positivo do capacitor eletrolítico de 2200 µF está no mesmo nó de medição dos resistores e do pino A0. O terminal negativo do capacitor está no terra comum. O pino A0 do Arduino mede diretamente a tensão do capacitor 
+𝑉
+𝐶
+(
+𝑡
+)
+V
+C
+	​
 
+(t) no nó R–C. O pino de cinco volts do Arduino alimenta o trilho positivo da protoboard e o pino GND do Arduino alimenta o trilho negativo, garantindo referência comum.
+
+<div align="center">
+<sub>Figura X - Circuito RC arduíno</sub>
+
+<img src="../assets/circuito-rc-1.jpeg">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+<sub>Figura X - Circuito RC arduíno 2</sub>
+
+<img src="../assets/circuito-rc-2.jpeg">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+<sub>Figura X - Circuito RC arduíno 3</sub>
+
+<img src="../assets/circuito-rc-3.jpeg">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+&emsp; A Figura 1 mostra a visão geral da ligação entre Arduino e protoboard, com a alimentação, o terra e o cabeamento até a área do circuito. A Figura 2 destaca o nó R–C onde se encontram o terminal positivo do capacitor, os terminais dos dois resistores e o fio do A0. A Figura 3 mostra os pinos analógicos do Arduino e confirma a conexão do A0. Verifique continuidade dos trilhos da protoboard ao longo de toda a extensão e confirme a polaridade do capacitor pela perna menor e pela faixa de marcação negativa voltadas ao GND.
+
+&emsp; Antes da coleta, faça a checagem funcional simples. Toque o A0 no GND e observe leitura próxima de zero. Toque o A0 no cinco volts e observe leitura próxima do máximo do conversor analógico. Isso confirma a referência, o canal de medição e a polaridade correta do capacitor.
 
 #### 6.1.6. Gráfico experimental
 
