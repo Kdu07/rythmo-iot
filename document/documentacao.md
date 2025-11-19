@@ -830,7 +830,7 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 ### 3.4.3. Protótipo do Projeto com MQTT e I2C (sprint 3)	
 
-
+&emsp;&emsp;&emsp;&emsp;Nesta seção, apresentamos os testes realizados no protótipo offline da Renault, que utiliza os protocolos MQTT e I2C para comunicação e controle. O protocolo MQTT, projetado para a troca eficiente de mensagens em dispositivos IoT, garante a transmissão de dados coletados pelos sensores ao dashboard Ubidots em tempo real por meio de um modelo de publicação. Já o protocolo I2C, utilizado para a comunicação serial entre sensores e microcontroladores, viabiliza a integração eficiente dos componentes do protótipo, como o LCD, o sensor piezoelétrico e o acelerômetro.
 
 &emsp;&emsp;&emsp;&emsp;Para ilustrar o funcionamento, incluímos figuras do protótipo físico (montado com ESP32 no protoboard, fios organizados e display LCD via I2C) e telas do dashboard Ubidots.
 
