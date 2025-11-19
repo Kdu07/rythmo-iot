@@ -697,7 +697,7 @@ Conforme Sommerville e Sawyer, requisitos não funcionais definem como o sistema
 | **RNF#** | **Descrição** | **Aspecto de qualidade** | 
 |----------|----------|----------|
 |RNF01|Os dados coletados devem ser enviados ao armazenamento central mantendo cópia local. Se a rede estiver indisponível, os dados ficam guardados e são enviados automaticamente quando a conexão voltar. | Confiabilidade |
-|RNF02|O tempo de envio de cada pacote do sensor para o armazenamento central deve ser de até sessenta segundos durante os testes. | Desempenho |
+|RNF02|O tempo de envio de cada pacote do sensor deve respeitar as limitações da plataforma ao mesmo tempo que forneça a menor latência possível | Desempenho |
 |RNF03|O dispositivo deve possuir capacidade de armazenamento local para pelo menos uma hora de coleta contínua de sinais. | Espaço |
 |RNF04|O sistema deve gerar um registro de sessão com data e hora de início e de término, volume de dados gravados e estado do envio, disponível para consulta pelos times técnicos.| Operacional |
 |RNF05|Os dados exportados devem ser fáceis de localizar e entender por novos usuários. Adotar estrutura de pastas simples por data e sessão, nomes de arquivo padronizados| Usabilidade |
@@ -707,7 +707,7 @@ Conforme Sommerville e Sawyer, requisitos não funcionais definem como o sistema
 Este requisito garante continuidade de coleta e proteção do histórico, evitando perda de informação durante testes e coletas em campo. Suporta comparações entre campanhas e dá previsibilidade ao fluxo de trabalho técnico.
 Como validar. Simular ausência de rede durante a coleta, confirmar a gravação local dos arquivos e verificar o envio automático após o retorno da conexão, conferindo contagem de registros e integridade no destino.
 
-#### **RNF02 - O tempo de envio de cada pacote do sensor para o armazenamento central deve ser de até sessenta segundos durante os testes.**
+#### **RNF02 - O tempo de envio de cada pacote do sensor deve respeitar as limitações da plataforma ao mesmo tempo que forneça a menor latência possível**
 Define um limite claro para o tempo de entrega dos dados, permitindo uso rápido pelas equipes e respostas mais ágeis em rotinas de engenharia.
 Como validar. Marcar horários no ponto de captura e no recebimento no repositório, executar sessões controladas e confirmar que os tempos medidos permanecem dentro de sessenta segundos.
 
@@ -729,19 +729,42 @@ Como validar. Solicitar a usuários novos que localizem uma sessão específica 
 
 ### 3.3.3. Arquitetura da Solução (sprint 3)
 
-_Vídeo de explicação sobre a arquitetura da solução: (coloque aqui o link do vídeo)_
+&nbsp;&nbsp;&nbsp;&nbsp;A arquitetura da solução representa o blueprint estrutural que delineia a integração entre componentes de hardware, software e comunicação em um sistema IoT, garantindo que os requisitos funcionais e não funcionais sejam atendidos de forma eficiente e escalável. Nesse contexto, ela define como os sensores, microcontroladores, protocolos de transmissão e plataformas de armazenamento interagem para coletar, processar e visualizar dados de aceleração e força, suportando análises precisas de Squeak and Rattle na Renault, (BASS; CLEMENTS; KAZMAN, 2012).
 
-_Descreva a arquitetura técnica da solução de forma detalhada (visão de arquitetura).
+<div align="center">
+<sub>Figura 10 - Diagrama de Arquitetura da Solução</sub><br>
+<img src="../assets/arquitetura.png">
+<sub>Fonte: Material produzido pelos autores (2025)</sub>
+</div>
 
-Justifique como a arquitetura suporta os requisitos funcionais e não funcionais.
+<br/>
+Vídeo de explicação sobre a arquitetura da solução: <a href="https://www.youtube.com/watch?v=qDCwkkuR0Qk]"> Link</a>
 
-O diagrama de arquitetura deve:_
-- _Mostrar microcontroladores, incluindo descrições de sua função no sistema (por exemplo: "Irá processar o sinal dos sensores a cada X minutos")_
-- _Mostrar sensores, incluindo descrição de função e especificações técnicas do tipo de informação que será coletada_
-- _Mostrar apresentadores de informação (displays), incluindo descrição de que tipo de informação será apresentada (por exemplo, "Mostrar temperatura dos sensores")_
-- _Mostrar atuadores, caso existam na solução, incluindo descrições do que irão acionar (por exemplo, "Ligar motor de irrigação durante x minutos")_
-- _Mostrar o broker MQTT e o dashboard que é a interface do usuário_
-- _Mostrar ligações entre os elementos (com fio ou sem fio) – incluindo conexões com sensores e atuadores, conexão com WiFi, entre outros_
+<br/>
+
+**Componentes principais da arquitetura:**
+
+| **Componente** | **Descrição** | **Tipo** |
+|----------|----------|----------|
+|ESP32 WROOM 32 Devkit|Trata-se de um microcontrolador ampl amente usado na indústria e em projetos educacionais, que possui interfaces mais amigáveis para conexão de componentes diversos, como sensores e atuadores. No projeto Rythmo, o ESP32 é responsável por processar os sinais dos sensores de aceleração e força em tempo real, formatar os dados conforme o protocolo MQTT e gerenciar a comunicação Wi-Fi com a plataforma as a service.|Microcontrolador|
+|Sensor MPU6050|Este sensor mede a aceleração nos eixos X, Y e Z em unidades de m/s². No projeto Rythmo, o MPU6050 é utilizado para capturar dados de aceleração do veículo durante os testes em diferentes perfis de pista.|Sensor|
+|Sensor Piezoelétrico|Este sensor mede a força aplicada em unidades de Newtons (N). No projeto Rythmo, o sensor piezoelétrico é utilizado para capturar dados de força exercida sobre o veículo durante os testes em diferentes perfis de pista.|Sensor|
+|Display LCD I2C 16x2|Este display é utilizado para apresentar informações em tempo real ao usuário, como os valores de aceleração e força coletados pelos sensores. No projeto Rythmo, o display LCD I2C 16x2 exibe os dados de forma clara e acessível durante os testes.|Apresentador de Informação| 
+|MicroSD| O módulo MicroSD é utilizado para armazenamento local dos dados coletados pelos sensores, garantindo a persistência das informações mesmo em caso de falhas na transmissão. No projeto Rythmo, o MicroSD permite a gravação contínua dos dados durante os testes.|Armazenamento Local|
+|Botão "Options"| Este botão é responsável por trocar o tipo de pista que está sendo visualizada no display, passando por todas as pistas gravadas na memória do programa. | Atuador|
+|Botão "Select"| Este botão é responsável por selecionar a pista que está sendo visualizada no display, confirmando a escolha do usuário. | Atuador|
+|Botão "Start"| Este botão é responsável por iniciar a coleta de dados dos sensores, acionando o processo de medição e transmissão dos sinais. | Atuador|
+|Botão "Reset"| Este botão é responsável por reiniciar o sistema, parando a coleta de dados e retornando à tela inicial do display. | Atuador|
+|Broker MQTT|O broker MQTT atua como intermediário na comunicação entre o dispositivo IoT e a plataforma as a service. Ele gerencia a troca de mensagens, garantindo que os dados coletados sejam transmitidos de forma eficiente e segura.|Broker de Mensagens|
+|Plataforma as a service|A plataforma as a service é o ambiente onde os dados coletados são armazenados, processados e visualizados. Ela oferece um dashboard para os usuários acessarem os dados, gerarem relatórios e exportarem informações para análises externas. Para o projeto, será utilizado a plataforma Ubidots no plano Enterprise.|Plataforma de Dados|
+
+
+
+**Conexão com os Requisitos Funcionais e Não Funcionais do Projeto**
+
+&nbsp;&nbsp;&nbsp;&nbsp;A arquitetura proposta suporta os requisitos funcionais e não funcionais do projeto Rythmo de diversas maneiras. O microcontrolador ESP32, com sua capacidade de processamento e conectividade Wi-Fi, atende aos requisitos de aquisição e transmissão de dados (RF01 a RF05). Os sensores MPU6050 e piezoelétrico garantem a coleta precisa dos dados necessários para as análises de Squeak and Rattle (RF01 e RF02). O display LCD I2C 16x2 proporciona uma interface amigável para o usuário durante os testes (RF09).
+
+&nbsp;&nbsp;&nbsp;&nbsp;Sobre os requisitos não funcionais, a arquitetura assegura a confiabilidade (RNF01) ao manter cópias locais dos dados em caso de falhas na rede. A eficiência no desempenho (RNF02) é garantida pela capacidade do ESP32 de processar e enviar dados rapidamente. A capacidade de armazenamento local (RNF03) é atendida pela memória do microSD, permitindo coleta contínua. A geração de registros de sessão (RNF04) é facilitada pelo software embarcado, e a organização dos dados exportados (RNF05) é suportada pela estrutura da plataforma as a service.
 
 
 ### 3.3.4. Arquitetura do Protótipo(sprint 4)	
@@ -1041,6 +1064,8 @@ KEMET ELECTRONICS. *Aluminum Electrolytic Capacitor Specification and Characteri
 INTERNATIONAL ELECTROTECHNICAL COMMISSION (IEC). *IEC 60384-1: Fixed capacitors for use in electronic equipment - Part 1: Generic specification*. Genebra, 2021. Estabelece as tolerâncias padrão para capacitores eletrolíticos conforme norma internacional.
 
 ELECTRONIC INDUSTRIES ALLIANCE (EIA). *EIA-198: Aluminum Electrolytic Capacitors*. Arlington, VA, 2019. Descreve as especificações técnicas e tolerâncias típicas de ±20% a ±50% para capacitores eletrolíticos.
+
+BASS, L.; CLEMENTS, P.; KAZMAN, R. Software Architecture in Practice. 3. ed. Upper Saddle River: Addison-Wesley, 2012. Acesso em: 11 nov. 2025.
 
 
 ## <a name="c6"></a>6. Anexos
