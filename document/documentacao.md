@@ -2,9 +2,21 @@
 
 **_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final_**
 
-## Nome do Grupo
+## Rythmo
 
 #### Nomes dos integrantes do grupo
+
+- <a href="https://www.linkedin.com/in/antoniodicillo/">Antonio Di Cillo</a>
+- <a href="https://github.com/CaduQuaglia">Carlos Quaglia
+  </a>
+- <a href="https://www.linkedin.com/in/caue-taddeo-956194362/">Caue Taddeo
+  </a>
+- <a href="https://www.linkedin.com/in/gabriel-bartmanovicz/">Gabriel Bartmanovicz
+  </a>
+- <a href="https://www.linkedin.com/in/rafael-santana-rodrigues/">Rafael Santana Rodrigues
+  </a>
+- <a href="https://github.com/thuliobacco/">Thulio Bacco
+  Pinto</a>
 
 <img src="../assets/inteli.png">
 
