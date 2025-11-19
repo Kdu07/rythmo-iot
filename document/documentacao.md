@@ -87,7 +87,32 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 # <a name="c2"></a>2. Metodologia (sprint 3)
 
-_Descreva as etapas da metodologia RM-ODP que foram utilizadas para o desenvolvimento, citando o referencial teórico. Você deve apenas enunciar os métodos, sem dizer ainda como ele foi aplicado e quais resultados obtidos._
+&nbsp;&nbsp;&nbsp;&nbsp;O RM-ODP (Reference Model of Open Distributed Processing) é um modelo de referência criado no início dos anos 1990 em uma iniciativa conjunta da ISO/IEC e da ITU-T, com forte contribuição de pesquisadores e profissionais de engenharia de software e telecomunicações (ISO/IEC 10746-1, 1998). Seu objetivo é fornecer uma base conceitual sólida para projetar e padronizar sistemas distribuídos complexos, promovendo interoperabilidade e clareza arquitetural por meio de cinco visões complementares. Mais do que um “manual técnico”, o RM-ODP é um jeito organizado de pensar um sistema a partir de diferentes perspectivas que se encaixam como peças de um quebra-cabeça.
+</br>
+
+<div align="center">
+Figura X - RM-ODP
+<img src="../assets/rm-odp.png"/>
+<sup> Fonte: Material feito pelos autores (2025)</sup>
+</div>
+
+</br>
+
+- Visão Empresarial: Foca no “porquê” e no “para quê”. Define objetivos de negócio, escopo, políticas e responsabilidades. É onde se alinham missão, regras e valor entregue, garantindo que a tecnologia sirva à estratégia.
+
+
+- Visão de Informação: Descreve o “o quê”. Modela os conceitos, seus significados, relacionamentos e restrições de integridade. Aqui se busca consistência semântica e compartilhamento confiável de informações ao longo do sistema.
+
+
+- Visão Computacional: Separa o sistema em componentes de software e suas interfaces, deixando claro “quem conversa com quem” e por quais contratos. Favorece modularidade, reuso e independência entre partes.
+
+
+- Visão de Engenharia: Trata do “como fazer acontecer” em um ambiente distribuído. Define mecanismos de comunicação, middleware, canais, transparências (como de localização e falhas) e infraestrutura para que os componentes cooperem de forma eficiente.
+
+
+- Visão de Tecnologia: Escolhe as “ferramentas e peças” concretas. Especifica plataformas, frameworks, protocolos, bancos de dados e demais tecnologias que materializam as decisões das visões anteriores, respeitando padrões e viabilizando a implementação.
+
+
 
 # <a name="c3"></a>3. Desenvolvimento e Resultados 
 
@@ -1007,6 +1032,16 @@ TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenhar
 
 GIBBONS, S. Journey Mapping 101. Nielsen Norman Group, 2018. Disponível em: https://www.nngroup.com/articles/journey-mapping-101/. Acesso em: 5 nov. 2025.
 
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. Information technology – Open Distributed Processing – Reference model. Geneva: ISO, 1998–2001. 4 parts (ISO/IEC 10746-1 to -4).
+
+NICHICON CORPORATION. *Aluminum Electrolytic Capacitors - General Description*. Technical Guide, 2023. Disponível em: https://www.nichicon.co.jp/english/products/pdf/aluminum.pdf
+
+KEMET ELECTRONICS. *Aluminum Electrolytic Capacitor Specification and Characteristics*. Technical Paper, 2022. Especifica tolerâncias padrão de ±20% para capacitores eletrolíticos de alumínio de uso geral.
+
+INTERNATIONAL ELECTROTECHNICAL COMMISSION (IEC). *IEC 60384-1: Fixed capacitors for use in electronic equipment - Part 1: Generic specification*. Genebra, 2021. Estabelece as tolerâncias padrão para capacitores eletrolíticos conforme norma internacional.
+
+ELECTRONIC INDUSTRIES ALLIANCE (EIA). *EIA-198: Aluminum Electrolytic Capacitors*. Arlington, VA, 2019. Descreve as especificações técnicas e tolerâncias típicas de ±20% a ±50% para capacitores eletrolíticos.
+
 
 ## <a name="c6"></a>6. Anexos
 
@@ -1240,19 +1275,3 @@ Para experimentos futuros, recomenda-se:
 - Aumentar a taxa de amostragem próximo ao tempo esperado de $\tau$
 - Realizar múltiplas medições e calcular valores médios para reduzir erros aleatórios
 - Considerar a temperatura ambiente e seu efeito nos componentes
-
----
-
-#### Referências
-
-[1] NICHICON CORPORATION. *Aluminum Electrolytic Capacitors - General Description*. Technical Guide, 2023. Disponível em: https://www.nichicon.co.jp/english/products/pdf/aluminum.pdf
-
-[2] KEMET ELECTRONICS. *Aluminum Electrolytic Capacitor Specification and Characteristics*. Technical Paper, 2022. Especifica tolerâncias padrão de ±20% para capacitores eletrolíticos de alumínio de uso geral.
-
-[3] INTERNATIONAL ELECTROTECHNICAL COMMISSION (IEC). *IEC 60384-1: Fixed capacitors for use in electronic equipment - Part 1: Generic specification*. Genebra, 2021. Estabelece as tolerâncias padrão para capacitores eletrolíticos conforme norma internacional.
-
-[4] ELECTRONIC INDUSTRIES ALLIANCE (EIA). *EIA-198: Aluminum Electrolytic Capacitors*. Arlington, VA, 2019. Descreve as especificações técnicas e tolerâncias típicas de ±20% a ±50% para capacitores eletrolíticos.
-
-
-
-
