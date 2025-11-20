@@ -1125,15 +1125,15 @@ BASS, L.; CLEMENTS, P.; KAZMAN, R. Software Architecture in Practice. 3. ed. Upp
 
 ### 6.1. Análise Experimental de Circuito RC
 
-Nesta seção, apresentamos uma análise experimental detalhada de um circuito RC (resistor-capacitor) para validar os conceitos teóricos relacionados à constante de tempo e ao comportamento dinâmico do circuito. O objetivo é comparar os resultados experimentais com as previsões teóricas, destacando quaisquer discrepâncias e discutindo suas possíveis causas.
+&emsp; Nesta seção, apresentamos uma análise experimental detalhada de um circuito RC (resistor-capacitor) para validar os conceitos teóricos relacionados à constante de tempo e ao comportamento dinâmico do circuito. O objetivo é comparar os resultados experimentais com as previsões teóricas, destacando quaisquer discrepâncias e discutindo suas possíveis causas.
 
 #### 6.1.1. Fundamentação Teórica
 
-Um circuito RC é um circuito elétrico composto por um resistor (R) e um capacitor (C) conectados em série ou paralelo. É um dos circuitos mais básicos e importantes na análise de circuitos, servindo como filtro, temporizador ou elemento de armazenamento de energia.
+&emsp; Um circuito RC é um circuito elétrico composto por um resistor (R) e um capacitor (C) conectados em série ou paralelo. É um dos circuitos mais básicos e importantes na análise de circuitos, servindo como filtro, temporizador ou elemento de armazenamento de energia.
 
-A tensão no capacitor em um circuito RC segue comportamentos diferentes dependendo se está carregando ou descarregando:
+&emsp; A tensão no capacitor em um circuito RC segue comportamentos diferentes dependendo se está carregando ou descarregando:
 
-Durante o carregamento (capacitor inicialmente descarregado conectado a uma fonte V₀):
+&emsp; Durante o carregamento (capacitor inicialmente descarregado conectado a uma fonte V₀):
 
 $$V_C(t) = V_f \cdot (1 - e^{-t/RC})$$
 
@@ -1153,7 +1153,7 @@ $$V_C(t) = V_f \cdot e^{-t/RC}$$
 
 O capacitor começa em $V_f$ e decai exponencialmente até 0V.
 
-A constante de tempo é o parâmetro mais importante do circuito RC, definida como:
+&emsp; A constante de tempo é o parâmetro mais importante do circuito RC, definida como:
 $$\tau = R \times C$$
 Onde:
 
@@ -1165,7 +1165,7 @@ $C$ é a capacitância em farads (F)
 
 Significado físico:
 
-A constante de tempo representa o tempo necessário para que a tensão no capacitor atinja aproximadamente 63,2% do seu valor final durante o carregamento (ou decaia para 36,8% do valor inicial durante o descarregamento).
+&emsp; A constante de tempo representa o tempo necessário para que a tensão no capacitor atinja aproximadamente 63,2% do seu valor final durante o carregamento (ou decaia para 36,8% do valor inicial durante o descarregamento).
 Regra prática:
   
 Após $1\tau$: o capacitor atinge ~63% da carga total
@@ -1178,17 +1178,17 @@ Após $5\tau$: atinge ~99% da carga total (considera-se completamente carregado)
 
 #### 6.1.2. Projeto e Cáculo
 
-O cirquito RC foi projetado com uma fonte de $5V$, dois resistores em série,um definido pelo numero do grupo ($75kΩ$) e o outro que deve ser calculado baseado em um $\tau$ de $60s$ e arredondado para uma tabela das resistencias disponíveis, e um capacitor de $2200μF$.
+&emsp; O cirquito RC foi projetado com uma fonte de $5V$, dois resistores em série,um definido pelo numero do grupo ($75kΩ$) e o outro que deve ser calculado baseado em um $\tau$ de $60s$ e arredondado para uma tabela das resistencias disponíveis, e um capacitor de $2200μF$.
 
-Primeiro temos que organizar as variaveis na fórmula da constante de tempo:
+&emsp; Primeiro temos que organizar as variaveis na fórmula da constante de tempo:
 
 $$R_{eq} = \frac{\tau}{C}$$
 
-Substituindo os valores conhecidos:
+&emsp; Substituindo os valores conhecidos:
 
 $$R_{eq} = \frac{60s}{2200μF} = \frac{60s}{2200 \times 10^{-6}F} = 27273\Omega$$
 
-Tendo a Resistencia Equivalente($R_{eq}$), podemos calcular o valor do segundo resistor:
+&emsp; Tendo a Resistencia Equivalente($R_{eq}$), podemos calcular o valor do segundo resistor:
 
 $$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
 
@@ -1200,9 +1200,9 @@ $$\frac{1}{R_2} = \frac{47727\Omega}{2045475000\Omega^{2}} $$
 
 $${R_2} = \frac{2045475000\Omega^{2}}{47727\Omega} = 42858\Omega$$
 
-Então, o valor do segundo resistor deve ser $42.8k\Omega$. O valor mais próximo disponível na tabela de resistores é $43k\Omega$.
+&emsp; Então, o valor do segundo resistor deve ser $42.8k\Omega$. O valor mais próximo disponível na tabela de resistores é $43k\Omega$.
 
-Agora precisamos calcular o valor de $\tau$ com o valor arredondado do resistor, por isso devemos encontrar novanmente a resistencia equivalente:
+&emsp; Agora precisamos calcular o valor de $\tau$ com o valor arredondado do resistor, por isso devemos encontrar novanmente a resistencia equivalente:
 
 $$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
 
@@ -1212,7 +1212,7 @@ $$\frac{1}{R_{eq}} = \frac{118000\Omega}{3225000000\Omega^{2}} $$
 
 $${R_{eq}} = \frac{3225000000\Omega^{2}}{118000\Omega} = 27331\Omega$$
 
-Finalmente, podemos calcular o valor de $\tau$ com o valor arredondado do resistor:
+&emsp; Finalmente, podemos calcular o valor de $\tau$ com o valor arredondado do resistor:
 
 $$\tau = R_{eq} \times C$$
 
@@ -1220,11 +1220,134 @@ $$\tau = 27331\Omega \times 2200μF = 27331\Omega \times 2200 \times 10^{-6}F $$
 
 $$\tau = 60.13s \approx 60s$$
 
-O valor de $\tau$ com o resistor arredondado é aproximadamente $60s$, o que é aceitável dentro da margem de $\pm10\%$ para este experimento.
+&emsp; O valor de $\tau$ com o resistor arredondado é aproximadamente $60s$, o que é aceitável dentro da margem de $\pm10\%$ para este experimento.
 
-#### 6.1.3. Coleta de Dados e Correção Temporal
+#### 6.1.3. Montagem do protótipo
 
-Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
+&emsp; A montagem segue o arranjo calculado com dois resistores em paralelo. Os resistores R1 e R2 ligam os mesmos dois nós, de um lado o trilho de cinco volts e do outro o nó de medição. O terminal positivo do capacitor eletrolítico de 2200 µF está no mesmo nó de medição dos resistores e do pino A0. O terminal negativo do capacitor está no terra comum. O pino A0 do Arduino mede diretamente a tensão do capacitor 
+𝑉
+𝐶
+(
+𝑡
+)
+V
+C
+	​
+(t) no nó R–C. O pino de cinco volts do Arduino alimenta o trilho positivo da protoboard e o pino GND do Arduino alimenta o trilho negativo, garantindo referência comum.
+
+<div align="center">
+<sub>Figura X - Circuito RC arduíno</sub>
+
+<img src="../assets/circuito-rc-1.jpeg">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+<sub>Figura X - Circuito RC arduíno 2</sub>
+
+<img src="../assets/circuito-rc-2.jpeg">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+<sub>Figura X - Circuito RC arduíno 3</sub>
+
+<img src="../assets/circuito-rc-3.jpeg">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+&emsp; A Figura 1 mostra a visão geral da ligação entre Arduino e protoboard, com a alimentação, o terra e o cabeamento até a área do circuito. A Figura 2 destaca o nó R–C onde se encontram o terminal positivo do capacitor, os terminais dos dois resistores e o fio do A0. A Figura 3 mostra os pinos analógicos do Arduino e confirma a conexão do A0. Verifique continuidade dos trilhos da protoboard ao longo de toda a extensão e confirme a polaridade do capacitor pela perna menor e pela faixa de marcação negativa voltadas ao GND.
+
+&emsp; Antes da coleta, faça a checagem funcional simples. Toque o A0 no GND e observe leitura próxima de zero. Toque o A0 no cinco volts e observe leitura próxima do máximo do conversor analógico. Isso confirma a referência, o canal de medição e a polaridade correta do capacitor.
+
+#### 6.1.4. Coleta de Dados Experimentais
+
+&emsp; A coleta foi automatizada por sketch no Arduino, com amostragem total de cinquenta pontos ao longo de cinco minutos e exportação em CSV no formato t_s e Vc_V. O plano de amostragem prioriza o início da carga, conforme recomendado: vinte pontos igualmente espaçados no primeiro minuto, vinte pontos igualmente espaçados de um a três minutos, e dez pontos igualmente espaçados de três a cinco minutos. O pino A0 mede diretamente a tensão no capacitor e cada amostra é registrada com carimbo de tempo relativo ao início da sessão.
+
+&emsp; Procedimento operacional adotado. Descarregar totalmente o capacitor antes de iniciar. Ligar a alimentação, iniciar o sketch e confirmar a primeira linha do CSV com o cabeçalho t_s, Vc_V. Manter o circuito estável durante todo o intervalo de cinco minutos e salvar o arquivo gerado ao final da sessão.
+
+<div align="center" style="text-align:center;">
+  <table style="margin-left:auto; margin-right:auto;">
+    <caption><strong>Coleta de Dados Experimentais — Circuito RC</strong></caption>
+    <thead>
+      <tr>
+        <th style="text-align:right;">Tempo [s]</th>
+        <th style="text-align:right;">Vc [V]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="text-align:right;">3.000</td><td style="text-align:right;">1.354</td></tr>
+      <tr><td style="text-align:right;">6.000</td><td style="text-align:right;">1.520</td></tr>
+      <tr><td style="text-align:right;">9.000</td><td style="text-align:right;">1.676</td></tr>
+      <tr><td style="text-align:right;">12.000</td><td style="text-align:right;">1.823</td></tr>
+      <tr><td style="text-align:right;">15.000</td><td style="text-align:right;">1.965</td></tr>
+      <tr><td style="text-align:right;">18.000</td><td style="text-align:right;">2.097</td></tr>
+      <tr><td style="text-align:right;">21.000</td><td style="text-align:right;">2.229</td></tr>
+      <tr><td style="text-align:right;">24.000</td><td style="text-align:right;">2.346</td></tr>
+      <tr><td style="text-align:right;">27.000</td><td style="text-align:right;">2.458</td></tr>
+      <tr><td style="text-align:right;">30.000</td><td style="text-align:right;">2.571</td></tr>
+      <tr><td style="text-align:right;">33.000</td><td style="text-align:right;">2.674</td></tr>
+      <tr><td style="text-align:right;">36.000</td><td style="text-align:right;">2.771</td></tr>
+      <tr><td style="text-align:right;">39.000</td><td style="text-align:right;">2.864</td></tr>
+      <tr><td style="text-align:right;">42.000</td><td style="text-align:right;">2.952</td></tr>
+      <tr><td style="text-align:right;">45.000</td><td style="text-align:right;">3.030</td></tr>
+      <tr><td style="text-align:right;">48.000</td><td style="text-align:right;">3.099</td></tr>
+      <tr><td style="text-align:right;">51.000</td><td style="text-align:right;">3.167</td></tr>
+      <tr><td style="text-align:right;">54.000</td><td style="text-align:right;">3.231</td></tr>
+      <tr><td style="text-align:right;">57.000</td><td style="text-align:right;">3.284</td></tr>
+      <tr><td style="text-align:right;">60.000</td><td style="text-align:right;">3.338</td></tr>
+      <tr><td style="text-align:right;">66.000</td><td style="text-align:right;">3.436</td></tr>
+      <tr><td style="text-align:right;">72.000</td><td style="text-align:right;">3.534</td></tr>
+      <tr><td style="text-align:right;">78.000</td><td style="text-align:right;">3.617</td></tr>
+      <tr><td style="text-align:right;">84.000</td><td style="text-align:right;">3.700</td></tr>
+      <tr><td style="text-align:right;">90.000</td><td style="text-align:right;">3.778</td></tr>
+      <tr><td style="text-align:right;">96.000</td><td style="text-align:right;">3.851</td></tr>
+      <tr><td style="text-align:right;">102.000</td><td style="text-align:right;">3.915</td></tr>
+      <tr><td style="text-align:right;">108.000</td><td style="text-align:right;">3.978</td></tr>
+      <tr><td style="text-align:right;">114.000</td><td style="text-align:right;">4.042</td></tr>
+      <tr><td style="text-align:right;">120.000</td><td style="text-align:right;">4.096</td></tr>
+      <tr><td style="text-align:right;">126.000</td><td style="text-align:right;">4.150</td></tr>
+      <tr><td style="text-align:right;">132.000</td><td style="text-align:right;">4.194</td></tr>
+      <tr><td style="text-align:right;">138.000</td><td style="text-align:right;">4.238</td></tr>
+      <tr><td style="text-align:right;">144.000</td><td style="text-align:right;">4.282</td></tr>
+      <tr><td style="text-align:right;">150.000</td><td style="text-align:right;">4.321</td></tr>
+      <tr><td style="text-align:right;">156.000</td><td style="text-align:right;">4.355</td></tr>
+      <tr><td style="text-align:right;">162.000</td><td style="text-align:right;">4.389</td></tr>
+      <tr><td style="text-align:right;">168.000</td><td style="text-align:right;">4.428</td></tr>
+      <tr><td style="text-align:right;">174.000</td><td style="text-align:right;">4.457</td></tr>
+      <tr><td style="text-align:right;">180.000</td><td style="text-align:right;">4.482</td></tr>
+      <tr><td style="text-align:right;">192.000</td><td style="text-align:right;">4.536</td></tr>
+      <tr><td style="text-align:right;">204.000</td><td style="text-align:right;">4.585</td></tr>
+      <tr><td style="text-align:right;">216.000</td><td style="text-align:right;">4.624</td></tr>
+      <tr><td style="text-align:right;">228.000</td><td style="text-align:right;">4.658</td></tr>
+      <tr><td style="text-align:right;">240.000</td><td style="text-align:right;">4.692</td></tr>
+      <tr><td style="text-align:right;">252.000</td><td style="text-align:right;">4.721</td></tr>
+      <tr><td style="text-align:right;">264.000</td><td style="text-align:right;">4.746</td></tr>
+      <tr><td style="text-align:right;">276.000</td><td style="text-align:right;">4.770</td></tr>
+      <tr><td style="text-align:right;">288.000</td><td style="text-align:right;">4.790</td></tr>
+      <tr><td style="text-align:right;">300.000</td><td style="text-align:right;">4.804</td></tr>
+    </tbody>
+  </table>
+</div>
+
+#### 6.1.5. Gráfico Experimental
+
+&emsp; O gráfico experimental é um diagrama de dispersão dos dados coletados, com o eixo horizontal representando o tempo em segundos e o eixo vertical a tensão no capacitor em volts. O título deve descrever claramente o conteúdo, por exemplo, Carga do capacitor em circuito RC — dados experimentais. Recomenda-se usar marcadores visíveis, eixo vertical de zero a cinco volts, grade leve para leitura e legenda opcional identificando a série como Dados experimentais.
+
+<div align="center">
+<sub>Figura X - Carga do capacitor em circuito RC — dados experimentais</sub>
+
+<img src="../assets/grafico-rc-cap.png">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+#### 6.1.6. Análise Comparativa
+
+&emsp; Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
 
 <div align="center">
 <sub>Figura 14 - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
@@ -1234,9 +1357,9 @@ Durante a realização do experimento, foi identificado um problema de sincroniz
 <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-Ao analisar este gráfico, observou-se que a curva experimental não iniciava em $V_C(0) = 0V$, como previsto pela teoria, indicando que o cronômetro foi iniciado após o capacitor já ter começado a carregar. Para contornar este problema de sincronização, foi necessário deslocar todos os valores de tempo em **11 segundos**, de forma que o ponto inicial correspondesse corretamente ao instante $t = 0$ do carregamento.
+&emsp; Ao analisar este gráfico, observou-se que a curva experimental não iniciava em $V_C(0) = 0V$, como previsto pela teoria, indicando que o cronômetro foi iniciado após o capacitor já ter começado a carregar. Para contornar este problema de sincronização, foi necessário deslocar todos os valores de tempo em **11 segundos**, de forma que o ponto inicial correspondesse corretamente ao instante $t = 0$ do carregamento.
 
-A correção foi aplicada somando 11 segundos de cada valor temporal registrado: $t_{corrigido} = t_{medido} + 11s$. O gráfico corrigido está apresentado a seguir:
+&emsp; A correção foi aplicada somando 11 segundos de cada valor temporal registrado: $t_{corrigido} = t_{medido} + 11s$. O gráfico corrigido está apresentado a seguir:
 
 <div align="center">
 <sub>Figura 15 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
@@ -1246,32 +1369,32 @@ A correção foi aplicada somando 11 segundos de cada valor temporal registrado:
 <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-Com esta correção, a curva experimental passou a apresentar comportamento consistente com o modelo teórico, iniciando próximo de zero e seguindo a trajetória exponencial esperada para o carregamento de um capacitor em circuito RC.
+&emsp; Com esta correção, a curva experimental passou a apresentar comportamento consistente com o modelo teórico, iniciando próximo de zero e seguindo a trajetória exponencial esperada para o carregamento de um capacitor em circuito RC.
 
 #### 6.1.7. Interpretação e Conclusão dos Resultados
 
 ##### Comparação entre Dados Experimentais e Curva Teórica
 
-Após a correção temporal de 11 segundos, o gráfico experimental apresenta excelente compatibilidade com a curva teórica prevista pela equação 
+&emsp; Após a correção temporal de 11 segundos, o gráfico experimental apresenta excelente compatibilidade com a curva teórica prevista pela equação 
 
 $$ V_C(t) = V_f \cdot (1 - e^{-t/\tau}) $$
 
-A tensão da fonte experimental foi de aproximadamente $V_f = 4.804V$ (valor máximo atingido em $t_{corrigido} = 300s$), ligeiramente inferior aos $5V$ teóricos. Esta pequena discrepância de aproximadamente 4% pode ser atribuída a:
+&emsp; A tensão da fonte experimental foi de aproximadamente $V_f = 4.804V$ (valor máximo atingido em $t_{corrigido} = 300s$), ligeiramente inferior aos $5V$ teóricos. Esta pequena discrepância de aproximadamente 4% pode ser atribuída a:
 
 - **Resistência interna da fonte de alimentação**: A fonte pode apresentar uma pequena queda de tensão sob carga.
 - **Perdas ôhmicas no circuito**: Fios e conexões introduzem resistências parasitas que reduzem a tensão efetiva.
 - **Tolerância dos componentes**: Os componentes utilizados possuem tolerâncias que afetam os valores nominais.
 
-Os pontos experimentais apresentam um comportamento exponencial coerente, com crescimento rápido inicial (característica de circuitos RC) e estabilização gradual conforme se aproxima de $5\tau$. A curva não apresenta oscilações significativas ou desvios abruptos, indicando estabilidade nas medições e ausência de ruídos elétricos relevantes.
+&emsp; Os pontos experimentais apresentam um comportamento exponencial coerente, com crescimento rápido inicial (característica de circuitos RC) e estabilização gradual conforme se aproxima de $5\tau$. A curva não apresenta oscilações significativas ou desvios abruptos, indicando estabilidade nas medições e ausência de ruídos elétricos relevantes.
 
 ##### Análise da Constante de Tempo Experimental
 
-Para determinar a constante de tempo experimental ($\tau_{exp}$), analisamos o momento em que a tensão atinge 63,2% do valor final. Com base nos dados corrigidos:
+&emsp; Para determinar a constante de tempo experimental ($\tau_{exp}$), analisamos o momento em que a tensão atinge 63,2% do valor final. Com base nos dados corrigidos:
 
 - **Tensão final experimental**: $V_f = 4.804V$
 - **63,2% de $V_f$**: $0.632 \times 4.804V = 3.036V$
 
-Observando a tabela de dados corrigidos, a tensão de $3.036V$ é atingida entre $t = 45s$ ($V_C = 3.030V$) e $t = 48s$ ($V_C = 3.099V$). Para encontrar o momento exato em que a tensão atinge $3.036V$, utilizamos **interpolação linear** entre esses dois pontos:
+&emsp; Observando a tabela de dados corrigidos, a tensão de $3.036V$ é atingida entre $t = 45s$ ($V_C = 3.030V$) e $t = 48s$ ($V_C = 3.099V$). Para encontrar o momento exato em que a tensão atinge $3.036V$, utilizamos **interpolação linear** entre esses dois pontos:
 
 $$t_{63.2\%} \approx t_1 + \frac{(V_{alvo} - V_1)}{(V_2 - V_1)} \times (t_2 - t_1)$$
 
@@ -1288,21 +1411,21 @@ $$t_{63.2\%} \approx 45s + \frac{0.006}{0.069} \times 3s$$
 
 $$t_{63.2\%} \approx 45s + 0.087 \times 3s \approx 45s + 0.26s \approx 45.26s$$
 
-Esta interpolação assume que a variação da tensão entre os dois pontos de medição é aproximadamente linear, o que é razoável para intervalos pequenos de tempo.
+&emsp; Esta interpolação assume que a variação da tensão entre os dois pontos de medição é aproximadamente linear, o que é razoável para intervalos pequenos de tempo.
 
-Portanto, a **constante de tempo experimental é $\tau_{exp} \approx 45.3s$**.
+&emsp; Portanto, a **constante de tempo experimental é $\tau_{exp} \approx 45.3s$**.
 
-Comparando com o valor teórico projetado:
+&emsp; Comparando com o valor teórico projetado:
 
 - **Constante de tempo teórica**: $\tau_{teórico} = 60.13s$
 - **Constante de tempo experimental**: $\tau_{exp} \approx 45.3s$
 - **Erro relativo**: $\frac{|60.13 - 45.3|}{60.13} \times 100\% \approx 24.7\%$
 
-Esta discrepância de aproximadamente 25% pode ser explicada por diversos fatores experimentais que serão discutidos a seguir.
+&emsp; Esta discrepância de aproximadamente 25% pode ser explicada por diversos fatores experimentais que serão discutidos a seguir.
 
 ##### Fontes Potenciais de Erro
 
-Diversas fontes de erro podem ter contribuído para as diferenças observadas entre os resultados teóricos e experimentais:
+&emsp; Diversas fontes de erro podem ter contribuído para as diferenças observadas entre os resultados teóricos e experimentais:
 
 **1. Tolerância dos Componentes**
 
@@ -1332,7 +1455,7 @@ Diversas fontes de erro podem ter contribuído para as diferenças observadas en
 
 ##### Conclusões Finais
 
-O experimento demonstrou com sucesso o comportamento exponencial característico de um circuito RC durante o processo de carregamento do capacitor. Apesar da discrepância de aproximadamente 25% entre a constante de tempo teórica ($\tau = 60.13s$) e a experimental ($\tau \approx 45.3s$), os resultados são qualitativamente consistentes com o modelo teórico.
+&emsp; O experimento demonstrou com sucesso o comportamento exponencial característico de um circuito RC durante o processo de carregamento do capacitor. Apesar da discrepância de aproximadamente 25% entre a constante de tempo teórica ($\tau = 60.13s$) e a experimental ($\tau \approx 45.3s$), os resultados são qualitativamente consistentes com o modelo teórico.
 
 As principais conclusões são:
 
@@ -1347,7 +1470,7 @@ As principais conclusões são:
 
 4. **Aplicações Práticas**: Apesar das diferenças, o circuito RC demonstra sua utilidade em temporizadores e filtros, sendo a constante de tempo experimental ainda previsível dentro de uma margem de erro aceitável para muitas aplicações não-críticas.
 
-Para experimentos futuros, recomenda-se:
+&emsp; Para experimentos futuros, recomenda-se:
 - Medir individualmente os valores de $R$ e $C$ com instrumentos de precisão antes da montagem
 - Utilizar componentes com menor tolerância
 - Aumentar a taxa de amostragem próximo ao tempo esperado de $\tau$
