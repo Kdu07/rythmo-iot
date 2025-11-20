@@ -1236,7 +1236,7 @@ C
 (t) no nó R–C. O pino de cinco volts do Arduino alimenta o trilho positivo da protoboard e o pino GND do Arduino alimenta o trilho negativo, garantindo referência comum.
 
 <div align="center">
-<sub>Figura X - Circuito RC arduíno</sub>
+<sub>Figura 14 - Circuito RC arduíno</sub>
 
 <img src="../assets/circuito-rc-1.jpeg">
 
@@ -1244,7 +1244,7 @@ C
 </div>
 
 <div align="center">
-<sub>Figura X - Circuito RC arduíno 2</sub>
+<sub>Figura 15 - Circuito RC arduíno 2</sub>
 
 <img src="../assets/circuito-rc-2.jpeg">
 
@@ -1252,14 +1252,14 @@ C
 </div>
 
 <div align="center">
-<sub>Figura X - Circuito RC arduíno 3</sub>
+<sub>Figura 16 - Circuito RC arduíno 3</sub>
 
 <img src="../assets/circuito-rc-3.jpeg">
 
 <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-&emsp; A Figura 1 mostra a visão geral da ligação entre Arduino e protoboard, com a alimentação, o terra e o cabeamento até a área do circuito. A Figura 2 destaca o nó R–C onde se encontram o terminal positivo do capacitor, os terminais dos dois resistores e o fio do A0. A Figura 3 mostra os pinos analógicos do Arduino e confirma a conexão do A0. Verifique continuidade dos trilhos da protoboard ao longo de toda a extensão e confirme a polaridade do capacitor pela perna menor e pela faixa de marcação negativa voltadas ao GND.
+&emsp; A Figura 14 mostra a visão geral da ligação entre Arduino e protoboard, com a alimentação, o terra e o cabeamento até a área do circuito. A Figura 15 destaca o nó R–C onde se encontram o terminal positivo do capacitor, os terminais dos dois resistores e o fio do A0. A Figura 16 mostra os pinos analógicos do Arduino e confirma a conexão do A0. Verifique continuidade dos trilhos da protoboard ao longo de toda a extensão e confirme a polaridade do capacitor pela perna menor e pela faixa de marcação negativa voltadas ao GND.
 
 &emsp; Antes da coleta, faça a checagem funcional simples. Toque o A0 no GND e observe leitura próxima de zero. Toque o A0 no cinco volts e observe leitura próxima do máximo do conversor analógico. Isso confirma a referência, o canal de medição e a polaridade correta do capacitor.
 
@@ -1338,7 +1338,7 @@ C
 &emsp; O gráfico experimental é um diagrama de dispersão dos dados coletados, com o eixo horizontal representando o tempo em segundos e o eixo vertical a tensão no capacitor em volts. O título deve descrever claramente o conteúdo, por exemplo, Carga do capacitor em circuito RC — dados experimentais. Recomenda-se usar marcadores visíveis, eixo vertical de zero a cinco volts, grade leve para leitura e legenda opcional identificando a série como Dados experimentais.
 
 <div align="center">
-<sub>Figura X - Carga do capacitor em circuito RC — dados experimentais</sub>
+<sub>Figura 17 - Carga do capacitor em circuito RC — dados experimentais</sub>
 
 <img src="../assets/grafico-rc-cap.png">
 
@@ -1350,7 +1350,7 @@ C
 &emsp; Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
 
 <div align="center">
-<sub>Figura 14 - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
+<sub>Figura 18 - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
 
 <img src="grafico.png">
 
@@ -1362,7 +1362,7 @@ C
 &emsp; A correção foi aplicada somando 11 segundos de cada valor temporal registrado: $t_{corrigido} = t_{medido} + 11s$. O gráfico corrigido está apresentado a seguir:
 
 <div align="center">
-<sub>Figura 15 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
+<sub>Figura 19 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
 
 <img src="graficoCorrigido.png">
 
