@@ -103,7 +103,7 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 </br>
 
 <div align="center">
-Figura X - RM-ODP
+Figura 1 - RM-ODP
 <img src="../assets/rm-odp.png"/>
 <sup> Fonte: Material feito pelos autores (2025)</sup>
 </div>
@@ -167,7 +167,7 @@ Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para 
 &nbsp;&nbsp;&nbsp;&nbsp;A seguir, a análise das 5 forças de Porter no contexto da Renault Brasil:
 
 <div align="center">
-<sup>Figura 1 - 5 Forças de Porter </sup>
+<sup>Figura 2 - 5 Forças de Porter </sup>
    
 <img src="../assets/5-forcas.png"> 
 
@@ -187,7 +187,7 @@ Dessa forma, em um mercado altamente disputado e em rápida transformação, a R
 ### 3.1.2.1  Visualização da análise SWOT:
 
 <div align="center">
-Figura 2 - Análise SWOT
+Figura 3 - Análise SWOT
 <img src="../document/analiseSWOT.png"/>
 <sup> Fonte: Material alterado pelos autores com base no tamplete disponível em: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/</sup>
 </div>
@@ -390,7 +390,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 &emsp; Essa abordagem inaugura um novo paradigma na engenharia automotiva: unir tecnologia e engenharia para criar veículos mais silenciosos, confortáveis e sofisticados — refletindo não apenas eficiência técnica, mas também o cuidado com a experiência do motorista e o legado da marca Renault.
 
 <div align="center">
-<sup>Figura 3- Canvas Proposta de Valor </sup>
+<sup>Figura 4 - Canvas Proposta de Valor </sup>
 
 <img src="../assets/canvas-proposta-de-valor.png">
 
@@ -405,7 +405,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 &emsp; No contexto da Renault, a matriz de riscos permite identificar ameaças e falhas que possam comprometer as operações de telemetria e análise de dados veiculares em pista, além de, por meio de seu eixo de oportunidades, explorar caminhos voltados à inovação e à segurança dos dados na infraestrutura IoT em desenvolvimento pelo grupo. Diante da crescente demanda por otimização dos processos de engenharia automotiva e das rápidas transformações tecnológicas no setor de IoT, essa ferramenta assegura resiliência e agilidade, fortalecendo a capacidade da Renault em desenvolver veículos mais eficientes e seguros, especialmente na identificação e mitigação de problemas de squeak and rattle.
 
 <div align="center">
-<sup>Figura 4 - Matriz de Riscos e Oportunidades </sup>
+<sup>Figura 5 - Matriz de Riscos e Oportunidades </sup>
    
 <img src="../assets/matriz-de-riscos.png"> 
 
@@ -586,7 +586,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 <div align="center">
 
-<sub> Figura 5 - Storyboard Maria Oliveira </sub>
+<sub> Figura 6 - Storyboard Maria Oliveira </sub>
 
 <img src="../assets/storyboard-maria.png">
 
@@ -609,7 +609,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 <div align="center">
 
-<sub> Figura 6 - Storyboard João Silva </sub>
+<sub> Figura 7 - Storyboard João Silva </sub>
 
 <img src="../assets/storyboard-joao.png">
 
@@ -640,7 +640,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 **Etapas da Jornada de João Silva (Antes da Solução):**
 
 <div align="center">
-<sub> Figura 7- Jornada de João Silva (Antes da Solução) </sub>
+<sub> Figura 8 - Jornada de João Silva (Antes da Solução) </sub>
 <img src="../assets/jornada-joao-silva-current.png">
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 </div>
@@ -653,7 +653,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 **Etapas da Jornada de João Silva (Depois da Solução):**
 
 <div align="center">
-<sub> Figura 8 - Jornada de João Silva (Depois da Solução) </sub>
+<sub> Figura 9 - Jornada de João Silva (Depois da Solução) </sub>
 <img src="../assets/jornada-joao-silva-future.png">
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 </div>
@@ -666,7 +666,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 **Jornada de usuário da Maria Oliveira (Depois da Solução):**
 
 <div align="center">
-<sub> Figura 9 - Jornada de Maria Oliveira (Depois da Solução) </sub>
+<sub> Figura 10 - Jornada de Maria Oliveira (Depois da Solução) </sub>
 <img src="../assets/jornada-maria-oliveira-future.png">
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 </div>
@@ -744,7 +744,7 @@ Como validar. Solicitar a usuários novos que localizem uma sessão específica 
 &nbsp;&nbsp;&nbsp;&nbsp;A arquitetura da solução representa o blueprint estrutural que delineia a integração entre componentes de hardware, software e comunicação em um sistema IoT, garantindo que os requisitos funcionais e não funcionais sejam atendidos de forma eficiente e escalável. Nesse contexto, ela define como os sensores, microcontroladores, protocolos de transmissão e plataformas de armazenamento interagem para coletar, processar e visualizar dados de aceleração e força, suportando análises precisas de Squeak and Rattle na Renault, (BASS; CLEMENTS; KAZMAN, 2012).
 
 <div align="center">
-<sub>Figura 10 - Diagrama de Arquitetura da Solução</sub><br>
+<sub>Figura 11 - Diagrama de Arquitetura da Solução</sub><br>
 <img src="../assets/arquitetura.png">
 <sub>Fonte: Material produzido pelos autores (2025)</sub>
 </div>
@@ -1029,7 +1029,7 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 <div align="center">
 
-   <sub>Figura 1: Imagem do protótipo</sub>
+   <sub>Figura 12 - Imagem do protótipo</sub>
 
    <img src="../assets/ImagemDoPrototipo.png"> 
 
@@ -1042,7 +1042,7 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 <div align="center">
 
-   <sub>Figura 2: Imagem do Ubidots</sub>
+   <sub>Figura 13 - Imagem do Ubidots</sub>
 
    <img src="../assets/ImagemUbidots.png"> 
 
@@ -1227,7 +1227,7 @@ O valor de $\tau$ com o resistor arredondado é aproximadamente $60s$, o que é 
 Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
 
 <div align="center">
-<sub>Figura X - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
+<sub>Figura 14 - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
 
 <img src="grafico.png">
 
@@ -1239,7 +1239,7 @@ Ao analisar este gráfico, observou-se que a curva experimental não iniciava em
 A correção foi aplicada somando 11 segundos de cada valor temporal registrado: $t_{corrigido} = t_{medido} + 11s$. O gráfico corrigido está apresentado a seguir:
 
 <div align="center">
-<sub>Figura X+1 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
+<sub>Figura 15 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
 
 <img src="graficoCorrigido.png">
 
