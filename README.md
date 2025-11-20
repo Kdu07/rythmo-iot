@@ -6,9 +6,9 @@
 
 <br>
 
-# Nome do projeto
+# Rythmo IoT
 
-## Nome do grupo
+## Rythmo
 
 ## 👨‍🎓 Integrantes:
 
