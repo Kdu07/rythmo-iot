@@ -1396,7 +1396,8 @@ $$ V_C(t) = V_f \cdot (1 - e^{-t/\tau}) $$
 
 &emsp; Observando a tabela de dados corrigidos, a tensão de $3.036V$ é atingida entre $t = 45s$ ($V_C = 3.030V$) e $t = 48s$ ($V_C = 3.099V$). Para encontrar o momento exato em que a tensão atinge $3.036V$, utilizamos **interpolação linear** entre esses dois pontos:
 
-$$t_{63.2\%} \approx t_1 + \frac{(V_{alvo} - V_1)}{(V_2 - V_1)} \times (t_2 - t_1)$$
+$$ t_{63.2\%} \approx t_1 + \frac{(V_{alvo} - V_1)}{(V_2 - V_1)} \times (t_2 - t_1) $$
+
 
 Onde:
 - $t_1 = 45s$ e $V_1 = 3.030V$ (ponto antes do alvo)
@@ -1405,11 +1406,12 @@ Onde:
 
 Substituindo os valores:
 
-$$t_{63.2\%} \approx 45s + \frac{(3.036 - 3.030)}{(3.099 - 3.030)} \times (48 - 45)$$
+$$ t_{63.2\%} \approx 45s + \frac{(3.036 - 3.030)}{(3.099 - 3.030)} \times (48 - 45) $$
 
-$$t_{63.2\%} \approx 45s + \frac{0.006}{0.069} \times 3s$$
 
-$$t_{63.2\%} \approx 45s + 0.087 \times 3s \approx 45s + 0.26s \approx 45.26s$$
+$$ t_{63.2\%} \approx 45s + \frac{0.006}{0.069} \times 3s $$
+
+$$ t_{63.2\%} \approx 45s + 0.087 \times 3s \approx 45s + 0.26s \approx 45.26s $$
 
 &emsp; Esta interpolação assume que a variação da tensão entre os dois pontos de medição é aproximadamente linear, o que é razoável para intervalos pequenos de tempo.
 
