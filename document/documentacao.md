@@ -1151,6 +1151,80 @@ C
 
 &emsp; Antes da coleta, faça a checagem funcional simples. Toque o A0 no GND e observe leitura próxima de zero. Toque o A0 no cinco volts e observe leitura próxima do máximo do conversor analógico. Isso confirma a referência, o canal de medição e a polaridade correta do capacitor.
 
+#### 6.1.4. Coleta de Dados Experimentais
+
+&emsp; A coleta foi automatizada por sketch no Arduino, com amostragem total de cinquenta pontos ao longo de cinco minutos e exportação em CSV no formato t_s e Vc_V. O plano de amostragem prioriza o início da carga, conforme recomendado: vinte pontos igualmente espaçados no primeiro minuto, vinte pontos igualmente espaçados de um a três minutos, e dez pontos igualmente espaçados de três a cinco minutos. O pino A0 mede diretamente a tensão no capacitor e cada amostra é registrada com carimbo de tempo relativo ao início da sessão.
+
+&emsp; Procedimento operacional adotado. Descarregar totalmente o capacitor antes de iniciar. Ligar a alimentação, iniciar o sketch e confirmar a primeira linha do CSV com o cabeçalho t_s, Vc_V. Manter o circuito estável durante todo o intervalo de cinco minutos e salvar o arquivo gerado ao final da sessão.
+
+<div align="center" style="text-align:center;">
+  <table style="margin-left:auto; margin-right:auto;">
+    <caption><strong>Coleta de Dados Experimentais — Circuito RC</strong></caption>
+    <thead>
+      <tr>
+        <th style="text-align:right;">Tempo [s]</th>
+        <th style="text-align:right;">Vc [V]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="text-align:right;">3.000</td><td style="text-align:right;">1.354</td></tr>
+      <tr><td style="text-align:right;">6.000</td><td style="text-align:right;">1.520</td></tr>
+      <tr><td style="text-align:right;">9.000</td><td style="text-align:right;">1.676</td></tr>
+      <tr><td style="text-align:right;">12.000</td><td style="text-align:right;">1.823</td></tr>
+      <tr><td style="text-align:right;">15.000</td><td style="text-align:right;">1.965</td></tr>
+      <tr><td style="text-align:right;">18.000</td><td style="text-align:right;">2.097</td></tr>
+      <tr><td style="text-align:right;">21.000</td><td style="text-align:right;">2.229</td></tr>
+      <tr><td style="text-align:right;">24.000</td><td style="text-align:right;">2.346</td></tr>
+      <tr><td style="text-align:right;">27.000</td><td style="text-align:right;">2.458</td></tr>
+      <tr><td style="text-align:right;">30.000</td><td style="text-align:right;">2.571</td></tr>
+      <tr><td style="text-align:right;">33.000</td><td style="text-align:right;">2.674</td></tr>
+      <tr><td style="text-align:right;">36.000</td><td style="text-align:right;">2.771</td></tr>
+      <tr><td style="text-align:right;">39.000</td><td style="text-align:right;">2.864</td></tr>
+      <tr><td style="text-align:right;">42.000</td><td style="text-align:right;">2.952</td></tr>
+      <tr><td style="text-align:right;">45.000</td><td style="text-align:right;">3.030</td></tr>
+      <tr><td style="text-align:right;">48.000</td><td style="text-align:right;">3.099</td></tr>
+      <tr><td style="text-align:right;">51.000</td><td style="text-align:right;">3.167</td></tr>
+      <tr><td style="text-align:right;">54.000</td><td style="text-align:right;">3.231</td></tr>
+      <tr><td style="text-align:right;">57.000</td><td style="text-align:right;">3.284</td></tr>
+      <tr><td style="text-align:right;">60.000</td><td style="text-align:right;">3.338</td></tr>
+      <tr><td style="text-align:right;">66.000</td><td style="text-align:right;">3.436</td></tr>
+      <tr><td style="text-align:right;">72.000</td><td style="text-align:right;">3.534</td></tr>
+      <tr><td style="text-align:right;">78.000</td><td style="text-align:right;">3.617</td></tr>
+      <tr><td style="text-align:right;">84.000</td><td style="text-align:right;">3.700</td></tr>
+      <tr><td style="text-align:right;">90.000</td><td style="text-align:right;">3.778</td></tr>
+      <tr><td style="text-align:right;">96.000</td><td style="text-align:right;">3.851</td></tr>
+      <tr><td style="text-align:right;">102.000</td><td style="text-align:right;">3.915</td></tr>
+      <tr><td style="text-align:right;">108.000</td><td style="text-align:right;">3.978</td></tr>
+      <tr><td style="text-align:right;">114.000</td><td style="text-align:right;">4.042</td></tr>
+      <tr><td style="text-align:right;">120.000</td><td style="text-align:right;">4.096</td></tr>
+      <tr><td style="text-align:right;">126.000</td><td style="text-align:right;">4.150</td></tr>
+      <tr><td style="text-align:right;">132.000</td><td style="text-align:right;">4.194</td></tr>
+      <tr><td style="text-align:right;">138.000</td><td style="text-align:right;">4.238</td></tr>
+      <tr><td style="text-align:right;">144.000</td><td style="text-align:right;">4.282</td></tr>
+      <tr><td style="text-align:right;">150.000</td><td style="text-align:right;">4.321</td></tr>
+      <tr><td style="text-align:right;">156.000</td><td style="text-align:right;">4.355</td></tr>
+      <tr><td style="text-align:right;">162.000</td><td style="text-align:right;">4.389</td></tr>
+      <tr><td style="text-align:right;">168.000</td><td style="text-align:right;">4.428</td></tr>
+      <tr><td style="text-align:right;">174.000</td><td style="text-align:right;">4.457</td></tr>
+      <tr><td style="text-align:right;">180.000</td><td style="text-align:right;">4.482</td></tr>
+      <tr><td style="text-align:right;">192.000</td><td style="text-align:right;">4.536</td></tr>
+      <tr><td style="text-align:right;">204.000</td><td style="text-align:right;">4.585</td></tr>
+      <tr><td style="text-align:right;">216.000</td><td style="text-align:right;">4.624</td></tr>
+      <tr><td style="text-align:right;">228.000</td><td style="text-align:right;">4.658</td></tr>
+      <tr><td style="text-align:right;">240.000</td><td style="text-align:right;">4.692</td></tr>
+      <tr><td style="text-align:right;">252.000</td><td style="text-align:right;">4.721</td></tr>
+      <tr><td style="text-align:right;">264.000</td><td style="text-align:right;">4.746</td></tr>
+      <tr><td style="text-align:right;">276.000</td><td style="text-align:right;">4.770</td></tr>
+      <tr><td style="text-align:right;">288.000</td><td style="text-align:right;">4.790</td></tr>
+      <tr><td style="text-align:right;">300.000</td><td style="text-align:right;">4.804</td></tr>
+    </tbody>
+  </table>
+</div>
+
+&emsp; 
+
+&emsp; 
+
 #### 6.1.6. Gráfico experimental
 
 Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
