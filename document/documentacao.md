@@ -1120,7 +1120,6 @@ O valor de $\tau$ com o resistor arredondado é aproximadamente $60s$, o que é 
 V
 C
 	​
-
 (t) no nó R–C. O pino de cinco volts do Arduino alimenta o trilho positivo da protoboard e o pino GND do Arduino alimenta o trilho negativo, garantindo referência comum.
 
 <div align="center">
@@ -1221,11 +1220,19 @@ C
   </table>
 </div>
 
-&emsp; 
+#### 6.1.5. Gráfico Experimental
 
-&emsp; 
+&emsp; O gráfico experimental é um diagrama de dispersão dos dados coletados, com o eixo horizontal representando o tempo em segundos e o eixo vertical a tensão no capacitor em volts. O título deve descrever claramente o conteúdo, por exemplo, Carga do capacitor em circuito RC — dados experimentais. Recomenda-se usar marcadores visíveis, eixo vertical de zero a cinco volts, grade leve para leitura e legenda opcional identificando a série como Dados experimentais.
 
-#### 6.1.6. Gráfico experimental
+<div align="center">
+<sub>Figura X - Carga do capacitor em circuito RC — dados experimentais</sub>
+
+<img src="../assets/grafico-rc-cap.png">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+#### 6.1.6. Análise Comparativa
 
 Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
 
