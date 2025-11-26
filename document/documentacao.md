@@ -2,9 +2,21 @@
 
 **_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final_**
 
-## Nome do Grupo
+## Rythmo
 
 #### Nomes dos integrantes do grupo
+
+- <a href="https://www.linkedin.com/in/antoniodicillo/">Antonio Di Cillo</a>
+- <a href="https://github.com/CaduQuaglia">Carlos Quaglia
+  </a>
+- <a href="https://www.linkedin.com/in/caue-taddeo-956194362/">Caue Taddeo
+  </a>
+- <a href="https://www.linkedin.com/in/gabriel-bartmanovicz/">Gabriel Bartmanovicz
+  </a>
+- <a href="https://www.linkedin.com/in/rafael-santana-rodrigues/">Rafael Santana Rodrigues
+  </a>
+- <a href="https://github.com/thuliobacco/">Thulio Bacco
+  Pinto</a>
 
 <img src="../assets/inteli.png">
 
@@ -87,7 +99,32 @@ Estudar sistematicamente os tipos de pistas e coletar dados experimentais que po
 
 # <a name="c2"></a>2. Metodologia (sprint 3)
 
-_Descreva as etapas da metodologia RM-ODP que foram utilizadas para o desenvolvimento, citando o referencial teórico. Você deve apenas enunciar os métodos, sem dizer ainda como ele foi aplicado e quais resultados obtidos._
+&nbsp;&nbsp;&nbsp;&nbsp;O RM-ODP (Reference Model of Open Distributed Processing) é um modelo de referência criado no início dos anos 1990 em uma iniciativa conjunta da ISO/IEC e da ITU-T, com forte contribuição de pesquisadores e profissionais de engenharia de software e telecomunicações (ISO/IEC 10746-1, 1998). Seu objetivo é fornecer uma base conceitual sólida para projetar e padronizar sistemas distribuídos complexos, promovendo interoperabilidade e clareza arquitetural por meio de cinco visões complementares. Mais do que um “manual técnico”, o RM-ODP é um jeito organizado de pensar um sistema a partir de diferentes perspectivas que se encaixam como peças de um quebra-cabeça.
+</br>
+
+<div align="center">
+Figura 1 - RM-ODP
+<img src="../assets/rm-odp.png"/>
+<sup> Fonte: Material feito pelos autores (2025)</sup>
+</div>
+
+</br>
+
+- Visão Empresarial: Foca no “porquê” e no “para quê”. Define objetivos de negócio, escopo, políticas e responsabilidades. É onde se alinham missão, regras e valor entregue, garantindo que a tecnologia sirva à estratégia.
+
+
+- Visão de Informação: Descreve o “o quê”. Modela os conceitos, seus significados, relacionamentos e restrições de integridade. Aqui se busca consistência semântica e compartilhamento confiável de informações ao longo do sistema.
+
+
+- Visão Computacional: Separa o sistema em componentes de software e suas interfaces, deixando claro “quem conversa com quem” e por quais contratos. Favorece modularidade, reuso e independência entre partes.
+
+
+- Visão de Engenharia: Trata do “como fazer acontecer” em um ambiente distribuído. Define mecanismos de comunicação, middleware, canais, transparências (como de localização e falhas) e infraestrutura para que os componentes cooperem de forma eficiente.
+
+
+- Visão de Tecnologia: Escolhe as “ferramentas e peças” concretas. Especifica plataformas, frameworks, protocolos, bancos de dados e demais tecnologias que materializam as decisões das visões anteriores, respeitando padrões e viabilizando a implementação.
+
+
 
 # <a name="c3"></a>3. Desenvolvimento e Resultados 
 
@@ -130,7 +167,7 @@ Novos modelos de acesso: assinatura, locação de longo prazo e vendas B2B para 
 &nbsp;&nbsp;&nbsp;&nbsp;A seguir, a análise das 5 forças de Porter no contexto da Renault Brasil:
 
 <div align="center">
-<sup>Figura 1 - 5 Forças de Porter </sup>
+<sup>Figura 2 - 5 Forças de Porter </sup>
    
 <img src="../assets/5-forcas.png"> 
 
@@ -150,7 +187,7 @@ Dessa forma, em um mercado altamente disputado e em rápida transformação, a R
 ### 3.1.2.1  Visualização da análise SWOT:
 
 <div align="center">
-Figura 2 - Análise SWOT
+Figura 3 - Análise SWOT
 <img src="../document/analiseSWOT.png"/>
 <sup> Fonte: Material alterado pelos autores com base no tamplete disponível em: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/</sup>
 </div>
@@ -353,7 +390,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 &emsp; Essa abordagem inaugura um novo paradigma na engenharia automotiva: unir tecnologia e engenharia para criar veículos mais silenciosos, confortáveis e sofisticados — refletindo não apenas eficiência técnica, mas também o cuidado com a experiência do motorista e o legado da marca Renault.
 
 <div align="center">
-<sup>Figura 3- Canvas Proposta de Valor </sup>
+<sup>Figura 4 - Canvas Proposta de Valor </sup>
 
 <img src="../assets/canvas-proposta-de-valor.png">
 
@@ -368,7 +405,7 @@ Tal critério será avaliado com base nos seguintes indicadores-chave de desempe
 &emsp; No contexto da Renault, a matriz de riscos permite identificar ameaças e falhas que possam comprometer as operações de telemetria e análise de dados veiculares em pista, além de, por meio de seu eixo de oportunidades, explorar caminhos voltados à inovação e à segurança dos dados na infraestrutura IoT em desenvolvimento pelo grupo. Diante da crescente demanda por otimização dos processos de engenharia automotiva e das rápidas transformações tecnológicas no setor de IoT, essa ferramenta assegura resiliência e agilidade, fortalecendo a capacidade da Renault em desenvolver veículos mais eficientes e seguros, especialmente na identificação e mitigação de problemas de squeak and rattle.
 
 <div align="center">
-<sup>Figura 4 - Matriz de Riscos e Oportunidades </sup>
+<sup>Figura 5 - Matriz de Riscos e Oportunidades </sup>
    
 <img src="../assets/matriz-de-riscos.png"> 
 
@@ -549,7 +586,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 <div align="center">
 
-<sub> Figura 5 - Storyboard Maria Oliveira </sub>
+<sub> Figura 6 - Storyboard Maria Oliveira </sub>
 
 <img src="../assets/storyboard-maria.png">
 
@@ -572,7 +609,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 <div align="center">
 
-<sub> Figura 6 - Storyboard João Silva </sub>
+<sub> Figura 7 - Storyboard João Silva </sub>
 
 <img src="../assets/storyboard-joao.png">
 
@@ -603,7 +640,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 **Etapas da Jornada de João Silva (Antes da Solução):**
 
 <div align="center">
-<sub> Figura 7- Jornada de João Silva (Antes da Solução) </sub>
+<sub> Figura 8 - Jornada de João Silva (Antes da Solução) </sub>
 <img src="../assets/jornada-joao-silva-current.png">
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 </div>
@@ -616,7 +653,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 **Etapas da Jornada de João Silva (Depois da Solução):**
 
 <div align="center">
-<sub> Figura 8 - Jornada de João Silva (Depois da Solução) </sub>
+<sub> Figura 9 - Jornada de João Silva (Depois da Solução) </sub>
 <img src="../assets/jornada-joao-silva-future.png">
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 </div>
@@ -629,7 +666,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 **Jornada de usuário da Maria Oliveira (Depois da Solução):**
 
 <div align="center">
-<sub> Figura 9 - Jornada de Maria Oliveira (Depois da Solução) </sub>
+<sub> Figura 10 - Jornada de Maria Oliveira (Depois da Solução) </sub>
 <img src="../assets/jornada-maria-oliveira-future.png">
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 </div>
@@ -672,7 +709,7 @@ Conforme Sommerville e Sawyer, requisitos não funcionais definem como o sistema
 | **RNF#** | **Descrição** | **Aspecto de qualidade** | 
 |----------|----------|----------|
 |RNF01|Os dados coletados devem ser enviados ao armazenamento central mantendo cópia local. Se a rede estiver indisponível, os dados ficam guardados e são enviados automaticamente quando a conexão voltar. | Confiabilidade |
-|RNF02|O tempo de envio de cada pacote do sensor para o armazenamento central deve ser de até sessenta segundos durante os testes. | Desempenho |
+|RNF02|O tempo de envio de cada pacote do sensor deve respeitar as limitações da plataforma ao mesmo tempo que forneça a menor latência possível | Desempenho |
 |RNF03|O dispositivo deve possuir capacidade de armazenamento local para pelo menos uma hora de coleta contínua de sinais. | Espaço |
 |RNF04|O sistema deve gerar um registro de sessão com data e hora de início e de término, volume de dados gravados e estado do envio, disponível para consulta pelos times técnicos.| Operacional |
 |RNF05|Os dados exportados devem ser fáceis de localizar e entender por novos usuários. Adotar estrutura de pastas simples por data e sessão, nomes de arquivo padronizados| Usabilidade |
@@ -682,7 +719,7 @@ Conforme Sommerville e Sawyer, requisitos não funcionais definem como o sistema
 Este requisito garante continuidade de coleta e proteção do histórico, evitando perda de informação durante testes e coletas em campo. Suporta comparações entre campanhas e dá previsibilidade ao fluxo de trabalho técnico.
 Como validar. Simular ausência de rede durante a coleta, confirmar a gravação local dos arquivos e verificar o envio automático após o retorno da conexão, conferindo contagem de registros e integridade no destino.
 
-#### **RNF02 - O tempo de envio de cada pacote do sensor para o armazenamento central deve ser de até sessenta segundos durante os testes.**
+#### **RNF02 - O tempo de envio de cada pacote do sensor deve respeitar as limitações da plataforma ao mesmo tempo que forneça a menor latência possível**
 Define um limite claro para o tempo de entrega dos dados, permitindo uso rápido pelas equipes e respostas mais ágeis em rotinas de engenharia.
 Como validar. Marcar horários no ponto de captura e no recebimento no repositório, executar sessões controladas e confirmar que os tempos medidos permanecem dentro de sessenta segundos.
 
@@ -704,19 +741,42 @@ Como validar. Solicitar a usuários novos que localizem uma sessão específica 
 
 ### 3.3.3. Arquitetura da Solução (sprint 3)
 
-_Vídeo de explicação sobre a arquitetura da solução: (coloque aqui o link do vídeo)_
+&nbsp;&nbsp;&nbsp;&nbsp;A arquitetura da solução representa o blueprint estrutural que delineia a integração entre componentes de hardware, software e comunicação em um sistema IoT, garantindo que os requisitos funcionais e não funcionais sejam atendidos de forma eficiente e escalável. Nesse contexto, ela define como os sensores, microcontroladores, protocolos de transmissão e plataformas de armazenamento interagem para coletar, processar e visualizar dados de aceleração e força, suportando análises precisas de Squeak and Rattle na Renault, (BASS; CLEMENTS; KAZMAN, 2012).
 
-_Descreva a arquitetura técnica da solução de forma detalhada (visão de arquitetura).
+<div align="center">
+<sub>Figura 11 - Diagrama de Arquitetura da Solução</sub><br>
+<img src="../assets/arquitetura.png">
+<sub>Fonte: Material produzido pelos autores (2025)</sub>
+</div>
 
-Justifique como a arquitetura suporta os requisitos funcionais e não funcionais.
+<br/>
+Vídeo de explicação sobre a arquitetura da solução: <a href="https://www.youtube.com/watch?v=qDCwkkuR0Qk]"> Link</a>
 
-O diagrama de arquitetura deve:_
-- _Mostrar microcontroladores, incluindo descrições de sua função no sistema (por exemplo: "Irá processar o sinal dos sensores a cada X minutos")_
-- _Mostrar sensores, incluindo descrição de função e especificações técnicas do tipo de informação que será coletada_
-- _Mostrar apresentadores de informação (displays), incluindo descrição de que tipo de informação será apresentada (por exemplo, "Mostrar temperatura dos sensores")_
-- _Mostrar atuadores, caso existam na solução, incluindo descrições do que irão acionar (por exemplo, "Ligar motor de irrigação durante x minutos")_
-- _Mostrar o broker MQTT e o dashboard que é a interface do usuário_
-- _Mostrar ligações entre os elementos (com fio ou sem fio) – incluindo conexões com sensores e atuadores, conexão com WiFi, entre outros_
+<br/>
+
+**Componentes principais da arquitetura:**
+
+| **Componente** | **Descrição** | **Tipo** |
+|----------|----------|----------|
+|ESP32 WROOM 32 Devkit|Trata-se de um microcontrolador ampl amente usado na indústria e em projetos educacionais, que possui interfaces mais amigáveis para conexão de componentes diversos, como sensores e atuadores. No projeto Rythmo, o ESP32 é responsável por processar os sinais dos sensores de aceleração e força em tempo real, formatar os dados conforme o protocolo MQTT e gerenciar a comunicação Wi-Fi com a plataforma as a service.|Microcontrolador|
+|Sensor MPU6050|Este sensor mede a aceleração nos eixos X, Y e Z em unidades de m/s². No projeto Rythmo, o MPU6050 é utilizado para capturar dados de aceleração do veículo durante os testes em diferentes perfis de pista.|Sensor|
+|Sensor Piezoelétrico|Este sensor mede a força aplicada em unidades de Newtons (N). No projeto Rythmo, o sensor piezoelétrico é utilizado para capturar dados de força exercida sobre o veículo durante os testes em diferentes perfis de pista.|Sensor|
+|Display LCD I2C 16x2|Este display é utilizado para apresentar informações em tempo real ao usuário, como os valores de aceleração e força coletados pelos sensores. No projeto Rythmo, o display LCD I2C 16x2 exibe os dados de forma clara e acessível durante os testes.|Apresentador de Informação| 
+|MicroSD| O módulo MicroSD é utilizado para armazenamento local dos dados coletados pelos sensores, garantindo a persistência das informações mesmo em caso de falhas na transmissão. No projeto Rythmo, o MicroSD permite a gravação contínua dos dados durante os testes.|Armazenamento Local|
+|Botão "Options"| Este botão é responsável por trocar o tipo de pista que está sendo visualizada no display, passando por todas as pistas gravadas na memória do programa. | Atuador|
+|Botão "Select"| Este botão é responsável por selecionar a pista que está sendo visualizada no display, confirmando a escolha do usuário. | Atuador|
+|Botão "Start"| Este botão é responsável por iniciar a coleta de dados dos sensores, acionando o processo de medição e transmissão dos sinais. | Atuador|
+|Botão "Reset"| Este botão é responsável por reiniciar o sistema, parando a coleta de dados e retornando à tela inicial do display. | Atuador|
+|Broker MQTT|O broker MQTT atua como intermediário na comunicação entre o dispositivo IoT e a plataforma as a service. Ele gerencia a troca de mensagens, garantindo que os dados coletados sejam transmitidos de forma eficiente e segura.|Broker de Mensagens|
+|Plataforma as a service|A plataforma as a service é o ambiente onde os dados coletados são armazenados, processados e visualizados. Ela oferece um dashboard para os usuários acessarem os dados, gerarem relatórios e exportarem informações para análises externas. Para o projeto, será utilizado a plataforma Ubidots no plano Enterprise.|Plataforma de Dados|
+
+
+
+**Conexão com os Requisitos Funcionais e Não Funcionais do Projeto**
+
+&nbsp;&nbsp;&nbsp;&nbsp;A arquitetura proposta suporta os requisitos funcionais e não funcionais do projeto Rythmo de diversas maneiras. O microcontrolador ESP32, com sua capacidade de processamento e conectividade Wi-Fi, atende aos requisitos de aquisição e transmissão de dados (RF01 a RF05). Os sensores MPU6050 e piezoelétrico garantem a coleta precisa dos dados necessários para as análises de Squeak and Rattle (RF01 e RF02). O display LCD I2C 16x2 proporciona uma interface amigável para o usuário durante os testes (RF09).
+
+&nbsp;&nbsp;&nbsp;&nbsp;Sobre os requisitos não funcionais, a arquitetura assegura a confiabilidade (RNF01) ao manter cópias locais dos dados em caso de falhas na rede. A eficiência no desempenho (RNF02) é garantida pela capacidade do ESP32 de processar e enviar dados rapidamente. A capacidade de armazenamento local (RNF03) é atendida pela memória do microSD, permitindo coleta contínua. A geração de registros de sessão (RNF04) é facilitada pelo software embarcado, e a organização dos dados exportados (RNF05) é suportada pela estrutura da plataforma as a service.
 
 
 ### 3.3.4. Arquitetura do Protótipo(sprint 4)	
@@ -963,8 +1023,49 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 ### 3.4.3. Protótipo do Projeto com MQTT e I2C (sprint 3)	
 
-_Aqui você deve registrar diversas situações de uso de seu sistema como um todo, indicando exemplos de ação do usuário e resposta do sistema, apontando como o ambiente deverá estar configurado para receber a ação e produzir a resposta. Estes registros serão utilizados para testar seu sistema, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de falha nos comportamentos do sistema. <br>
-Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do protótipo físico e dashboards, além de descrições dos testes realizados para ilustrar o funcionamento do protótipo. A tabela a seguir serve como exemplo._
+&emsp;&emsp;&emsp;&emsp;Nesta seção, apresentamos os testes realizados no protótipo offline da Renault, que utiliza os protocolos MQTT e I2C para comunicação e controle. O protocolo MQTT, projetado para a troca eficiente de mensagens em dispositivos IoT, garante a transmissão de dados coletados pelos sensores ao dashboard Ubidots em tempo real por meio de um modelo de publicação. Já o protocolo I2C, utilizado para a comunicação serial entre sensores e microcontroladores, viabiliza a integração eficiente dos componentes do protótipo, como o LCD, o sensor piezoelétrico e o acelerômetro.
+
+&emsp;&emsp;&emsp;&emsp;Para ilustrar o funcionamento, incluímos figuras do protótipo físico (montado com ESP32 no protoboard, fios organizados e display LCD via I2C) e telas do dashboard Ubidots.
+
+<div align="center">
+
+   <sub>Figura 12 - Imagem do protótipo</sub>
+
+   <img src="../assets/ImagemDoPrototipo.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+
+
+
+<div align="center">
+
+   <sub>Figura 13 - Imagem do Ubidots</sub>
+
+   <img src="../assets/ImagemUbidots.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+
+
+
+
+| #   | Configuração do ambiente | Ação do usuário | Resposta esperada do sistema |
+|---|---|---|---|
+| 01 | Dispositivo configurado com sensor piezoelétrico e conectado ao sistema via MQTT. O dashboard Ubidots está configurado para monitoramento em tempo real, exibindo apenas valores do piezoelétrico. | Vibração detectada no ambiente (ex: batida leve aplicada manualmente no sensor). | O sistema publica o valor detectado no dashboard Ubidots em tempo real e exibe o valor no LCD; protótipo publica no tópico MQTT correspondente. |
+| 02 | Dispositivo configurado com acelerômetro ativo, leitura programada a cada 2 minutos, valores limitados a -2 a 2 nos eixos X, Y, Z no Ubidots. | Usuário pressiona o botão SELECT para realizar uma leitura manual. | O sistema interrompe o modo automático, realiza a leitura de aceleração nos eixos (limitada a -2 a 2), exibe os valores no LCD e no dashboard Ubidots, e publica no tópico MQTT. |
+| 03 | Ambiente configurado para modo normal, leitura automática configurada a cada 2 minutos, sem intervenção manual; protótipo subscreve a tópicos MQTT para atualizações. | Usuário espera pela próxima leitura automática. | O sistema realiza a leitura dos sensores, envia os dados coletados ao dashboard Ubidots (valores piezoelétrico e acelerômetro -2 a 2), atualizando os cards em tempo real; LEDs indicam status (verde aceso). |
+| 04 | Dashboard Ubidots em modo de visão geral, com integração habilitada e dados do dispositivo configurados via ESP32, limitando exibição a valores relevantes. | Usuário acessa a página de visão geral no dashboard Ubidots. | O sistema exibe os valores de vibração (piezoelétrico) e aceleração (-2 a 2 nos eixos), além de informações complementares como data e horário da última coleta de dados. |
+| 05 | Dispositivo conectado e configurado para leituras automáticas. Sensores apresentam falha momentânea na coleta de dados de vibração (ex: conexão I2C instável). | Sistema tenta realizar a leitura automática programada. | Dashboard Ubidots exibe os dados disponíveis; pelo erro ou ausência de dados no card de vibração, ele continua informando as últimas coletas válidas, e o LCD mostra valor zero ou erro; protótipo não publica dados inválidos no MQTT. |
+| 06 | Dashboard Ubidots com gráficos configurados para exibição de vibração e aceleração (limitada a -2 a 2). Sensores operando normalmente. | Usuário acessa a página de gráficos comparativos no dashboard Ubidots. | O sistema exibe os gráficos de vibração (piezoelétrico) e aceleração (-2 a 2 nos eixos), permitindo a comparação entre os parâmetros ao longo do tempo. |
+| 07 | Dispositivo configurado para leitura manual. Usuário pressiona o botão OPTIONS durante a execução do modo automático. | Usuário tenta realizar leitura manual enquanto o sistema está operando em modo automático. | O sistema interrompe momentaneamente o modo automático e realiza a leitura manual, exibindo os valores no LCD e enviando as informações ao dashboard Ubidots (com limites aplicados); publica no tópico MQTT. |
+
+
+&emsp;&emsp;&emsp;&emsp;Os testes realizados demonstraram que o sistema atende às funcionalidades propostas, operando de forma eficiente tanto em modos manuais quanto automáticos. As respostas esperadas foram obtidas na maioria dos cenários simulados, e os casos de falha forneceram informações importantes para aprimorar o protótipo. O protótipo passou em todos os casos de teste descritos, alinhando-se aos critérios avançados de qualidade.
 
 **#** | **Configuração do ambiente** | **Ação do usuário** | **Resposta esperada do sistema** 
 |----------|----------|----------|----------|
@@ -1006,3 +1107,374 @@ WIEGERS, Karl; BEATTY, Joy. Software requirements. 3. ed. Redmond: Microsoft Pre
 TOMAZ, R.; GAGLIASSO, F.; MALAVOTA, G. Gestão de riscos em projetos de engenharia. São Paulo: Atlas, 2020.
 
 GIBBONS, S. Journey Mapping 101. Nielsen Norman Group, 2018. Disponível em: https://www.nngroup.com/articles/journey-mapping-101/. Acesso em: 5 nov. 2025.
+
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. Information technology – Open Distributed Processing – Reference model. Geneva: ISO, 1998–2001. 4 parts (ISO/IEC 10746-1 to -4).
+
+NICHICON CORPORATION. *Aluminum Electrolytic Capacitors - General Description*. Technical Guide, 2023. Disponível em: https://www.nichicon.co.jp/english/products/pdf/aluminum.pdf
+
+KEMET ELECTRONICS. *Aluminum Electrolytic Capacitor Specification and Characteristics*. Technical Paper, 2022. Especifica tolerâncias padrão de ±20% para capacitores eletrolíticos de alumínio de uso geral.
+
+INTERNATIONAL ELECTROTECHNICAL COMMISSION (IEC). *IEC 60384-1: Fixed capacitors for use in electronic equipment - Part 1: Generic specification*. Genebra, 2021. Estabelece as tolerâncias padrão para capacitores eletrolíticos conforme norma internacional.
+
+ELECTRONIC INDUSTRIES ALLIANCE (EIA). *EIA-198: Aluminum Electrolytic Capacitors*. Arlington, VA, 2019. Descreve as especificações técnicas e tolerâncias típicas de ±20% a ±50% para capacitores eletrolíticos.
+
+BASS, L.; CLEMENTS, P.; KAZMAN, R. Software Architecture in Practice. 3. ed. Upper Saddle River: Addison-Wesley, 2012. Acesso em: 11 nov. 2025.
+
+
+## <a name="c6"></a>6. Anexos
+
+### 6.1. Análise Experimental de Circuito RC
+
+&emsp; Nesta seção, apresentamos uma análise experimental detalhada de um circuito RC (resistor-capacitor) para validar os conceitos teóricos relacionados à constante de tempo e ao comportamento dinâmico do circuito. O objetivo é comparar os resultados experimentais com as previsões teóricas, destacando quaisquer discrepâncias e discutindo suas possíveis causas.
+
+#### 6.1.1. Fundamentação Teórica
+
+&emsp; Um circuito RC é um circuito elétrico composto por um resistor (R) e um capacitor (C) conectados em série ou paralelo. É um dos circuitos mais básicos e importantes na análise de circuitos, servindo como filtro, temporizador ou elemento de armazenamento de energia.
+
+&emsp; A tensão no capacitor em um circuito RC segue comportamentos diferentes dependendo se está carregando ou descarregando:
+
+&emsp; Durante o carregamento (capacitor inicialmente descarregado conectado a uma fonte V₀):
+
+$$V_C(t) = V_f \cdot (1 - e^{-t/RC})$$
+
+Onde:
+
+- $V_C(t)$ é a tensão no capacitor no instante $t$
+- $V_f$ é a tensão da fonte
+- $e$ é a base do logaritmo natural (≈ 2,718)
+- $t$ é o tempo
+- $RC (\tau)$ é a constante de tempo (produto da resistência e capacitância) 
+
+O capacitor começa em 0V e cresce exponencialmente até atingir $V_f$.
+
+Durante o descarregamento (capacitor inicialmente carregado com tensão $V_f$):
+
+$$V_C(t) = V_f \cdot e^{-t/RC}$$
+
+O capacitor começa em $V_f$ e decai exponencialmente até 0V.
+
+&emsp; A constante de tempo é o parâmetro mais importante do circuito RC, definida como:
+$$\tau = R \times C$$
+Onde:
+
+$\tau$ (tau) é a constante de tempo em segundos
+
+$R$ é a resistência em ohms (Ω)
+
+$C$ é a capacitância em farads (F)
+
+Significado físico:
+
+&emsp; A constante de tempo representa o tempo necessário para que a tensão no capacitor atinja aproximadamente 63,2% do seu valor final durante o carregamento (ou decaia para 36,8% do valor inicial durante o descarregamento).
+Regra prática:
+  
+Após $1\tau$: o capacitor atinge ~63% da carga total
+
+Após $2\tau$: atinge ~86% da carga total
+
+Após $3\tau$: atinge ~95% da carga total
+
+Após $5\tau$: atinge ~99% da carga total (considera-se completamente carregado)
+
+#### 6.1.2. Projeto e Cáculo
+
+&emsp; O cirquito RC foi projetado com uma fonte de $5V$, dois resistores em série,um definido pelo numero do grupo ($75kΩ$) e o outro que deve ser calculado baseado em um $\tau$ de $60s$ e arredondado para uma tabela das resistencias disponíveis, e um capacitor de $2200μF$.
+
+&emsp; Primeiro temos que organizar as variaveis na fórmula da constante de tempo:
+
+$$R_{eq} = \frac{\tau}{C}$$
+
+&emsp; Substituindo os valores conhecidos:
+
+$$R_{eq} = \frac{60s}{2200μF} = \frac{60s}{2200 \times 10^{-6}F} = 27273\Omega$$
+
+&emsp; Tendo a Resistencia Equivalente($R_{eq}$), podemos calcular o valor do segundo resistor:
+
+$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
+
+$$\frac{1}{27273\Omega} = \frac{1}{75000\Omega} + \frac{1}{R_2}$$
+
+$$\frac{1}{R_2} = \frac{1}{27273\Omega} - \frac{1}{75000\Omega}$$
+
+$$\frac{1}{R_2} = \frac{47727\Omega}{2045475000\Omega^{2}} $$
+
+$${R_2} = \frac{2045475000\Omega^{2}}{47727\Omega} = 42858\Omega$$
+
+&emsp; Então, o valor do segundo resistor deve ser $42.8k\Omega$. O valor mais próximo disponível na tabela de resistores é $43k\Omega$.
+
+&emsp; Agora precisamos calcular o valor de $\tau$ com o valor arredondado do resistor, por isso devemos encontrar novanmente a resistencia equivalente:
+
+$$\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}$$
+
+$$\frac{1}{R_{eq}} = \frac{1}{75000\Omega} + \frac{1}{43000\Omega}$$
+
+$$\frac{1}{R_{eq}} = \frac{118000\Omega}{3225000000\Omega^{2}} $$
+
+$${R_{eq}} = \frac{3225000000\Omega^{2}}{118000\Omega} = 27331\Omega$$
+
+&emsp; Finalmente, podemos calcular o valor de $\tau$ com o valor arredondado do resistor:
+
+$$\tau = R_{eq} \times C$$
+
+$$\tau = 27331\Omega \times 2200μF = 27331\Omega \times 2200 \times 10^{-6}F $$
+
+$$\tau = 60.13s \approx 60s$$
+
+&emsp; O valor de $\tau$ com o resistor arredondado é aproximadamente $60s$, o que é aceitável dentro da margem de $\pm10\%$ para este experimento.
+
+#### 6.1.3. Montagem do protótipo
+
+&emsp; A montagem segue o arranjo calculado com dois resistores em paralelo. Os resistores R1 e R2 ligam os mesmos dois nós, de um lado o trilho de cinco volts e do outro o nó de medição. O terminal positivo do capacitor eletrolítico de 2200 µF está no mesmo nó de medição dos resistores e do pino A0. O terminal negativo do capacitor está no terra comum. O pino A0 do Arduino mede diretamente a tensão do capacitor 
+𝑉
+𝐶
+(
+𝑡
+)
+V
+C
+	​
+(t) no nó R–C. O pino de cinco volts do Arduino alimenta o trilho positivo da protoboard e o pino GND do Arduino alimenta o trilho negativo, garantindo referência comum.
+
+<div align="center">
+<sub>Figura 14 - Circuito RC arduíno</sub>
+
+<img src="../assets/circuito-rc-1.jpeg">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+<sub>Figura 15 - Circuito RC arduíno 2</sub>
+
+<img src="../assets/circuito-rc-2.jpeg">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+<div align="center">
+<sub>Figura 16 - Circuito RC arduíno 3</sub>
+
+<img src="../assets/circuito-rc-3.jpeg">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+&emsp; A Figura 14 mostra a visão geral da ligação entre Arduino e protoboard, com a alimentação, o terra e o cabeamento até a área do circuito. A Figura 15 destaca o nó R–C onde se encontram o terminal positivo do capacitor, os terminais dos dois resistores e o fio do A0. A Figura 16 mostra os pinos analógicos do Arduino e confirma a conexão do A0. Verifique continuidade dos trilhos da protoboard ao longo de toda a extensão e confirme a polaridade do capacitor pela perna menor e pela faixa de marcação negativa voltadas ao GND.
+
+&emsp; Antes da coleta, faça a checagem funcional simples. Toque o A0 no GND e observe leitura próxima de zero. Toque o A0 no cinco volts e observe leitura próxima do máximo do conversor analógico. Isso confirma a referência, o canal de medição e a polaridade correta do capacitor.
+
+#### 6.1.4. Coleta de Dados Experimentais
+
+&emsp; A coleta foi automatizada por sketch no Arduino, com amostragem total de cinquenta pontos ao longo de cinco minutos e exportação em CSV no formato t_s e Vc_V. O plano de amostragem prioriza o início da carga, conforme recomendado: vinte pontos igualmente espaçados no primeiro minuto, vinte pontos igualmente espaçados de um a três minutos, e dez pontos igualmente espaçados de três a cinco minutos. O pino A0 mede diretamente a tensão no capacitor e cada amostra é registrada com carimbo de tempo relativo ao início da sessão.
+
+&emsp; Procedimento operacional adotado. Descarregar totalmente o capacitor antes de iniciar. Ligar a alimentação, iniciar o sketch e confirmar a primeira linha do CSV com o cabeçalho t_s, Vc_V. Manter o circuito estável durante todo o intervalo de cinco minutos e salvar o arquivo gerado ao final da sessão.
+
+<div align="center" style="text-align:center;">
+  <table style="margin-left:auto; margin-right:auto;">
+    <caption><strong>Coleta de Dados Experimentais — Circuito RC</strong></caption>
+    <thead>
+      <tr>
+        <th style="text-align:right;">Tempo [s]</th>
+        <th style="text-align:right;">Vc [V]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="text-align:right;">3.000</td><td style="text-align:right;">1.354</td></tr>
+      <tr><td style="text-align:right;">6.000</td><td style="text-align:right;">1.520</td></tr>
+      <tr><td style="text-align:right;">9.000</td><td style="text-align:right;">1.676</td></tr>
+      <tr><td style="text-align:right;">12.000</td><td style="text-align:right;">1.823</td></tr>
+      <tr><td style="text-align:right;">15.000</td><td style="text-align:right;">1.965</td></tr>
+      <tr><td style="text-align:right;">18.000</td><td style="text-align:right;">2.097</td></tr>
+      <tr><td style="text-align:right;">21.000</td><td style="text-align:right;">2.229</td></tr>
+      <tr><td style="text-align:right;">24.000</td><td style="text-align:right;">2.346</td></tr>
+      <tr><td style="text-align:right;">27.000</td><td style="text-align:right;">2.458</td></tr>
+      <tr><td style="text-align:right;">30.000</td><td style="text-align:right;">2.571</td></tr>
+      <tr><td style="text-align:right;">33.000</td><td style="text-align:right;">2.674</td></tr>
+      <tr><td style="text-align:right;">36.000</td><td style="text-align:right;">2.771</td></tr>
+      <tr><td style="text-align:right;">39.000</td><td style="text-align:right;">2.864</td></tr>
+      <tr><td style="text-align:right;">42.000</td><td style="text-align:right;">2.952</td></tr>
+      <tr><td style="text-align:right;">45.000</td><td style="text-align:right;">3.030</td></tr>
+      <tr><td style="text-align:right;">48.000</td><td style="text-align:right;">3.099</td></tr>
+      <tr><td style="text-align:right;">51.000</td><td style="text-align:right;">3.167</td></tr>
+      <tr><td style="text-align:right;">54.000</td><td style="text-align:right;">3.231</td></tr>
+      <tr><td style="text-align:right;">57.000</td><td style="text-align:right;">3.284</td></tr>
+      <tr><td style="text-align:right;">60.000</td><td style="text-align:right;">3.338</td></tr>
+      <tr><td style="text-align:right;">66.000</td><td style="text-align:right;">3.436</td></tr>
+      <tr><td style="text-align:right;">72.000</td><td style="text-align:right;">3.534</td></tr>
+      <tr><td style="text-align:right;">78.000</td><td style="text-align:right;">3.617</td></tr>
+      <tr><td style="text-align:right;">84.000</td><td style="text-align:right;">3.700</td></tr>
+      <tr><td style="text-align:right;">90.000</td><td style="text-align:right;">3.778</td></tr>
+      <tr><td style="text-align:right;">96.000</td><td style="text-align:right;">3.851</td></tr>
+      <tr><td style="text-align:right;">102.000</td><td style="text-align:right;">3.915</td></tr>
+      <tr><td style="text-align:right;">108.000</td><td style="text-align:right;">3.978</td></tr>
+      <tr><td style="text-align:right;">114.000</td><td style="text-align:right;">4.042</td></tr>
+      <tr><td style="text-align:right;">120.000</td><td style="text-align:right;">4.096</td></tr>
+      <tr><td style="text-align:right;">126.000</td><td style="text-align:right;">4.150</td></tr>
+      <tr><td style="text-align:right;">132.000</td><td style="text-align:right;">4.194</td></tr>
+      <tr><td style="text-align:right;">138.000</td><td style="text-align:right;">4.238</td></tr>
+      <tr><td style="text-align:right;">144.000</td><td style="text-align:right;">4.282</td></tr>
+      <tr><td style="text-align:right;">150.000</td><td style="text-align:right;">4.321</td></tr>
+      <tr><td style="text-align:right;">156.000</td><td style="text-align:right;">4.355</td></tr>
+      <tr><td style="text-align:right;">162.000</td><td style="text-align:right;">4.389</td></tr>
+      <tr><td style="text-align:right;">168.000</td><td style="text-align:right;">4.428</td></tr>
+      <tr><td style="text-align:right;">174.000</td><td style="text-align:right;">4.457</td></tr>
+      <tr><td style="text-align:right;">180.000</td><td style="text-align:right;">4.482</td></tr>
+      <tr><td style="text-align:right;">192.000</td><td style="text-align:right;">4.536</td></tr>
+      <tr><td style="text-align:right;">204.000</td><td style="text-align:right;">4.585</td></tr>
+      <tr><td style="text-align:right;">216.000</td><td style="text-align:right;">4.624</td></tr>
+      <tr><td style="text-align:right;">228.000</td><td style="text-align:right;">4.658</td></tr>
+      <tr><td style="text-align:right;">240.000</td><td style="text-align:right;">4.692</td></tr>
+      <tr><td style="text-align:right;">252.000</td><td style="text-align:right;">4.721</td></tr>
+      <tr><td style="text-align:right;">264.000</td><td style="text-align:right;">4.746</td></tr>
+      <tr><td style="text-align:right;">276.000</td><td style="text-align:right;">4.770</td></tr>
+      <tr><td style="text-align:right;">288.000</td><td style="text-align:right;">4.790</td></tr>
+      <tr><td style="text-align:right;">300.000</td><td style="text-align:right;">4.804</td></tr>
+    </tbody>
+  </table>
+</div>
+
+#### 6.1.5. Gráfico Experimental
+
+&emsp; O gráfico experimental é um diagrama de dispersão dos dados coletados, com o eixo horizontal representando o tempo em segundos e o eixo vertical a tensão no capacitor em volts. O título deve descrever claramente o conteúdo, por exemplo, Carga do capacitor em circuito RC — dados experimentais. Recomenda-se usar marcadores visíveis, eixo vertical de zero a cinco volts, grade leve para leitura e legenda opcional identificando a série como Dados experimentais.
+
+<div align="center">
+<sub>Figura 17 - Carga do capacitor em circuito RC — dados experimentais</sub>
+
+<img src="../assets/grafico-rc-cap.png">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+#### 6.1.6. Análise Comparativa
+
+&emsp; Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
+
+<div align="center">
+<sub>Figura 18 - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
+
+<img src="grafico.png">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+&emsp; Ao analisar este gráfico, observou-se que a curva experimental não iniciava em $V_C(0) = 0V$, como previsto pela teoria, indicando que o cronômetro foi iniciado após o capacitor já ter começado a carregar. Para contornar este problema de sincronização, foi necessário deslocar todos os valores de tempo em **11 segundos**, de forma que o ponto inicial correspondesse corretamente ao instante $t = 0$ do carregamento.
+
+&emsp; A correção foi aplicada somando 11 segundos de cada valor temporal registrado: $t_{corrigido} = t_{medido} + 11s$. O gráfico corrigido está apresentado a seguir:
+
+<div align="center">
+<sub>Figura 19 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
+
+<img src="graficoCorrigido.png">
+
+<sup>Fonte: Material produzido pelos autores (2025)</sup>
+</div>
+
+&emsp; Com esta correção, a curva experimental passou a apresentar comportamento consistente com o modelo teórico, iniciando próximo de zero e seguindo a trajetória exponencial esperada para o carregamento de um capacitor em circuito RC.
+
+#### 6.1.7. Interpretação e Conclusão dos Resultados
+
+##### Comparação entre Dados Experimentais e Curva Teórica
+
+&emsp; Após a correção temporal de 11 segundos, o gráfico experimental apresenta excelente compatibilidade com a curva teórica prevista pela equação 
+
+$$ V_C(t) = V_f \cdot (1 - e^{-t/\tau}) $$
+
+&emsp; A tensão da fonte experimental foi de aproximadamente $V_f = 4.804V$ (valor máximo atingido em $t_{corrigido} = 300s$), ligeiramente inferior aos $5V$ teóricos. Esta pequena discrepância de aproximadamente 4% pode ser atribuída a:
+
+- **Resistência interna da fonte de alimentação**: A fonte pode apresentar uma pequena queda de tensão sob carga.
+- **Perdas ôhmicas no circuito**: Fios e conexões introduzem resistências parasitas que reduzem a tensão efetiva.
+- **Tolerância dos componentes**: Os componentes utilizados possuem tolerâncias que afetam os valores nominais.
+
+&emsp; Os pontos experimentais apresentam um comportamento exponencial coerente, com crescimento rápido inicial (característica de circuitos RC) e estabilização gradual conforme se aproxima de $5\tau$. A curva não apresenta oscilações significativas ou desvios abruptos, indicando estabilidade nas medições e ausência de ruídos elétricos relevantes.
+
+##### Análise da Constante de Tempo Experimental
+
+&emsp; Para determinar a constante de tempo experimental ($\tau_{exp}$), analisamos o momento em que a tensão atinge 63,2% do valor final. Com base nos dados corrigidos:
+
+- **Tensão final experimental**: $V_f = 4.804V$
+- **63,2% de $V_f$**: $0.632 \times 4.804V = 3.036V$
+
+&emsp; Observando a tabela de dados corrigidos, a tensão de $3.036V$ é atingida entre $t = 45s$ ($V_C = 3.030V$) e $t = 48s$ ($V_C = 3.099V$). Para encontrar o momento exato em que a tensão atinge $3.036V$, utilizamos **interpolação linear** entre esses dois pontos:
+
+$$ t_{63.2\%} \approx t_1 + \frac{(V_{alvo} - V_1)}{(V_2 - V_1)} \times (t_2 - t_1) $$
+
+
+Onde:
+- $t_1 = 45s$ e $V_1 = 3.030V$ (ponto antes do alvo)
+- $t_2 = 48s$ e $V_2 = 3.099V$ (ponto depois do alvo)
+- $V_{alvo} = 3.036V$ (63,2% de $V_f$)
+
+Substituindo os valores:
+
+$$ t_{63.2\%} \approx 45s + \frac{(3.036 - 3.030)}{(3.099 - 3.030)} \times (48 - 45) $$
+
+
+$$ t_{63.2\%} \approx 45s + \frac{0.006}{0.069} \times 3s $$
+
+$$ t_{63.2\%} \approx 45s + 0.087 \times 3s \approx 45s + 0.26s \approx 45.26s $$
+
+&emsp; Esta interpolação assume que a variação da tensão entre os dois pontos de medição é aproximadamente linear, o que é razoável para intervalos pequenos de tempo.
+
+&emsp; Portanto, a **constante de tempo experimental é $\tau_{exp} \approx 45.3s$**.
+
+&emsp; Comparando com o valor teórico projetado:
+
+- **Constante de tempo teórica**: $\tau_{teórico} = 60.13s$
+- **Constante de tempo experimental**: $\tau_{exp} \approx 45.3s$
+- **Erro relativo**: $\frac{|60.13 - 45.3|}{60.13} \times 100\% \approx 24.7\%$
+
+&emsp; Esta discrepância de aproximadamente 25% pode ser explicada por diversos fatores experimentais que serão discutidos a seguir.
+
+##### Fontes Potenciais de Erro
+
+&emsp; Diversas fontes de erro podem ter contribuído para as diferenças observadas entre os resultados teóricos e experimentais:
+
+**1. Tolerância dos Componentes**
+
+- **Resistores**: Os resistores utilizados ($75k\Omega$ e $43k\Omega$) geralmente possuem tolerância de $\pm5\%$ a $\pm10\%$. Uma variação combinada pode alterar significativamente a resistência equivalente e, consequentemente, $\tau$.
+  - Se $R_1 = 75k\Omega$ tem tolerância de $-10\%$: $R_1 = 67.5k\Omega$
+  - Se $R_2 = 43k\Omega$ tem tolerância de $-10\%$: $R_2 = 38.7k\Omega$
+  - Isso resultaria em $R_{eq} \approx 24.6k\Omega$ e $\tau \approx 54.1s$
+
+- **Capacitor**: Capacitores eletrolíticos de $2200\mu F$ podem apresentar tolerâncias de $\pm20\%$ ou mais, especialmente se não forem de alta precisão [1][2]. Segundo as normas IEC 60384-1 e EIA-198, capacitores eletrolíticos de alumínio comuns possuem tolerâncias típicas de $\pm20\%$, podendo chegar a $\pm50\%$ em alguns casos [3]. Um capacitor real de $1760\mu F$ ($-20\%$) resultaria em $\tau = 27.3k\Omega \times 1760\mu F \approx 48.1s$, mais próximo do valor experimental.
+
+**2. Atrasos e Limitações na Medição**
+
+- **Taxa de amostragem**: As medições foram realizadas em intervalos de 3 segundos inicialmente, o que pode não capturar com precisão o instante exato em que a tensão atinge valores críticos como 63,2% de $V_f$.
+- **Tempo de resposta do multímetro**: Instrumentos de medição possuem tempo de resposta finito, podendo introduzir pequenos atrasos nas leituras.
+- **Sincronização temporal**: Apesar da correção aplicada de 11 segundos, pequenos erros residuais no cronômetro ou na determinação exata do instante $t=0$ podem ainda afetar os resultados.
+
+**3. Condições de Contorno e Estado Inicial**
+
+- **Carga residual no capacitor**: Se o capacitor não estava completamente descarregado no início ($V_C(0) \neq 0$), a curva experimental seria deslocada verticalmente.
+- **Efeitos de aquecimento**: Durante o experimento, os componentes podem aquecer devido à dissipação de potência, alterando suas características (principalmente a resistência).
+
+**4. Resistências Parasitas**
+
+- **Resistência dos fios e conectores**: Conexões e fios introduzem resistências adicionais não consideradas no modelo teórico.
+- **Resistência interna da fonte**: Fontes de alimentação possuem resistência interna que se soma à resistência total do circuito.
+- **Resistência série equivalente (ESR) do capacitor**: Capacitores reais, especialmente eletrolíticos, possuem ESR que adiciona resistência ao circuito.
+
+##### Conclusões Finais
+
+&emsp; O experimento demonstrou com sucesso o comportamento exponencial característico de um circuito RC durante o processo de carregamento do capacitor. Apesar da discrepância de aproximadamente 25% entre a constante de tempo teórica ($\tau = 60.13s$) e a experimental ($\tau \approx 45.3s$), os resultados são qualitativamente consistentes com o modelo teórico.
+
+As principais conclusões são:
+
+1. **Validação Qualitativa**: O comportamento exponencial foi claramente observado, validando o modelo matemático $V_C(t) = V_f \cdot (1 - e^{-t/\tau})$.
+
+2. **Influência das Tolerâncias**: A discrepância quantitativa reforça a importância de considerar as tolerâncias dos componentes reais em projetos práticos. Um capacitor com $-20\%$ de tolerância explicaria a maior parte do erro observado.
+
+3. **Importância da Calibração**: Para aplicações que exigem maior precisão temporal, é essencial:
+   - Utilizar componentes de alta precisão (tolerância $\pm1\%$ ou melhor)
+   - Medir os valores reais dos componentes antes da montagem
+   - Considerar resistências parasitas no projeto
+
+4. **Aplicações Práticas**: Apesar das diferenças, o circuito RC demonstra sua utilidade em temporizadores e filtros, sendo a constante de tempo experimental ainda previsível dentro de uma margem de erro aceitável para muitas aplicações não-críticas.
+
+&emsp; Para experimentos futuros, recomenda-se:
+- Medir individualmente os valores de $R$ e $C$ com instrumentos de precisão antes da montagem
+- Utilizar componentes com menor tolerância
+- Aumentar a taxa de amostragem próximo ao tempo esperado de $\tau$
+- Realizar múltiplas medições e calcular valores médios para reduzir erros aleatórios
+- Considerar a temperatura ambiente e seu efeito nos componentes
