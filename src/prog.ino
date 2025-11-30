@@ -23,7 +23,7 @@ const char *CLIENT_ID = "grupo3";
 Ubidots ubidots(UBIDOTS_TOKEN, CLIENT_ID);
 
 // Timer MQTT
-unsigned long lastPublish = 0;
+unsigned long lastPublFish = 0;
 const int MQTT_INTERVAL = 1000;
 
 // ===== HARDWARE =====
