@@ -231,6 +231,7 @@ private:
   {
     unsigned long now = millis();
 
+    // ESTADO 1: NADA FOI SELECIONADO AINDA
     if (selected == -1)
     {
       if (lastState != option)
@@ -263,27 +264,33 @@ private:
 
         lastLCDUpdate = now;
 
-        int16_t rx, ry, rz;
-        readMPU(rx, ry, rz);
+        int16_t ax, ay, az;
+        readMPU(ax, ay, az);
 
-        float ax = rx / 16384.0;
-        float ay = ry / 16384.0;
-        float az = rz / 16384.0;
+        // float ax = rx / 16384.0;
+        // float ay = ry / 16384.0;
+        // float az = rz / 16384.0;
 
         int piezo = analogRead(PIEZO_PIN);
 
         lcd.setCursor(0, 0);
-        lcd.print("X:");
-        lcd.print(ax, 2);
+        lcd.print("X:      ");
+        lcd.setCursor(2, 0);
+        lcd.print(ax);
+
         lcd.setCursor(8, 0);
-        lcd.print("Y:");
-        lcd.print(ay, 2);
+        lcd.print("Y:      ");
+        lcd.setCursor(10, 0);
+        lcd.print(ay);
 
         lcd.setCursor(0, 1);
-        lcd.print("Z:");
-        lcd.print(az, 2);
+        lcd.print("Z:      ");
+        lcd.setCursor(2, 1);
+        lcd.print(az);
+
         lcd.setCursor(8, 1);
-        lcd.print("V:");
+        lcd.print("V:      ");
+        lcd.setCursor(10, 1);
         lcd.print(piezo);
 
         sendToUbidots(ax, ay, az, piezo);
