@@ -781,7 +781,27 @@ Vídeo de explicação sobre a arquitetura da solução: <a href="https://www.yo
 
 ### 3.3.4. Arquitetura do Protótipo(sprint 4)	
 
-_Vídeo de explicação sobre a arquitetura do protótipo físico: (coloque aqui o link do vídeo)_
+&emsp; A arquitetura do protótipo é o planejamento detalhado de como o sistema será estruturado fisicamente, funcionando como um mapa que mostra a disposição e a função de cada componente. Essa etapa é essencial para o desenvolvimento do projeto, pois define não apenas quais peças serão usadas, mas também como elas se conectam e trabalham juntas para alcançar os objetivos do sistema.
+
+&emsp; Neste documento, apresentamos a arquitetura do protótipo desenvolvido para o projeto Rythmo, detalhando os componentes físicos utilizados - como sensores, microcontroladores e display LCD - as tecnologias escolhidas - incluindo linguagem de programação, banco de dados e bibliotecas - e as formas de comunicação necessárias entre esses elementos. Essa organização serve como guia para a construção e implementação do sistema, além de facilitar a identificação de pontos que podem ser melhorados e proporcionar uma visão mais clara de como o dispositivo funciona na prática.
+
+&emsp; Como parte desse planejamento, explicamos em detalhe as tecnologias específicas usadas no protótipo e o papel de cada uma na coleta, transmissão e análise de dados em tempo real. Sensores de aceleração e força, dispositivos IoT, protocolos de comunicação e ferramentas de visualização foram selecionados para garantir que o sistema funcione de forma integrada e eficiente. A seguir, apresentamos a arquitetura do protótipo do projeto Rythmo, descrevendo todos os sensores e tecnologias utilizadas no dispositivo IoT, na nuvem e no dashboard, além de destacar os tipos de conexão entre os componentes com fio, sem fio e de pertencimento.
+
+**_Vídeo de explicação sobre a arquitetura do protótipo físico: (coloque aqui o link do vídeo)_**
+
+<div align="center">
+<sub>Figura 12 - Diagrama de Arquitetura do Protótipo Físico</sub>
+<br>
+<br>
+
+<img src="../assets/arquitetura-solucao.png">
+
+<sub> Fonte: Material produzido pelos autores 
+(2025)</sub>
+
+</div>
+
+
 
 _Descreva as tecnologias utilizadas de forma detalhada (visão de tecnologia).
 
