@@ -1082,6 +1082,42 @@ Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esq
 _Registre as situações de uso do sistema revisadas utilizando a modelagem UML para descrever os fluxos de teste. <br>
 Também inclua figuras da versão final do protótipo físico e dashboards, além de descrições dos testes realizados para ilustrar o funcionamento do protótipo._
 
+### 3.4.6. Testes de Usabilidade
+
+&emsp;&emsp;&emsp;&emsp;O teste de usabilidade é uma metodologia utilizada para avaliar a facilidade com que usuários reais interagem com um produto, sistema ou interface, como sites, aplicativos ou dispositivos. Durante o teste, observadores analisam como os participantes executam tarefas específicas, identificando dificuldades, confusões ou barreiras na experiência de uso. O objetivo principal é coletar insights sobre o comportamento do usuário para melhorar a funcionalidade, eficiência e satisfação geral do produto. Desse modo, abaixo podemos ver um breve relato de como foi o processo de testagem da nossa IoT, durante uma atividade em sala de aula:
+
+
+- **Projeto Avaliado:** Rythmo, projeto de IoT desenvolvido para monitoramento de vibrações e acelerações em veículos Renault
+- **Turma:** Turma 15
+- **Data do Teste:** 01/12/2025
+- **Local:** Sala de aula
+- **Responsáveis:** Rafael Santana, Thulio Bacco e Gabriel Bartmanovicz. 
+
+**Contexto dos testes**
+
+&emsp;&emsp;&emsp;&emsp;Os testes foram realizados em um ambiente de sala de aula, onde os participantes tiveram a oportunidade de interagir com o protótipo físico. O objetivo era avaliar a usabilidade do dispositivo, incluindo a facilidade de navegação pelos menus, a clareza das informações exibidas no LCD e a eficiência na coleta e transmissão dos dados para o dashboard Ubidots.
+
+O perfil do público testador incluiu estudantes do primeiro ano da Turma 17, os quais possuem conhecimentos em eletrônica e programação, o que proporcionou uma perspectiva valiosa sobre a experiência do usuário final.
+
+**Parâmetros de Aplicação:**
+- **Tarefas:** Os participantes foram instruídos a realizar tarefas específicas, como navegar pelo menu usando os botões OPTIONS, SELECT, RESET e START, aplicar pressão no sensor piezoelétrico e movimentar o acelerômetro para observar as leituras no LCD e no dashboard Ubidots.
+
+
+**Focos de Avaliação:**
+- **Navegação:** Avaliar a facilidade de uso dos botões para navegar pelo menu e selecionar opções.s
+- **Clareza das Informações:** Verificar se as informações exibidas no LCD são claras e compreensíveis.
+- **Eficiência:** Medir o tempo necessário para completar as tarefas designadas.
+- **Satisfação do Usuário:** Coletar feedback qualitativo sobre a experiência geral de uso do dispositivo.
+- **Usabilidade do Dashboard:** Facilidade de navegação e compreensão das informações apresentadas.
+
+
+**Problemas Detectados e Resultados Obtidos**
+
+&emsp;&emsp;&emsp;&emsp;Durante os testes, foram identificados alguns problemas de usabilidade que impactaram a experiência dos usuários. A seguir, destacamos os principais pontos observados:
+
+
+
+
 ## <a name="c4"></a>4. Conclusões e Recomendações
 
 _Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de projeto em relação ao uso dessa solução. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras._
