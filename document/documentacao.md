@@ -1073,61 +1073,273 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 ### 3.4.4. Protótipo Físico do Projeto (online) (sprint 4)	
 
-&emsp;&emsp;&emsp;&emsp;Esta seção documenta os principais fluxos de uso do sistema Rythmo IoT, contemplando comportamentos esperados, respostas do protótipo e registros de falhas. O objetivo é validar a usabilidade e o correto funcionamento dos componentes: sensores (MPU6050 – digital / piezo – analógico), entradas booleanas (Options, Select, Reset, Start), saídas LED vermelho e verde, display LCD 16×2 I2C, SD card, comunicação MQTT com Ubidots e atuadores lógicos inseridos nas regras de negócio.
+&emsp;&emsp;&emsp;&emsp;Esta seção apresenta a documentação completa do protótipo físico do sistema **Rythmo IoT**, desenvolvido para realizar a coleta e transmissão de dados de aceleração e vibração em veículos de teste da Renault. O objetivo é validar o comportamento do sistema sob diferentes condições de operação, garantindo que todos os componentes, sensores, interface física e comunicação funcionem conforme o planejado.
 
-&emsp;&emsp;&emsp;&emsp;As situações de teste foram selecionadas com base no processo de coleta de dados definido para a Renault do Brasil, garantindo alinhamento com experiência do usuário (UX) e requisitos técnicos. 
+  O protótipo implementa:
 
-&emsp;&emsp;&emsp;&emsp;Para descrever os fluxos de teste do sistema, utilizamos diagramas de sequência UML, que ilustram a interação entre os componentes do protótipo e o usuário em diferentes cenários. O Diagrama UML, ou Unified Modeling Language (Linguagem de Modelagem Unificada), é uma ferramenta visual padronizada utilizada na engenharia de software para representar, projetar e documentar sistemas complexos de forma clara e organizada. Esses diagramas facilitam a comunicação entre equipes de desenvolvimento, ajudando a identificar requisitos, modelar comportamentos e arquiteturas, e reduzir ambiguidades no ciclo de vida de um software, sendo amplamente adotada em metodologias ágeis e tradicionais para promover uma visão unificada do projeto.
+* **2 saídas informacionais:** LED vermelho (idle), LED verde (coleta ativa)
+* **4 entradas booleanas:** Options, Select, Start, Reset
+* **2 sensores distintos:** MPU6050 (digital via I2C), piezoelétrico (analógico)
+* **1 componente serial I2C:** LCD 16×2
+* **Comunicação MQTT completa:** via Ubidots
+* **Dashboard online:** gráficos para AX, AY, AZ e Piezo
+* **1 atuador lógico:** lógica de LEDs e fluxo de operação conforme regras de negócio
 
-
-**Caso de Teste 1 - Seleção de Pista e Início de Medição (Sucesso)**
-
-**Objetivo:** Validar o fluxo completo de seleção de pista → confirmação → início da coleta → envio MQTT → exibição no LCD → armazenamento no SD → indicação por LEDs.
-
-**Pré-Condição:** Dispositivo ligado e conectado a internet, conexão MQTT ativa, SD card inserido.
-
-
-
-**Caso de Teste 2 - Erro de Inicialização do MPU6050 (Falha)**
-
-**Objetivo:** Testar a reação do sistema quando o sensor digital falha durante o boot.
-**Pré-Condição:** Dispositivo ligado, conexão MQTT ativa, SD card inserido, mas o sensor MPU6050 está desconectado ou com falha.
-
-**Participantes:**
-ESP32/UIManager → MPU6050 → LCD
-
-**Sequência:**
-
-- ESP32 → MPU: beginTransmission()
-- MPU → ESP32: error
-- ESP32 → LCD: "MPU ERROR"
-- ESP32 → Loop infinito (stop system)
+&emsp;&emsp;&emsp;&emsp;Para representar os fluxos do sistema, utilizam-se **diagramas de sequência UML**, que facilitam a compreensão do comportamento dinâmico dos componentes físicos e lógicos. Os diagramas foram elaborados com base no protótipo funcional e validam tanto cenários de sucesso quanto falhas operacionais.
 
 
-Trecho do código responsável pela verificação do MPU6050:
+---
 
+**Diagrama de Sequência UML – Visão Geral do Sistema**
+
+Este diagrama representa todo o fluxo do sistema desde o boot até o término da coleta, incluindo comunicação MQTT.
+
+#### **Diagrama Completo (Mermaid)**
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant ESP as ESP32/UIManager
+    participant LCD as LCD 16x2 I2C
+    participant MPU as Sensor MPU6050
+    participant PIEZO as Piezoelétrico
+    participant BTN_Options as Botão OPTIONS
+    participant BTN_Select as Botão SELECT
+    participant BTN_Start as Botão START
+    participant BTN_Reset as Botão RESET
+    participant LED_R as LED Vermelho
+    participant LED_G as LED Verde
+    participant BUZZ as Buzzer
+    participant MQTT as Ubidots MQTT Broker
+    actor Usuario as Usuário
+
+    Note over ESP: Inicialização do sistema
+
+    ESP ->> LCD: iniciar display
+    ESP ->> MPU: initMPU()
+    MPU -->> ESP: OK
+    ESP ->> MQTT: conectar Wi-Fi e broker
+    MQTT -->> ESP: Conexão estabelecida
+
+    Note over LCD: Tela inicial "Select Pista"
+
+    Usuario ->> BTN_Options: Pressiona Options
+    BTN_Options ->> ESP: LOW
+    ESP ->> LCD: Atualiza pista
+
+    Usuario ->> BTN_Select: Pressiona Select
+    BTN_Select ->> ESP: LOW
+    ESP ->> LCD: “Pista selecionada”
+
+    ESP ->> LED_R: piscar (idle visual)
+
+    Usuario ->> BTN_Start: Pressiona Start
+    BTN_Start ->> ESP: LOW
+
+    ESP ->> LED_R: desligar
+    ESP ->> LED_G: ligar (coleta ativa)
+    ESP ->> BUZZ: tocar 1 vez (beep)
+
+    %% Coleta contínua
+    loop Leitura contínua
+        ESP ->> MPU: readAccel()
+        MPU -->> ESP: ax, ay, az
+
+        ESP ->> PIEZO: analogRead()
+        PIEZO -->> ESP: piezo
+
+        ESP ->> LCD: exibir valores
+    end
+
+    %% Envio MQTT
+    loop Envio MQTT
+        ESP ->> MQTT: publish(ax, ay, az, piezo)
+        MQTT -->> ESP: ack
+    end
+
+    Usuario ->> BTN_Reset: Pressionar Reset
+    BTN_Reset ->> ESP: LOW
+
+    ESP ->> LED_G: desligar
+    ESP ->> LED_R: piscar (idle)
+    ESP ->> LCD: retornar ao menu
+```
+
+---
+
+**Caso de Teste 1 – Seleção de Pista e Início da Medição (Sucesso)**
+
+**Objetivo**
+
+Validar o fluxo completo de uso previsto:
+selecionar pista → confirmar → iniciar coleta → exibir sensores → enviar MQTT → indicar LEDs.
+
+**Pré-Condições**
+
+* ESP32 ligado
+* Wi-Fi funcional
+* Conexão MQTT ativa
+* Sensor MPU6050 conectado corretamente
+* Piezo funcional
+
+
+**Procedimento**
+
+1. Pressionar **OPTIONS** para navegar entre as pistas.
+2. Verificar que o LCD atualiza o texto.
+3. Pressionar **SELECT** para confirmar a pista.
+4. Pressionar **START** para iniciar a coleta.
+5. Observar LEDs:
+
+   * vermelho pisca (idle)
+   * verde liga (coleta)
+6. Verificar no LCD: AX, AY, AZ, Piezo.
+7. Verificar no dashboard Ubidots os dados publicados.
+8. Pressionar **RESET** para finalizar a sessão.
+
+
+
+**Fluxo UML**
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    actor Usuario as Usuário
+    participant BTN_Options as Botão OPTIONS
+    participant BTN_Select as Botão SELECT
+    participant BTN_Start as Botão START
+    participant ESP as ESP32/UIManager
+    participant LCD as LCD 16x2
+    participant MPU as MPU6050
+    participant PIEZO as Piezo
+    participant LED_R as LED Vermelho
+    participant LED_G as LED Verde
+    participant BUZZ as Buzzer
+    participant MQTT as MQTT Broker
+
+    Usuario ->> BTN_Options: Pressionar Options
+    BTN_Options ->> ESP: LOW
+    ESP ->> LCD: Atualiza pista exibida
+
+    Usuario ->> BTN_Select: Pressionar Select
+    BTN_Select ->> ESP: LOW
+    ESP ->> LCD: “Pista Selecionada”
+
+    ESP ->> LED_R: piscar (idle)
+
+    Usuario ->> BTN_Start: Pressionar Start
+    BTN_Start ->> ESP: LOW
+
+    ESP ->> LED_R: desligar
+    ESP ->> LED_G: ligar
+    ESP ->> BUZZ: emitir *beep* único
+
+    loop Leitura contínua
+        ESP ->> MPU: readAccel()
+        MPU -->> ESP: ax, ay, az
+
+        ESP ->> PIEZO: analogRead()
+        PIEZO -->> ESP: piezo
+
+        ESP ->> LCD: atualizar valores
+    end
+
+    loop Envio MQTT
+        ESP ->> MQTT: publish(ax, ay, az, piezo)
+    end
+
+    Usuario ->> ESP: Pressionar RESET
+    ESP ->> LED_G: desligar
+    ESP ->> LED_R: piscar
+    ESP ->> LCD: limpar e voltar ao menu
+```
+
+---
+
+**Caso de Teste 2 – Erro de Inicialização do MPU6050 (Falha)**
+
+**Objetivo**
+
+Testar comportamento seguro quando o sensor digital MPU6050 falha durante o boot.
+
+**Pré-Condição**
+
+* ESP32 ligado 
+* Wi-Fi ativo
+* **MPU6050 desconectado ou com falha**
+
+**Procedimento**
+
+1. Desconectar o cabo SDA ou VCC do MPU6050.
+2. Ligar o dispositivo.
+3. Observar o LCD.
+4. Confirmar que o sistema NÃO prossegue para seleção de pista.
+5. Verificar que o firmware permanece travado em loop seguro.
+
+
+**Fluxo UML (Mermaid)**
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant ESP as ESP32/UIManager
+    participant MPU as Sensor MPU6050
+    participant LCD as LCD 16x2 I2C
+
+    Note over ESP: Boot do sistema
+
+    ESP ->> MPU: initMPU() / beginTransmission()
+    MPU -->> ESP: erro / sem resposta
+
+    ESP ->> LCD: print("MPU ERROR")
+
+    Note over ESP: Sistema trava em loop infinito
+    ESP ->> ESP: while(true)
+```
+
+
+**Trecho de Código da Falha**
 
 ```cpp
-void setup() {
-  ... 
-
-  // MPU
-  if (!initMPU())
-  {
-    lcd.print("MPU ERROR");
-    while (true);  // trava o sistema para evitar operação incorreta
-  }
-
-  ...
+if (!initMPU())
+{
+  lcd.print("MPU ERROR");
+  while (true); // trava o sistema
 }
 ```
 
 
+**Dashboard do Sistema**
+
+O sistema envia dados para o Ubidots, onde o dashboard apresenta:
+
+* gráficos de aceleração X, Y e Z
+* gráfico do piezoelétrico
+* indicadores de conexão
+
+Esses elementos garantem rastreabilidade completa da coleta.
+
+*(Inserir prints reais do dashboard aqui)*
 
 
 
-**Desta vez, utilize diagramas de sequência UML para descrever os fluxos de teste do sistema.** <br>
-Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do protótipo físico e dashboards, além de descrições dos testes realizados para ilustrar o funcionamento do protótipo._
+**Conclusões Preliminares**
+
+  Com base nos testes realizados, o protótipo físico atende integralmente aos requisitos do projeto e aos critérios avaliativos da sprint. O sistema demonstrou:
+
+* funcionamento estável dos sensores analógico e digital
+* navegação clara via botões físicos
+* boa experiência do usuário através do LCD
+* comunicação MQTT resiliente, com reconexão automática
+* reação adequada a falhas críticas (MPU)
+
+  Os diagramas de sequência UML facilitaram a visualização das interações entre os módulos e confirmaram que o comportamento implementado corresponde ao esperado. O protótipo encontra-se apto para servir como base para testes em ambiente real, coleta de dados de vibração e futuras evoluções do sistema.
+
+
+
 
 ### 3.4.5. Protótipo Final do Projeto (sprint 5)	
 

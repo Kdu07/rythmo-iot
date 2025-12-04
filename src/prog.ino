@@ -9,9 +9,9 @@
 #include <UbidotsEsp32Mqtt.h>
 
 const char *WIFI_SSID = "Inteli.Iot";
-const char *WIFI_PASS = "";
+const char *WIFI_PASS = "%(Yk(sxGMtvFEs.3";
 
-const char *UBIDOTS_TOKEN = "";
+const char *UBIDOTS_TOKEN = "BBUS-ppLwYnTNv1R94JaQKPXxj258WjBqbr";
 const char *DEVICE_LABEL = "esp32_t15_grupo3";
 
 const char *VARIABLE_LABEL1 = "acelerometro-x";
@@ -45,9 +45,21 @@ const char *DATA_FILENAME = "/dados.csv";
 
 const int MPU_ADDR = 0x68;
 
+#define BUZZER_PIN 4 // >>> BUZZER <<<
+
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 
 bool sdCardOK = false;
+
+// =============================================================================
+// BUZZER — função que toca UM único beep
+// =============================================================================
+void playStartBeep()
+{
+  tone(BUZZER_PIN, 2000, 150); // 2 kHz por 150 ms
+  delay(150);
+  noTone(BUZZER_PIN);
+}
 
 // =============================================================================
 // MPU FUNCTIONS
@@ -187,6 +199,9 @@ private:
         lcd.clear();
         started = selected;
         startTime = millis();
+
+        playStartBeep(); // >>> BUZZER <<<
+
         Serial.println(">>> MEDIÇÃO INICIADA <<<");
       }
     }
@@ -396,6 +411,8 @@ void setup()
   pinMode(PIEZO_PIN, INPUT);
   pinMode(LED_RED, OUTPUT);
   pinMode(LED_GREEN, OUTPUT);
+
+  pinMode(BUZZER_PIN, OUTPUT); // >>> BUZZER <<<
 
   // MPU
   if (!initMPU())
