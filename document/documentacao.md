@@ -1073,7 +1073,59 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 ### 3.4.4. Protótipo Físico do Projeto (online) (sprint 4)	
 
-_Aqui você deve registrar diversas situações de uso de seu sistema como um todo, indicando exemplos de ação do usuário e resposta do sistema, apontando como o ambiente deverá estar configurado para receber a ação e produzir a resposta. Estes registros serão utilizados para testar seu sistema, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de falha nos comportamentos do sistema. <br>
+&emsp;&emsp;&emsp;&emsp;Esta seção documenta os principais fluxos de uso do sistema Rythmo IoT, contemplando comportamentos esperados, respostas do protótipo e registros de falhas. O objetivo é validar a usabilidade e o correto funcionamento dos componentes: sensores (MPU6050 – digital / piezo – analógico), entradas booleanas (Options, Select, Reset, Start), saídas LED vermelho e verde, display LCD 16×2 I2C, SD card, comunicação MQTT com Ubidots e atuadores lógicos inseridos nas regras de negócio.
+
+&emsp;&emsp;&emsp;&emsp;As situações de teste foram selecionadas com base no processo de coleta de dados definido para a Renault do Brasil, garantindo alinhamento com experiência do usuário (UX) e requisitos técnicos. 
+
+&emsp;&emsp;&emsp;&emsp;Para descrever os fluxos de teste do sistema, utilizamos diagramas de sequência UML, que ilustram a interação entre os componentes do protótipo e o usuário em diferentes cenários. O Diagrama UML, ou Unified Modeling Language (Linguagem de Modelagem Unificada), é uma ferramenta visual padronizada utilizada na engenharia de software para representar, projetar e documentar sistemas complexos de forma clara e organizada. Esses diagramas facilitam a comunicação entre equipes de desenvolvimento, ajudando a identificar requisitos, modelar comportamentos e arquiteturas, e reduzir ambiguidades no ciclo de vida de um software, sendo amplamente adotada em metodologias ágeis e tradicionais para promover uma visão unificada do projeto.
+
+
+**Caso de Teste 1 - Seleção de Pista e Início de Medição (Sucesso)**
+
+**Objetivo:** Validar o fluxo completo de seleção de pista → confirmação → início da coleta → envio MQTT → exibição no LCD → armazenamento no SD → indicação por LEDs.
+
+**Pré-Condição:** Dispositivo ligado e conectado a internet, conexão MQTT ativa, SD card inserido.
+
+
+
+**Caso de Teste 2 - Erro de Inicialização do MPU6050 (Falha)**
+
+**Objetivo:** Testar a reação do sistema quando o sensor digital falha durante o boot.
+**Pré-Condição:** Dispositivo ligado, conexão MQTT ativa, SD card inserido, mas o sensor MPU6050 está desconectado ou com falha.
+
+**Participantes:**
+ESP32/UIManager → MPU6050 → LCD
+
+**Sequência:**
+
+- ESP32 → MPU: beginTransmission()
+- MPU → ESP32: error
+- ESP32 → LCD: "MPU ERROR"
+- ESP32 → Loop infinito (stop system)
+
+
+Trecho do código responsável pela verificação do MPU6050:
+
+
+```cpp
+void setup() {
+  ... 
+
+  // MPU
+  if (!initMPU())
+  {
+    lcd.print("MPU ERROR");
+    while (true);  // trava o sistema para evitar operação incorreta
+  }
+
+  ...
+}
+```
+
+
+
+
+
 **Desta vez, utilize diagramas de sequência UML para descrever os fluxos de teste do sistema.** <br>
 Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do protótipo físico e dashboards, além de descrições dos testes realizados para ilustrar o funcionamento do protótipo._
 
