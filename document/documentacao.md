@@ -1195,8 +1195,6 @@ selecionar pista → confirmar → iniciar coleta → exibir sensores → enviar
    * vermelho pisca (idle)
    * verde liga (coleta)
 6. Verificar no LCD: AX, AY, AZ, Piezo.
-7. Verificar no dashboard Ubidots os dados publicados.
-8. Pressionar **RESET** para finalizar a sessão.
 
 
 
@@ -1256,6 +1254,10 @@ sequenceDiagram
     ESP ->> LCD: limpar e voltar ao menu
 ```
 
+Vídeo de Demonstração: [Youtube](https://youtu.be/K8lj8y34wYY)
+
+<img src="../assets/caso-de-teste1.png" alt="Caso de Teste 1" />
+
 ---
 
 **Caso de Teste 2 – Erro de Inicialização do MPU6050 (Falha)**
@@ -1311,19 +1313,9 @@ if (!initMPU())
 }
 ```
 
+Vídeo de Demonstração: [Youtube](https://youtu.be/VQmL0koQvTQ)
 
-**Dashboard do Sistema**
-
-O sistema envia dados para o Ubidots, onde o dashboard apresenta:
-
-* gráficos de aceleração X, Y e Z
-* gráfico do piezoelétrico
-* indicadores de conexão
-
-Esses elementos garantem rastreabilidade completa da coleta.
-
-*(Inserir prints reais do dashboard aqui)*
-
+<img src="../assets/mpu-error.png" alt="Erro MPU6050" />
 
 
 **Conclusões Preliminares**
