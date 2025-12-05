@@ -823,7 +823,7 @@ Vídeo de explicação sobre a arquitetura do protótipo físico: https://www.yo
 | Botão RESET (B3F-1020) | Reinicia o sistema, parando a coleta de dados e retornando à tela inicial do display LCD para nova seleção de pista. | Dispositivo de Entrada |
 | LED Vermelho | Indica o estado pré-inicialização do sistema, piscando em intervalo regular até que o protótipo complete a inicialização. | Dispositivo de Saída |
 | LED Verde | Permanece aceso durante o funcionamento normal do protótipo, indicando que o sistema está operacional e coletando dados. | Dispositivo de Saída |
-| Pilhas/Bateria | Fonte de energia portátil para alimentação do microcontrolador ESP32 e demais componentes do circuito, permitindo operação independente durante os testes em pista. | Fonte de Energia |
+| Buzzer | Componente piezoelétrico que emite um sinal sonoro breve ao iniciar o dispositivo, confirmando que o sistema foi energizado e está pronto para uso. | Dispositivo de Saída |
 | Antena WiFi | Amplificador de sinal WiFi integrado ao ESP32, que melhora a cobertura e a intensidade do sinal para garantir transmissão estável dos dados para a plataforma Ubidots. | Amplificador de Sinal |
 
 <div align="center">
