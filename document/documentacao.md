@@ -1084,7 +1084,7 @@ Também inclua figuras da versão final do protótipo físico e dashboards, alé
 
 ### 3.4.6. Testes de Usabilidade
 
-&emsp;&emsp;&emsp;&emsp;O teste de usabilidade é uma metodologia utilizada para avaliar a facilidade com que usuários reais interagem com um produto, sistema ou interface, como sites, aplicativos ou dispositivos. Durante o teste, observadores analisam como os participantes executam tarefas específicas, identificando dificuldades, confusões ou barreiras na experiência de uso. O objetivo principal é coletar insights sobre o comportamento do usuário para melhorar a funcionalidade, eficiência e satisfação geral do produto. Desse modo, abaixo podemos ver um breve relato de como foi o processo de testagem da nossa IoT, durante uma atividade em sala de aula:
+&emsp; O teste de usabilidade é uma metodologia utilizada para avaliar a facilidade com que usuários reais interagem com um produto, sistema ou interface, como sites, aplicativos ou dispositivos. Durante o teste, observadores analisam como os participantes executam tarefas específicas, identificando dificuldades, confusões ou barreiras na experiência de uso. O objetivo principal é coletar insights sobre o comportamento do usuário para melhorar a funcionalidade, eficiência e satisfação geral do produto. Desse modo, abaixo podemos ver um breve relato de como foi o processo de testagem da nossa IoT, durante uma atividade em sala de aula:
 
 
 - **Projeto Avaliado:** Rythmo, projeto de IoT desenvolvido para monitoramento de vibrações e acelerações em veículos Renault
@@ -1093,11 +1093,15 @@ Também inclua figuras da versão final do protótipo físico e dashboards, alé
 - **Local:** Sala de aula
 - **Responsáveis:** Rafael Santana, Thulio Bacco e Gabriel Bartmanovicz. 
 
-**Contexto dos testes**
+Segue o link da pasta com os vídeos dos testes de usabilidade:
 
-&emsp;&emsp;&emsp;&emsp;Os testes foram realizados em um ambiente de sala de aula, onde os participantes tiveram a oportunidade de interagir com o protótipo físico. O objetivo era avaliar a usabilidade do dispositivo, incluindo a facilidade de navegação pelos menus, a clareza das informações exibidas no LCD e a eficiência na coleta e transmissão dos dados para o dashboard Ubidots.
+[VÍDEOS DOS TESTES DE USABILIDADE](https://drive.google.com/drive/folders/1TAEmfw4gQbqdAGiNXI_RFrzez1vFiyWs?usp=sharing)
 
-O perfil do público testador incluiu estudantes do primeiro ano da Turma 17, os quais possuem conhecimentos em eletrônica e programação, o que proporcionou uma perspectiva valiosa sobre a experiência do usuário final.
+**3.4.6.1. Contexto dos testes**
+
+&emsp; Os testes foram realizados em um ambiente de sala de aula, onde os participantes tiveram a oportunidade de interagir com o protótipo físico. O objetivo era avaliar a usabilidade do dispositivo, incluindo a facilidade de navegação pelos menus, a clareza das informações exibidas no LCD e a eficiência na coleta e transmissão dos dados para o dashboard Ubidots.
+
+&emsp; O perfil do público testador incluiu estudantes do primeiro ano da Turma 17, os quais possuem conhecimentos em eletrônica e programação, o que proporcionou uma perspectiva valiosa sobre a experiência do usuário final.
 
 **Parâmetros de Aplicação:**
 - **Tarefas:** Os participantes foram instruídos a realizar tarefas específicas, como navegar pelo menu usando os botões OPTIONS, SELECT, RESET e START, aplicar pressão no sensor piezoelétrico e movimentar o acelerômetro para observar as leituras no LCD e no dashboard Ubidots.
@@ -1113,10 +1117,31 @@ O perfil do público testador incluiu estudantes do primeiro ano da Turma 17, os
 
 **Problemas Detectados e Resultados Obtidos**
 
-&emsp;&emsp;&emsp;&emsp;Durante os testes, foram identificados alguns problemas de usabilidade que impactaram a experiência dos usuários. A seguir, destacamos os principais pontos observados:
+&emsp; Durante os testes, foram identificados alguns problemas de usabilidade que impactaram a experiência dos usuários. A seguir, destacamos os principais pontos observados:
 
 
 
+Segue o link da tabela dos testes de usabilidade: 
+
+[TABELA DOS TESTES DE USABILIDADE](https://docs.google.com/spreadsheets/d/1FxtjJtgKUqLDD7cN9jgiONR6FmJ07ZN7b1vGEoNSmN8/edit?usp=sharing)
+
+<div align="center">
+
+   <sub>Figura 14 - Tabela de ocorrências </sub>
+
+   <img src="../assets/tabela-ocorrências.jpeg"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+&emsp; Uma das ocorrências observadas foi a respeito da limpeza do monitor LCD, mesmo após selecionar a pista e deixar com o status de "selected", é possível alterar o tipo da trilha.
+
+&emsp; Além disso, outra ocorrência observada foi ao passar pelo placeholder 2 e não selecioná-lo, ocorre um problema de limpeza do monitor, mantendo o final da palavra ("der 2") mesmo após selecionar outra pista.
+
+&emsp; Ambos erros ocorreram com somente 1 pessoa cada; Como próximos passos, o firmware deve ser ajustado para que, após a pista ser marcada como “selected”, o botão de navegação não altere mais a trilha até que o usuário use um comando claro de retorno (por exemplo, Reset). Em paralelo, a rotina de escrita no LCD deve limpar toda a linha antes de exibir um novo texto, eliminando resíduos como “der 2”. Depois dessas correções, recomenda-se repetir rapidamente os mesmos cenários de teste para confirmar que os erros foram resolvidos.
+
+&emsp; De forma geral, os testes de usabilidade mostraram que o Rythmo é funcional e compreensível para o público alvo, permitindo navegar pelos menus, interagir com os sensores e visualizar os dados no LCD e no dashboard da Ubidots sem grandes dificuldades. Os problemas identificados foram pontuais, ligados principalmente à navegação após a seleção de pista e à limpeza do texto no LCD, e já têm encaminhamento claro de correção no firmware. Com os ajustes propostos e uma nova rodada rápida de validação, a tendência é que a experiência de uso se torne mais fluida, consistente e adequada ao contexto de aplicação na Renault.
 
 ## <a name="c4"></a>4. Conclusões e Recomendações
 
