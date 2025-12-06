@@ -787,7 +787,7 @@ Vídeo de explicação sobre a arquitetura da solução: <a href="https://www.yo
 
 &emsp; Como parte desse planejamento, explicamos em detalhe as tecnologias específicas usadas no protótipo e o papel de cada uma na coleta, transmissão e análise de dados em tempo real. Sensores de aceleração e força, dispositivos IoT, protocolos de comunicação e ferramentas de visualização foram selecionados para garantir que o sistema funcione de forma integrada e eficiente. A seguir, apresentamos a arquitetura do protótipo do projeto Rythmo, descrevendo todos os sensores e tecnologias utilizadas no dispositivo IoT, na nuvem e no dashboard, além de destacar os tipos de conexão entre os componentes com fio, sem fio e de pertencimento.
 
-Vídeo de explicação sobre a arquitetura do protótipo físico: https://www.youtube.com/watch?v=lfGM7GLAsxc
+Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.be/jQI-WdnehS8 
 
 <div align="center">
 <sub>Figura 12 - Diagrama de Arquitetura do Protótipo Físico</sub>
@@ -823,7 +823,7 @@ Vídeo de explicação sobre a arquitetura do protótipo físico: https://www.yo
 | Botão RESET (B3F-1020) | Reinicia o sistema, parando a coleta de dados e retornando à tela inicial do display LCD para nova seleção de pista. | Dispositivo de Entrada |
 | LED Vermelho | Indica o estado pré-inicialização do sistema, piscando em intervalo regular até que o protótipo complete a inicialização. | Dispositivo de Saída |
 | LED Verde | Permanece aceso durante o funcionamento normal do protótipo, indicando que o sistema está operacional e coletando dados. | Dispositivo de Saída |
-| Pilhas/Bateria | Fonte de energia portátil para alimentação do microcontrolador ESP32 e demais componentes do circuito, permitindo operação independente durante os testes em pista. | Fonte de Energia |
+| Buzzer | Componente piezoelétrico que emite um sinal sonoro breve ao iniciar o dispositivo, confirmando que o sistema foi energizado e está pronto para uso. | Dispositivo de Saída |
 | Antena WiFi | Amplificador de sinal WiFi integrado ao ESP32, que melhora a cobertura e a intensidade do sinal para garantir transmissão estável dos dados para a plataforma Ubidots. | Amplificador de Sinal |
 
 <div align="center">
