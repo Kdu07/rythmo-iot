@@ -781,23 +781,68 @@ Vídeo de explicação sobre a arquitetura da solução: <a href="https://www.yo
 
 ### 3.3.4. Arquitetura do Protótipo(sprint 4)	
 
-_Vídeo de explicação sobre a arquitetura do protótipo físico: (coloque aqui o link do vídeo)_
+&emsp; A arquitetura do protótipo é o planejamento detalhado de como o sistema será estruturado fisicamente, funcionando como um mapa que mostra a disposição e a função de cada componente. Essa etapa é essencial para o desenvolvimento do projeto, pois define não apenas quais peças serão usadas, mas também como elas se conectam e trabalham juntas para alcançar os objetivos do sistema.
 
-_Descreva as tecnologias utilizadas de forma detalhada (visão de tecnologia).
+&emsp; Neste documento, apresentamos a arquitetura do protótipo desenvolvido para o projeto Rythmo, detalhando os componentes físicos utilizados - como sensores, microcontroladores e display LCD - as tecnologias escolhidas - incluindo linguagem de programação, banco de dados e bibliotecas - e as formas de comunicação necessárias entre esses elementos. Essa organização serve como guia para a construção e implementação do sistema, além de facilitar a identificação de pontos que podem ser melhorados e proporcionar uma visão mais clara de como o dispositivo funciona na prática.
 
-Descreva a arquitetura usando um diagrama de blocos similar à visão anterior, porém especificando as tecnologias utilizadas. O diagrama de arquitetura deve:_
-- _Mostrar microcontroladores, incluindo descrições de sua função no sistema (por exemplo: "Irá processar o sinal dos sensores a cada X minutos")_
-- _Mostrar sensores, incluindo descrição de função e especificações técnicas do tipo de informação que será coletada_
-- _Mostrar apresentadores de informação (displays), incluindo descrição de que tipo de informação será apresentada (por exemplo, "Mostrar temperatura dos sensores")_
-- _Mostrar atuadores, caso existam na solução, incluindo descrições do que irão acionar (por exemplo, "Ligar motor de irrigação durante x minutos")_
-- _Mostrar o broker MQTT e o dashboard que é a interface do usuário_
-- _Mostrar ligações entre os elementos (com fio ou sem fio) – incluindo conexões com sensores e atuadores, conexão com WiFi, entre outros._
-_Faça uma tabela dos possíveis componentes utilizados. Todos os componentes devem estar presentes na arquitetura._
+&emsp; Como parte desse planejamento, explicamos em detalhe as tecnologias específicas usadas no protótipo e o papel de cada uma na coleta, transmissão e análise de dados em tempo real. Sensores de aceleração e força, dispositivos IoT, protocolos de comunicação e ferramentas de visualização foram selecionados para garantir que o sistema funcione de forma integrada e eficiente. A seguir, apresentamos a arquitetura do protótipo do projeto Rythmo, descrevendo todos os sensores e tecnologias utilizadas no dispositivo IoT, na nuvem e no dashboard, além de destacar os tipos de conexão entre os componentes com fio, sem fio e de pertencimento.
 
-| **Componente** | **Descrição** | **Tipo** | 
+Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.be/jQI-WdnehS8 
+
+<div align="center">
+<sub>Figura 12 - Diagrama de Arquitetura do Protótipo Físico</sub>
+
+<br>
+
+<img src="../assets/arquitetura-solucao.png">
+
+<sub> Fonte: Material produzido pelos autores 
+(2025)</sub>
+
+</div>
+
+&emsp; Para facilitar a compreensão da arquitetura apresentada, detalhamos a seguir todos os componentes físicos que compõem o protótipo do projeto Rythmo. A tabela organiza cada elemento por categoria (microcontrolador, sensores, dispositivos de entrada/saída, etc.), apresentando suas especificações técnicas e o papel que desempenham no sistema de coleta e transmissão de dados de Squeak and Rattle.
+ 
+
+<div align="center">
+<br>
+<sub> Quadro 1: Componentes </sub>
+
+<br>
+</div>
+
+| **Componente** | **Descrição** | **Tipo** |
 |----------|----------|----------|
-|E.g. ESP32 WROOM 32 Devkit|E.g. Trata-se de um microcontrolador amplamente usado na indústria e em projetos educacionais, que possui interfaces mais amigáveis para conexão de componentes diversos...|E.g. Microcontrolador|
-|E.g. sensor XPTO|E.g. Este sensor mede o sinal de XYZ em unidades q/s, e possui tolerância de abcd...|E.g. Sensor|
+| ESP32 WROOM 32 Devkit | Microcontrolador responsável por realizar a leitura e processamento dos dados enviados pelos sensores e transmiti-los pela internet para o Ubidots. Opera com conectividade WiFi integrada e possui capacidade de processamento suficiente para gerenciar múltiplos sensores simultaneamente. | Microcontrolador |
+| MPU6050 (GY-521) | Acelerômetro que mede aceleração e movimentos nos eixos X, Y e Z, permitindo detectar deslocamentos, inclinação e vibrações do veículo durante os testes em pista. Opera com interface I2C e fornece dados com alta precisão. | Sensor |
+| Sensor Piezoelétrico (7BB-27-4L0) | Detecta vibrações, impactos e pressões, convertendo esses estímulos mecânicos em sinais elétricos. Utilizado para capturar dados de força exercida sobre o veículo durante os testes de Squeak and Rattle. | Sensor |
+| Display LCD I2C 16x2 (1602A) | Exibe informações em tempo real como os valores de aceleração nos eixos X, Y, Z e a leitura do sensor piezoelétrico. Também apresenta a tela de seleção de pista e status do sistema. Opera com interface I2C para comunicação simplificada com o ESP32. | Dispositivo de Saída |
+| Botão OPTIONS (B3F-1020) | Permite ao usuário navegar entre as diferentes opções de pistas disponíveis no menu do display LCD. | Dispositivo de Entrada |
+| Botão SELECT (B3F-1020) | Confirma a seleção da pista escolhida pelo usuário no menu do display LCD. | Dispositivo de Entrada |
+| Botão START (B3F-1020) | Inicia a coleta de dados dos sensores, acionando o processo de medição e transmissão dos sinais para o Ubidots. | Dispositivo de Entrada |
+| Botão RESET (B3F-1020) | Reinicia o sistema, parando a coleta de dados e retornando à tela inicial do display LCD para nova seleção de pista. | Dispositivo de Entrada |
+| LED Vermelho | Indica o estado pré-inicialização do sistema, piscando em intervalo regular até que o protótipo complete a inicialização. | Dispositivo de Saída |
+| LED Verde | Permanece aceso durante o funcionamento normal do protótipo, indicando que o sistema está operacional e coletando dados. | Dispositivo de Saída |
+| Buzzer | Componente piezoelétrico que emite um sinal sonoro breve ao iniciar o dispositivo, confirmando que o sistema foi energizado e está pronto para uso. | Dispositivo de Saída |
+| Antena WiFi | Amplificador de sinal WiFi integrado ao ESP32, que melhora a cobertura e a intensidade do sinal para garantir transmissão estável dos dados para a plataforma Ubidots. | Amplificador de Sinal |
+
+<div align="center">
+<br>
+<sub> Quadro 2: Tecnologias e ferramentas </sub>
+
+<br>
+</div>
+
+| **Tecnologia/Ferramenta** | **Descrição** | **Tipo** |
+|----------|----------|----------|
+| C++ | Linguagem de programação utilizada para desenvolvimento do firmware embarcado no ESP32, responsável pela lógica de controle, leitura de sensores, interface com o usuário e transmissão de dados. | Linguagem de Programação |
+| Arduino IDE | Ambiente de desenvolvimento integrado (IDE) utilizado para escrever, compilar e fazer upload do código para o microcontrolador ESP32. Fornece bibliotecas e ferramentas específicas para desenvolvimento embarcado. | IDE |
+| PlatformIO | Plataforma alternativa de desenvolvimento para sistemas embarcados, oferecendo recursos avançados de gerenciamento de bibliotecas, debug e controle de versão. Utilizada opcionalmente ao Arduino IDE. | IDE |
+| Protocolo MQTT | Protocolo de comunicação leve e eficiente para IoT, utilizado para publicar dados dos sensores em tópicos específicos e transmiti-los para o broker na nuvem. | Protocolo de Comunicação |
+| Protocolo I2C | Protocolo de comunicação serial síncrono utilizado para a comunicação entre o ESP32 e os dispositivos I2C, como o display LCD 16x2 e o acelerômetro MPU6050. | Protocolo de Comunicação |
+| Ubidots | Plataforma as a service que atua como broker MQTT, gerenciando, armazenando e visualizando os dados capturados pelo dispositivo IoT. Oferece dashboard personalizável para análise dos dados coletados. | Broker MQTT / Plataforma Cloud |
+| WiFi (802.11 b/g/n) | Tecnologia de conectividade sem fio utilizada pelo ESP32 para estabelecer conexão com a rede local e transmitir dados para o Ubidots via internet. | Conectividade |
+| 
 
 ### 3.3.5. Arquitetura Refinada da Solução (sprint 5)	
 
@@ -1073,14 +1118,331 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 ### 3.4.4. Protótipo Físico do Projeto (online) (sprint 4)	
 
-_Aqui você deve registrar diversas situações de uso de seu sistema como um todo, indicando exemplos de ação do usuário e resposta do sistema, apontando como o ambiente deverá estar configurado para receber a ação e produzir a resposta. Estes registros serão utilizados para testar seu sistema, portanto, descreva várias situações, incluindo não apenas casos de sucesso, mas também de falha nos comportamentos do sistema. <br>
-**Desta vez, utilize diagramas de sequência UML para descrever os fluxos de teste do sistema.** <br>
-Siga as nomenclaturas e convenções já utilizadas anteriormente, e não se esqueça dos alinhamentos de negócios e experiência do usuário para pensar em situações representativas. Inclua figuras do protótipo físico e dashboards, além de descrições dos testes realizados para ilustrar o funcionamento do protótipo._
+&emsp;&emsp;&emsp;&emsp;Esta seção apresenta a documentação completa do protótipo físico do sistema **Rythmo IoT**, desenvolvido para realizar a coleta e transmissão de dados de aceleração e vibração em veículos de teste da Renault. O objetivo é validar o comportamento do sistema sob diferentes condições de operação, garantindo que todos os componentes, sensores, interface física e comunicação funcionem conforme o planejado.
+
+  O protótipo implementa:
+
+* **2 saídas informacionais:** LED vermelho (idle), LED verde (coleta ativa)
+* **4 entradas booleanas:** Options, Select, Start, Reset
+* **2 sensores distintos:** MPU6050 (digital via I2C), piezoelétrico (analógico)
+* **1 componente serial I2C:** LCD 16×2
+* **Comunicação MQTT completa:** via Ubidots
+* **Dashboard online:** gráficos para AX, AY, AZ e Piezo
+* **1 atuador lógico:** lógica de LEDs e fluxo de operação conforme regras de negócio
+
+&emsp;&emsp;&emsp;&emsp;Para representar os fluxos do sistema, utilizam-se **diagramas de sequência UML**, que facilitam a compreensão do comportamento dinâmico dos componentes físicos e lógicos. Os diagramas foram elaborados com base no protótipo funcional e validam tanto cenários de sucesso quanto falhas operacionais.
+
+
+---
+
+**Diagrama de Sequência UML – Visão Geral do Sistema**
+
+Este diagrama representa todo o fluxo do sistema desde o boot até o término da coleta, incluindo comunicação MQTT.
+
+#### **Diagrama Completo (Mermaid)**
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant ESP as ESP32/UIManager
+    participant LCD as LCD 16x2 I2C
+    participant MPU as Sensor MPU6050
+    participant PIEZO as Piezoelétrico
+    participant BTN_Options as Botão OPTIONS
+    participant BTN_Select as Botão SELECT
+    participant BTN_Start as Botão START
+    participant BTN_Reset as Botão RESET
+    participant LED_R as LED Vermelho
+    participant LED_G as LED Verde
+    participant BUZZ as Buzzer
+    participant MQTT as Ubidots MQTT Broker
+    actor Usuario as Usuário
+
+    Note over ESP: Inicialização do sistema
+
+    ESP ->> LCD: iniciar display
+    ESP ->> MPU: initMPU()
+    MPU -->> ESP: OK
+    ESP ->> MQTT: conectar Wi-Fi e broker
+    MQTT -->> ESP: Conexão estabelecida
+
+    Note over LCD: Tela inicial "Select Pista"
+
+    Usuario ->> BTN_Options: Pressiona Options
+    BTN_Options ->> ESP: LOW
+    ESP ->> LCD: Atualiza pista
+
+    Usuario ->> BTN_Select: Pressiona Select
+    BTN_Select ->> ESP: LOW
+    ESP ->> LCD: “Pista selecionada”
+
+    ESP ->> LED_R: piscar (idle visual)
+
+    Usuario ->> BTN_Start: Pressiona Start
+    BTN_Start ->> ESP: LOW
+
+    ESP ->> LED_R: desligar
+    ESP ->> LED_G: ligar (coleta ativa)
+    ESP ->> BUZZ: tocar 1 vez (beep)
+
+    %% Coleta contínua
+    loop Leitura contínua
+        ESP ->> MPU: readAccel()
+        MPU -->> ESP: ax, ay, az
+
+        ESP ->> PIEZO: analogRead()
+        PIEZO -->> ESP: piezo
+
+        ESP ->> LCD: exibir valores
+    end
+
+    %% Envio MQTT
+    loop Envio MQTT
+        ESP ->> MQTT: publish(ax, ay, az, piezo)
+        MQTT -->> ESP: ack
+    end
+
+    Usuario ->> BTN_Reset: Pressionar Reset
+    BTN_Reset ->> ESP: LOW
+
+    ESP ->> LED_G: desligar
+    ESP ->> LED_R: piscar (idle)
+    ESP ->> LCD: retornar ao menu
+```
+
+---
+
+**Caso de Teste 1 – Seleção de Pista e Início da Medição (Sucesso)**
+
+**Objetivo**
+
+Validar o fluxo completo de uso previsto:
+selecionar pista → confirmar → iniciar coleta → exibir sensores → enviar MQTT → indicar LEDs.
+
+**Pré-Condições**
+
+* ESP32 ligado
+* Wi-Fi funcional
+* Conexão MQTT ativa
+* Sensor MPU6050 conectado corretamente
+* Piezo funcional
+
+
+**Procedimento**
+
+1. Pressionar **OPTIONS** para navegar entre as pistas.
+2. Verificar que o LCD atualiza o texto.
+3. Pressionar **SELECT** para confirmar a pista.
+4. Pressionar **START** para iniciar a coleta.
+5. Observar LEDs:
+
+   * vermelho pisca (idle)
+   * verde liga (coleta)
+6. Verificar no LCD: AX, AY, AZ, Piezo.
+
+
+
+**Fluxo UML**
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    actor Usuario as Usuário
+    participant BTN_Options as Botão OPTIONS
+    participant BTN_Select as Botão SELECT
+    participant BTN_Start as Botão START
+    participant ESP as ESP32/UIManager
+    participant LCD as LCD 16x2
+    participant MPU as MPU6050
+    participant PIEZO as Piezo
+    participant LED_R as LED Vermelho
+    participant LED_G as LED Verde
+    participant BUZZ as Buzzer
+    participant MQTT as MQTT Broker
+
+    Usuario ->> BTN_Options: Pressionar Options
+    BTN_Options ->> ESP: LOW
+    ESP ->> LCD: Atualiza pista exibida
+
+    Usuario ->> BTN_Select: Pressionar Select
+    BTN_Select ->> ESP: LOW
+    ESP ->> LCD: “Pista Selecionada”
+
+    ESP ->> LED_R: piscar (idle)
+
+    Usuario ->> BTN_Start: Pressionar Start
+    BTN_Start ->> ESP: LOW
+
+    ESP ->> LED_R: desligar
+    ESP ->> LED_G: ligar
+    ESP ->> BUZZ: emitir *beep* único
+
+    loop Leitura contínua
+        ESP ->> MPU: readAccel()
+        MPU -->> ESP: ax, ay, az
+
+        ESP ->> PIEZO: analogRead()
+        PIEZO -->> ESP: piezo
+
+        ESP ->> LCD: atualizar valores
+    end
+
+    loop Envio MQTT
+        ESP ->> MQTT: publish(ax, ay, az, piezo)
+    end
+
+    Usuario ->> ESP: Pressionar RESET
+    ESP ->> LED_G: desligar
+    ESP ->> LED_R: piscar
+    ESP ->> LCD: limpar e voltar ao menu
+```
+
+Vídeo de Demonstração: [Youtube](https://youtu.be/K8lj8y34wYY)
+
+<img src="../assets/caso-de-teste1.png" alt="Caso de Teste 1" />
+
+---
+
+**Caso de Teste 2 – Erro de Inicialização do MPU6050 (Falha)**
+
+**Objetivo**
+
+Testar comportamento seguro quando o sensor digital MPU6050 falha durante o boot.
+
+**Pré-Condição**
+
+* ESP32 ligado 
+* Wi-Fi ativo
+* **MPU6050 desconectado ou com falha**
+
+**Procedimento**
+
+1. Desconectar o cabo SDA ou VCC do MPU6050.
+2. Ligar o dispositivo.
+3. Observar o LCD.
+4. Confirmar que o sistema NÃO prossegue para seleção de pista.
+5. Verificar que o firmware permanece travado em loop seguro.
+
+
+**Fluxo UML (Mermaid)**
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant ESP as ESP32/UIManager
+    participant MPU as Sensor MPU6050
+    participant LCD as LCD 16x2 I2C
+
+    Note over ESP: Boot do sistema
+
+    ESP ->> MPU: initMPU() / beginTransmission()
+    MPU -->> ESP: erro / sem resposta
+
+    ESP ->> LCD: print("MPU ERROR")
+
+    Note over ESP: Sistema trava em loop infinito
+    ESP ->> ESP: while(true)
+```
+
+
+**Trecho de Código da Falha**
+
+```cpp
+if (!initMPU())
+{
+  lcd.print("MPU ERROR");
+  while (true); // trava o sistema
+}
+```
+
+Vídeo de Demonstração: [Youtube](https://youtu.be/VQmL0koQvTQ)
+
+<img src="../assets/mpu-error.png" alt="Erro MPU6050" />
+
+
+**Conclusões Preliminares**
+
+  Com base nos testes realizados, o protótipo físico atende integralmente aos requisitos do projeto e aos critérios avaliativos da sprint. O sistema demonstrou:
+
+* funcionamento estável dos sensores analógico e digital
+* navegação clara via botões físicos
+* boa experiência do usuário através do LCD
+* comunicação MQTT resiliente, com reconexão automática
+* reação adequada a falhas críticas (MPU)
+
+  Os diagramas de sequência UML facilitaram a visualização das interações entre os módulos e confirmaram que o comportamento implementado corresponde ao esperado. O protótipo encontra-se apto para servir como base para testes em ambiente real, coleta de dados de vibração e futuras evoluções do sistema.
+
+
+
 
 ### 3.4.5. Protótipo Final do Projeto (sprint 5)	
 
 _Registre as situações de uso do sistema revisadas utilizando a modelagem UML para descrever os fluxos de teste. <br>
 Também inclua figuras da versão final do protótipo físico e dashboards, além de descrições dos testes realizados para ilustrar o funcionamento do protótipo._
+
+### 3.4.6. Testes de Usabilidade
+
+&emsp; O teste de usabilidade é uma metodologia utilizada para avaliar a facilidade com que usuários reais interagem com um produto, sistema ou interface, como sites, aplicativos ou dispositivos. Durante o teste, observadores analisam como os participantes executam tarefas específicas, identificando dificuldades, confusões ou barreiras na experiência de uso. O objetivo principal é coletar insights sobre o comportamento do usuário para melhorar a funcionalidade, eficiência e satisfação geral do produto. Desse modo, abaixo podemos ver um breve relato de como foi o processo de testagem da nossa IoT, durante uma atividade em sala de aula:
+
+
+- **Projeto Avaliado:** Rythmo, projeto de IoT desenvolvido para monitoramento de vibrações e acelerações em veículos Renault
+- **Turma:** Turma 15
+- **Data do Teste:** 01/12/2025
+- **Local:** Sala de aula
+- **Responsáveis:** Rafael Santana, Thulio Bacco e Gabriel Bartmanovicz. 
+
+Segue o link da pasta com os vídeos dos testes de usabilidade:
+
+[VÍDEOS DOS TESTES DE USABILIDADE](https://drive.google.com/drive/folders/1TAEmfw4gQbqdAGiNXI_RFrzez1vFiyWs?usp=sharing)
+
+**3.4.6.1. Contexto dos testes**
+
+&emsp; Os testes foram realizados em um ambiente de sala de aula, onde os participantes tiveram a oportunidade de interagir com o protótipo físico. O objetivo era avaliar a usabilidade do dispositivo, incluindo a facilidade de navegação pelos menus, a clareza das informações exibidas no LCD e a eficiência na coleta e transmissão dos dados para o dashboard Ubidots.
+
+&emsp; O perfil do público testador incluiu estudantes do primeiro ano da Turma 17, os quais possuem conhecimentos em eletrônica e programação, o que proporcionou uma perspectiva valiosa sobre a experiência do usuário final.
+
+**Parâmetros de Aplicação:**
+- **Tarefas:** Os participantes foram instruídos a realizar tarefas específicas, como navegar pelo menu usando os botões OPTIONS, SELECT, RESET e START, aplicar pressão no sensor piezoelétrico e movimentar o acelerômetro para observar as leituras no LCD e no dashboard Ubidots.
+
+
+**Focos de Avaliação:**
+- **Navegação:** Avaliar a facilidade de uso dos botões para navegar pelo menu e selecionar opções.s
+- **Clareza das Informações:** Verificar se as informações exibidas no LCD são claras e compreensíveis.
+- **Eficiência:** Medir o tempo necessário para completar as tarefas designadas.
+- **Satisfação do Usuário:** Coletar feedback qualitativo sobre a experiência geral de uso do dispositivo.
+- **Usabilidade do Dashboard:** Facilidade de navegação e compreensão das informações apresentadas.
+
+
+**Problemas Detectados e Resultados Obtidos**
+
+&emsp; Durante os testes, foram identificados alguns problemas de usabilidade que impactaram a experiência dos usuários. A seguir, destacamos os principais pontos observados:
+
+
+
+Segue o link da tabela dos testes de usabilidade: 
+
+[TABELA DOS TESTES DE USABILIDADE](https://docs.google.com/spreadsheets/d/1FxtjJtgKUqLDD7cN9jgiONR6FmJ07ZN7b1vGEoNSmN8/edit?usp=sharing)
+
+<div align="center">
+
+   <sub>Figura 14 - Tabela de ocorrências </sub>
+
+   <img src="../assets/tabela-ocorrências.jpeg"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+&emsp; Uma das ocorrências observadas foi a respeito da limpeza do monitor LCD, mesmo após selecionar a pista e deixar com o status de "selected", é possível alterar o tipo da trilha.
+
+&emsp; Além disso, outra ocorrência observada foi ao passar pelo placeholder 2 e não selecioná-lo, ocorre um problema de limpeza do monitor, mantendo o final da palavra ("der 2") mesmo após selecionar outra pista.
+
+&emsp; Ambos erros ocorreram com somente 1 pessoa cada; Como próximos passos, o firmware deve ser ajustado para que, após a pista ser marcada como “selected”, o botão de navegação não altere mais a trilha até que o usuário use um comando claro de retorno (por exemplo, Reset). Em paralelo, a rotina de escrita no LCD deve limpar toda a linha antes de exibir um novo texto, eliminando resíduos como “der 2”. Depois dessas correções, recomenda-se repetir rapidamente os mesmos cenários de teste para confirmar que os erros foram resolvidos.
+
+&emsp; De forma geral, os testes de usabilidade mostraram que o Rythmo é funcional e compreensível para o público alvo, permitindo navegar pelos menus, interagir com os sensores e visualizar os dados no LCD e no dashboard da Ubidots sem grandes dificuldades. Os problemas identificados foram pontuais, ligados principalmente à navegação após a seleção de pista e à limpeza do texto no LCD, e já têm encaminhamento claro de correção no firmware. Com os ajustes propostos e uma nova rodada rápida de validação, a tendência é que a experiência de uso se torne mais fluida, consistente e adequada ao contexto de aplicação na Renault.
 
 ## <a name="c4"></a>4. Conclusões e Recomendações
 

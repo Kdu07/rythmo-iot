@@ -8,7 +8,10 @@
 #include <WiFi.h>
 #include <UbidotsEsp32Mqtt.h>
 
-const char *WIFI_SSID = "Inteli.Iot";
+// const char *WIFI_SSID = "Inteli.Iot";
+// const char *WIFI_PASS = "";
+
+const char *WIFI_SSID = "SHARE-RESIDENTE";
 const char *WIFI_PASS = "";
 
 const char *UBIDOTS_TOKEN = "";
@@ -45,14 +48,26 @@ const char *DATA_FILENAME = "/dados.csv";
 
 const int MPU_ADDR = 0x68;
 
+#define BUZZER_PIN 4 // >>> BUZZER <<<
+
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 
 bool sdCardOK = false;
 
 // =============================================================================
+// BUZZER — função que toca UM único beep
+// =============================================================================
+void playStartBeep()
+{
+  tone(BUZZER_PIN, 2000, 200); // 2 kHz por 200 ms
+  delay(150);
+  noTone(BUZZER_PIN);
+}
+
+// =============================================================================
 // MPU FUNCTIONS
 // =============================================================================
-bool initMPU()
+bool initMPU() // inicializa o mpu para aquisição dos dados
 {
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(0x6B);
@@ -118,13 +133,13 @@ public:
   void begin()
   {
     option = 0;
-    selected = -1;
-    started = -1;
+    selected = -1; // Variável auxiliar para controlar se a pista foi selecionada ou não
+    started = -1;  // Variável auxiliar para controlar se o teste de rodagem começou ou não
     number = 1;
 
     lastLCDUpdate = 0;
     lcdUpdateInterval = 500;
-    lastLedMillis = 0;
+    lastLedMillis = 0; // Tempo de delay dos LEDs
     lastSaveMillis = 0;
 
     updateOptionText();
@@ -187,6 +202,9 @@ private:
         lcd.clear();
         started = selected;
         startTime = millis();
+
+        playStartBeep(); // >>> BUZZER <<<
+
         Serial.println(">>> MEDIÇÃO INICIADA <<<");
       }
     }
@@ -266,27 +284,39 @@ private:
         int16_t rx, ry, rz;
         readMPU(rx, ry, rz);
 
+        // Converte para 'g' (aprox. 16384 = 1g)
         float ax = rx / 16384.0;
         float ay = ry / 16384.0;
         float az = rz / 16384.0;
 
+        // Converte de g -> m/s²
+        float axMs2 = ax * 9.80665;
+        float ayMs2 = ay * 9.80665;
+        float azMs2 = az * 9.80665;
+
         int piezo = analogRead(PIEZO_PIN);
 
         lcd.setCursor(0, 0);
-        lcd.print("X:");
-        lcd.print(ax, 2);
+        lcd.print("X:      ");
+        lcd.setCursor(2, 0);
+        lcd.print(axMs2);
+
         lcd.setCursor(8, 0);
-        lcd.print("Y:");
-        lcd.print(ay, 2);
+        lcd.print("Y:      ");
+        lcd.setCursor(10, 0);
+        lcd.print(ayMs2);
 
         lcd.setCursor(0, 1);
-        lcd.print("Z:");
-        lcd.print(az, 2);
+        lcd.print("Z:      ");
+        lcd.setCursor(2, 1);
+        lcd.print(azMs2);
+
         lcd.setCursor(8, 1);
-        lcd.print("V:");
+        lcd.print("V:      ");
+        lcd.setCursor(10, 1);
         lcd.print(piezo);
 
-        sendToUbidots(ax, ay, az, piezo);
+        sendToUbidots(axMs2, ayMs2, azMs2, piezo);
       }
     }
   }
@@ -317,9 +347,11 @@ private:
   // ---------------------------------------------------------------
   void writeDataIfNeeded()
   {
+    // Caso o teste de rodagem não esteja atualmente rodando e o sdCard não foi configurado, não executa a função
     if (started == -1 || !sdCardOK_global)
       return;
 
+    // Impede que os dados sejam salvos muito rapidamente no microSD
     if (millis() - lastSaveMillis < saveInterval)
       return;
 
@@ -328,9 +360,15 @@ private:
     int16_t rx, ry, rz;
     readMPU(rx, ry, rz);
 
+    // Converte para 'g' (aprox. 16384 = 1g)
     float ax = rx / 16384.0;
     float ay = ry / 16384.0;
     float az = rz / 16384.0;
+
+    // Converte de g -> m/s²
+    float axMs2 = ax * 9.80665;
+    float ayMs2 = ay * 9.80665;
+    float azMs2 = az * 9.80665;
     int piezo = analogRead(PIEZO_PIN);
 
     // ====== SALVA NO SD ======
@@ -342,10 +380,10 @@ private:
     }
 
     File f = SD.open(DATA_FILENAME, FILE_APPEND);
-    unsigned long t = millis() - startTime;
+    unsigned long t = millis() - startTime; // Tempo relativo desde o começo do experimento
 
     f.printf("%lu,%d,%s,%.2f,%.2f,%.2f,%d\n",
-             t, number, optionText.c_str(), ax, ay, az, piezo);
+             t, number, optionText.c_str(), axMs2, ayMs2, azMs2, piezo);
 
     f.close();
   }
@@ -363,15 +401,51 @@ private:
     case 2:
       optionText = "Paralelepipedo";
       break;
-    case 3:
-      optionText = "Placeholder";
-      break;
-    case 4:
-      optionText = "Placeholder2";
-      break;
     }
   }
 };
+
+// Função para mostrar em qual rede o dispostivo está tentando se conectar
+bool connectWifiWithLCD()
+{
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Conectando WiFi");
+  lcd.setCursor(0, 1);
+  lcd.print(WIFI_SSID);
+
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+
+  unsigned long start = millis();
+  Serial.print("Conectando ao WiFi ");
+
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    delay(500);
+    Serial.print(".");
+    lcd.print("."); // imprime pontos no LCD
+
+    if (millis() - start > 15000)
+    { // 15s timeout
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("ERRO WIFI");
+      lcd.setCursor(0, 1);
+      lcd.print("Sem conexao");
+
+      Serial.println("\nWiFi timeout!");
+      return false;
+    }
+  }
+
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("WiFi Conectado!");
+  delay(700);
+
+  Serial.println("\nWiFi OK!");
+  return true;
+}
 
 UIManager ui;
 
@@ -397,6 +471,8 @@ void setup()
   pinMode(LED_RED, OUTPUT);
   pinMode(LED_GREEN, OUTPUT);
 
+  pinMode(BUZZER_PIN, OUTPUT); // >>> BUZZER <<<
+
   // MPU
   if (!initMPU())
   {
@@ -411,7 +487,7 @@ void setup()
 
   // UBIDOTS MQTT
   ubidots.setDebug(true);
-  ubidots.connectToWifi(WIFI_SSID, WIFI_PASS);
+  connectWifiWithLCD();
   ubidots.setCallback(callback);
   ubidots.setup();
   ubidots.reconnect();
