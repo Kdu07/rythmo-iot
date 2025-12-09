@@ -65,22 +65,48 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Instalação
 
+Segue a estrutura atualizada incluindo as informações de **pré-requisitos** e **instalação básica** do projeto, descrevendo as versões utilizadas para cada ferramenta:
+
+### Pré-requisitos
+
+Para configurar e executar o projeto corretamente, certifique-se de ter os seguintes itens instalados no seu ambiente de desenvolvimento:
+
+1. **Ambientes de Desenvolvimento**:
+
+   - **Arduino IDE** (versão 2.1 ou superior):
+     - Usada para programar os sensores IoT e o firmware.
+     - Download: [Arduino IDE](https://www.arduino.cc/en/software)
+
+### **Conexão com Hardware**
+
+- Conecte os sensores na placa ESP32 conforme o guia no diretório `document/manual-de-instrucoes.pdf`.
+- Verifique as leituras iniciais via Monitor Serial no Arduino IDE.
+
 Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços etc.) e instalação básica do projeto, descrevendo as versões utilizadas.
 
 Posicione aqui um link para o Manual de Instruções. (Link do Template: https://docs.google.com/document/d/1HqNJ_Ex2HnDIw98rVrJIXhpvu9lmujeO/edit) (Sprint 4)
 
 ## 🗃 Histórico de lançamentos
 
-    * 0.5.0 - 19/12/2023
-        Refinamento
-    * 0.4.0 - 05/12/2023
-        Conexão online para envio e captação dos dados do IoT
-    * 0.3.0 - 19/11/2023
-        Criação física do projeto offline
-    * 0.2.0 - 07/11/2023
-        Prototipação no Wokwi
-    * 0.1.0 - 24/10/2023
-        Análise do negócio
+* 0.1.0 - 24/10/2023
+  
+Fundamentos de negócio, experiência de usuário, protótipo inicial wokwi, requisitos Funcionais
+
+ * 0.2.0 - 07/11/2023
+
+Protótipo físico do projeto, requisitos não funcionais, jornada do usuário e storyboard
+
+* 0.3.0 - 19/11/2023
+
+Protótipo do Projeto com MQTT e I2C, metodologia e arquitetura da solução
+
+ * 0.4.0 - 05/12/2023
+
+Protótipo físico do projeto (online), Código do projeto, Manual de Instruções, Arquitetura do protótipo e Possibilidades de descarte
+
+* 0.5.0 - 19/12/2023
+
+Código do projeto (versão final), Arquitetura refinada da solução, Manual de instruções revisado e Protótipo final do projeto
 
 ## 📋 Licença/License
 
