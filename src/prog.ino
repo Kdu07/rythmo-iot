@@ -10,7 +10,7 @@
 
 String WIFI_SSID;
 
-const char *IoT_WIFI_PASSWORD = "%(Yk(sxGMtvFEs.3";
+const char *IoT_WIFI_PASSWORD = "";
 
 const char *UBIDOTS_TOKEN = "BBUS-wIAFfNwEVUcQ9RPLMTo1zJCmGwtctZ";
 const char *DEVICE_LABEL = "esp32_t15_grupo3";
