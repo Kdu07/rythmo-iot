@@ -1446,7 +1446,13 @@ Segue o link da tabela dos testes de usabilidade:
 
 ## <a name="c4"></a>4. Conclusões e Recomendações
 
-_Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de projeto em relação ao uso dessa solução. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras._
+
+O projeto Rythmo se demonstrou uma solução viável e eficaz para o monitoramento de vibrações e acelerações em veículos da Renault. Através do desenvolvimento de um protótipo funcional, foi possível validar a integração de sensores, comunicação MQTT e uma interface de usuário intuitiva via LCD. Os testes realizados, tanto técnicos quanto de usabilidade, confirmaram que o sistema atende aos requisitos propostos, oferecendo respostas rápidas e precisas às interações dos usuários.
+
+
+
+
+
 
 ## <a name="c5"></a>5. Referências
 
