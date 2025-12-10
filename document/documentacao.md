@@ -1451,7 +1451,7 @@ O projeto Rythmo se demonstrou uma solução viável e eficaz para o monitoramen
 
 A arquitetura implementada, baseada no microcontrolador ESP32 com sensores MPU6050 e piezoelétrico, mostrou-se adequada para a coleta de dados em tempo real. A comunicação via protocolo MQTT com a plataforma Ubidots garantiu a transmissão confiável dos dados, enquanto o armazenamento local em cartão microSD assegurou a persistência das informações mesmo em cenários de falha de conectividade. A interface física com display LCD e botões proporcionou uma experiência de uso acessível ao piloto de testes, alinhando-se aos objetivos de usabilidade definidos no projeto.
 
-
+Para futuras melhorias, recomenda-se a implementação de ajustes no firmware para aprimorar a navegação após a seleção de pista e garantir a limpeza adequada do texto no LCD. Além disso, explorar a expansão das funcionalidades do dashboard Ubidots, como alertas personalizados e análises avançadas, pode agregar valor ao sistema. Também se recomenda um dashboard com mais métricas e visualizações para facilitar a interpretação dos dados coletados.
 
 
 ## <a name="c5"></a>5. Referências
