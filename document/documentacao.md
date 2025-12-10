@@ -1449,7 +1449,7 @@ Segue o link da tabela dos testes de usabilidade:
 
 O projeto Rythmo se demonstrou uma solução viável e eficaz para o monitoramento de vibrações e acelerações em veículos da Renault. Através do desenvolvimento de um protótipo funcional, foi possível validar a integração de sensores, comunicação MQTT e uma interface de usuário intuitiva via LCD. Os testes realizados, tanto técnicos quanto de usabilidade, confirmaram que o sistema atende aos requisitos propostos, oferecendo respostas rápidas e precisas às interações dos usuários.
 
-
+A arquitetura implementada, baseada no microcontrolador ESP32 com sensores MPU6050 e piezoelétrico, mostrou-se adequada para a coleta de dados em tempo real. A comunicação via protocolo MQTT com a plataforma Ubidots garantiu a transmissão confiável dos dados, enquanto o armazenamento local em cartão microSD assegurou a persistência das informações mesmo em cenários de falha de conectividade. A interface física com display LCD e botões proporcionou uma experiência de uso acessível ao piloto de testes, alinhando-se aos objetivos de usabilidade definidos no projeto.
 
 
 
