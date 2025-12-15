@@ -1446,7 +1446,13 @@ Segue o link da tabela dos testes de usabilidade:
 
 ## <a name="c4"></a>4. Conclusões e Recomendações
 
-_Escreva, de forma resumida, sobre os principais resultados do seu projeto e faça recomendações formais ao seu parceiro de projeto em relação ao uso dessa solução. Você pode aproveitar este espaço para comentar sobre possíveis materiais extras._
+
+&emsp; O projeto Rythmo se demonstrou uma solução viável e eficaz para o monitoramento de vibrações e acelerações em veículos da Renault. Através do desenvolvimento de um protótipo funcional, foi possível validar a integração de sensores, comunicação MQTT e uma interface de usuário intuitiva via LCD. Os testes realizados, tanto técnicos quanto de usabilidade, confirmaram que o sistema atende aos requisitos propostos, oferecendo respostas rápidas e precisas às interações dos usuários.
+
+&emsp; A arquitetura implementada, baseada no microcontrolador ESP32 com sensores MPU6050 e piezoelétrico, mostrou-se adequada para a coleta de dados em tempo real. A comunicação via protocolo MQTT com a plataforma Ubidots garantiu a transmissão confiável dos dados, enquanto o armazenamento local em cartão microSD assegurou a persistência das informações mesmo em cenários de falha de conectividade. A interface física com display LCD e botões proporcionou uma experiência de uso acessível ao piloto de testes, alinhando-se aos objetivos de usabilidade definidos no projeto.
+
+&emsp; Para futuras melhorias, recomenda-se a implementação de ajustes no firmware para aprimorar a navegação após a seleção de pista e garantir a limpeza adequada do texto no LCD. Além disso, explorar a expansão das funcionalidades do dashboard Ubidots, como alertas personalizados e análises avançadas, pode agregar valor ao sistema. Também se recomenda um dashboard com mais métricas e visualizações para facilitar a interpretação dos dados coletados.
+
 
 ## <a name="c5"></a>5. Referências
 
