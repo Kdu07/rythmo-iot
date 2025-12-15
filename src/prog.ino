@@ -8,13 +8,11 @@
 #include <WiFi.h>
 #include <UbidotsEsp32Mqtt.h>
 
-// const char *WIFI_SSID = "Inteli.Iot";
-// const char *WIFI_PASS = "";
+String WIFI_SSID;
 
-const char *WIFI_SSID = "SHARE-RESIDENTE";
-const char *WIFI_PASS = "";
+const char *IoT_WIFI_PASSWORD = "";
 
-const char *UBIDOTS_TOKEN = "";
+const char *UBIDOTS_TOKEN = "BBUS-wIAFfNwEVUcQ9RPLMTo1zJCmGwtctZ";
 const char *DEVICE_LABEL = "esp32_t15_grupo3";
 
 const char *VARIABLE_LABEL1 = "acelerometro-x";
@@ -28,6 +26,9 @@ Ubidots ubidots(UBIDOTS_TOKEN, CLIENT_ID);
 // Timer MQTT
 unsigned long lastPublish = 0;
 const int MQTT_INTERVAL = 1000;
+
+// Estado
+unsigned short currentState = 0;  // 0 - Selecao de pista; 1 - Seleção do Wifi; 2 - Medindo Dados
 
 // ===== HARDWARE =====
 #define I2C_ADDR 0x27
@@ -48,7 +49,7 @@ const char *DATA_FILENAME = "/dados.csv";
 
 const int MPU_ADDR = 0x68;
 
-#define BUZZER_PIN 4 // >>> BUZZER <<<
+#define BUZZER_PIN 4  // >>> BUZZER <<<
 
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 
@@ -57,9 +58,8 @@ bool sdCardOK = false;
 // =============================================================================
 // BUZZER — função que toca UM único beep
 // =============================================================================
-void playStartBeep()
-{
-  tone(BUZZER_PIN, 2000, 200); // 2 kHz por 200 ms
+void playStartBeep() {
+  tone(BUZZER_PIN, 2000, 200);  // 2 kHz por 200 ms
   delay(150);
   noTone(BUZZER_PIN);
 }
@@ -67,7 +67,7 @@ void playStartBeep()
 // =============================================================================
 // MPU FUNCTIONS
 // =============================================================================
-bool initMPU() // inicializa o mpu para aquisição dos dados
+bool initMPU()  // inicializa o mpu para aquisição dos dados
 {
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(0x6B);
@@ -75,8 +75,7 @@ bool initMPU() // inicializa o mpu para aquisição dos dados
   return (Wire.endTransmission() == 0);
 }
 
-bool readMPU(int16_t &ax_raw, int16_t &ay_raw, int16_t &az_raw)
-{
+bool readMPU(int16_t &ax_raw, int16_t &ay_raw, int16_t &az_raw) {
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(0x3B);
   if (Wire.endTransmission(false) != 0)
@@ -92,8 +91,7 @@ bool readMPU(int16_t &ax_raw, int16_t &ay_raw, int16_t &az_raw)
 // =============================================================================
 // MQTT CALLBACK
 // =============================================================================
-void callback(char *topic, byte *payload, unsigned int length)
-{
+void callback(char *topic, byte *payload, unsigned int length) {
   Serial.print("Mensagem MQTT: ");
   for (int i = 0; i < length; i++)
     Serial.print((char)payload[i]);
@@ -103,8 +101,7 @@ void callback(char *topic, byte *payload, unsigned int length)
 // =============================================================================
 // FUNÇÃO DE ENVIO PARA UBIDOTS (CHAMADA SOMENTE DURANTE A MEDIÇÃO)
 // =============================================================================
-void sendToUbidots(float ax, float ay, float az, float piezo)
-{
+void sendToUbidots(float ax, float ay, float az, float piezo) {
   if (!ubidots.connected())
     ubidots.reconnect();
 
@@ -125,30 +122,29 @@ void sendToUbidots(float ax, float ay, float az, float piezo)
 // =============================================================================
 // UI MANAGER
 // =============================================================================
-class UIManager
-{
+class UIManager {
 public:
   UIManager() {}
 
-  void begin()
-  {
+  void begin() {
     option = 0;
-    selected = -1; // Variável auxiliar para controlar se a pista foi selecionada ou não
-    started = -1;  // Variável auxiliar para controlar se o teste de rodagem começou ou não
+    selected = -1;  // Variável auxiliar para controlar se a pista foi selecionada ou não
+    started = -1;   // Variável auxiliar para controlar se o teste de rodagem começou ou não
     number = 1;
 
     lastLCDUpdate = 0;
     lcdUpdateInterval = 500;
-    lastLedMillis = 0; // Tempo de delay dos LEDs
+    lastLedMillis = 0;  // Tempo de delay dos LEDs
     lastSaveMillis = 0;
 
     updateOptionText();
   }
 
-  void setSdOk(bool v) { sdCardOK_global = v; }
+  void setSdOk(bool v) {
+    sdCardOK_global = v;
+  }
 
-  void update()
-  {
+  void update() {
     readButtons();
     updateLEDs();
     updateLCD();
@@ -158,11 +154,12 @@ public:
 private:
   int option = 0;
   int selected = -1;
+  int selectedTrack = -1;
   int started = -1;
   int number = 1;
 
   String optionText = "Lisa";
-  static const int NUM_OPTIONS = 5;
+  int num_options = 5;
 
   unsigned long lastLCDUpdate;
   unsigned long lcdUpdateInterval;
@@ -178,39 +175,96 @@ private:
 
   int lastState = -99;
 
+  String wifiNetworks[10];
+
+  // ---------------------------------------------------------------
+  // WIFI
+  // ---------------------------------------------------------------
+
+  void getOpenWifiNetworks() {
+    int n = WiFi.scanNetworks();
+    int count = 0;
+
+    for (int i = 0; i < n; i++) {
+      if (WiFi.encryptionType(i) == WIFI_AUTH_OPEN || WiFi.SSID(i) == "Inteli.Iot") {
+       wifiNetworks[count] = WiFi.SSID(i);
+       Serial.println(wifiNetworks[count]);
+       count++;
+      }
+      Serial.println(wifiNetworks[0]);
+      num_options = count;
+    }
+  }
+
   // ---------------------------------------------------------------
   // BOTÕES
   // ---------------------------------------------------------------
-  void readButtons()
-  {
-    if (buttonPressed(BUTTON_OPTIONS))
-    {
-      option = (option + 1) % NUM_OPTIONS;
+  void readButtons() {
+    if (buttonPressed(BUTTON_OPTIONS)) {
+      option = (option + 1) % num_options;
       updateOptionText();
     }
 
-    if (buttonPressed(BUTTON_SELECT))
-    {
+    if (buttonPressed(BUTTON_SELECT)) {
       if (selected == -1)
         selected = option;
+        Serial.println(option);
+        
+        if(currentState == 1) {
+          WIFI_SSID = wifiNetworks[selected];
+        }
     }
 
-    if (buttonPressed(BUTTON_START))
-    {
-      if (selected != -1 && started == -1)
-      {
-        lcd.clear();
-        started = selected;
-        startTime = millis();
+    if (buttonPressed(BUTTON_START)) {
+      if (selected != -1 && started == -1) {
+        // Primeiro estado, selecao de pista
+        if (currentState == 0) {
+          selectedTrack = selected;
+          selected = -1;
+          currentState = 1;
 
-        playStartBeep(); // >>> BUZZER <<<
+          lcd.clear();
+          lcd.setCursor(0, 0);
+          lcd.print("Procurando Redes");
+          lcd.setCursor(0, 1);
+          lcd.print("Wifi...");
 
-        Serial.println(">>> MEDIÇÃO INICIADA <<<");
+          getOpenWifiNetworks();
+          updateOptionText();
+        }
+
+        // Segundo estado, selecao de wifi
+        else if (currentState == 1) {
+          Serial.println(selected);
+          // UBIDOTS MQTT
+          ubidots.setDebug(true);
+          connectWifiWithLCD();
+          ubidots.setCallback(callback);
+
+          lcd.clear();
+          lcd.setCursor(0, 0);
+          lcd.print("Conectando");
+          lcd.setCursor(0, 1);
+          lcd.print("Ubidots...");
+
+          ubidots.setup();
+          ubidots.reconnect();
+          currentState = 2;
+        }
+
+        if (currentState == 2) {
+          started = selected;
+          startTime = millis();
+          lcd.clear();
+          // playStartBeep(); // >>> BUZZER <<<
+
+          Serial.println(">>> MEDIÇÃO INICIADA <<<");
+          Serial.println(selectedTrack);
+        }
       }
     }
 
-    if (buttonPressed(BUTTON_RESET, false))
-    {
+    if (buttonPressed(BUTTON_RESET, false)) {
       if (started != -1)
         number++;
 
@@ -223,18 +277,15 @@ private:
     }
   }
 
-  bool buttonPressed(uint8_t pin, bool debounce = true)
-  {
+  bool buttonPressed(uint8_t pin, bool debounce = true) {
     static unsigned long lastDebounce = 0;
     const unsigned long debounceDelay = 250;
 
     int val = digitalRead(pin);
     unsigned long now = millis();
 
-    if (val == LOW)
-    {
-      if (!debounce || (now - lastDebounce > debounceDelay))
-      {
+    if (val == LOW) {
+      if (!debounce || (now - lastDebounce > debounceDelay)) {
         lastDebounce = now;
         return true;
       }
@@ -245,39 +296,42 @@ private:
   // ---------------------------------------------------------------
   // LCD
   // ---------------------------------------------------------------
-  void updateLCD()
-  {
+  void updateLCD() {
     unsigned long now = millis();
 
-    if (selected == -1)
-    {
-      if (lastState != option)
-      {
+    if (selected == -1) {
+      if (lastState != option) {
         lastState = option;
         lcd.clear();
       }
 
-      if (now - lastLCDUpdate > lcdUpdateInterval)
-      {
+      if (now - lastLCDUpdate > lcdUpdateInterval) {
         lcd.clear();
         lastLCDUpdate = now;
         lcd.setCursor(0, 0);
-        lcd.print("Select Pista:");
+
+        if (currentState == 0) {
+          lcd.print("Select Pista:");
+        } else {
+          lcd.print("Select Rede:");
+        }
+
         lcd.setCursor(0, 1);
         lcd.print(optionText + "    ");
       }
-    }
-    else if (started == -1)
-    {
+    } else if (started == -1) {
       lcd.setCursor(0, 0);
-      lcd.print("Selected Pista:");
+
+      if (currentState == 0) {
+          lcd.print("Selected Pista:");
+        } else {
+          lcd.print("Selected Rede:");
+        }
+      
       lcd.setCursor(0, 1);
       lcd.print(optionText + "    ");
-    }
-    else
-    {
-      if (now - lastLCDUpdate > lcdUpdateInterval)
-      {
+    } else {
+      if (now - lastLCDUpdate > lcdUpdateInterval) {
 
         lastLCDUpdate = now;
 
@@ -324,18 +378,13 @@ private:
   // ---------------------------------------------------------------
   // LED
   // ---------------------------------------------------------------
-  void updateLEDs()
-  {
-    if (started == -1)
-    {
-      if (millis() - lastLedMillis > ledBlinkInterval)
-      {
+  void updateLEDs() {
+    if (started == -1) {
+      if (millis() - lastLedMillis > ledBlinkInterval) {
         lastLedMillis = millis();
         digitalWrite(LED_RED, !digitalRead(LED_RED));
       }
-    }
-    else
-    {
+    } else {
       digitalWrite(LED_RED, LOW);
     }
 
@@ -345,8 +394,7 @@ private:
   // ---------------------------------------------------------------
   // SD
   // ---------------------------------------------------------------
-  void writeDataIfNeeded()
-  {
+  void writeDataIfNeeded() {
     // Caso o teste de rodagem não esteja atualmente rodando e o sdCard não foi configurado, não executa a função
     if (started == -1 || !sdCardOK_global)
       return;
@@ -372,15 +420,14 @@ private:
     int piezo = analogRead(PIEZO_PIN);
 
     // ====== SALVA NO SD ======
-    if (!SD.exists(DATA_FILENAME))
-    {
+    if (!SD.exists(DATA_FILENAME)) {
       File f = SD.open(DATA_FILENAME, FILE_WRITE);
       f.println("Time,Number,Pista,AX,AY,AZ,PIEZO");
       f.close();
     }
 
     File f = SD.open(DATA_FILENAME, FILE_APPEND);
-    unsigned long t = millis() - startTime; // Tempo relativo desde o começo do experimento
+    unsigned long t = millis() - startTime;  // Tempo relativo desde o começo do experimento
 
     f.printf("%lu,%d,%s,%.2f,%.2f,%.2f,%d\n",
              t, number, optionText.c_str(), axMs2, ayMs2, azMs2, piezo);
@@ -388,50 +435,54 @@ private:
     f.close();
   }
 
-  void updateOptionText()
-  {
-    switch (option)
-    {
-    case 0:
-      optionText = "Lisa";
-      break;
-    case 1:
-      optionText = "Esburacada";
-      break;
-    case 2:
-      optionText = "Paralelepipedo";
-      break;
+  void updateOptionText() {
+    if (currentState == 0) {
+      switch (option) {
+        case 0:
+          optionText = "Lisa";
+          break;
+        case 1:
+          optionText = "Esburacada";
+          break;
+        case 2:
+          optionText = "Paralelepipedo";
+          break;
+      }
+    } else if (currentState == 1) {
+      Serial.println(option);
+      Serial.println(num_options);
+      optionText = wifiNetworks[option];
     }
   }
 };
 
 // Função para mostrar em qual rede o dispostivo está tentando se conectar
-bool connectWifiWithLCD()
-{
+bool connectWifiWithLCD() {
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Conectando WiFi");
   lcd.setCursor(0, 1);
   lcd.print(WIFI_SSID);
 
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  if(WIFI_SSID == "Inteli.Iot") {
+    WiFi.begin(WIFI_SSID, IoT_WIFI_PASSWORD);
+  }
+  WiFi.begin(WIFI_SSID);
 
   unsigned long start = millis();
   Serial.print("Conectando ao WiFi ");
 
-  while (WiFi.status() != WL_CONNECTED)
-  {
+  while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
-    lcd.print("."); // imprime pontos no LCD
+    lcd.print(".");  // imprime pontos no LCD
 
-    if (millis() - start > 15000)
-    { // 15s timeout
+    if (millis() - start > 15000) {  // 15s timeout
       lcd.clear();
       lcd.setCursor(0, 0);
       lcd.print("ERRO WIFI");
       lcd.setCursor(0, 1);
-      lcd.print("Sem conexao");
+      lcd.print("Reconectando...");
 
       Serial.println("\nWiFi timeout!");
       return false;
@@ -452,8 +503,7 @@ UIManager ui;
 // =============================================================================
 // SETUP
 // =============================================================================
-void setup()
-{
+void setup() {
   Serial.begin(115200);
   delay(200);
 
@@ -471,11 +521,10 @@ void setup()
   pinMode(LED_RED, OUTPUT);
   pinMode(LED_GREEN, OUTPUT);
 
-  pinMode(BUZZER_PIN, OUTPUT); // >>> BUZZER <<<
+  pinMode(BUZZER_PIN, OUTPUT);  // >>> BUZZER <<<
 
   // MPU
-  if (!initMPU())
-  {
+  if (!initMPU()) {
     lcd.print("MPU ERROR");
     while (true)
       ;
@@ -485,13 +534,6 @@ void setup()
   SPI.begin(18, 19, 23, SD_CS_PIN);
   sdCardOK = SD.begin(SD_CS_PIN);
 
-  // UBIDOTS MQTT
-  ubidots.setDebug(true);
-  connectWifiWithLCD();
-  ubidots.setCallback(callback);
-  ubidots.setup();
-  ubidots.reconnect();
-
   ui.begin();
   ui.setSdOk(sdCardOK);
 }
@@ -499,8 +541,7 @@ void setup()
 // =============================================================================
 // LOOP
 // =============================================================================
-void loop()
-{
+void loop() {
   ubidots.loop();
   ui.update();
 }
