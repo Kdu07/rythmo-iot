@@ -256,7 +256,7 @@ private:
           started = selected;
           startTime = millis();
           lcd.clear();
-          // playStartBeep(); // >>> BUZZER <<<
+          playStartBeep(); // >>> BUZZER <<<
 
           Serial.println(">>> MEDIÇÃO INICIADA <<<");
           Serial.println(selectedTrack);

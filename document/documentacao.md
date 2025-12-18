@@ -864,7 +864,7 @@ Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.
 
 &emsp; Como parte desse planejamento, explicamos em detalhe as tecnologias específicas usadas no protótipo e o papel de cada uma na coleta, transmissão e análise de dados em tempo real. Sensores de aceleração e força, dispositivos IoT, protocolos de comunicação e ferramentas de visualização foram selecionados para garantir que o sistema funcione de forma integrada e eficiente. A seguir, apresentamos a arquitetura do protótipo do projeto Rythmo, descrevendo todos os sensores e tecnologias utilizadas no dispositivo IoT, na nuvem e no dashboard, além de destacar os tipos de conexão entre os componentes com fio, sem fio e de pertencimento.
 
-Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.be/jQI-WdnehS8 
+Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.be/C82-bPVwJQg
 
 <div align="center">
 <sub>Figura 13 - Diagrama de Arquitetura do Protótipo Físico</sub>
