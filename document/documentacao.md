@@ -528,7 +528,7 @@ Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
 
 
 <div align="center">
-<sup>Figura 5 - Matriz de Riscos e Oportunidades </sup>
+<sup>Figura 6 - Matriz de Riscos e Oportunidades </sup>
    
 <img src="../assets/persona-1.png" alt="Persona 1" />
 
@@ -549,7 +549,7 @@ Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
 **Maria Oliveira, Engenheira de Simulação**
 
 <div align="center">
-<sup>Figura 5 - Matriz de Riscos e Oportunidades </sup>
+<sup>Figura 7 - Matriz de Riscos e Oportunidades </sup>
    
 <img src="../assets/persona-2.png" alt="Persona 2" />
 
@@ -598,7 +598,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 <div align="center">
 
-<sub> Figura 6 - Storyboard Maria Oliveira </sub>
+<sub> Figura 8 - Storyboard Maria Oliveira </sub>
 
 <img src="../assets/storyboard-maria.png">
 
@@ -621,7 +621,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 
 <div align="center">
 
-<sub> Figura 7 - Storyboard João Silva </sub>
+<sub> Figura 9 - Storyboard João Silva </sub>
 
 <img src="../assets/storyboard-joao.png">
 
@@ -652,7 +652,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 **Etapas da Jornada de João Silva (Antes da Solução):**
 
 <div align="center">
-<sub> Figura 8 - Jornada de João Silva (Antes da Solução) </sub>
+<sub> Figura 10 - Jornada de João Silva (Antes da Solução) </sub>
 <img src="../assets/jornada-joao-silva-current.png">
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 </div>
@@ -665,7 +665,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 **Etapas da Jornada de João Silva (Depois da Solução):**
 
 <div align="center">
-<sub> Figura 9 - Jornada de João Silva (Depois da Solução) </sub>
+<sub> Figura 11 - Jornada de João Silva (Depois da Solução) </sub>
 <img src="../assets/jornada-joao-silva-future.png">
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 </div>
@@ -678,7 +678,7 @@ Em geral, a criação de um storyboard inclui três elementos principais:
 **Jornada de usuário da Maria Oliveira (Depois da Solução):**
 
 <div align="center">
-<sub> Figura 10 - Jornada de Maria Oliveira (Depois da Solução) </sub>
+<sub> Figura 12 - Jornada de Maria Oliveira (Depois da Solução) </sub>
 <img src="../assets/jornada-maria-oliveira-future.png">
 <sub> Fonte: Material produzido pelos autores (2025) </sub>
 </div>
@@ -756,7 +756,7 @@ Como validar. Solicitar a usuários novos que localizem uma sessão específica 
 &nbsp;&nbsp;&nbsp;&nbsp;A arquitetura da solução representa o blueprint estrutural que delineia a integração entre componentes de hardware, software e comunicação em um sistema IoT, garantindo que os requisitos funcionais e não funcionais sejam atendidos de forma eficiente e escalável. Nesse contexto, ela define como os sensores, microcontroladores, protocolos de transmissão e plataformas de armazenamento interagem para coletar, processar e visualizar dados de aceleração e força, suportando análises precisas de Squeak and Rattle na Renault, (BASS; CLEMENTS; KAZMAN, 2012).
 
 <div align="center">
-<sub>Figura 11 - Diagrama de Arquitetura da Solução</sub><br>
+<sub>Figura 13 - Diagrama de Arquitetura da Solução</sub><br>
 <img src="../assets/arquitetura.png">
 <sub>Fonte: Material produzido pelos autores (2025)</sub>
 </div>
@@ -802,7 +802,7 @@ Vídeo de explicação sobre a arquitetura da solução: <a href="https://www.yo
 Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.be/jQI-WdnehS8 
 
 <div align="center">
-<sub>Figura 12 - Diagrama de Arquitetura do Protótipo Físico</sub>
+<sub>Figura 14 - Diagrama de Arquitetura do Protótipo Físico</sub>
 
 <br>
 
@@ -867,7 +867,7 @@ Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.
 Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.be/C82-bPVwJQg
 
 <div align="center">
-<sub>Figura 13 - Diagrama de Arquitetura do Protótipo Físico</sub>
+<sub>Figura 15 - Diagrama de Arquitetura do Protótipo Físico</sub>
 
 <br>
 
@@ -1140,7 +1140,7 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 <div align="center">
 
-   <sub>Figura 12 - Imagem do protótipo</sub>
+   <sub>Figura 16 - Imagem do protótipo</sub>
 
    <img src="../assets/ImagemDoPrototipo.png"> 
 
@@ -1153,7 +1153,7 @@ Após ligar e inicializar o protótipo com o LED verde conectado, verifiquei que
 
 <div align="center">
 
-   <sub>Figura 13 - Imagem do Ubidots</sub>
+   <sub>Figura 17 - Imagem do Ubidots</sub>
 
    <img src="../assets/ImagemUbidots.png"> 
 
@@ -1464,7 +1464,7 @@ Vídeo de Demonstração: [Youtube](https://youtu.be/VQmL0koQvTQ)
 
 <div align="center">
 
-   <sub>Figura 14 - Imagem do dispositivo frontal</sub>
+   <sub>Figura 18 - Imagem do dispositivo frontal</sub>
 
    <img src="../assets/disp-frontal.jpeg"> 
 
@@ -1474,7 +1474,7 @@ Vídeo de Demonstração: [Youtube](https://youtu.be/VQmL0koQvTQ)
 
 <div align="center">
 
-   <sub>Figura 15 - Imagem do dispositivo vertical</sub>
+   <sub>Figura 19 - Imagem do dispositivo vertical</sub>
 
    <img src="../assets/disp-vertical.jpeg"> 
 
@@ -1492,7 +1492,7 @@ Vídeo de Demonstração: [Youtube](https://youtu.be/VQmL0koQvTQ)
 
 <div align="center">
 
-   <sub>Figura 16 - Imagem do Ubidots</sub>
+   <sub>Figura 20 - Imagem do Ubidots</sub>
 
    <img src="../assets/disp-carro.png"> 
 
@@ -1545,7 +1545,7 @@ Segue o link da tabela dos testes de usabilidade:
 
 <div align="center">
 
-   <sub>Figura 17 - Tabela de ocorrências </sub>
+   <sub>Figura 21 - Tabela de ocorrências </sub>
 
    <img src="../assets/tabela-ocorrências.jpeg"> 
 
@@ -1721,7 +1721,7 @@ C
 (t) no nó R–C. O pino de cinco volts do Arduino alimenta o trilho positivo da protoboard e o pino GND do Arduino alimenta o trilho negativo, garantindo referência comum.
 
 <div align="center">
-<sub>Figura 14 - Circuito RC arduíno</sub>
+<sub>Figura 22 - Circuito RC arduíno</sub>
 
 <img src="../assets/circuito-rc-1.jpeg">
 
@@ -1729,7 +1729,7 @@ C
 </div>
 
 <div align="center">
-<sub>Figura 15 - Circuito RC arduíno 2</sub>
+<sub>Figura 23 - Circuito RC arduíno 2</sub>
 
 <img src="../assets/circuito-rc-2.jpeg">
 
@@ -1737,14 +1737,14 @@ C
 </div>
 
 <div align="center">
-<sub>Figura 16 - Circuito RC arduíno 3</sub>
+<sub>Figura 24 - Circuito RC arduíno 3</sub>
 
 <img src="../assets/circuito-rc-3.jpeg">
 
 <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
 
-&emsp; A Figura 14 mostra a visão geral da ligação entre Arduino e protoboard, com a alimentação, o terra e o cabeamento até a área do circuito. A Figura 15 destaca o nó R–C onde se encontram o terminal positivo do capacitor, os terminais dos dois resistores e o fio do A0. A Figura 16 mostra os pinos analógicos do Arduino e confirma a conexão do A0. Verifique continuidade dos trilhos da protoboard ao longo de toda a extensão e confirme a polaridade do capacitor pela perna menor e pela faixa de marcação negativa voltadas ao GND.
+&emsp; A Figura 22 mostra a visão geral da ligação entre Arduino e protoboard, com a alimentação, o terra e o cabeamento até a área do circuito. A Figura 23 destaca o nó R–C onde se encontram o terminal positivo do capacitor, os terminais dos dois resistores e o fio do A0. A Figura 24 mostra os pinos analógicos do Arduino e confirma a conexão do A0. Verifique continuidade dos trilhos da protoboard ao longo de toda a extensão e confirme a polaridade do capacitor pela perna menor e pela faixa de marcação negativa voltadas ao GND.
 
 &emsp; Antes da coleta, faça a checagem funcional simples. Toque o A0 no GND e observe leitura próxima de zero. Toque o A0 no cinco volts e observe leitura próxima do máximo do conversor analógico. Isso confirma a referência, o canal de medição e a polaridade correta do capacitor.
 
@@ -1823,7 +1823,7 @@ C
 &emsp; O gráfico experimental é um diagrama de dispersão dos dados coletados, com o eixo horizontal representando o tempo em segundos e o eixo vertical a tensão no capacitor em volts. O título deve descrever claramente o conteúdo, por exemplo, Carga do capacitor em circuito RC — dados experimentais. Recomenda-se usar marcadores visíveis, eixo vertical de zero a cinco volts, grade leve para leitura e legenda opcional identificando a série como Dados experimentais.
 
 <div align="center">
-<sub>Figura 17 - Carga do capacitor em circuito RC — dados experimentais</sub>
+<sub>Figura 25 - Carga do capacitor em circuito RC — dados experimentais</sub>
 
 <img src="../assets/grafico-rc-cap.png">
 
@@ -1835,7 +1835,7 @@ C
 &emsp; Durante a realização do experimento, foi identificado um problema de sincronização temporal entre o início efetivo do carregamento do capacitor e o momento em que as medições começaram a ser registradas. A figura abaixo mostra o gráfico inicial obtido:
 
 <div align="center">
-<sub>Figura 18 - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
+<sub>Figura 26 - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
 
 <img src="../assets/grafico.png">
 
@@ -1847,7 +1847,7 @@ C
 &emsp; A correção foi aplicada somando 11 segundos de cada valor temporal registrado: $t_{corrigido} = t_{medido} + 11s$. O gráfico corrigido está apresentado a seguir:
 
 <div align="center">
-<sub>Figura 19 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
+<sub>Figura 27 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
 
 <img src="../assets/graficoCorrigido.png">
 
