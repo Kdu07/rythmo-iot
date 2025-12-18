@@ -1444,10 +1444,61 @@ Vídeo de Demonstração: [Youtube](https://youtu.be/VQmL0koQvTQ)
 
 
 
-### 3.4.5. Protótipo Final do Projeto (sprint 5)	
+### 3.4.5. Protótipo Final do Projeto (sprint 5)
 
-_Registre as situações de uso do sistema revisadas utilizando a modelagem UML para descrever os fluxos de teste. <br>
-Também inclua figuras da versão final do protótipo físico e dashboards, além de descrições dos testes realizados para ilustrar o funcionamento do protótipo._
+&emsp; Nesta sprint o Rythmo IoT foi consolidado como protótipo final, com firmware estabilizado, interface física em caixa de MDF, sensores integrados e envio contínuo de dados para a plataforma Ubidots. Esta seção descreve as situações de uso revisadas com base nos diagramas de sequência UML, bem como os testes realizados para validar o funcionamento completo do sistema.
+
+**Situações de uso e diagramas de sequência**
+
+&emsp; O fluxo principal de uso parte do boot do ESP32 com o módulo UIManager, que inicializa o LCD 16×2, testa a comunicação com o MPU6050 via I2C e prepara o sensor piezoelétrico. O diagrama de sequência global elaborado nesta sprint registra, em ordem temporal, as seguintes etapas: inicialização do display, verificação do MPU, exibição da tela “Select Pista”, leitura dos comandos dos botões OPTIONS, SELECT, START e RESET, alternância entre estados de “idle” e “coleta ativa”, leitura contínua de ax, ay, az e piezo, atualização das informações no LCD, acionamento dos LEDs (vermelho para ociosidade, verde para coleta) e publicação dos dados por MQTT na Ubidots.
+
+&emsp; Um segundo diagrama de sequência concentra-se no ponto de vista do usuário. Nele, o ator “Usuário” interage diretamente com os botões: utiliza OPTIONS para percorrer as pistas disponíveis, SELECT para confirmar a pista, START para iniciar a coleta e RESET para encerrar o teste e retornar ao menu inicial. O diagrama evidencia as trocas de mensagens entre os botões físicos, o ESP32/UIManager, o LCD, os sensores e o buzzer, deixando explícito o encadeamento de ações esperado em situação de uso real.
+
+&emsp; Foi também modelado um cenário de falha do MPU6050. Nesse diagrama, após o boot, o ESP32 tenta inicializar o sensor; na ausência de resposta, a função de inicialização retorna erro, o firmware escreve “MPU ERROR” no LCD e entra em laço infinito, impedindo qualquer avanço para as telas de pista e coleta. Esse comportamento está alinhado à lógica implementada no código e garante um modo de falha seguro, evitando que o usuário interprete dados inválidos.
+
+**Descrição do protótipo final**
+
+&emsp; O protótipo final é montado em uma caixa de MDF, com a interface frontal composta por um LCD 16×2 centralizado, dois LEDs (vermelho e verde) no canto superior esquerdo e quatro botões na parte inferior (OPTIONS, SELECT, RESET e START), além do buzzer acoplado à estrutura. Internamente, a caixa abriga o ESP32 em placa perfurada, o módulo MPU6050, o circuito de condicionamento do piezoelétrico, a fiação dos LEDs e botões e o conector para o sensor externo. O piezoelétrico é posicionado no veículo utilizando fixação mecânica e adesiva, permitindo contato adequado com a superfície de interesse para captar vibrações da suspensão e da carroceria.
+
+&emsp; Essa configuração física corresponde à topologia descrita nos diagramas UML e na documentação de hardware, garantindo que o fluxo de sinais, da pista até o dashboard, seja coerente com a arquitetura proposta.
+
+<div align="center">
+
+   <sub>Figura 14 - Imagem do dispositivo frontal</sub>
+
+   <img src="../assets/disp-frontal.jpeg"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+<div align="center">
+
+   <sub>Figura 15 - Imagem do dispositivo vertical</sub>
+
+   <img src="../assets/disp-vertical.jpeg"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
+
+**Dashboards e testes finais**
+
+&emsp; Na Ubidots foram configurados dashboards com séries temporais para as componentes de aceleração ax, ay, az do MPU6050 e para o sinal do piezoelétrico, além de indicadores vinculados à pista selecionada. Esses painéis permitem acompanhar em tempo quase real o comportamento do veículo em diferentes tipos de pavimento, correlacionando as leituras dos sensores com o contexto de uso informado pelo usuário no dispositivo físico.
+
+&emsp; Os testes finais foram conduzidos em duas etapas. Em bancada, validou-se a navegação de menus, o acionamento correto dos LEDs, o disparo do buzzer no início da coleta, a atualização do LCD e o envio regular dos dados para a Ubidots. Em seguida, o protótipo foi instalado em veículo de teste da Renault e submetido a trajetos com pistas distintas, confirmando a integridade das mensagens MQTT, a correspondência entre as variações de aceleração e o tipo de pista selecionado e a robustez da interface física durante a condução. Também foi verificado o cenário de falha do MPU, com exibição da mensagem de erro e bloqueio do sistema conforme especificado.
+
+&emsp; Com essas revisões, o protótipo final documentado nesta seção responde aos pontos levantados nas versões anteriores: os fluxos de uso estão descritos de forma clara em UML, o comportamento físico e lógico do dispositivo é explicitado de ponta a ponta e os testes realizados demonstram que o Rythmo IoT está apto para ser utilizado como base para experimentos de monitoramento de vibrações em contexto automotivo.
+
+<div align="center">
+
+   <sub>Figura 16 - Imagem do Ubidots</sub>
+
+   <img src="../assets/disp-carro.png"> 
+
+   <sup>Fonte: Material produzido pelos autores (2025)</sup>
+
+</div>
 
 ### 3.4.6. Testes de Usabilidade
 
@@ -1494,7 +1545,7 @@ Segue o link da tabela dos testes de usabilidade:
 
 <div align="center">
 
-   <sub>Figura 14 - Tabela de ocorrências </sub>
+   <sub>Figura 17 - Tabela de ocorrências </sub>
 
    <img src="../assets/tabela-ocorrências.jpeg"> 
 
