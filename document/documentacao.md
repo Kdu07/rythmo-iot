@@ -858,12 +858,68 @@ Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.
 
 ### 3.3.5. Arquitetura Refinada da Solução (sprint 5)	
 
-_Descreva a revisão da arquitetura técnica da solução de forma detalhada (visão de arquitetura). <br>
+&emsp; A arquitetura do protótipo é o planejamento detalhado de como o sistema será estruturado fisicamente, funcionando como um mapa que mostra a disposição e a função de cada componente. Essa etapa é essencial para o desenvolvimento do projeto, pois define não apenas quais peças serão usadas, mas também como elas se conectam e trabalham juntas para alcançar os objetivos do sistema.
 
-Justifique como a arquitetura suporta os requisitos funcionais e não funcionais. <br>
+&emsp; Neste documento, apresentamos a arquitetura do protótipo desenvolvido para o projeto Rythmo, detalhando os componentes físicos utilizados - como sensores, microcontroladores e display LCD - as tecnologias escolhidas - incluindo linguagem de programação, banco de dados e bibliotecas - e as formas de comunicação necessárias entre esses elementos. Essa organização serve como guia para a construção e implementação do sistema, além de facilitar a identificação de pontos que podem ser melhorados e proporcionar uma visão mais clara de como o dispositivo funciona na prática.
 
-A revisão deverá incluir comentários sobre cada ponto levantado, mostrando como os ajustes foram realizados, além da descrição da arquitetura revisada._
+&emsp; Como parte desse planejamento, explicamos em detalhe as tecnologias específicas usadas no protótipo e o papel de cada uma na coleta, transmissão e análise de dados em tempo real. Sensores de aceleração e força, dispositivos IoT, protocolos de comunicação e ferramentas de visualização foram selecionados para garantir que o sistema funcione de forma integrada e eficiente. A seguir, apresentamos a arquitetura do protótipo do projeto Rythmo, descrevendo todos os sensores e tecnologias utilizadas no dispositivo IoT, na nuvem e no dashboard, além de destacar os tipos de conexão entre os componentes com fio, sem fio e de pertencimento.
 
+Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.be/jQI-WdnehS8 
+
+<div align="center">
+<sub>Figura 13 - Diagrama de Arquitetura do Protótipo Físico</sub>
+
+<br>
+
+<img src="../assets/arquiteturaCorrigida.png">
+
+<sub> Fonte: Material produzido pelos autores 
+(2025)</sub>
+
+</div>
+
+&emsp; Para facilitar a compreensão da arquitetura apresentada, detalhamos a seguir todos os componentes físicos que compõem o protótipo do projeto Rythmo. A tabela organiza cada elemento por categoria (microcontrolador, sensores, dispositivos de entrada/saída, etc.), apresentando suas especificações técnicas e o papel que desempenham no sistema de coleta e transmissão de dados de Squeak and Rattle.
+ 
+
+<div align="center">
+<br>
+<sub> Quadro 1: Componentes </sub>
+
+<br>
+</div>
+
+| **Componente** | **Descrição** | **Tipo** |
+|----------|----------|----------|
+| ESP32 WROOM 32 Devkit | Microcontrolador responsável por realizar a leitura e processamento dos dados enviados pelos sensores e transmiti-los pela internet para o Ubidots. Opera com conectividade WiFi integrada e possui capacidade de processamento suficiente para gerenciar múltiplos sensores simultaneamente. | Microcontrolador |
+| MPU6050 (GY-521) | Acelerômetro que mede aceleração e movimentos nos eixos X, Y e Z, permitindo detectar deslocamentos, inclinação e vibrações do veículo durante os testes em pista. Opera com interface I2C e fornece dados com alta precisão. | Sensor |
+| Sensor Piezoelétrico (7BB-27-4L0) | Detecta vibrações, impactos e pressões, convertendo esses estímulos mecânicos em sinais elétricos. Utilizado para capturar dados de força exercida sobre o veículo durante os testes de Squeak and Rattle. | Sensor |
+| Display LCD I2C 16x2 (1602A) | Exibe informações em tempo real como os valores de aceleração nos eixos X, Y, Z e a leitura do sensor piezoelétrico. Também apresenta a tela de seleção de pista e status do sistema. Opera com interface I2C para comunicação simplificada com o ESP32. | Dispositivo de Saída |
+| Botão OPTIONS (B3F-1020) | Permite ao usuário navegar entre as diferentes opções de pistas disponíveis no menu do display LCD. | Dispositivo de Entrada |
+| Botão SELECT (B3F-1020) | Confirma a seleção da pista escolhida pelo usuário no menu do display LCD. | Dispositivo de Entrada |
+| Botão START (B3F-1020) | Inicia a coleta de dados dos sensores, acionando o processo de medição e transmissão dos sinais para o Ubidots. | Dispositivo de Entrada |
+| Botão RESET (B3F-1020) | Reinicia o sistema, parando a coleta de dados e retornando à tela inicial do display LCD para nova seleção de pista. | Dispositivo de Entrada |
+| LED Vermelho | Indica o estado pré-inicialização do sistema, piscando em intervalo regular até que o protótipo complete a inicialização. | Dispositivo de Saída |
+| LED Verde | Permanece aceso durante o funcionamento normal do protótipo, indicando que o sistema está operacional e coletando dados. | Dispositivo de Saída |
+| Buzzer | Componente piezoelétrico que emite um sinal sonoro breve ao iniciar o dispositivo, confirmando que o sistema foi energizado e está pronto para uso. | Dispositivo de Saída |
+| Antena WiFi | Amplificador de sinal WiFi integrado ao ESP32, que melhora a cobertura e a intensidade do sinal para garantir transmissão estável dos dados para a plataforma Ubidots. | Amplificador de Sinal |
+
+<div align="center">
+<br>
+<sub> Quadro 2: Tecnologias e ferramentas </sub>
+
+<br>
+</div>
+
+| **Tecnologia/Ferramenta** | **Descrição** | **Tipo** |
+|----------|----------|----------|
+| C++ | Linguagem de programação utilizada para desenvolvimento do firmware embarcado no ESP32, responsável pela lógica de controle, leitura de sensores, interface com o usuário e transmissão de dados. | Linguagem de Programação |
+| Arduino IDE | Ambiente de desenvolvimento integrado (IDE) utilizado para escrever, compilar e fazer upload do código para o microcontrolador ESP32. Fornece bibliotecas e ferramentas específicas para desenvolvimento embarcado. | IDE |
+| PlatformIO | Plataforma alternativa de desenvolvimento para sistemas embarcados, oferecendo recursos avançados de gerenciamento de bibliotecas, debug e controle de versão. Utilizada opcionalmente ao Arduino IDE. | IDE |
+| Protocolo MQTT | Protocolo de comunicação leve e eficiente para IoT, utilizado para publicar dados dos sensores em tópicos específicos e transmiti-los para o broker na nuvem. | Protocolo de Comunicação |
+| Protocolo I2C | Protocolo de comunicação serial síncrono utilizado para a comunicação entre o ESP32 e os dispositivos I2C, como o display LCD 16x2 e o acelerômetro MPU6050. | Protocolo de Comunicação |
+| Ubidots | Plataforma as a service que atua como broker MQTT, gerenciando, armazenando e visualizando os dados capturados pelo dispositivo IoT. Oferece dashboard personalizável para análise dos dados coletados. | Broker MQTT / Plataforma Cloud |
+| WiFi (802.11 b/g/n) | Tecnologia de conectividade sem fio utilizada pelo ESP32 para estabelecer conexão com a rede local e transmitir dados para o Ubidots via internet. | Conectividade |
+| 
 
 ## 3.4. Resultados	
 

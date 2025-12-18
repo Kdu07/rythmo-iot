@@ -10,7 +10,7 @@
 
 String WIFI_SSID;
 
-const char *IoT_WIFI_PASSWORD = "";
+const char *IoT_WIFI_PASSWORD = "%(Yk(sxGMtvFEs.3";
 
 const char *UBIDOTS_TOKEN = "BBUS-wIAFfNwEVUcQ9RPLMTo1zJCmGwtctZ";
 const char *DEVICE_LABEL = "esp32_t15_grupo3";
@@ -159,7 +159,7 @@ private:
   int number = 1;
 
   String optionText = "Lisa";
-  int num_options = 5;
+  int num_options = 3;
 
   unsigned long lastLCDUpdate;
   unsigned long lcdUpdateInterval;
@@ -186,7 +186,7 @@ private:
     int count = 0;
 
     for (int i = 0; i < n; i++) {
-      if (WiFi.encryptionType(i) == WIFI_AUTH_OPEN || WiFi.SSID(i) == "Inteli.Iot") {
+      if ((WiFi.encryptionType(i) == WIFI_AUTH_OPEN || WiFi.SSID(i) == "Inteli.Iot") && count < 9) {
        wifiNetworks[count] = WiFi.SSID(i);
        Serial.println(wifiNetworks[count]);
        count++;
