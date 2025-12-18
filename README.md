@@ -49,13 +49,15 @@ O projeto Rythmo desenvolve uma solução IoT para a Renault do Brasil voltada �
 
 A solução busca resolver a falta de dados estruturados para análises do tipo "e-line", que dependem de sinais precisos de deslocamento e força ao longo do tempo. Com a implementação deste sistema, espera-se reduzir significativamente o tempo e os custos associados aos testes físicos, aumentar a precisão das análises de engenharia e identificar antecipadamente falhas estruturais nos veículos. O projeto contribui para a inovação nos processos de desenvolvimento automotivo da Renault, alinhando-se às tendências de digitalização e automação da indústria, além de estabelecer uma base sólida para futuras análises reprodutíveis e construção de sinais de entrada genéricos para estudos de Squeak and Rattle.
 
+
 **Diferenciais**
 - Coleta de dados em tempo real com sensores avançados.
 - Transmissão eficiente via MQTT.
 - Armazenamento estruturado em banco de dados na nuvem.
 - Interface web interativa para visualização de dados.
 
-_Inclua um link para o vídeo de demonstração do funcionamento de seu projeto (sprint 5)_
+Link do vídeo de demonstração do projeto:
+https://youtu.be/NFCR8O2e0Go
 
 ## 📁 Estrutura de pastas
 
