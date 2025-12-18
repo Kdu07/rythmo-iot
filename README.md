@@ -49,6 +49,12 @@ O projeto Rythmo desenvolve uma solução IoT para a Renault do Brasil voltada �
 
 A solução busca resolver a falta de dados estruturados para análises do tipo "e-line", que dependem de sinais precisos de deslocamento e força ao longo do tempo. Com a implementação deste sistema, espera-se reduzir significativamente o tempo e os custos associados aos testes físicos, aumentar a precisão das análises de engenharia e identificar antecipadamente falhas estruturais nos veículos. O projeto contribui para a inovação nos processos de desenvolvimento automotivo da Renault, alinhando-se às tendências de digitalização e automação da indústria, além de estabelecer uma base sólida para futuras análises reprodutíveis e construção de sinais de entrada genéricos para estudos de Squeak and Rattle.
 
+**Diferenciais**
+- Coleta de dados em tempo real com sensores avançados.
+- Transmissão eficiente via MQTT.
+- Armazenamento estruturado em banco de dados na nuvem.
+- Interface web interativa para visualização de dados.
+
 _Inclua um link para o vídeo de demonstração do funcionamento de seu projeto (sprint 5)_
 
 ## 📁 Estrutura de pastas
@@ -63,24 +69,122 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 - <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
+```
+├── assets
+│   ├── 5-forcas.png
+│   ├── analiseSWOT.png
+│   ├── arquitetura-solucao.png
+│   ├── arquitetura.png
+│   ├── canvas-proposta-de-valor.png
+│   ├── caso-de-teste1.png
+│   ├── caso-teste-10.png
+│   ├── caso-teste-11.png
+│   ├── caso-teste-147.png
+│   ├── caso-teste-258.png
+│   ├── caso-teste-369.png
+│   ├── circuito-rc-1.jpeg
+│   ├── circuito-rc-2.jpeg
+│   ├── circuito-rc-3.jpeg
+│   ├── grafico-rc-cap.png
+│   ├── grafico.png
+│   ├── graficoCorrigido.png
+│   ├── image.png
+│   ├── ImagemDoPrototipo.png
+│   ├── ImagemUbidots.png
+│   ├── inteli.png
+│   ├── jornada-joao-silva-current.png
+│   ├── jornada-joao-silva-future.png
+│   ├── jornada-maria-oliveira-future.png
+│   ├── matriz-de-riscos.png
+│   ├── mpu-error.png
+│   ├── persona-1.png
+│   ├── persona-2.png
+│   ├── rm-odp.png
+│   ├── storyboard-joao.png
+│   ├── storyboard-maria.png
+│   ├── tabela-ocorrências.jpeg
+│   └── TaxaDeAtualizacao.png
+├── diagram.json
+├── document
+│   ├── documentacao.md
+│   ├── manual-de-instrucoes.pdf
+│   └── outros
+│       ├── dados.csv
+│       └── grafico.ipynb
+├── platformio.ini
+├── README.md
+├── src
+│   └── firmware
+│       └── prog.ino
+└── wokwi.toml
+```
+
 ## 🔧 Instalação
 
-Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços etc.) e instalação básica do projeto, descrevendo as versões utilizadas.
+Segue a estrutura atualizada incluindo as informações de **pré-requisitos** e **instalação básica** do projeto, descrevendo as versões utilizadas para cada ferramenta:
 
-Posicione aqui um link para o Manual de Instruções. (Link do Template: https://docs.google.com/document/d/1HqNJ_Ex2HnDIw98rVrJIXhpvu9lmujeO/edit) (Sprint 4)
+### Pré-requisitos
+
+Para configurar e executar o projeto corretamente, certifique-se de ter os seguintes itens instalados no seu ambiente de desenvolvimento:
+
+1. **Ambientes de Desenvolvimento**:
+
+   - **Arduino IDE** (versão 2.1 ou superior):
+     - Usada para programar os sensores IoT e o firmware.
+     - Download: [Arduino IDE](https://www.arduino.cc/en/software)
+
+2. Versões Utilizadas: 
+    - Arduino IDE: 2.1.0
+    - VSCode: 1.80
+    - Placa ESP32: Espressif Systems ESP32 Dev Module
+    - Plataforma Ubidots: Conta gratuita para visualização de dados IoT
+  - 
+3. **Conexão com Hardware**
+  
+- Conecte os sensores na placa ESP32 conforme o guia no diretório `document/manual-de-instrucoes.pdf`.
+- Verifique as leituras iniciais via Monitor Serial no Arduino IDE e pela plataforma Ubidots.
+
+### Instalação Básica
+1. Clone este repositório para o seu ambiente local:
+   ```bash
+   git clone https://github.com/Inteli-College/2025-2B-T15-IN04-G03.git
+   ```  
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd 2025-2B-T15-IN04-G03
+    ```
+3. Abra o arquivo `prog.ino` localizado em `src/firmware/` com o Arduino IDE.
+4. Instale as bibliotecas necessárias no Arduino IDE:
+   - Vá para `Sketch` > `Include Library` > `Manage Libraries...`
+   - Procure e instale as bibliotecas descritas no manual de instruções.
+5. Configure as credenciais Wi-Fi e as configurações do MQTT no código-fonte conforme o manual de instruções.
+6. Faça o upload do código para a placa ESP32.
+7. Monitore os dados coletados via Monitor Serial e na plataforma Ubidots.
+
+**Manual de Instruções:** acesse o arquivo `manual-de-instrucoes.pdf` na pasta `document`.
+
 
 ## 🗃 Histórico de lançamentos
 
-    * 0.5.0 - 19/12/2023
-        Refinamento
-    * 0.4.0 - 05/12/2023
-        Conexão online para envio e captação dos dados do IoT
-    * 0.3.0 - 19/11/2023
-        Criação física do projeto offline
-    * 0.2.0 - 07/11/2023
-        Prototipação no Wokwi
-    * 0.1.0 - 24/10/2023
-        Análise do negócio
+* 0.1.0 - 24/10/2023
+  
+Fundamentos de negócio, experiência de usuário, protótipo inicial wokwi, requisitos Funcionais
+
+ * 0.2.0 - 07/11/2023
+
+Protótipo físico do projeto, requisitos não funcionais, jornada do usuário e storyboard
+
+* 0.3.0 - 19/11/2023
+
+Protótipo do Projeto com MQTT e I2C, metodologia e arquitetura da solução
+
+ * 0.4.0 - 05/12/2023
+
+Protótipo físico do projeto (online), Código do projeto, Manual de Instruções, Arquitetura do protótipo e Possibilidades de descarte
+
+* 0.5.0 - 19/12/2023
+
+Código do projeto (versão final), Arquitetura refinada da solução, Manual de instruções revisado e Protótipo final do projeto
 
 ## 📋 Licença/License
 
