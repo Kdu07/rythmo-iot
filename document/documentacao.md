@@ -1,7 +1,5 @@
 # Documentação IoTDoc - Módulo 4 - Inteli
 
-**_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final_**
-
 ## Rythmo
 
 #### Nomes dos integrantes do grupo
@@ -130,8 +128,6 @@ Figura 1 - RM-ODP
 
 ## 3.1. Domínio de Fundamentos de Negócio
 
-_Link para os templates de negócios: https://drive.google.com/drive/folders/1lTqisJ_gxxtc5J5aXM8ula2kQ4MsII_M?usp=sharing_
-
 ### 3.1.1. Contexto da Indústria
 
 &nbsp;&nbsp;&nbsp;&nbsp;A Renault Brasil atua no competitivo setor automotivo, com foco na produção e venda de veículos de passeio e comerciais leves, além de serviços financeiros e locação. Inserida numa cadeia complexa que abrange pesquisa científica, engenharia, manufatura, logística, rede de concessionárias e soluções digitais, a operação no país tem valor estratégico para a marca. No país, combina uma fábrica robusta, ecossistema de fornecedores locais e crescente integração com tendências globais, como frota elétrica e conectividade.</br>
@@ -188,7 +184,7 @@ Dessa forma, em um mercado altamente disputado e em rápida transformação, a R
 
 <div align="center">
 Figura 3 - Análise SWOT
-<img src="../document/analiseSWOT.png"/>
+<img src="../assets/analiseSWOT.png"/>
 <sup> Fonte: Material alterado pelos autores com base no tamplete disponível em: https://uolhost.uol.com.br/blog/matriz-swot-conheca-melhor-seu-negocio-e-otimize-suas-estrategias/</sup>
 </div>
  
@@ -530,7 +526,15 @@ Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
 
 **João Silva, Piloto de Teste**
 
+
+<div align="center">
+<sup>Figura 5 - Matriz de Riscos e Oportunidades </sup>
+   
 <img src="../assets/persona-1.png" alt="Persona 1" />
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+   
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;João Silva representa o usuário operacional que interage diretamente com o dispositivo IoT durante os testes em pistas. Como piloto experiente, ele será responsável por instalar o dispositivo, ativar o sistema embarcado e conduzir o veículo em condições reais de rodagem, coletando dados de aceleração (A x t) e força (F x t).
 
@@ -544,7 +548,15 @@ Abaixo está a Bill of Materials dos materiais que serão utilizados no projeto:
 
 **Maria Oliveira, Engenheira de Simulação**
 
+<div align="center">
+<sup>Figura 5 - Matriz de Riscos e Oportunidades </sup>
+   
 <img src="../assets/persona-2.png" alt="Persona 2" />
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+   
+</div>
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;Maria Oliveira personifica o usuário analítico que processa os dados coletados, utilizando-os para simulações CAE (Computer-Aided Engineering) de Squeak and Rattle. Como engenheira sênior, ela acessa a plataforma as a service, analisa sinais para gerar indicadores de criticidade e espectros de frequência, e integra os dados em modelos virtuais.
 
@@ -910,8 +922,6 @@ Vídeo de explicação sobre a arquitetura do protótipo físico: https://youtu.
 | 
 
 ## 3.4. Resultados	
-
-_Nesta seção, detalhe os resultados obtidos com a implementação, de acordo com o disposto nas subseções._
 
 ### 3.4.1.Protótipo Inicial do Projeto usando o Simulador Wokwi (sprint 1)
 
@@ -1776,7 +1786,7 @@ C
 <div align="center">
 <sub>Figura 18 - Gráfico experimental inicial (com erro de sincronização temporal)</sub>
 
-<img src="grafico.png">
+<img src="../assets/grafico.png">
 
 <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
@@ -1788,7 +1798,7 @@ C
 <div align="center">
 <sub>Figura 19 - Gráfico experimental corrigido (após ajuste temporal de +11s)</sub>
 
-<img src="graficoCorrigido.png">
+<img src="../assets/graficoCorrigido.png">
 
 <sup>Fonte: Material produzido pelos autores (2025)</sup>
 </div>
